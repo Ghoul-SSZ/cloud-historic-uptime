@@ -1,0 +1,125 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="About" description="How Cloud Historic Uptime collects data and calculates uptime scores.">
+  <h1 class="page-title">Methodology & Data Sources</h1>
+
+  <div class="card">
+    <h2>Data Sources</h2>
+    <p>All data comes from official cloud provider status pages:</p>
+    <table class="data-table">
+      <thead>
+        <tr><th>Provider</th><th>Source</th><th>Method</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Google Cloud</td>
+          <td><a href="https://status.cloud.google.com/incidents.json" target="_blank" rel="noopener">status.cloud.google.com/incidents.json</a></td>
+          <td>JSON feed — fetched directly</td>
+        </tr>
+        <tr>
+          <td>AWS</td>
+          <td><a href="https://health.aws.amazon.com/health/status" target="_blank" rel="noopener">health.aws.amazon.com</a></td>
+          <td>JSON events API</td>
+        </tr>
+        <tr>
+          <td>Azure</td>
+          <td><a href="https://azure.status.microsoft/en-us/status/history/" target="_blank" rel="noopener">azure.status.microsoft</a></td>
+          <td>HTML scraping of Post Incident Reviews</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>Uptime Calculation</h2>
+    <p>For a given time window (e.g., 90 days):</p>
+    <code class="formula">
+      uptime% = (total_minutes − incident_minutes) / total_minutes × 100
+    </code>
+    <p>Per-category scores only count incidents affecting services in that category. Scores are recomputed daily at build time.</p>
+  </div>
+
+  <div class="card">
+    <h2>Severity Mapping</h2>
+    <ul>
+      <li><strong>Google Cloud:</strong> Uses the <code>severity</code> field from the JSON feed — <code>high</code> → critical, <code>medium</code> → major, <code>low</code> → minor.</li>
+      <li><strong>AWS:</strong> Derived from the event status code — 3 → critical, 2 → major, 1 → minor.</li>
+      <li><strong>Azure:</strong> Inferred from narrative text using keyword matching (e.g., "outage" → critical, "degradation" → major) combined with the number of affected services. This is the most heuristic-heavy mapping.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Known Limitations</h2>
+    <ul>
+      <li>Cloud providers may not publicly report all incidents. This data reflects only what appears on official status pages.</li>
+      <li>Azure data is extracted from narrative HTML, which is less reliable than structured JSON feeds.</li>
+      <li>Uptime percentages are <strong>estimates</strong> based on reported incident durations. Actual SLA performance as experienced by customers may differ.</li>
+      <li>Service category mappings are manually maintained and may not cover every service.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Collection Frequency</h2>
+    <p>A GitHub Actions workflow runs daily at 06:00 UTC, executing the scrapers, merging new data, and redeploying the site. Data can also be collected manually via <code>npm run collect</code>.</p>
+  </div>
+
+  <div class="card">
+    <h2>Open Source</h2>
+    <p>This project is fully open source. You can audit the scrapers, data pipeline, and every data point in the repository:</p>
+    <p><a href="https://github.com/YOUR_USERNAME/cloud-historic-uptime" target="_blank" rel="noopener">View on GitHub →</a></p>
+  </div>
+</Base>
+
+<style>
+  .page-title { font-size: 1.5rem; margin-bottom: 1.5rem; }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .card h2 { font-size: 1.05rem; margin-bottom: 0.75rem; }
+  .card p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.75rem; }
+  .card p:last-child { margin-bottom: 0; }
+  .card ul { color: var(--text-muted); font-size: 0.9rem; padding-left: 1.25rem; }
+  .card li { margin-bottom: 0.5rem; }
+  .card code { color: var(--text); font-size: 0.85rem; }
+
+  .formula {
+    display: block;
+    background: #0f1117;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    margin: 0.75rem 0;
+    font-family: monospace;
+    font-size: 0.9rem;
+    color: var(--green);
+  }
+
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+  }
+
+  .data-table th {
+    text-align: left;
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-muted);
+    font-weight: 600;
+  }
+
+  .data-table td {
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-muted);
+  }
+</style>
