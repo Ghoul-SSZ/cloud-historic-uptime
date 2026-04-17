@@ -1,0 +1,154 @@
+---
+import Base from "../../layouts/Base.astro";
+import { getAllIncidents, PROVIDER_META, formatDuration } from "../../lib/data";
+import type { GetStaticPaths } from "astro";
+
+export const getStaticPaths: GetStaticPaths = () => {
+  const incidents = getAllIncidents();
+  return incidents.map((inc) => ({
+    params: { id: inc.id },
+    props: { incident: inc },
+  }));
+};
+
+const { incident } = Astro.props;
+const meta = PROVIDER_META[incident.provider];
+
+const SEVERITY_COLORS: Record<string, { bg: string; text: string }> = {
+  minor: { bg: "#422006", text: "#f59e0b" },
+  major: { bg: "#431407", text: "#ea580c" },
+  critical: { bg: "#3b0000", text: "#ef4444" },
+};
+const sevStyle = SEVERITY_COLORS[incident.severity] ?? SEVERITY_COLORS.minor;
+---
+
+<Base title={incident.title}>
+  <div class="badges">
+    <span class="badge" style={`color: ${meta.color}; background: ${meta.color}22;`}>
+      {meta.name}
+    </span>
+    <span class="badge" style={`color: ${sevStyle.text}; background: ${sevStyle.bg};`}>
+      {incident.severity.toUpperCase()}
+    </span>
+  </div>
+
+  <h1 class="incident-title">{incident.title}</h1>
+
+  <div class="incident-meta">
+    {new Date(incident.startedAt).toLocaleDateString("en-US", {
+      year: "numeric", month: "long", day: "numeric",
+    })}
+    {" · "}
+    {new Date(incident.startedAt).toLocaleTimeString("en-US", {
+      hour: "2-digit", minute: "2-digit", timeZone: "UTC", timeZoneName: "short",
+    })}
+    {incident.resolvedAt && (
+      <>
+        {" – "}
+        {new Date(incident.resolvedAt).toLocaleTimeString("en-US", {
+          hour: "2-digit", minute: "2-digit", timeZone: "UTC", timeZoneName: "short",
+        })}
+      </>
+    )}
+    {" · Duration: "}
+    {formatDuration(incident.durationMinutes)}
+  </div>
+
+  <div class="card">
+    <h3>Affected Services</h3>
+    <div class="service-tags">
+      {incident.affectedServices.map((svc) => (
+        <span class="service-tag">{svc.serviceName}</span>
+      ))}
+    </div>
+  </div>
+
+  {incident.updates.length > 0 && (
+    <div class="card">
+      <h3>Timeline</h3>
+      <div class="timeline">
+        {incident.updates.map((update, i) => {
+          const isLast = i === incident.updates.length - 1;
+          const time = new Date(update.timestamp).toLocaleTimeString("en-US", {
+            hour: "2-digit", minute: "2-digit", timeZone: "UTC",
+          });
+          return (
+            <div class="timeline-entry">
+              <div class="timeline-time" style={`color: ${isLast ? "#10b981" : i === 0 ? "#ef4444" : "#f59e0b"}`}>
+                {time}
+              </div>
+              <div class="timeline-message">{update.message}</div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  )}
+
+  <div class="source-link">
+    <a href={incident.sourceUrl} target="_blank" rel="noopener noreferrer">
+      View on official status page →
+    </a>
+  </div>
+</Base>
+
+<style>
+  .badges { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
+
+  .badge {
+    font-size: 0.75rem;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+
+  .incident-title { font-size: 1.35rem; margin-bottom: 0.5rem; }
+
+  .incident-meta {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 2rem;
+  }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .card h3 { font-size: 0.95rem; margin-bottom: 0.75rem; }
+
+  .service-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+  .service-tag {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    background: #252535;
+    padding: 4px 10px;
+    border-radius: 4px;
+  }
+
+  .timeline { border-left: 2px solid var(--border); padding-left: 1.25rem; }
+
+  .timeline-entry { margin-bottom: 1rem; }
+  .timeline-entry:last-child { margin-bottom: 0; }
+
+  .timeline-time {
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .timeline-message {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-top: 0.15rem;
+  }
+
+  .source-link {
+    margin-top: 2rem;
+    font-size: 0.85rem;
+  }
+</style>
