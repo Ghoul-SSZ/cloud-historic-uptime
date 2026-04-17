@@ -1,8 +1,161 @@
 ---
 import Base from "../layouts/Base.astro";
+import Heatmap from "../components/Heatmap";
+import {
+  getRecentIncidents,
+  getAllIncidents,
+  uptimeScores,
+  PROVIDER_META,
+  formatDuration,
+  formatRelativeTime,
+} from "../lib/data";
+
+const recent = getRecentIncidents(10);
+const allIncidents = getAllIncidents();
+const base = import.meta.env.BASE_URL;
+
+const providers = ["aws", "azure", "gcp"] as const;
 ---
 
 <Base title="Dashboard">
-  <h1>Dashboard</h1>
-  <p>Coming soon.</p>
+  <h1 class="page-title">Cloud Provider Uptime Dashboard</h1>
+
+  <div class="score-cards">
+    {providers.map((p) => {
+      const score = uptimeScores.providers[p]?.overall?.["90d"];
+      const meta = PROVIDER_META[p];
+      return (
+        <a href={`${base}provider/${p}`} class="score-card">
+          <div class="score-value" style={`color: ${meta.color}`}>
+            {score !== undefined ? `${score.toFixed(2)}%` : "—"}
+          </div>
+          <div class="score-label">{meta.name} (90-day)</div>
+        </a>
+      );
+    })}
+  </div>
+
+  <div class="section">
+    <Heatmap
+      client:load
+      incidents={allIncidents.map((inc) => ({
+        provider: inc.provider,
+        startedAt: inc.startedAt,
+        severity: inc.severity,
+      }))}
+      weeks={52}
+    />
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Recent Incidents</h2>
+    <div class="incident-list">
+      {recent.map((inc) => {
+        const meta = PROVIDER_META[inc.provider];
+        return (
+          <a href={`${base}incident/${inc.id}`} class="incident-row">
+            <div class="incident-left">
+              <span class="provider-badge" style={`color: ${meta.color}; background: ${meta.color}22`}>
+                {meta.name}
+              </span>
+              <span class="incident-title">{inc.title}</span>
+            </div>
+            <div class="incident-right">
+              <span class="incident-time">{formatRelativeTime(inc.startedAt)}</span>
+              <span class="incident-duration">· {formatDuration(inc.durationMinutes)}</span>
+            </div>
+          </a>
+        );
+      })}
+      {recent.length === 0 && (
+        <p class="empty-state">No incidents recorded yet. Run the scraper to collect data.</p>
+      )}
+    </div>
+  </div>
 </Base>
+
+<style>
+  .page-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .score-cards {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .score-card {
+    flex: 1;
+    min-width: 180px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.25rem;
+    text-align: center;
+    text-decoration: none;
+    transition: border-color 0.2s;
+  }
+
+  .score-card:hover {
+    border-color: #4a4d5e;
+    text-decoration: none;
+  }
+
+  .score-value { font-size: 1.75rem; font-weight: 700; }
+  .score-label { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem; }
+
+  .section { margin-bottom: 2rem; }
+  .section-title { font-size: 1.1rem; margin-bottom: 1rem; }
+
+  .incident-list {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .incident-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--border);
+    text-decoration: none;
+    color: var(--text);
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .incident-row:last-child { border-bottom: none; }
+  .incident-row:hover { background: #1f2235; }
+
+  .incident-left { display: flex; align-items: center; gap: 0.75rem; }
+
+  .provider-badge {
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .incident-title { font-size: 0.9rem; }
+
+  .incident-right {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    display: flex;
+    gap: 0.25rem;
+    white-space: nowrap;
+  }
+
+  .empty-state {
+    padding: 2rem;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+</style>
