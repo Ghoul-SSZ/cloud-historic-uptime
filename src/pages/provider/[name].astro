@@ -1,0 +1,114 @@
+---
+import Base from "../../layouts/Base.astro";
+import UptimeTrend from "../../components/UptimeTrend";
+import IncidentList from "../../components/IncidentList";
+import { getProviderIncidents, uptimeScores, PROVIDER_META } from "../../lib/data";
+import type { GetStaticPaths } from "astro";
+
+export const getStaticPaths: GetStaticPaths = () => {
+  return [
+    { params: { name: "aws" } },
+    { params: { name: "azure" } },
+    { params: { name: "gcp" } },
+  ];
+};
+
+const { name } = Astro.params;
+const provider = name as "aws" | "azure" | "gcp";
+const meta = PROVIDER_META[provider];
+const incidents = getProviderIncidents(provider);
+const scores = uptimeScores.providers[provider];
+const base = import.meta.env.BASE_URL;
+
+const CATEGORIES = [
+  "compute", "storage", "networking", "database", "ai-ml",
+  "security", "analytics", "devtools", "messaging", "management",
+];
+---
+
+<Base title={meta.name}>
+  <h1 class="page-title" style={`color: ${meta.color}`}>{meta.name}</h1>
+
+  <div class="trend-section">
+    <UptimeTrend
+      client:load
+      incidents={incidents.map((inc) => ({
+        startedAt: inc.startedAt,
+        durationMinutes: inc.durationMinutes,
+      }))}
+      color={meta.color}
+      months={12}
+    />
+  </div>
+
+  <div class="category-section">
+    <div class="category-card">
+      <h3>Uptime by Category (90-day)</h3>
+      <div class="category-table">
+        {CATEGORIES.map((cat) => {
+          const val = scores?.byCategory?.[cat]?.["90d"];
+          const color = val === undefined ? "#8892a4"
+            : val >= 99.95 ? "#10b981"
+            : val >= 99.9 ? "#f59e0b"
+            : "#ef4444";
+          return (
+            <div class="category-row">
+              <span class="category-name">{cat}</span>
+              <span class="category-value" style={`color: ${color}`}>
+                {val !== undefined ? `${val.toFixed(2)}%` : "—"}
+              </span>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </div>
+
+  <div class="incidents-section">
+    <IncidentList
+      client:load
+      incidents={incidents.map((inc) => ({
+        id: inc.id,
+        title: inc.title,
+        severity: inc.severity,
+        startedAt: inc.startedAt,
+        durationMinutes: inc.durationMinutes,
+        affectedServices: inc.affectedServices.map((s) => ({
+          serviceName: s.serviceName,
+          category: s.category,
+        })),
+      }))}
+      baseUrl={base}
+    />
+  </div>
+</Base>
+
+<style>
+  .page-title { font-size: 1.5rem; margin-bottom: 1.5rem; }
+  .trend-section { margin-bottom: 2rem; }
+  .category-section { margin-bottom: 2rem; }
+
+  .category-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.25rem;
+  }
+
+  .category-card h3 { font-size: 0.95rem; margin-bottom: 1rem; }
+
+  .category-table { font-size: 0.85rem; }
+
+  .category-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.4rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .category-row:last-child { border-bottom: none; }
+  .category-name { color: var(--text-muted); }
+  .category-value { font-weight: 600; font-variant-numeric: tabular-nums; }
+
+  .incidents-section { margin-bottom: 2rem; }
+</style>
