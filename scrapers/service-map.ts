@@ -20,5 +20,13 @@ export function lookupCategory(
 ): ServiceCategory {
   const map = loadServiceMap();
   const providerMap = map[provider];
-  return providerMap[serviceName] ?? "other";
+  if (providerMap[serviceName]) return providerMap[serviceName];
+  // Try stripping common prefixes (Azure PIRs use "Azure App Service" but map has "App Service")
+  for (const prefix of ["Azure ", "Microsoft ", "Amazon ", "AWS ", "Google "]) {
+    if (serviceName.startsWith(prefix)) {
+      const stripped = serviceName.slice(prefix.length);
+      if (providerMap[stripped]) return providerMap[stripped];
+    }
+  }
+  return "other";
 }

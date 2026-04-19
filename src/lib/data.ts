@@ -61,14 +61,53 @@ export const PROVIDER_META: Record<
   },
   azure: {
     name: "Azure",
-    color: "#0078d4",
+    color: "#00a4ef",
     statusUrl: "https://azure.status.microsoft/en-us/status/history/",
   },
   gcp: {
     name: "Google Cloud",
-    color: "#4285f4",
+    color: "#0f9d58",
     statusUrl: "https://status.cloud.google.com/summary",
   },
+};
+
+export const PERIODS = [
+  { value: "30d", label: "30 days" },
+  { value: "90d", label: "90 days" },
+  { value: "180d", label: "180 days" },
+  { value: "ytd", label: "Year to date" },
+  { value: "365d", label: "1 year" },
+  { value: "2y", label: "2 years" },
+  { value: "3y", label: "3 years" },
+  { value: "5y", label: "5 years" },
+];
+
+export const PERIOD_TO_MONTHS: Record<string, number> = {
+  "30d": 3,
+  "90d": 6,
+  "180d": 9,
+  "ytd": Math.ceil(
+    (Date.now() - new Date(new Date().getFullYear(), 0, 1).getTime()) /
+      (30.44 * 24 * 60 * 60 * 1000)
+  ) || 1,
+  "365d": 12,
+  "2y": 24,
+  "3y": 36,
+  "5y": 60,
+};
+
+export const CATEGORY_LABELS: Record<string, string> = {
+  compute: "Compute",
+  storage: "Storage",
+  networking: "Networking",
+  database: "Database",
+  "ai-ml": "AI/ML",
+  security: "Security",
+  analytics: "Analytics",
+  devtools: "Dev Tools",
+  messaging: "Messaging",
+  management: "Management",
+  other: "Other",
 };
 
 export function formatDuration(minutes: number | null): string {

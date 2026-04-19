@@ -18,8 +18,8 @@ const SEVERITY_COLORS: Record<string, string> = {
 
 const PROVIDER_LABELS: Record<string, { label: string; color: string }> = {
   aws: { label: "AWS", color: "#ff9900" },
-  azure: { label: "Azure", color: "#0078d4" },
-  gcp: { label: "GCP", color: "#4285f4" },
+  azure: { label: "Azure", color: "#00a4ef" },
+  gcp: { label: "GCP", color: "#0f9d58" },
 };
 
 function getWeekKey(date: Date): string {

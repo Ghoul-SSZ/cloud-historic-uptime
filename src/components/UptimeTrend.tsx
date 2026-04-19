@@ -7,18 +7,21 @@ import {
   ResponsiveContainer,
   CartesianGrid,
 } from "recharts";
+import { mergedDowntimeMinutes, buildYAxisConfig } from "../lib/uptime";
+
+interface IncidentData {
+  startedAt: string;
+  durationMinutes: number | null;
+}
 
 interface UptimeTrendProps {
-  incidents: {
-    startedAt: string;
-    durationMinutes: number | null;
-  }[];
+  incidents: IncidentData[];
   color: string;
   months: number;
 }
 
 function computeMonthlyUptime(
-  incidents: UptimeTrendProps["incidents"],
+  incidents: IncidentData[],
   months: number
 ): { month: string; uptime: number }[] {
   const now = new Date();
@@ -39,10 +42,7 @@ function computeMonthlyUptime(
       );
     });
 
-    const downtime = monthIncidents.reduce(
-      (sum, inc) => sum + (inc.durationMinutes ?? 0),
-      0
-    );
+    const downtime = mergedDowntimeMinutes(monthIncidents);
 
     data.push({
       month: d.toLocaleDateString("en-US", {
@@ -62,6 +62,8 @@ export default function UptimeTrend({
   months = 12,
 }: UptimeTrendProps) {
   const data = computeMonthlyUptime(incidents, months);
+  const minValue = Math.min(...data.map((d) => d.uptime));
+  const yAxis = buildYAxisConfig(minValue);
 
   return (
     <div style={{ background: "#1a1d2e", borderRadius: 8, padding: "1.25rem", border: "1px solid #2a2d3e" }}>
@@ -73,9 +75,10 @@ export default function UptimeTrend({
           <CartesianGrid strokeDasharray="3 3" stroke="#2a2d3e" />
           <XAxis dataKey="month" tick={{ fill: "#8892a4", fontSize: 12 }} />
           <YAxis
-            domain={[99, 100]}
+            domain={yAxis.domain}
+            ticks={yAxis.ticks}
             tick={{ fill: "#8892a4", fontSize: 12 }}
-            tickFormatter={(v: number) => `${v}%`}
+            tickFormatter={yAxis.formatter}
           />
           <Tooltip
             contentStyle={{ background: "#1a1d2e", border: "1px solid #2a2d3e", borderRadius: 6, color: "#e2e8f0" }}

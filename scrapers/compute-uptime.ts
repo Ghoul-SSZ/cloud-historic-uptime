@@ -22,8 +22,46 @@ const CATEGORIES: ServiceCategory[] = [
 const WINDOWS: { label: string; days: number }[] = [
   { label: "30d", days: 30 },
   { label: "90d", days: 90 },
+  { label: "180d", days: 180 },
+  { label: "ytd", days: -1 }, // computed dynamically
   { label: "365d", days: 365 },
+  { label: "2y", days: 730 },
+  { label: "3y", days: 1095 },
+  { label: "5y", days: 1825 },
 ];
+
+// Cap each incident's downtime contribution — multi-week "known issues" are
+// tracked as incidents but aren't continuous full outages.
+const MAX_INCIDENT_MINUTES = 24 * 60; // 24 hours
+
+/** Merge overlapping time intervals and return total non-overlapping minutes */
+function mergedDowntimeMinutes(incidents: Incident[]): number {
+  const intervals = incidents
+    .map((inc) => {
+      const start = new Date(inc.startedAt).getTime();
+      const duration = Math.min(inc.durationMinutes ?? 0, MAX_INCIDENT_MINUTES);
+      return { start, end: start + duration * 60000 };
+    })
+    .sort((a, b) => a.start - b.start);
+
+  let total = 0;
+  let curEnd = -Infinity;
+
+  for (const { start, end } of intervals) {
+    if (start >= curEnd) {
+      // no overlap — add full interval
+      total += end - start;
+      curEnd = end;
+    } else if (end > curEnd) {
+      // partial overlap — add only the extension
+      total += end - curEnd;
+      curEnd = end;
+    }
+    // fully contained — skip
+  }
+
+  return total / 60000;
+}
 
 export function computeUptimeScores(
   incidents: Incident[],
@@ -44,11 +82,13 @@ export function computeUptimeScores(
       byCategory[category] = {};
     }
 
-    for (const { label, days } of WINDOWS) {
-      const windowStart = new Date(
-        endDate.getTime() - days * 24 * 60 * 60 * 1000
-      );
-      const totalMinutes = days * 24 * 60;
+    for (const { label, days: rawDays } of WINDOWS) {
+      const windowStart =
+        rawDays === -1
+          ? new Date(endDate.getFullYear(), 0, 1) // Jan 1 of current year
+          : new Date(endDate.getTime() - rawDays * 24 * 60 * 60 * 1000);
+      const totalMinutes =
+        (endDate.getTime() - windowStart.getTime()) / 60000;
 
       const windowIncidents = providerIncidents.filter(
         (inc) =>
@@ -56,10 +96,7 @@ export function computeUptimeScores(
           new Date(inc.startedAt) <= endDate
       );
 
-      const overallDowntime = windowIncidents.reduce(
-        (sum, inc) => sum + (inc.durationMinutes ?? 0),
-        0
-      );
+      const overallDowntime = mergedDowntimeMinutes(windowIncidents);
       overall[label] =
         ((totalMinutes - overallDowntime) / totalMinutes) * 100;
 
@@ -67,10 +104,7 @@ export function computeUptimeScores(
         const catIncidents = windowIncidents.filter((inc) =>
           inc.affectedServices.some((svc) => svc.category === category)
         );
-        const catDowntime = catIncidents.reduce(
-          (sum, inc) => sum + (inc.durationMinutes ?? 0),
-          0
-        );
+        const catDowntime = mergedDowntimeMinutes(catIncidents);
         byCategory[category][label] =
           ((totalMinutes - catDowntime) / totalMinutes) * 100;
       }

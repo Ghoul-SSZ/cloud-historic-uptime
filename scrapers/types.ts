@@ -66,29 +66,38 @@ export interface GcpRawIncident {
   }[];
 }
 
+export interface AwsEventLogEntry {
+  summary: string;
+  message: string | null;
+  status: number;
+  timestamp: number; // seconds
+}
+
 export interface AwsRawEvent {
   service: string;
-  service_name: string;
   region: string;
-  region_name: string;
   typeCode: string;
-  startTime: number;
-  endTime: number | null;
-  lastUpdatedTime: number;
-  statusCode: string;
+  startTime: number; // milliseconds
+  endTime?: number; // milliseconds, absent for ongoing
+  lastUpdatedTime: number; // milliseconds
   metadata: {
-    EVENT_LOG: {
-      summary: string;
-      message: string | null;
-      status: number;
-      timestamp: number;
-    }[];
+    EVENT_LOG: string; // JSON-encoded AwsEventLogEntry[]
   };
-  impacted_services: Record<
+}
+
+export interface AwsHistoryEvent {
+  summary: string;
+  arn: string;
+  status: string; // "0"=resolved, "1"=info, "2"=major, "3"=critical
+  date: string; // unix timestamp in seconds (as string)
+  event_log: AwsEventLogEntry[];
+  impacted_services?: Record<
     string,
-    { service_name: string; current: number; max: number }
+    { service_name: string; current: string; max: string }
   >;
 }
+
+export type AwsHistoryData = Record<string, AwsHistoryEvent[]>;
 
 export type ServiceMap = Record<Provider, Record<string, ServiceCategory>>;
 

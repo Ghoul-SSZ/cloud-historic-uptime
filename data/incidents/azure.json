@@ -1,1 +1,3165 @@
-[]
+[
+  {
+    "id": "azure-8GCS-858",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) – Azure OpenAI – GPT-5.2 availability degradation in 7 regions",
+    "description": "Between 23:20 UTC on 9 March and 19:32 UTC on 10 March 2026, a platform issue resulted in impact to the Azure OpenAI Service. Impacted customers experienced HTTP 400 and HTTP 429 error responses, specifically for the GPT-5.2 model. All other GPT models were unaffected during this time.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2026-03-09T23:20:00.000Z",
+    "resolvedAt": "2026-03-10T19:32:00.000Z",
+    "durationMinutes": 1212,
+    "affectedServices": [
+      {
+        "serviceName": "Azure OpenAI",
+        "category": "other",
+        "regions": [
+          "Central US",
+          "East US 2",
+          "Australia East",
+          "UK South",
+          "Korea Central"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-03-09T23:20:00.000Z",
+        "status": "update",
+        "message": "Customer impact began, triggered by the recent service update."
+      },
+      {
+        "timestamp": "2026-03-10T00:19:00.000Z",
+        "status": "update",
+        "message": "We detected the issue via service monitoring. This prompted us to begin our investigation, engage with other teams to troubleshoot, and start developing a hot fix."
+      },
+      {
+        "timestamp": "2026-03-10T03:18:00.000Z",
+        "status": "update",
+        "message": "We determined that a rollback could mitigate more quickly than hotfix, so started the rollback for the impacted model."
+      },
+      {
+        "timestamp": "2026-03-10T10:55:00.000Z",
+        "status": "update",
+        "message": "Traffic routes were determined to be using incomplete data, due to the aforementioned dependency issue."
+      },
+      {
+        "timestamp": "2026-03-10T12:40:00.000Z",
+        "status": "update",
+        "message": "We identified and investigated resource constraints."
+      },
+      {
+        "timestamp": "2026-03-10T18:00:00.000Z",
+        "status": "update",
+        "message": "Rollback actions completed across all affected regions."
+      },
+      {
+        "timestamp": "2026-03-10T19:30:00.000Z",
+        "status": "update",
+        "message": "Full capacity information was restored across regions, traffic distribution normalized."
+      },
+      {
+        "timestamp": "2026-03-10T19:32:00.000Z",
+        "status": "update",
+        "message": "Once monitoring confirmed stable recovery, we determined the service was fully restored and all customer impact had been mitigated."
+      }
+    ],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-_SVS-5_G",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) – Power event impacting multiple services – West US",
+    "description": "Between 07:58 UTC on 07 February 2026 and 04:24 UTC on 08 February 2026, impacted customers experienced intermittent service unavailability, timeouts and/or higher than normal latency for services in the West US region. The event began following a power interruption affecting one of the datacenters within the region, after which impact manifested as infrastructure availability loss and service disruptions across multiple dependent workloads in the region.",
+    "severity": "major",
+    "status": "resolved",
+    "startedAt": "2026-02-07T07:54:00.000Z",
+    "resolvedAt": "2026-02-09T03:42:00.000Z",
+    "durationMinutes": 2628,
+    "affectedServices": [
+      {
+        "serviceName": "Azure AI Search",
+        "category": "other",
+        "regions": [
+          "West US"
+        ]
+      },
+      {
+        "serviceName": "Azure App Service",
+        "category": "compute",
+        "regions": [
+          "West US"
+        ]
+      },
+      {
+        "serviceName": "Azure Backup",
+        "category": "other",
+        "regions": [
+          "West US"
+        ]
+      },
+      {
+        "serviceName": "Azure Cache for Redis",
+        "category": "database",
+        "regions": [
+          "West US"
+        ]
+      },
+      {
+        "serviceName": "Azure Container Registry",
+        "category": "other",
+        "regions": [
+          "West US"
+        ]
+      },
+      {
+        "serviceName": "Azure Cosmos DB",
+        "category": "database",
+        "regions": [
+          "West US"
+        ]
+      },
+      {
+        "serviceName": "Azure Data Factory",
+        "category": "analytics",
+        "regions": [
+          "West US"
+        ]
+      },
+      {
+        "serviceName": "Azure Database for MySQL – Flexible Server",
+        "category": "other",
+        "regions": [
+          "West US"
+        ]
+      },
+      {
+        "serviceName": "Azure Database for PostgreSQL – Flexible Server",
+        "category": "other",
+        "regions": [
+          "West US"
+        ]
+      },
+      {
+        "serviceName": "Azure Databricks",
+        "category": "other",
+        "regions": [
+          "West US"
+        ]
+      },
+      {
+        "serviceName": "Azure DevOps",
+        "category": "devtools",
+        "regions": [
+          "West US"
+        ]
+      },
+      {
+        "serviceName": "Azure Event Hubs",
+        "category": "messaging",
+        "regions": [
+          "West US"
+        ]
+      },
+      {
+        "serviceName": "Azure IoT Hub",
+        "category": "other",
+        "regions": [
+          "West US"
+        ]
+      },
+      {
+        "serviceName": "Azure Kubernetes Service (AKS)",
+        "category": "compute",
+        "regions": [
+          "West US"
+        ]
+      },
+      {
+        "serviceName": "Azure Key Vault",
+        "category": "security",
+        "regions": [
+          "West US"
+        ]
+      },
+      {
+        "serviceName": "Azure Monitor",
+        "category": "management",
+        "regions": [
+          "West US"
+        ]
+      },
+      {
+        "serviceName": "Azure Monitor (Application Insights)",
+        "category": "other",
+        "regions": [
+          "West US"
+        ]
+      },
+      {
+        "serviceName": "Azure Service Bus",
+        "category": "messaging",
+        "regions": [
+          "West US"
+        ]
+      },
+      {
+        "serviceName": "Azure SQL Database",
+        "category": "database",
+        "regions": [
+          "West US"
+        ]
+      },
+      {
+        "serviceName": "Azure Storage",
+        "category": "other",
+        "regions": [
+          "West US"
+        ]
+      },
+      {
+        "serviceName": "Azure Stream Analytics",
+        "category": "analytics",
+        "regions": [
+          "West US"
+        ]
+      },
+      {
+        "serviceName": "Azure Virtual Machines",
+        "category": "compute",
+        "regions": [
+          "West US"
+        ]
+      },
+      {
+        "serviceName": "Azure Virtual Machines (Confidential VM types)",
+        "category": "other",
+        "regions": [
+          "West US"
+        ]
+      },
+      {
+        "serviceName": "Microsoft Defender for Cloud Apps",
+        "category": "other",
+        "regions": [
+          "West US"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-02-07T07:54:00.000Z",
+        "status": "update",
+        "message": "Initial electrical failure in an onsite transformer, although various UPS batteries carried the load for several minutes."
+      },
+      {
+        "timestamp": "2026-02-07T07:58:00.000Z",
+        "status": "update",
+        "message": "Customers began experiencing unavailability and delayed monitoring/log data."
+      },
+      {
+        "timestamp": "2026-02-07T08:07:00.000Z",
+        "status": "update",
+        "message": "Datacenter and engineering teams engaged and initiated coordinated investigation across power, network, storage, and compute recovery workstreams."
+      },
+      {
+        "timestamp": "2026-02-07T09:31:00.000Z",
+        "status": "update",
+        "message": "90% of facility power restored on generators."
+      },
+      {
+        "timestamp": "2026-02-07T11:26:00.000Z",
+        "status": "update",
+        "message": "93% of facility power restored on generators."
+      },
+      {
+        "timestamp": "2026-02-07T11:29:00.000Z",
+        "status": "update",
+        "message": "100% of facility power restored on generators with continued recovery of hosted services."
+      },
+      {
+        "timestamp": "2026-02-07T12:15:00.000Z",
+        "status": "update",
+        "message": "Storage recovery started and dependent services started seeing recovery."
+      },
+      {
+        "timestamp": "2026-02-07T15:00:00.000Z",
+        "status": "update",
+        "message": "Targeted remediation actions continued for remaining unhealthy services."
+      },
+      {
+        "timestamp": "2026-02-07T15:25:00.000Z",
+        "status": "update",
+        "message": "Applied configuration changes to optimize processing of recovery events, to assist in expediting the recovery of compute services."
+      },
+      {
+        "timestamp": "2026-02-07T19:05:00.000Z",
+        "status": "update",
+        "message": "Storage recovery was complete."
+      },
+      {
+        "timestamp": "2026-02-07T19:24:00.000Z",
+        "status": "update",
+        "message": "Compute recovery system stabilized and fully operational, continued gradually restoring remaining nodes."
+      },
+      {
+        "timestamp": "2026-02-07T23:30:00.000Z",
+        "status": "update",
+        "message": "Long tail of Compute nodes impact mitigated."
+      },
+      {
+        "timestamp": "2026-02-08T04:24:00.000Z",
+        "status": "update",
+        "message": "All affected services confirmed mitigated."
+      },
+      {
+        "timestamp": "2026-02-09T03:42:00.000Z",
+        "status": "update",
+        "message": "Power was transitioned back to utility power, restoring the datacenter to normal operations."
+      }
+    ],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-FNJ8-VQZ",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) – Virtual Machines, Managed identities for Azure resources, and dependent services – Service management issues in multiple regions",
+    "description": "Between 18:03 UTC on 02 February 2026 and approximately 00:30 UTC on 03 February 2026, a platform issue caused some customers to experience degraded performance and control plane failures, for multiple Azure services across multiple regions. Impacted services included:",
+    "severity": "major",
+    "status": "resolved",
+    "startedAt": "2026-02-02T18:03:00.000Z",
+    "resolvedAt": "2026-02-03T06:05:00.000Z",
+    "durationMinutes": 722,
+    "affectedServices": [
+      {
+        "serviceName": "Azure Virtual Machines (VMs)",
+        "category": "other",
+        "regions": [
+          "East US",
+          "West US"
+        ]
+      },
+      {
+        "serviceName": "Azure Virtual Machine Scale Sets (VMSS)",
+        "category": "other",
+        "regions": [
+          "East US",
+          "West US"
+        ]
+      },
+      {
+        "serviceName": "Azure Kubernetes Service (AKS)",
+        "category": "compute",
+        "regions": [
+          "East US",
+          "West US"
+        ]
+      },
+      {
+        "serviceName": "Azure DevOps (ADO)",
+        "category": "other",
+        "regions": [
+          "East US",
+          "West US"
+        ]
+      },
+      {
+        "serviceName": "Other dependent services",
+        "category": "other",
+        "regions": [
+          "East US",
+          "West US"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-02-02T18:03:00.000Z",
+        "status": "update",
+        "message": "Customer impact began, triggered by the periodic remediation workflow starting."
+      },
+      {
+        "timestamp": "2026-02-02T18:29:00.000Z",
+        "status": "update",
+        "message": "Internal service monitoring detected a subset of regions having an increasing number of control plane failures."
+      },
+      {
+        "timestamp": "2026-02-02T19:46:00.000Z",
+        "status": "update",
+        "message": "Correlated issues across multiple regions."
+      },
+      {
+        "timestamp": "2026-02-02T19:55:00.000Z",
+        "status": "update",
+        "message": "Service monitoring detected failure rates exceeding failure limit thresholds."
+      },
+      {
+        "timestamp": "2026-02-02T20:10:00.000Z",
+        "status": "update",
+        "message": "We began collaborating to devise a mitigation solution and investigate the underlying factors."
+      },
+      {
+        "timestamp": "2026-02-02T21:15:00.000Z",
+        "status": "update",
+        "message": "We applied a primary proposed mitigation and validated that it was successful on a test instance."
+      },
+      {
+        "timestamp": "2026-02-02T21:18:00.000Z",
+        "status": "update",
+        "message": "We identified and disabled the remediation workflow and stopped any ongoing activity, so it would not impact additional storage accounts."
+      },
+      {
+        "timestamp": "2026-02-02T21:50:00.000Z",
+        "status": "update",
+        "message": "Began broader mitigation to impacted storage accounts. Customers saw improvements as work progressed."
+      },
+      {
+        "timestamp": "2026-02-03T00:07:00.000Z",
+        "status": "update",
+        "message": "Storage accounts for a few high volume VM extensions that utilize managed identity finished their re-enablement in East US."
+      },
+      {
+        "timestamp": "2026-02-03T00:08:00.000Z",
+        "status": "update",
+        "message": "Unexpectedly, customer impact increased first in East US and cascaded to West US with retries, as a critical managed identity service degraded under recovery load."
+      },
+      {
+        "timestamp": "2026-02-03T00:14:00.000Z",
+        "status": "update",
+        "message": "Automated alerting identified availability impact to Managed Identity services in East US. Engineers quickly recognized that the service was overloaded and began to scale out."
+      },
+      {
+        "timestamp": "2026-02-03T00:30:00.000Z",
+        "status": "update",
+        "message": "All extension hosting storage accounts had been reenabled, mitigating this impact in all regions other than East US and West US."
+      },
+      {
+        "timestamp": "2026-02-03T00:50:00.000Z",
+        "status": "update",
+        "message": "Initial scale outs of managed identity service infrastructure scale out completed, but the new resources were still unable to handle the traffic volume due to the increasing backlog of retried requests."
+      },
+      {
+        "timestamp": "2026-02-03T02:00:00.000Z",
+        "status": "update",
+        "message": "A second, larger set of managed identity service scale outs completed. Once again, the capacity was unable to handle the volume of backlogs and retries."
+      },
+      {
+        "timestamp": "2026-02-03T02:15:00.000Z",
+        "status": "update",
+        "message": "Reviewed additional data and monitored downstream services to ensure that all mitigations were in place for all impacted storage accounts."
+      },
+      {
+        "timestamp": "2026-02-03T03:55:00.000Z",
+        "status": "update",
+        "message": "To recover infrastructure capacity for the managed identity service, we began rolling out a change to remove all traffic so that the infrastructure could be repaired without load."
+      },
+      {
+        "timestamp": "2026-02-03T04:25:00.000Z",
+        "status": "update",
+        "message": "After infrastructure nodes recovered, we began gradually ramping traffic to them, allowing backlogged identity operations to begin to process safely."
+      },
+      {
+        "timestamp": "2026-02-03T06:05:00.000Z",
+        "status": "update",
+        "message": "Backlogged operations completed, and services returned to normal operating levels. We concluded our monitoring and confirmed that all customer impact had been mitigated."
+      }
+    ],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-FV31-PQG",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) – Entra Privileged Identity Management – Customers experiencing API failures",
+    "description": "Between 08:05 UTC and 18:30 UTC on 22 December 2025, the Microsoft Entra Privileged Identity Management (PIM) service experienced issues that impacted role activations for a subset of customers. Some requests returned server errors (5xx) and, for a portion of customers, some requests returned unexpected client errors (4xx). This issue manifested as API failures, elevated latency, and various activation errors.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2025-12-15T21:36:00.000Z",
+    "resolvedAt": "2025-12-22T18:30:00.000Z",
+    "durationMinutes": 9894,
+    "affectedServices": [
+      {
+        "serviceName": "Entra Privileged Identity Management",
+        "category": "other",
+        "regions": []
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2025-12-15T21:36:00.000Z",
+        "status": "update",
+        "message": "The configuration change deployment was initiated."
+      },
+      {
+        "timestamp": "2025-12-19T22:08:00.000Z",
+        "status": "update",
+        "message": "The configuration change was progressed to the ring with the heavy workload."
+      },
+      {
+        "timestamp": "2025-12-22T08:05:00.000Z",
+        "status": "update",
+        "message": "Initial customer impact began."
+      },
+      {
+        "timestamp": "2025-12-22T08:26:00.000Z",
+        "status": "update",
+        "message": "Automated alerts received for intermittent, low volume of errors prompting us to start investigating."
+      },
+      {
+        "timestamp": "2025-12-22T10:30:00.000Z",
+        "status": "update",
+        "message": "We attempted isolated restarts on impacted database instances in an effort to mitigate low-level impact."
+      },
+      {
+        "timestamp": "2025-12-22T13:03:00.000Z",
+        "status": "update",
+        "message": "Automated monitoring alerted us to elevated error rates and a full incident response was initiated."
+      },
+      {
+        "timestamp": "2025-12-22T13:22:00.000Z",
+        "status": "update",
+        "message": "We identified that calls to the database were intermittently timing out. Traffic volume appeared to be normal with no significant surge detected however we observed the spike in CPU utilization."
+      },
+      {
+        "timestamp": "2025-12-22T13:54:00.000Z",
+        "status": "update",
+        "message": "Mitigation efforts began, including beginning to scale out the impacted environments."
+      },
+      {
+        "timestamp": "2025-12-22T15:05:00.000Z",
+        "status": "update",
+        "message": "Scale out efforts were observed as decreasing error rates but not completely eliminating failures. Further instance restarts provided temporary relief."
+      },
+      {
+        "timestamp": "2025-12-22T15:25:00.000Z",
+        "status": "update",
+        "message": "Scaling efforts continued. We engaged our database engineering team to help investigate."
+      },
+      {
+        "timestamp": "2025-12-22T16:37:00.000Z",
+        "status": "update",
+        "message": "While we did not correlate the deployment to this incident, we initiated a rollback of the configuration change."
+      },
+      {
+        "timestamp": "2025-12-22T17:20:00.000Z",
+        "status": "update",
+        "message": "Scale-out efforts completed."
+      },
+      {
+        "timestamp": "2025-12-22T17:45:00.000Z",
+        "status": "update",
+        "message": "Service availability telemetry was showing improvements. Some customers began to report recovery."
+      },
+      {
+        "timestamp": "2025-12-22T18:30:00.000Z",
+        "status": "update",
+        "message": "Customer impact confirmed as mitigated, after rollback of configuration change had completed and error rates had returned to normal levels."
+      }
+    ],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-ML7_-DWG",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) – Azure Resource Manager – Service management failures affecting Azure Government",
+    "description": "Between 11:04 and 14:13 EST on 08 December 2025, customers using any of the Azure Government regions may have experienced failures when attempting to perform service management operations through Azure Resource Manager (ARM). This included operations attempted through the Azure Portal, Azure REST APIs, Azure PowerShell, and Azure CLI.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2025-12-07T23:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Azure Resource Manager",
+        "category": "management",
+        "regions": []
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-JSNV-FBZ",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) – Azure Resource Manager – Service management failures affecting Azure in China",
+    "description": "Between 16:50 CST on 08 December 2025 and 02:00 CST on 09 December 2025 (China Standard Time) customers using any of the Azure in China regions may have experienced failures when attempting to perform service management operations through Azure Resource Manager (ARM). This included operations attempted through the Azure Portal, Azure REST APIs, Azure PowerShell, and Azure CLI.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2025-12-07T23:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Azure Resource Manager",
+        "category": "management",
+        "regions": []
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-2LGD-9VG",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) – Thermal event impacting multiple services in AZ01 – West Europe",
+    "description": "Between approximately 16:53 UTC on 5 November 2025 and 02:25 UTC on 6 November 2025, a subset of customers in the West Europe region experienced service disruptions or degraded performance across multiple services, including Virtual Machines (VM), Azure Database for PostgreSQL Flexible Server, MySQL Flexible Server, Azure Kubernetes Service, Storage, Service Bus, and Virtual Machine Scale Sets, among others. Customers using Azure Databricks in West Europe observed degraded performance when launching or scaling all-purpose and job compute workloads, which impacted Unity Catalog and Databricks SQL operations.",
+    "severity": "major",
+    "status": "resolved",
+    "startedAt": "2025-11-05T16:53:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Thermal event impacting multiple services in AZ01",
+        "category": "other",
+        "regions": [
+          "West Europe"
+        ]
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-YKYN-BWZ",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) – Azure Front Door – Connectivity issues across multiple regions",
+    "description": "Between 15:41 UTC on 29 October and 00:05 UTC on 30 October 2025, customers and Microsoft services leveraging Azure Front Door (AFD) and Azure Content Delivery Network (CDN) experienced connection timeout errors and Domain Name System (DNS) resolution issues. From 18:30 UTC on 29 October 2025, as the system recovered gradually, some customers started to see availability improve – albeit with increased latency – until the system fully stabilized by 00:05 UTC on 30 October 2025.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2025-10-30T00:05:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Azure Front Door",
+        "category": "networking",
+        "regions": []
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-QKNQ-PB8",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) – Azure Portal and other management portals – Access issues in multiple regions",
+    "description": "Between 19:43 UTC and 23:59 UTC on 09 October 2025, customers may have experienced availability issues and failures when loading content for the Azure Portal as well as other management portals across Microsoft. Over the course of the incident, approximately 45% of customers using the management portals experienced some form of impact – with failure rates reaching their peak at approximately 20:54 UTC, after which time customers generally experienced availability improving when attempting to load content. Note that service management via programmatic methods (such as PowerShell or the REST API) and the availability of resources were not impacted.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2025-10-09T11:59:00.000Z",
+    "resolvedAt": "2025-10-09T23:59:00.000Z",
+    "durationMinutes": 720,
+    "affectedServices": [
+      {
+        "serviceName": "Azure Portal and other management portals",
+        "category": "other",
+        "regions": []
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2025-10-09T11:59:00.000Z",
+        "status": "update",
+        "message": "We performed operations to allow management portal traffic to bypass AFD."
+      },
+      {
+        "timestamp": "2025-10-09T19:39:00.000Z",
+        "status": "update",
+        "message": "After verifying recovery of the previous incident, we took steps to migrate management portal traffic back completely through AFD."
+      },
+      {
+        "timestamp": "2025-10-09T19:43:00.000Z",
+        "status": "update",
+        "message": "Management portal availability issues occurred and impact grew."
+      },
+      {
+        "timestamp": "2025-10-09T19:44:00.000Z",
+        "status": "update",
+        "message": "Initial automated alerts were triggered."
+      },
+      {
+        "timestamp": "2025-10-09T19:50:00.000Z",
+        "status": "update",
+        "message": "Engineers were engaged and began investigating."
+      },
+      {
+        "timestamp": "2025-10-09T20:30:00.000Z",
+        "status": "update",
+        "message": "We confirmed the issues were related to the traffic migration and continued to investigate contributing factors."
+      },
+      {
+        "timestamp": "2025-10-09T20:54:00.000Z",
+        "status": "update",
+        "message": "We recovered one hosting service domain to correctly resume traffic through AFD and purged its caches to speed up recovery. Gradual recovery happened over the next 60 minutes, though other residual impact continued."
+      },
+      {
+        "timestamp": "2025-10-09T21:30:00.000Z",
+        "status": "update",
+        "message": "Azure Portal availability was mitigated, however other residual impact remained for other management portals. We shifted our focus to investigating these other residual failures and mitigating this impact."
+      },
+      {
+        "timestamp": "2025-10-09T23:59:00.000Z",
+        "status": "update",
+        "message": "We recovered an additional hosting service domain to correctly resume traffic through AFD. After reviewing our configuration and monitoring telemetry, we confirmed mitigation."
+      }
+    ],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-QNBQ-5W8",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) – Azure Front Door – Access issues in multiple regions",
+    "description": "Between 07:50 UTC and 16:00 UTC on 09 October 2025, Microsoft services and Azure customers leveraging Azure Front Door (AFD) and Azure Content Delivery Network (CDN) may have experienced increased latency and/or timeouts – primarily across Africa and Europe, as well as Asia Pacific and the Middle East. This impacted the availability of the Azure Portal as well as other management portals across Microsoft.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2025-10-09T07:30:00.000Z",
+    "resolvedAt": "2025-10-09T16:00:00.000Z",
+    "durationMinutes": 510,
+    "affectedServices": [
+      {
+        "serviceName": "Azure Front Door",
+        "category": "networking",
+        "regions": []
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2025-10-09T07:30:00.000Z",
+        "status": "update",
+        "message": "The cleanup operation was initiated."
+      },
+      {
+        "timestamp": "2025-10-09T07:50:00.000Z",
+        "status": "update",
+        "message": "Initial customer impact began, and increased over the next 90 minutes."
+      },
+      {
+        "timestamp": "2025-10-09T08:13:00.000Z",
+        "status": "update",
+        "message": "Our telemetry detected resource availability loss across multiple AFD edge sites. We began investigating as impact continued to grow."
+      },
+      {
+        "timestamp": "2025-10-09T09:04:00.000Z",
+        "status": "update",
+        "message": "We identified that the crashes were due to the previously identified data plane bug."
+      },
+      {
+        "timestamp": "2025-10-09T09:08:00.000Z",
+        "status": "update",
+        "message": "Automated restarts began for our AFD infrastructure resources, and manual intervention began for resources that did not recover automatically."
+      },
+      {
+        "timestamp": "2025-10-09T09:15:00.000Z",
+        "status": "update",
+        "message": "Customer impact had grown to be at its peak."
+      },
+      {
+        "timestamp": "2025-10-09T10:01:00.000Z",
+        "status": "update",
+        "message": "Communications were published to the Azure Status page."
+      },
+      {
+        "timestamp": "2025-10-09T10:45:00.000Z",
+        "status": "update",
+        "message": "Targeted customer communications were sent to Azure Service Health."
+      },
+      {
+        "timestamp": "2025-10-09T11:59:00.000Z",
+        "status": "update",
+        "message": "Management portals, like the Azure Portal, performed failover operations (including using scripts to update the load balancing configuration, to split traffic between multiple routes) helping restore its service availability."
+      },
+      {
+        "timestamp": "2025-10-09T12:50:00.000Z",
+        "status": "update",
+        "message": "Availability for AFD fully recovered, however a subset of customers may still have been experiencing elevated latency."
+      },
+      {
+        "timestamp": "2025-10-09T16:00:00.000Z",
+        "status": "update",
+        "message": "After continuous monitoring of latency improvement, we declared the incident as mitigated after confirming recovery."
+      }
+    ],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-BT6W-FX0",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) – Network Connectivity – Multiple services impacted in Switzerland North",
+    "description": "Between 23:54 UTC on 26 September 2025 and 21:59 UTC on 27 September 2025, a platform issue resulted in an impact to customers in Switzerland North who may have experienced service availability issues for resources hosted in the region. Many customers experienced mitigation by 04:00 UTC on 27 September 2025, while those impacted by additional residual impacts that remained after initial mitigation steps experienced full mitigation as late as 21:59 UTC on 27 September 2025.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2025-09-26T23:54:00.000Z",
+    "resolvedAt": "2025-09-27T21:59:00.000Z",
+    "durationMinutes": 1325,
+    "affectedServices": [
+      {
+        "serviceName": "Network Connectivity",
+        "category": "other",
+        "regions": []
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2025-09-26T23:54:00.000Z",
+        "status": "update",
+        "message": "Customer impact began, triggered by the configuration change."
+      },
+      {
+        "timestamp": "2025-09-27T00:08:00.000Z",
+        "status": "update",
+        "message": "The issue was detected via our automated monitoring."
+      },
+      {
+        "timestamp": "2025-09-27T00:12:00.000Z",
+        "status": "update",
+        "message": "Investigation commenced by our Azure Storage and Networking engineering teams."
+      },
+      {
+        "timestamp": "2025-09-27T02:33:00.000Z",
+        "status": "update",
+        "message": "We performed steps to revert the configuration change for the Switzerland North region."
+      },
+      {
+        "timestamp": "2025-09-27T03:40:00.000Z",
+        "status": "update",
+        "message": "The certificate was successfully reverted for the region."
+      },
+      {
+        "timestamp": "2025-09-27T04:00:00.000Z",
+        "status": "update",
+        "message": "Validation of recovery was confirmed for the majority of impacted services, but a subset of resources were still unhealthy due to residual impact. We performed an extended health evaluation to confirm which remaining resources required recovery, and investigated the steps were needed to recover residual impact."
+      },
+      {
+        "timestamp": "2025-09-27T06:19:00.000Z",
+        "status": "update",
+        "message": "We took additional time to recover remaining residual impact which included developing and validating new scripts to start resources that did not recover automatically."
+      },
+      {
+        "timestamp": "2025-09-27T11:24:00.000Z",
+        "status": "update",
+        "message": "Performed necessary checks to test safe recovery actions for different types of resources."
+      },
+      {
+        "timestamp": "2025-09-27T14:15:00.000Z",
+        "status": "update",
+        "message": "Recovery operations were performed for residual impact. This included executing mitigation scripts, and performing steps to safely reboot and recover remaining resources."
+      },
+      {
+        "timestamp": "2025-09-27T16:15:00.000Z",
+        "status": "update",
+        "message": "Partial recovery for residual impact. Additional operations to recover the remaining impact included properly restarting the resources in a stopped state."
+      },
+      {
+        "timestamp": "2025-09-27T21:59:00.000Z",
+        "status": "update",
+        "message": "Residual impact recovery activities and validation completed, confirming full recovery of all impacted services and customers."
+      }
+    ],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-VKY3-PF8",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) – Service management operations failures in East US 2",
+    "description": "Between 09:03 UTC and 18:50 UTC on 10 September 2025, an issue with the Allocator service in the Azure Compute control plane, led to degraded service management operations for resources in two Availability Zones (physical AZ02 and AZ03) in the East US 2 region. While the Allocator issue was mitigated by 18:50 UTC, a subset of downstream services experienced delayed recovery due to backlogged operations and retry mechanisms, with full recovery observed by 19:30 UTC.",
+    "severity": "critical",
+    "status": "resolved",
+    "startedAt": "2025-09-10T09:03:00.000Z",
+    "resolvedAt": "2025-09-10T19:30:00.000Z",
+    "durationMinutes": 627,
+    "affectedServices": [
+      {
+        "serviceName": "Service management operations failures in East US 2",
+        "category": "other",
+        "regions": [
+          "East US 2"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2025-09-10T09:03:00.000Z",
+        "status": "update",
+        "message": "Customer impact began in AZ03."
+      },
+      {
+        "timestamp": "2025-09-10T09:13:00.000Z",
+        "status": "update",
+        "message": "Monitoring systems observed a spike in allocation failure rates for Virtual Machines, triggering an alert and prompting teams to investigate."
+      },
+      {
+        "timestamp": "2025-09-10T09:23:00.000Z",
+        "status": "update",
+        "message": "Initial targeted communications sent to customers via Azure Service Health. Automated messaging gradually expanded as impact increased, and additional service alerts were triggered."
+      },
+      {
+        "timestamp": "2025-09-10T09:30:00.000Z",
+        "status": "update",
+        "message": "We began manual mitigation efforts in AZ03 by restarting critical service components to restore functionality, rerouting workloads from affected infrastructure, and initiated multiple recovery cycles for the impacted backend service."
+      },
+      {
+        "timestamp": "2025-09-10T10:02:00.000Z",
+        "status": "update",
+        "message": "Platform services in AZ02 began to throttle requests due to the accumulation of excessive load, following customer deployments being automatically redirected from AZ03, in addition to normal customer load in AZ02."
+      },
+      {
+        "timestamp": "2025-09-10T11:20:00.000Z",
+        "status": "update",
+        "message": "Platform-initiated retries caused excessive load in AZ02, leading to increased failure rates."
+      },
+      {
+        "timestamp": "2025-09-10T12:00:00.000Z",
+        "status": "update",
+        "message": "We stopped new VM deployments being allocated in AZ03."
+      },
+      {
+        "timestamp": "2025-09-10T12:40:00.000Z",
+        "status": "update",
+        "message": "The reduction in load in AZ03 enabled AZ03 to recover. Customer success rates for operations on VMs that were already deployed into AZ03 returned to normal levels."
+      },
+      {
+        "timestamp": "2025-09-10T13:30:00.000Z",
+        "status": "update",
+        "message": "After verifying that platform-initiated retries had sufficiently drained, we re-enabled new VM deployments to AZ03. We then stopped all new VM deployments in AZ02."
+      },
+      {
+        "timestamp": "2025-09-10T13:30:00.000Z",
+        "status": "update",
+        "message": "We continued to apply additional mitigations to AZ02 platform services with backlogs of retry requests. These included applying more aggressive throttling, draining existing backlogs, restarting services, and applying additional load management strategies."
+      },
+      {
+        "timestamp": "2025-09-10T15:05:00.000Z",
+        "status": "update",
+        "message": "Customer success rates for operations on VMs already deployed into AZ02 started increasing."
+      },
+      {
+        "timestamp": "2025-09-10T16:36:00.000Z",
+        "status": "update",
+        "message": "Broad targeted messaging sent to all customers with Virtual Machines in East US 2."
+      },
+      {
+        "timestamp": "2025-09-10T16:50:00.000Z",
+        "status": "update",
+        "message": "We started gradually re-enabling traffic in AZ02."
+      },
+      {
+        "timestamp": "2025-09-10T17:17:00.000Z",
+        "status": "update",
+        "message": "The first update was posted on the public Azure Status page."
+      },
+      {
+        "timestamp": "2025-09-10T18:50:00.000Z",
+        "status": "update",
+        "message": "After a period of monitoring to validate the health of services, we were confident that the control plane service was restored."
+      },
+      {
+        "timestamp": "2025-09-10T19:30:00.000Z",
+        "status": "update",
+        "message": "Remaining downstream services reported recovery, following backlog drainage and retry stabilization. Customer impact confirmed mitigated."
+      }
+    ],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-Z_SZ-NV8",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) – Network Connectivity – Availability issues in East US",
+    "description": "Between 13:37 and 16:52 UTC on 18 March, and again between 23:20 UTC on 18 March and 00:30 UTC on 19 March, 2025, a combination of a third-party fiber cut, and an internal tooling failure resulted in an impact to a subset of Azure customers with services in our East US region.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2025-03-18T13:37:00.000Z",
+    "resolvedAt": "2025-03-19T06:50:00.000Z",
+    "durationMinutes": 1033,
+    "affectedServices": [
+      {
+        "serviceName": "Network Connectivity",
+        "category": "other",
+        "regions": [
+          "East US"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2025-03-18T13:37:00.000Z",
+        "status": "update",
+        "message": "Customer impact began, triggered by a fiber cut causing network congestion which led to customers experiencing packet drops or intermittent connectivity. Our monitoring systems identified the impact immediately, so our on-call engineers engaged to investigate."
+      },
+      {
+        "timestamp": "2025-03-18T13:45:00.000Z",
+        "status": "update",
+        "message": "Our fiber provider was notified of the fiber cut and prepared for dispatch."
+      },
+      {
+        "timestamp": "2025-03-18T13:55:00.000Z",
+        "status": "update",
+        "message": "Mitigation efforts began identifying the impacted datacenters and redirecting traffic to healthier routes."
+      },
+      {
+        "timestamp": "2025-03-18T15:07:00.000Z",
+        "status": "update",
+        "message": "All customers using the East US region were notified about connectivity issues, even if their services were not directly impacted."
+      },
+      {
+        "timestamp": "2025-03-18T16:52:00.000Z",
+        "status": "update",
+        "message": "Mitigation efforts were successfully completed. All devices affected by the fiber cut were isolated, all customer traffic was using healthy paths and not experiencing congestion."
+      },
+      {
+        "timestamp": "2025-03-18T23:20:00.000Z",
+        "status": "update",
+        "message": "Customer impact recommenced, due to a tooling failure during the capacity repair process of the initial fiber cut."
+      },
+      {
+        "timestamp": "2025-03-19T00:30:00.000Z",
+        "status": "update",
+        "message": "This impact was mitigated after isolating the capacity that was incorrectly added by the tooling failure as part of the recovery process. Customers and services would have experienced full mitigation."
+      },
+      {
+        "timestamp": "2025-03-19T01:52:00.000Z",
+        "status": "update",
+        "message": "The underlying fiber cut was fully restored. We continued to monitor our capacity during the recovery process."
+      },
+      {
+        "timestamp": "2025-03-19T06:50:00.000Z",
+        "status": "update",
+        "message": "Fiber restoration efforts were completed. The incident was confirmed as mitigated."
+      }
+    ],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-ZT0X-9B8",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) – Network Connectivity – Toronto edge site issues",
+    "description": "Between 16:22 and 18:37 UTC on 3 March 2025, a subset of customers experienced issues when connecting to Microsoft services through our Toronto edge point-of-presence (PoP) location. This impacted customers connecting to Microsoft 365 and/or Azure services - including but not limited to Virtual Machines, Storage, App Service, SQL Database, Azure Kubernetes Service and Azure Portal access. These resources remained available for customers when connections were completed through other network paths.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2025-03-03T16:22:00.000Z",
+    "resolvedAt": "2025-03-03T18:37:00.000Z",
+    "durationMinutes": 135,
+    "affectedServices": [
+      {
+        "serviceName": "Network Connectivity",
+        "category": "other",
+        "regions": []
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2025-03-03T16:22:00.000Z",
+        "status": "update",
+        "message": "Customer impact began, as the redundant device began experiencing the hardware failure, while the paired primary device had already been removed from rotation."
+      },
+      {
+        "timestamp": "2025-03-03T16:32:00.000Z",
+        "status": "update",
+        "message": "Our automation attempted to bring the paired primary device back into rotation and, due to system load balancing after route convergence, the impact was marginally reduced."
+      },
+      {
+        "timestamp": "2025-03-03T16:43:00.000Z",
+        "status": "update",
+        "message": "First automated alert raised of potential issues, however the scope of impact was not evident from the alert or initial investigations."
+      },
+      {
+        "timestamp": "2025-03-03T17:19:00.000Z",
+        "status": "update",
+        "message": "Network engineers investigating the issue took steps to remove congestion from the network peer, which reduced impact."
+      },
+      {
+        "timestamp": "2025-03-03T17:27:00.000Z",
+        "status": "update",
+        "message": "Additional customer reports received, following delays in submitting support requests via the Azure Portal."
+      },
+      {
+        "timestamp": "2025-03-03T17:46:00.000Z",
+        "status": "update",
+        "message": "Additional engineering teams were engaged to investigate and mitigate."
+      },
+      {
+        "timestamp": "2025-03-03T17:59:00.000Z",
+        "status": "update",
+        "message": "We began steps to manually remove the redundant device from rotation."
+      },
+      {
+        "timestamp": "2025-03-03T18:37:00.000Z",
+        "status": "update",
+        "message": "We isolated the faulty line card from the device. Network traffic was shifted to healthy routes, connectivity was restored, and we monitored the service health to ensure customers had been mitigated."
+      }
+    ],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-TMS9-J_8",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) – Microsoft Entra ID – DNS authentication failures using Seamless SSO and Microsoft Entra Connect Sync",
+    "description": "Between 16:42 UTC on 25 February 2025 and 01:15 UTC on 26 February 2025, a platform issue affected Microsoft Entra ID, which prevented customers from authenticating via Microsoft Entra ID using the following features:",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2025-02-25T16:42:00.000Z",
+    "resolvedAt": "2025-02-26T01:15:00.000Z",
+    "durationMinutes": 513,
+    "affectedServices": [
+      {
+        "serviceName": "Microsoft Entra ID",
+        "category": "other",
+        "regions": []
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2025-02-25T16:42:00.000Z",
+        "status": "update",
+        "message": "Relevant DNS records were inadvertently removed. Gradual onset of impact as the 5-minute DNS Time to Live (TTL) expired."
+      },
+      {
+        "timestamp": "2025-02-25T17:18:00.000Z",
+        "status": "update",
+        "message": "Investigation started based on internal DNS reachability monitor failures."
+      },
+      {
+        "timestamp": "2025-02-25T17:40:00.000Z",
+        "status": "update",
+        "message": "We identified and isolated the change that introduced the failure."
+      },
+      {
+        "timestamp": "2025-02-25T18:35:00.000Z",
+        "status": "update",
+        "message": "Approximately 94% of the customer impact had been mitigated, as the DNS configuration related to this authentication scenario had been partially restored. This change allowed autologon.microsoftazuread.sso.com to resolve again."
+      },
+      {
+        "timestamp": "2025-02-25T19:16:00.000Z",
+        "status": "update",
+        "message": "First notification posted to Azure Status page banner."
+      },
+      {
+        "timestamp": "2025-02-25T22:35:00.000Z",
+        "status": "update",
+        "message": "Through customer reports, we identified a subset of affected tenants were still experiencing issues, manifesting as 403 Forbidden errors or time outs."
+      },
+      {
+        "timestamp": "2025-02-26T01:05:00.000Z",
+        "status": "update",
+        "message": "The configuration for the affected hostname was rolled back to last known good state using an A record."
+      },
+      {
+        "timestamp": "2025-02-26T01:15:00.000Z",
+        "status": "update",
+        "message": "Traffic fully reverted to regular patterns."
+      }
+    ],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-PLP3-1W8",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) – Networking issues impacting Azure Services in East US 2",
+    "description": "Between 22:31 UTC on 8 January and 00:44 UTC on 11 January 2025, a networking configuration change in a single availability zone (physical zone AZ01) in East US 2 resulted in customers experiencing connectivity issues, prolonged timeouts, connection drops, and resource allocation failures across multiple Azure services. Customers leveraging Private Link with Network Security Groups (NSG) to communicate with Azure services may have also been impacted. Services that were configured to be zonally redundant and leveraging VNet integration may have experienced impact across multiple zones.",
+    "severity": "major",
+    "status": "resolved",
+    "startedAt": "2025-01-11T00:44:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Azure Databricks",
+        "category": "other",
+        "regions": [
+          "East US 2"
+        ]
+      },
+      {
+        "serviceName": "Azure OpenAI",
+        "category": "other",
+        "regions": [
+          "East US 2"
+        ]
+      },
+      {
+        "serviceName": "Azure SQL Managed Instance, Azure Database for PostgreSQL flexible servers, Virtual Machines, Virtual Machine Scale Sets",
+        "category": "other",
+        "regions": [
+          "East US 2"
+        ]
+      },
+      {
+        "serviceName": "Azure App Service, Azure Logic Apps, Azure Function apps",
+        "category": "other",
+        "regions": [
+          "East US 2"
+        ]
+      },
+      {
+        "serviceName": "Azure Container Apps",
+        "category": "other",
+        "regions": [
+          "East US 2"
+        ]
+      },
+      {
+        "serviceName": "Azure SQL Database",
+        "category": "database",
+        "regions": [
+          "East US 2"
+        ]
+      },
+      {
+        "serviceName": "Azure Data Factory and Azure Synapse Analytics",
+        "category": "other",
+        "regions": [
+          "East US 2"
+        ]
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-CNF4-N_0",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) – Services impacted after zonal power issue – South Central US",
+    "description": "Between 18:40 UTC on 26 December and 19:30 UTC on 27 December 2024, multiple Azure services were impacted by a power event that occurred in one datacenter, within one Availability Zone (physical zone AZ03), in the South Central US region. Within the impacted datacenter, our automated power systems managed the event as expected, without interruption for two of the three data halls. However, one data hall did not successfully transition to an alternate power supply. This failure led to a loss of compute, network, and storage infrastructure in this data hall.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2024-12-26T18:40:00.000Z",
+    "resolvedAt": "2024-12-27T19:30:00.000Z",
+    "durationMinutes": 1490,
+    "affectedServices": [
+      {
+        "serviceName": "Services impacted after zonal power issue",
+        "category": "other",
+        "regions": [
+          "South Central US",
+          "East US 2",
+          "Brazil South"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2024-12-26T18:40:00.000Z",
+        "status": "update",
+        "message": "Initial power event occurred which led to power loss in the affected data hall."
+      },
+      {
+        "timestamp": "2024-12-26T18:45:00.000Z",
+        "status": "update",
+        "message": "Technicians from datacenter operations team engaged."
+      },
+      {
+        "timestamp": "2024-12-26T18:46:00.000Z",
+        "status": "update",
+        "message": "Portal Communications started being sent to impacted subscriptions."
+      },
+      {
+        "timestamp": "2024-12-26T19:02:00.000Z",
+        "status": "update",
+        "message": "Datacenter incident call began to support triaging and troubleshooting issues."
+      },
+      {
+        "timestamp": "2024-12-26T19:08:00.000Z",
+        "status": "update",
+        "message": "Azure engineering teams joined a central incident call, to triage and troubleshoot Azure service impact."
+      },
+      {
+        "timestamp": "2024-12-26T20:13:00.000Z",
+        "status": "update",
+        "message": "Power restoration assessed safe and began."
+      },
+      {
+        "timestamp": "2024-12-26T20:35:00.000Z",
+        "status": "update",
+        "message": "Compute, Network, and Storage infrastructure began to recover."
+      },
+      {
+        "timestamp": "2024-12-26T20:54:00.000Z",
+        "status": "update",
+        "message": "Communications published to our public status page."
+      },
+      {
+        "timestamp": "2024-12-26T20:56:00.000Z",
+        "status": "update",
+        "message": "Power had been restored. Infrastructure recovery continued."
+      },
+      {
+        "timestamp": "2024-12-26T21:40:00.000Z",
+        "status": "update",
+        "message": "85% of the VMs impacted by underlying VHD availability recovered."
+      },
+      {
+        "timestamp": "2024-12-27T06:30:00.000Z",
+        "status": "update",
+        "message": "Additional 13% of VMs impacted by VHD availability recovered."
+      },
+      {
+        "timestamp": "2024-12-27T08:30:00.000Z",
+        "status": "update",
+        "message": "Ongoing mitigation of additionally impacted services."
+      },
+      {
+        "timestamp": "2024-12-27T13:00:00.000Z",
+        "status": "update",
+        "message": "Mitigation to most affected services confirmed."
+      },
+      {
+        "timestamp": "2024-12-27T19:30:00.000Z",
+        "status": "update",
+        "message": "Incident mitigation confirmed and declared."
+      }
+    ],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-PSM0-BQ8",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) – Azure Storage – Unreachable Blob and Data Lake storage accounts in multiple regions",
+    "description": "Between 00:50 UTC and 12:30 UTC on 13 November 2024, a subset of Azure Blob Storage and Azure Data Lake Storage accounts experienced connectivity errors. The issue manifested as loss of access to Blob and Data Lake storage endpoints of the affected storage accounts, and subsequent unavailability of downstream services that depended on these storage accounts. Since many of the impacted storage accounts were used by other Azure services and major software vendor solutions, the customer impact was widespread. Although unavailable to access, the data stored in these storage accounts was not impacted during this incident. Impacted downstream services included:",
+    "severity": "critical",
+    "status": "resolved",
+    "startedAt": "2024-11-13T12:30:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Azure Storage",
+        "category": "other",
+        "regions": [
+          "Central US",
+          "East US",
+          "East US 2",
+          "North Central US",
+          "South Central US",
+          "West Central US",
+          "West US",
+          "West US 2",
+          "West US 3",
+          "Australia East",
+          "Australia Southeast",
+          "East Asia",
+          "Japan East",
+          "Japan West",
+          "Southeast Asia",
+          "France Central",
+          "Germany West Central",
+          "North Europe",
+          "UK South",
+          "UK West",
+          "West Europe",
+          "Brazil South",
+          "Canada Central",
+          "Canada East",
+          "Korea Central"
+        ]
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-HSKF-FB0",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) – Azure Resource Manager – Issues in Azure US Government regions",
+    "description": "Between 14:47 and 16:25 EDT on 27 September 2024, a platform issue impacted the Azure Resource Manager (ARM) service in our Azure US Government regions. Impacted customers may have experienced issues attempting control plane operations including create, update and delete operations on resources in the Azure Gov cloud, including the US Gov Arizona, US Gov Texas, and/or US Gov Virginia regions.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2024-09-26T22:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Azure Resource Manager",
+        "category": "management",
+        "regions": []
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-1LG8-1X0",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) – Azure Virtual Desktop – Unable to create new connections, impacting US regions",
+    "description": "Between 18:46 UTC and 20:36 UTC on 16 September 2024, a platform issue resulted in an impact to a subset of customers using Azure Virtual Desktop in several US regions – specifically, those who have their Azure Virtual Desktop configuration and metadata stored in the US Geography, which we host in the East US 2 region. Impacted customers may have experienced failures to access their list of available resources, make new connections, or perform management actions on their Azure Virtual Desktop resources.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2024-09-16T20:36:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Azure Virtual Desktop",
+        "category": "other",
+        "regions": [
+          "East US 2",
+          "Central US",
+          "East US",
+          "North Central US",
+          "South Central US",
+          "West Central US",
+          "West US",
+          "West US 2",
+          "West US 3"
+        ]
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-HVZN-VB0",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) – Azure Resource Manager – Control plane issues in China North 3",
+    "description": "Between 08:00 and 21:30 CST on 5 September 2024, customers in the Azure China regions were seeing delays in long running control plane operations including create, update and delete operations on resources. Although these delays were affecting all regions, the most significant impact was in China North 3. These delays resulted in various issues for customers and services utilizing Azure Resource Manager (ARM), including timeouts and operation failures.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2024-09-04T22:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Azure Resource Manager",
+        "category": "management",
+        "regions": []
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-0N_5-PQ0",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) – Azure Front Door – Intermittent issues with Microsoft services using AFD",
+    "description": "Between 18:22 and 19:49 UTC on 5 August 2024, some customers experienced intermittent connection errors, timeouts, or increased latency while connecting to Microsoft services that leverage Azure Front Door (AFD), because of an issue that impacted multiple geographies. Impacted services included Azure DevOps (ADO) and Azure Virtual Desktop (AVD), as well as a subset of LinkedIn and Microsoft 365 services. This incident specifically impacted Microsoft’s first-party services, and our customers who utilized these Microsoft services that rely on AFD. For clarity, this incident did not impact Azure customers’ services that use AFD directly.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2024-08-05T19:49:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Azure Front Door",
+        "category": "networking",
+        "regions": []
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-KTY1-HW8",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) – Azure Front Door – Connectivity issues in multiple regions",
+    "description": "Between 11:45 and 13:58 UTC on 30 July 2024, a subset of customers experienced intermittent connection errors, timeouts, or latency spikes while connecting to Microsoft services that leverage Azure Front Door (AFD) and Azure Content Delivery Network (CDN). From 13:58 to 19:43 UTC, a smaller set of customers continued to observe a low rate of connection timeouts. Beyond AFD and CDN, downstream services that rely on these were also impacted – including the Azure portal, and a subset of Microsoft 365 and Microsoft Purview services.",
+    "severity": "critical",
+    "status": "resolved",
+    "startedAt": "2024-07-30T11:45:00.000Z",
+    "resolvedAt": "2024-07-30T19:43:00.000Z",
+    "durationMinutes": 478,
+    "affectedServices": [
+      {
+        "serviceName": "Azure Front Door",
+        "category": "networking",
+        "regions": []
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2024-07-30T11:45:00.000Z",
+        "status": "update",
+        "message": "Impact started"
+      },
+      {
+        "timestamp": "2024-07-30T11:47:00.000Z",
+        "status": "update",
+        "message": "Our Azure Portal team detected initial service degradation and began to investigate."
+      },
+      {
+        "timestamp": "2024-07-30T12:10:00.000Z",
+        "status": "update",
+        "message": "Our network monitoring correlated this Portal incident to an underlying network issue at one specific site in Europe, and our networking engineers engaged to support the investigation."
+      },
+      {
+        "timestamp": "2024-07-30T12:55:00.000Z",
+        "status": "update",
+        "message": "We confirmed localized congestion, so engineers began executing our standard playbook to alleviate congestion – including rerouting traffic."
+      },
+      {
+        "timestamp": "2024-07-30T13:13:00.000Z",
+        "status": "update",
+        "message": "Communications were published that we are investigating reports of issues connecting to Microsoft services globally, and stated customers may experience timeouts connecting to Azure services."
+      },
+      {
+        "timestamp": "2024-07-30T13:58:00.000Z",
+        "status": "update",
+        "message": "The changes to reroute traffic successfully mitigated most of the impact by this time, after which the only remaining impact was isolated connection failures."
+      },
+      {
+        "timestamp": "2024-07-30T16:15:00.000Z",
+        "status": "update",
+        "message": "While investigating isolated connection failures, we identified a device within Europe that was not properly obeying commands from the Network control plane and was attracting traffic after it had been told to stop attracting traffic."
+      },
+      {
+        "timestamp": "2024-07-30T16:58:00.000Z",
+        "status": "update",
+        "message": "We ordered the network control plane to reissue its commands, but the problematic device was not accessible as described above."
+      },
+      {
+        "timestamp": "2024-07-30T17:50:00.000Z",
+        "status": "update",
+        "message": "We started the safe removal of the device from the network and began scanning the network for other potential issues."
+      },
+      {
+        "timestamp": "2024-07-30T19:32:00.000Z",
+        "status": "update",
+        "message": "We completed the safe removal of the device from the network."
+      },
+      {
+        "timestamp": "2024-07-30T19:43:00.000Z",
+        "status": "update",
+        "message": "Customer impact mitigated, as we confirmed availability returned to pre-incident levels."
+      }
+    ],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-1K80-N_8",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) – Storage – Impact to multiple services in Central US",
+    "description": "Between 21:40 UTC on 18 July and 22:00 UTC on 19 July 2024, customers may have experienced issues with multiple Azure services in the Central US region, due to an Azure Storage availability event that was resolved by 02:55 UTC on 19 July 2024. This issue affected Virtual Machine (VM) availability, which caused downstream impact to multiple Azure services, including service availability and connectivity issues, and service management failures. Storage scale units hosting Premium v2 and Ultra Disk offerings were not affected.",
+    "severity": "critical",
+    "status": "resolved",
+    "startedAt": "2024-07-19T22:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Storage",
+        "category": "other",
+        "regions": [
+          "Central US",
+          "West US 3",
+          "West Central US"
+        ]
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-1VT1-LX0",
+    "provider": "azure",
+    "title": "Virtual Machines startup failures due to CrowdStrike Falcon Agent update issue",
+    "description": "Virtual Machines startup failures due to CrowdStrike Falcon Agent update issue",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2024-07-18T22:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Virtual Machines startup failures due to CrowdStrike Falcon Agent update issue",
+        "category": "other",
+        "regions": []
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-4L44-3F0",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) – Azure OpenAI Service – Errors in multiple regions",
+    "description": "Between 00:00 UTC and 23:35 UTC on 13 July 2024, an issue during a cleanup operation caused a subset of critical resources to be deleted, which impacted the Azure OpenAI (AOAI) service across multiple regions. A subset of customers experienced errors when calling the Azure OpenAI endpoints and may have experienced issues, such as 5xx errors when accessing their Azure OpenAI service resources, in 14 of the 28 regions that offer AOAI – specifically Australia East, Brazil South, Canada Central, Canada East, East US 2, France Central, Korea Central, North Central US, Norway East, Poland Central, South Africa North, South India, Sweden Central and UK South.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2024-07-13T00:00:00.000Z",
+    "resolvedAt": "2024-07-15T16:54:00.000Z",
+    "durationMinutes": 3894,
+    "affectedServices": [
+      {
+        "serviceName": "Azure OpenAI Service",
+        "category": "ai-ml",
+        "regions": [
+          "East US 2",
+          "North Central US",
+          "Central US",
+          "Australia East",
+          "France Central",
+          "UK South",
+          "Brazil South",
+          "Canada Central",
+          "Canada East",
+          "Korea Central"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2024-07-13T00:00:00.000Z",
+        "status": "update",
+        "message": "Initial customer impact started, as cleanup operations began across regions, gradually increasing as more regions became unhealthy."
+      },
+      {
+        "timestamp": "2024-07-13T00:05:00.000Z",
+        "status": "update",
+        "message": "Service monitoring detected failure rates going above defined thresholds, alerting our engineers who began an investigation."
+      },
+      {
+        "timestamp": "2024-07-13T00:30:00.000Z",
+        "status": "update",
+        "message": "We determined there was a multi-region issue unfolding by correlating alerts, service metrics, and telemetry dashboards. It took 30-40 minutes for the delete to complete, so each region (and even each endpoint in each region) went offline at different times."
+      },
+      {
+        "timestamp": "2024-07-13T00:45:00.000Z",
+        "status": "update",
+        "message": "We identified that backend endpoints were being deleted, but did not yet know how or why. Our on-call engineers were investigating two hypotheses."
+      },
+      {
+        "timestamp": "2024-07-13T00:52:00.000Z",
+        "status": "update",
+        "message": "We classified the event as critical, engaging incident response personnel to further investigate, coordinate resources, and drive customer workstreams."
+      },
+      {
+        "timestamp": "2024-07-13T01:00:00.000Z",
+        "status": "update",
+        "message": "We identified the automated cleanup operation deleting resources. With the problem known, we began mitigation efforts, beginning with stopping the automation that was executing the cleanup."
+      },
+      {
+        "timestamp": "2024-07-13T01:40:00.000Z",
+        "status": "update",
+        "message": "The cleanup job stopped on its own and did not delete everything. However, we continued to work to ensure further deletion was prevented."
+      },
+      {
+        "timestamp": "2024-07-13T02:00:00.000Z",
+        "status": "update",
+        "message": "We added resource locks and stopped delete requests at both the ARM and Automation levels, to prevent further deletion."
+      },
+      {
+        "timestamp": "2024-07-13T02:00:00.000Z",
+        "status": "update",
+        "message": "Initial recovery efforts began to recreate deleted resources. Note regarding recovery time - AOAI models are very large and can only be transferred via secure channels. Within a model pool (there are separate model pools per region per model) each deployment is serial (so the model copying time is a significant factor). Model pools themselves are done in parallel."
+      },
+      {
+        "timestamp": "2024-07-13T02:22:00.000Z",
+        "status": "update",
+        "message": "First communication posted to the Azure Status page. Communications were delayed due to initial difficulties scoping affected customers, and impact analysis gaps in our communications tooling."
+      },
+      {
+        "timestamp": "2024-07-13T03:35:00.000Z",
+        "status": "update",
+        "message": "Customer impact scope determined, and first targeted communications sent to customers via Service Health in the Azure portal."
+      },
+      {
+        "timestamp": "2024-07-13T04:15:00.000Z",
+        "status": "update",
+        "message": "GPT-3.5-Turbo started recovering in North Central US."
+      },
+      {
+        "timestamp": "2024-07-13T07:10:00.000Z",
+        "status": "update",
+        "message": "GPT-4o recovered in East US 2."
+      },
+      {
+        "timestamp": "2024-07-13T07:10:00.000Z",
+        "status": "update",
+        "message": "Majority of regions and models began recovering."
+      },
+      {
+        "timestamp": "2024-07-13T08:35:00.000Z",
+        "status": "update",
+        "message": "GPT-4 in majority of regions recovered and serving traffic."
+      },
+      {
+        "timestamp": "2024-07-13T10:20:00.000Z",
+        "status": "update",
+        "message": "Majority of models and regions recovered, error rates dropped to normal levels. GPT-4 recovered in all regions except Canada Central, Sweden Central, North Central US, UK South, Central US, and Australia East."
+      },
+      {
+        "timestamp": "2024-07-13T15:40:00.000Z",
+        "status": "update",
+        "message": "GPT-4 in North Central recovered."
+      },
+      {
+        "timestamp": "2024-07-13T17:35:00.000Z",
+        "status": "update",
+        "message": "Recovered in all regions except Sweden Central."
+      },
+      {
+        "timestamp": "2024-07-13T19:20:00.000Z",
+        "status": "update",
+        "message": "DALL-E restored in all regions."
+      },
+      {
+        "timestamp": "2024-07-13T19:30:00.000Z",
+        "status": "update",
+        "message": "GPT-4 in UK South is recovered."
+      },
+      {
+        "timestamp": "2024-07-13T20:20:00.000Z",
+        "status": "update",
+        "message": "GPT-4o recovered in Sweden Central."
+      },
+      {
+        "timestamp": "2024-07-13T23:35:00.000Z",
+        "status": "update",
+        "message": "All base models recovered, and service restoration completed across all affected regions."
+      },
+      {
+        "timestamp": "2024-07-15T14:00:00.000Z",
+        "status": "update",
+        "message": "Fine tuning model recovery across various regions."
+      },
+      {
+        "timestamp": "2024-07-15T16:54:00.000Z",
+        "status": "update",
+        "message": "All fine-tuning model deployments restored across affected regions."
+      }
+    ],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-FTVR-L9Z",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) – Managed Identities for Azure resources – Failures in Australia East",
+    "description": "A platform issue caused some of our 'Managed Identities for Azure resources' (formerly Managed Service Identity or MSI) customers to experience failures when requesting managed identity tokens or performing management operations for managed identities in the Australia East region, between 00:55 UTC and 06:28 UTC on 12 July 2024. All identities in this region were subject to impact.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2024-07-12T06:28:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Managed Identities for Azure resources",
+        "category": "other",
+        "regions": [
+          "Australia East",
+          "Australia Southeast"
+        ]
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-V_BH-7DZ",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) – DNS resolution issues impacted Azure in China",
+    "description": "Between 03:45 CST and 06:00 CST on 23 Apr 2024, a configuration change performed through a domain registrar resulted in a service disruption to 2 system domains (chinacloudapp.cn and chinacloudsites.cn) that are critical in our cloud operations in China. This caused the following impact in the Azure China regions:",
+    "severity": "major",
+    "status": "resolved",
+    "startedAt": "2024-04-21T22:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "DNS resolution issues impacted Azure in China",
+        "category": "other",
+        "regions": []
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-QS3K-BPZ",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) - Azure Database for MySQL/MariaDB in West US, Azure Databricks in 3 regions",
+    "description": "Between 04:26 UTC and 07:30 UTC on 19 April 2024, a platform issue in the West US region resulted in impact for the following services:",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2024-04-19T07:30:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Azure Database for MySQL/MariaDB in West US, Azure Databricks in 3 regions",
+        "category": "other",
+        "regions": [
+          "West US",
+          "West US 2",
+          "South Central US"
+        ]
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-VT60-RPZ",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) - Network connectivity - Multiple services impacted in South Africa North and South Africa West",
+    "description": "Between 10:33 UTC on 14 March 2024 and 11:00 UTC on 15 March 2024, customers using Azure services in the South Africa North and/or South Africa West regions may have experienced network connectivity failures, including extended periods of increased latency or packet drops when accessing resources. This incident was part of a broader continental issue, impacting telecom services to multiple countries in Africa.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2024-03-14T10:33:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Network connectivity",
+        "category": "other",
+        "regions": []
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-NKRF-1TG",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) - Azure Resource Manager - Services impacted by ARM failures",
+    "description": "Between 01:30 and 08:58 UTC on 21 January 2024, customers attempting to leverage Azure Resource Manager (ARM) may have experienced issues when performing resource management operations. This impacted ARM calls that were made via Azure CLI, Azure PowerShell and the Azure portal. While the impact was predominantly experienced in Central US, East US, South Central US, West Central US, and West Europe, impact may have been experienced to a lesser degree in other regions due to the global nature of ARM.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2024-01-21T08:58:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Azure Resource Manager",
+        "category": "management",
+        "regions": [
+          "Central US",
+          "East US",
+          "South Central US",
+          "West Central US",
+          "West Europe"
+        ]
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-2LZ0-3DG",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) – Services impacted by power, BIOS, and Virtual Machine issues – East US",
+    "description": "Between 07:24 and 19:00 UTC on 16 September 2023, a subset of customers using Virtual Machines (VMs) in the East US region experienced connectivity issues. This incident was triggered when a number of scale units within one of the datacenters in one of the Availability Zones lost power and, as a result, the nodes in these scale units rebooted. While the majority rebooted successfully, a subset of these nodes failed to come back online automatically. This issue caused downstream impact to services that were dependent on these VMs - including SQL Databases, Service Bus and Event Hubs. Impact varied by service and configuration:",
+    "severity": "critical",
+    "status": "resolved",
+    "startedAt": "2023-09-16T19:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Services impacted by power, BIOS, and Virtual Machine issues",
+        "category": "other",
+        "regions": [
+          "East US"
+        ]
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-VVTQ-J98",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) - Services impacted after power/cooling issue - Australia East",
+    "description": "Starting at approximately 10:30 UTC on 30 August 2023, customers may have experienced issues accessing or using Azure, Microsoft 365 and Power Platform services. This incident was triggered by a utility power sag at 08:41 UTC on 30 August 2023, which impacted one of the three Availability Zones of the Australia East region. This power sag tripped a subset of the cooling system chiller units offline and, while working to restore cooling, temperatures in the datacenter increased to levels above operational thresholds. We powered down a small subset of selected compute and storage scale units, both to lower temperatures and to prevent damage to hardware. Although the vast majority of services recovered by 22:40 UTC on 30 August 2023, full mitigation was not until 20:00 UTC on 3 September 2023 – as some services experienced prolonged impact, predominantly as a result of dependencies on recovering subsets of Storage, SQL Database, and/or Cosmos DB services.",
+    "severity": "critical",
+    "status": "resolved",
+    "startedAt": "2023-08-30T10:30:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Services impacted after power/cooling issue",
+        "category": "other",
+        "regions": [
+          "Australia East",
+          "Australia Southeast"
+        ]
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-XMGF-5Z0",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) - Azure Monitor - Logs data access issues",
+    "description": "Between 23:15 UTC on 6 July 2023 and 09:00 UTC on 7 July 2023, a subset of data for Azure Monitor Log Analytics and Microsoft Sentinel failed to ingest. Additionally, platform logs gathered via Diagnostic Settings failed to route some data to customer destinations such as Log Analytics, Storage, Event Hub and Marketplace. These failures were caused by a deployment of a service within Microsoft, with a bug that caused a much higher than expected call volume that overwhelmed the telemetry management control plane. Customers in all regions experienced impact.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2023-07-06T23:15:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Azure Monitor",
+        "category": "management",
+        "regions": []
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-FVHB-188",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) - Networking fiber cut - West Europe",
+    "description": "Between approximately 07:22 UTC and 16:00 UTC on 5 July 2023, Azure customers using the West Europe region may have experienced packet drops, timeouts, and/or increased latency. This impact resulted from a fiber cut caused by severe weather conditions in the Netherlands. The West Europe region has multiple datacenters and is designed with four independent fiber paths for the traffic that flows between datacenters. In this incident, one of the four major paths was cut, which resulted in congestive packet loss when traffic on the remaining links exceeded their capacity.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2023-07-05T16:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Networking fiber cut",
+        "category": "other",
+        "regions": [
+          "West Europe",
+          "North Europe"
+        ]
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-VLB8-1Z0",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) - Networking connectivity issues - West Europe",
+    "description": "Between 02:34 UTC and 07:25 UTC on 16 June 2023, a network issue caused excessive packet loss that affected traffic entering or leaving the West Europe region and, to a lesser extent, traffic between Availability Zones inside the West Europe region. Resources hosted in this region may have experienced availability failures, low throughput, or increased latencies. The traffic loss rate peaked at 10% for short periods of time during the incident.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2023-06-16T07:25:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Networking connectivity issues",
+        "category": "other",
+        "regions": [
+          "West Europe",
+          "North Europe"
+        ]
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-QNPD-NC8",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) - Azure Portal - Errors accessing the Azure portal",
+    "description": "Between 15:10 and 17:00 UTC on 9 June 2023, customers may have experienced error notifications when trying to access the Azure Portal (portal.azure.com), and actions to load new HTTP content in the Azure Portal may have resulted in error notifications. Customers may also have experienced issues accessing other services built on the Azure Portal, like the Microsoft Entra Admin center (entra.microsoft.com) and Microsoft Intune (intune.microsoft.com).",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2023-06-09T17:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Azure Portal",
+        "category": "other",
+        "regions": []
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-RNQ2-NC8",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) – Azure Resource Manager – West Europe",
+    "description": "Between 02:20 UTC and 07:30 UTC on 23 March 2023 you may have experienced issues using Azure Resource Manager (ARM) when performing resource management operations in the West Europe region. This impacted users of Azure CLI, Azure PowerShell, the Azure portal, as well as Azure services which depend upon ARM for their internal resource management operations.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2023-03-23T07:30:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Azure Resource Manager",
+        "category": "management",
+        "regions": [
+          "West Europe"
+        ]
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-R_36-P80",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) - Azure Storage - West Europe",
+    "description": "Between 03:50 UTC and 17:55 UTC on 6 March 2023, a subset of customers using Azure Storage may have experienced greater than expected throttling when performing requests against Storage resources located in the West Europe region. Azure services dependent on Azure Storage may also have experienced intermittent failures and degraded performance due to this issue. These included Azure Automation, Azure Arc enabled Kubernetes, Azure Bastion, Azure Batch, Azure Container Apps, Azure Data Factory (ADF), Azure ExpressRoute \\ ExpressRoute Gateways, Azure HDInsight, Azure Key Vault (AKV), Azure Logic Apps, Azure Monitor, and Azure Synapse Analytics.",
+    "severity": "major",
+    "status": "resolved",
+    "startedAt": "2023-03-06T17:55:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Azure Storage",
+        "category": "other",
+        "regions": [
+          "West Europe"
+        ]
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-VN11-JD8",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) - Multi-service outage – Asia-Pacific Area",
+    "description": "Between 20:19 UTC on 7 February 2023 and 04:30 UTC on 9 February 2023, a subset of customers with workloads hosted in the Southeast Asia and East Asia regions experienced difficulties accessing and managing resources deployed in these regions.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2023-02-07T20:19:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Multi-service outage",
+        "category": "other",
+        "regions": [
+          "Southeast Asia",
+          "East Asia"
+        ]
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-BS81-390",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) - Service management issues - East US 2",
+    "description": "Between 05:55 UTC on 31 January 2023 and 00:58 UTC on 1 February 2023, a subset of customers using Virtual Machines (VMs) in the East US 2 region may have received error notifications when performing service management operations – such as create, delete, update, scale, start, stop – for resource hosted in this region.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2023-01-31T05:55:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Service management issues",
+        "category": "other",
+        "regions": [
+          "East US 2"
+        ]
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-VSG1-B90",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) – Azure Networking – Global WAN issues",
+    "description": "Between 07:08 UTC and 12:43 UTC on 25 January 2023, customers experienced issues with network connectivity, manifesting as long network latency and/or timeouts when attempting to connect to resources hosted in Azure regions, as well as other Microsoft services including Microsoft 365 and Power Platform. This incident also impacted Azure Government cloud services that were dependent on Azure public cloud. While most regions and services had recovered by 09:05 UTC, intermittent packet loss issues caused some customers to continue seeing connectivity issues due to two routers not being able to recover automatically. All issues were fully mitigated by 12:43 UTC.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2023-01-25T12:43:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Azure Networking",
+        "category": "other",
+        "regions": []
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-7NBR-T98",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) - Intermittent networking issues - South Central US",
+    "description": "Between 15:39 UTC and 19:38 UTC on 23 January 2023, a subset of customers in the South Central US region may have experienced increased latency and/or intermittent connectivity issues while accessing services hosted in the region. Downstream services that were impacted by this intermittent networking issue included Azure App Services, Azure Cosmos DB, Azure IoT Hub, and Azure SQL DB.",
+    "severity": "critical",
+    "status": "resolved",
+    "startedAt": "2023-01-23T19:38:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Intermittent networking issues",
+        "category": "other",
+        "regions": [
+          "South Central US"
+        ]
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-6S_Q-JT8",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) – Single zone power event – West Europe",
+    "description": "Between 09:44 and 13:10 UTC on 18 January 2023, a subset of customers using Storage services in West Europe may have experienced higher than expected latency, timeouts or HTTP 500 errors when accessing data stored on Storage accounts hosted in this region. Other Azure services with dependencies on this specific storage infrastructure may also have experienced impact – including Azure Application Insights, Azure Automation, Azure Container Registry, Azure Database for MySQL, Azure Database for PostgreSQL, Azure Red Hat OpenShift, Azure Search, Azure SQL Database, and Azure Virtual Machines (VMs).",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2023-01-18T13:10:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Single zone power event",
+        "category": "other",
+        "regions": [
+          "West Europe"
+        ]
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-YTGZ-1Z8",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) - Enrolling new certificates / Provisioning new resources - Azure Public / Government / China",
+    "description": "Between 00:42 UTC on 2 November and 05:55 UTC on 3 November 2022, customers experienced failures when attempting to provision new resources in a subset of Azure services including Application Gateway, Bastion, Container Apps, Database Services (MySQL - Flexible Server, Postgres - Flexible Server, and others), ExpressRoute, HDInsight, Open AI, SQL Managed Instance, Stream Analytics, VMware Solution, and VPN Gateway. Provisioning new resources in these services requires creating new certificates. The certificate Registration Authority (RA) that processes new certificate requests experienced a service degradation, which led to an incident preventing provisioning new resources in this subset of Azure services. We’re providing you with this Post Incident Review (PIR) to summarize what went wrong, how we responded, and the steps Microsoft is taking to learn and improve. Communications for this incident were provided under Tracking IDs YTGZ-1Z8 (Azure Public), 7LHZ-1S0 (Azure Government) and YTHP-180 (Azure China).",
+    "severity": "major",
+    "status": "resolved",
+    "startedAt": "2022-11-03T05:55:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Enrolling new certificates / Provisioning new resources",
+        "category": "other",
+        "regions": []
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-JKWW-JP8",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) - Azure Cosmos DB - East US",
+    "description": "Between 00:25 UTC and 06:00 UTC on 26 October 2022, a subset of customers using Azure Cosmos DB in the East US region may have experienced issues connecting to the service. Connections to Azure Cosmos DB accounts in this region may have resulted in an error or timeout. Downstream Azure services that rely on Azure Cosmos DB also experienced impact during this window - including Azure Application Insights, Azure Automation, Azure Container Registry, Azure Digital Twins, Azure Policy, Azure Rights Management, Azure Red Hat OpenShift, and Azure Spatial Anchors.",
+    "severity": "critical",
+    "status": "resolved",
+    "startedAt": "2022-10-26T06:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Azure Cosmos DB",
+        "category": "database",
+        "regions": [
+          "East US"
+        ]
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-YV8C-DT0",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) - Azure Front Door - Connectivity Issues",
+    "description": "Between 16:10 and 19:55 UTC on 07 Sep 2022, a subset of customers using Azure Front Door (AFD) experienced intermittent availability drops, connection timeouts and increased latency. At its peak, this impacted approximately 25% of the traffic, and on average, 10% of the traffic that traverses through the AFD service during the impact window. Some customers may have seen higher failures if their traffic was concentrated in the edges or regions with higher impact. This could also have impacted customers’ ability to access other Azure services that leverage AFD, in particular the Azure management portal and Azure Content Delivery Network (CDN).",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2022-09-06T22:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Azure Front Door",
+        "category": "networking",
+        "regions": []
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-3TPC-DT8",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) - Azure Cosmos DB - North Europe",
+    "description": "Between 09:50 UTC and 17:21 UTC on 07 Sep 2022, a subset of customers using Azure Cosmos DB in North Europe may have experienced issues accessing services. Connections to Cosmos DB accounts in this region may have resulted in an error or timeout.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2022-09-06T22:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Azure Cosmos DB",
+        "category": "database",
+        "regions": [
+          "North Europe"
+        ]
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-2TWN-VT0",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) - Canonical Ubuntu issue impacted VMs and AKS",
+    "description": "Between 06:00 UTC on 30 Aug 2022 and 16:00 UTC on 31 Aug 2022, customers running Ubuntu 18.04 (bionic) Virtual Machines (VMs) who had Ubuntu Unattended-Upgrades enabled received a systemd version that resulted in Domain Name System (DNS) resolution errors. This issue was confined to Ubuntu version 18.04, but impacted all Azure regions including public and sovereign clouds.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2022-08-29T22:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Canonical Ubuntu issue impacted VMs and AKS",
+        "category": "other",
+        "regions": []
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-MMXN-RZ0",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) - Datacenter power event - West US 2",
+    "description": "Between 02:47 UTC on 27 Aug 2022 and 02:00 UTC on 28 Aug 2022, a subset of customers experienced failures when trying to access resources hosted in the West US 2 region. Although initially triggered by a utility power outage that affected all of our datacenters in the region, the vast majority of our backup power systems performed as designed to prevent impact. Failures of a small number of backup power systems led to customer impact in two datacenters. Most customers were recovered by 07:00 UTC on 27 Aug 2022, but small subsets of resources required manual recovery – with the final set being brought back online by 02:00 UTC on 28 Aug 2022.",
+    "severity": "critical",
+    "status": "resolved",
+    "startedAt": "2022-08-26T22:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Datacenter power event",
+        "category": "other",
+        "regions": [
+          "West US 2"
+        ]
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-YLBJ-790",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) - Azure Key Vault - Provisioning Failures",
+    "description": "Between 16:30 UTC on 18 Aug 2022 and 02:22 UTC on 19 Aug 2022, a platform issue caused Azure offerings such as Bastion, ExpressRoute, Azure Container Apps, Azure ML, Azure Managed HSM, Azure Confidential VMs, Azure Database Services (MySQL - Flexible Server, Postgres- Flexible Server, PostgreSQL – Hyperscale) to experience provisioning failures globally. This issue impacted customers that relied on provisioning of certificates as part of provisioning of an Azure resource. This write-up is a Post Incident Review (PIR) we are providing to summarize what went wrong, how we responded, and the steps Microsoft is taking to learn from this and improve.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2022-08-17T22:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Azure Key Vault",
+        "category": "security",
+        "regions": []
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-YTYN-5T8",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) - Azure Communication Services - Multiple Regions",
+    "description": "Between 18:13 UTC on 12 Aug 2022 and 03:30 UTC on 13 Aug 2022, customers using Azure Communication Services (ACS) may have experienced authentication failures, or failures using our APIs. As a result, multiple scenarios may have been impacted including SMS, Chat, Email, Voice & Video scenarios, Phone Number Management, and Teams-ACS Interop.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2022-08-11T22:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Azure Communication Services",
+        "category": "other",
+        "regions": []
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-7SHM-P88",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) – Network Connectivity Issues",
+    "description": "Between 08:00 UTC and until 13:20 UTC on 29 July 2022, customers may have experienced connectivity issues such as network drops, latency, and/or degradation when attempting to access or manage Azure resources in multiple regions.",
+    "severity": "major",
+    "status": "resolved",
+    "startedAt": "2022-07-29T13:20:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Network Connectivity Issues",
+        "category": "other",
+        "regions": [
+          "East US",
+          "East US 2",
+          "North Central US",
+          "South Central US",
+          "West US",
+          "East Asia",
+          "Japan East",
+          "Southeast Asia",
+          "France Central",
+          "West Europe",
+          "Brazil South",
+          "Canada Central",
+          "Korea Central"
+        ]
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-3TBL-PD8",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) - SQL Database - West Europe",
+    "description": "Between 03:47 UTC and 13:30 UTC on 21 Jul 2022, customers using SQL Database and SQL Data Warehouse in West Europe may have experienced issues accessing services. During this time, new connections to databases in this region may have resulted in errors or timeouts. Existing connections would have remained available to accept new requests, however if those connections were terminated and then re-established, they may have failed.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2022-07-20T22:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "SQL Database",
+        "category": "other",
+        "regions": [
+          "West Europe"
+        ]
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-YKDK-TT8",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) - Wide Area Network - Multiple Regions",
+    "description": "Across 28 and 29 June, 2022, two independent Azure networking service incidents occurred simultaneously. While very few customer subscriptions were impacted by both, the overlapping nature of the incident timelines meant that we previously delivered a Preliminary Post Incident Review (PIR) that addressed both issues. After thorough investigations, we are publishing a Final PIR for each incident independently. Below is the Final PIR for Incident YKDK-TT8, summarizing our EMEA-impacting Wide Area Network (WAN) issue – we have separately published a Final PIR for Incident YVTL-RS0, summarizing our multi-region Software Load Balancer (SLB) issue.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2022-06-29T20:14:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Wide Area Network",
+        "category": "other",
+        "regions": [
+          "UK West",
+          "UK South"
+        ]
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-YVTL-RS0",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR)  - Azure Software Load Balancer - Multiple Regions",
+    "description": "Across 28 and 29 June, 2022, two independent Azure networking service incidents occurred simultaneously. While very few customer subscriptions were impacted by both, the overlapping nature of the incident timelines meant that we previously delivered a Preliminary Post Incident Review (PIR) that addressed both issues. After thorough investigations, we are publishing a Final PIR for each incident independently. Below is the Final PIR for Incident YVTL-RS0, summarizing our multi-region Software Load Balancer (SLB) issue – we have separately published a Final PIR for Incident YKDK-TT8, summarizing our EMEA-impacting Wide Area Network (WAN) issue.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2022-06-28T05:26:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Azure Software Load Balancer",
+        "category": "other",
+        "regions": []
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-NMB2-ND0",
+    "provider": "azure",
+    "title": "Post Incident Review (PIR) - Datacenter cooling event - East US 2",
+    "description": "Between 02:41 and 14:30 UTC on 07 Jun 2022, a subset of customers experienced difficulties connecting to resources hosted in one particular Availability Zone (AZ) of the East US 2 region. This issue impacted a subset of storage and compute resources within one of the region’s three Availability Zones. As a result, Azure services with dependencies on resources in this zone also experienced impact.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2022-06-06T22:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Datacenter cooling event",
+        "category": "other",
+        "regions": [
+          "East US 2"
+        ]
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-YL23-V90",
+    "provider": "azure",
+    "title": "RCA - Azure Active Directory Sign In logs",
+    "description": "RCA - Azure Active Directory Sign In logs",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2022-05-30T22:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Azure Active Directory Sign In logs",
+        "category": "other",
+        "regions": []
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-Y__5-9C0",
+    "provider": "azure",
+    "title": "RCA - Service Management Operation Errors Across Azure Services in East US 2",
+    "description": "RCA - Service Management Operation Errors Across Azure Services in East US 2",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2022-04-07T22:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Service Management Operation Errors Across Azure Services in East US 2",
+        "category": "other",
+        "regions": [
+          "East US 2"
+        ]
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-TTCR-NTZ",
+    "provider": "azure",
+    "title": "RCA - Azure AD B2C – Authentication Failures and Error Notifications",
+    "description": "RCA - Azure AD B2C – Authentication Failures and Error Notifications",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2022-03-15T23:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Azure AD B2C",
+        "category": "other",
+        "regions": []
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-ZNRZ-HDG",
+    "provider": "azure",
+    "title": "RCA - Azure Resource Manager - Service Management Operation Failures",
+    "description": "RCA - Azure Resource Manager - Service Management Operation Failures",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2022-02-28T23:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Azure Resource Manager",
+        "category": "management",
+        "regions": []
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-9TDP-N8G",
+    "provider": "azure",
+    "title": "RCA - SQL Database and App Service - West Europe",
+    "description": "RCA - SQL Database and App Service - West Europe",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2022-02-15T23:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "SQL Database",
+        "category": "other",
+        "regions": [
+          "West Europe"
+        ]
+      },
+      {
+        "serviceName": "App Service - West Europe",
+        "category": "other",
+        "regions": [
+          "West Europe"
+        ]
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-SL1P-TSZ",
+    "provider": "azure",
+    "title": "RCA - Azure SQL DB and Cosmos DB Unavailable",
+    "description": "RCA - Azure SQL DB and Cosmos DB Unavailable",
+    "severity": "critical",
+    "status": "resolved",
+    "startedAt": "2022-02-11T23:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Azure SQL DB",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Cosmos DB Unavailable",
+        "category": "other",
+        "regions": []
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-ZS1T-LCG",
+    "provider": "azure",
+    "title": "Virtual Machines - West US - Resolved",
+    "description": "Virtual Machines - West US - Resolved",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2022-02-11T23:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Virtual Machines - West US - Resolved",
+        "category": "other",
+        "regions": [
+          "West US"
+        ]
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-SMWW-BDZ",
+    "provider": "azure",
+    "title": "RCA - Azure AD - Service Management Failures",
+    "description": "RCA - Azure AD - Service Management Failures",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2022-02-01T23:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Azure AD",
+        "category": "other",
+        "regions": []
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-8V39-P9Z",
+    "provider": "azure",
+    "title": "RCA - Azure Resource Manager - Issues with management and resource operations",
+    "description": "RCA - Azure Resource Manager - Issues with management and resource operations",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2022-01-12T23:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Azure Resource Manager - Issues with management",
+        "category": "other",
+        "regions": [
+          "West US",
+          "West US 2",
+          "South Central US",
+          "East Asia",
+          "Southeast Asia",
+          "North Europe",
+          "West Europe"
+        ]
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-PKJ8-TTZ",
+    "provider": "azure",
+    "title": "Azure Data Factory V2 - West Europe - Mitigated",
+    "description": "Azure Data Factory V2 - West Europe - Mitigated",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2022-01-12T23:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Azure Data Factory V2 - West Europe - Mitigated",
+        "category": "other",
+        "regions": []
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-9VT8-HPG",
+    "provider": "azure",
+    "title": "Azure Cosmos DB - East US",
+    "description": "Azure Cosmos DB - East US",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2022-01-03T23:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Azure Cosmos DB - East US",
+        "category": "other",
+        "regions": [
+          "East US"
+        ]
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-ZN7Y-5DG",
+    "provider": "azure",
+    "title": "Mitigated - Microsoft Graph API",
+    "description": "Mitigated - Microsoft Graph API",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2021-12-16T17:30:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Mitigated - Microsoft Graph API",
+        "category": "other",
+        "regions": []
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-S_3M-FZZ",
+    "provider": "azure",
+    "title": "RCA - Azure Active Directory - Experiencing sign in issues when attempting to access Azure, Dynamics 365, and/or Microsoft 365 Services",
+    "description": "RCA - Azure Active Directory - Experiencing sign in issues when attempting to access Azure, Dynamics 365, and/or Microsoft 365 Services",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2021-12-16T02:25:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Azure Active Directory",
+        "category": "security",
+        "regions": []
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-8T9M-T9G",
+    "provider": "azure",
+    "title": "RCA - Azure Data Factory V2 - West Europe",
+    "description": "RCA - Azure Data Factory V2 - West Europe",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2021-12-13T12:30:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Azure Data Factory V2 - West Europe",
+        "category": "other",
+        "regions": [
+          "West Europe"
+        ]
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-SNCJ-9ZG",
+    "provider": "azure",
+    "title": "RCA - Errors connecting to SCM App Service and/or Azure Functions deployments",
+    "description": "RCA - Errors connecting to SCM App Service and/or Azure Functions deployments",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2021-12-08T23:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Errors connecting to SCM App Service and/or Azure Functions deployments",
+        "category": "other",
+        "regions": []
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-SVT2-VCZ",
+    "provider": "azure",
+    "title": "RCA - Azure Active Directory - Issues when attempting to authenticate",
+    "description": "RCA - Azure Active Directory - Issues when attempting to authenticate",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2021-11-15T23:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Azure Active Directory - Issues when attempting to authenticate",
+        "category": "other",
+        "regions": []
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-PLT7-RTZ",
+    "provider": "azure",
+    "title": "Microsoft Graph - Intermittent 400-level errors accessing Graph APIs - Mitigated",
+    "description": "Microsoft Graph - Intermittent 400-level errors accessing Graph APIs - Mitigated",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2021-11-11T23:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Microsoft Graph - Intermittent 400-level errors accessing Graph APIs - Mitigated",
+        "category": "other",
+        "regions": []
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-DK83-BDZ",
+    "provider": "azure",
+    "title": "RCA - Intermittent Failures When Accessing or Using Access Panel",
+    "description": "RCA - Intermittent Failures When Accessing or Using Access Panel",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2021-11-08T23:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-ZKP4-NSG",
+    "provider": "azure",
+    "title": "SMS MFA not being received by multiple tenants",
+    "description": "SMS MFA not being received by multiple tenants",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2021-10-26T22:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-0NC_-L9G",
+    "provider": "azure",
+    "title": "RCA - Virtual Machines",
+    "description": "RCA - Virtual Machines",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2021-10-12T22:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Virtual Machines",
+        "category": "compute",
+        "regions": []
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-4M8X-VTZ",
+    "provider": "azure",
+    "title": "Microsoft Azure Portal - Issues while trying to create an application - Mitigated",
+    "description": "Microsoft Azure Portal - Issues while trying to create an application - Mitigated",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2021-09-02T22:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Microsoft Azure Portal - Issues while trying to create an application - Mitigated",
+        "category": "other",
+        "regions": []
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-0MQY-NPG",
+    "provider": "azure",
+    "title": "RCA - Connection errors for resources leveraging Azure Front Door and Azure CDN",
+    "description": "RCA - Connection errors for resources leveraging Azure Front Door and Azure CDN",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2021-08-10T22:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Connection errors for resources leveraging Azure Front Door",
+        "category": "other",
+        "regions": [
+          "West US",
+          "Japan East",
+          "Japan West",
+          "Korea South",
+          "Korea Central"
+        ]
+      },
+      {
+        "serviceName": "Azure CDN",
+        "category": "networking",
+        "regions": [
+          "West US",
+          "Japan East",
+          "Japan West",
+          "Korea South",
+          "Korea Central"
+        ]
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-LNZM-TZG",
+    "provider": "azure",
+    "title": "RCA - Azure Network Infrastructure service availability issues - Brazil Southeast",
+    "description": "RCA - Azure Network Infrastructure service availability issues - Brazil Southeast",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2021-07-27T15:20:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Azure Network Infrastructure service availability issues - Brazil Southeast",
+        "category": "other",
+        "regions": []
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-5TGJ-1SZ",
+    "provider": "azure",
+    "title": "RCA - Service availability issue - Brazil South",
+    "description": "RCA - Service availability issue - Brazil South",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2021-07-22T22:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-4LRL-V8G",
+    "provider": "azure",
+    "title": "RCA - Azure Cognitive Services",
+    "description": "RCA - Azure Cognitive Services",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2021-07-20T22:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Azure Cognitive Services",
+        "category": "ai-ml",
+        "regions": []
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-4VWK-LPZ",
+    "provider": "azure",
+    "title": "RCA - Azure Cognitive Services - Azure Government",
+    "description": "RCA - Azure Cognitive Services - Azure Government",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2021-07-20T22:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Azure Cognitive Services - Azure Government",
+        "category": "other",
+        "regions": []
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-0TYG-DPG",
+    "provider": "azure",
+    "title": "RCA - Azure Front Door and Azure CDN - Connectivity issues and increased latency",
+    "description": "RCA - Azure Front Door and Azure CDN - Connectivity issues and increased latency",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2021-07-11T22:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Azure Front Door",
+        "category": "networking",
+        "regions": [
+          "East US"
+        ]
+      },
+      {
+        "serviceName": "Azure CDN",
+        "category": "networking",
+        "regions": [
+          "East US"
+        ]
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-0_JL-9SG",
+    "provider": "azure",
+    "title": "RCA - Service management operation failures - North Europe",
+    "description": "RCA - Service management operation failures - North Europe",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2021-07-06T22:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-1V9K-PSZ",
+    "provider": "azure",
+    "title": "RCA - Azure Resource Manager - Degraded Performance managing resources",
+    "description": "RCA - Azure Resource Manager - Degraded Performance managing resources",
+    "severity": "major",
+    "status": "resolved",
+    "startedAt": "2021-06-28T22:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Azure Resource Manager - Degraded Performance managing resources",
+        "category": "other",
+        "regions": []
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-LL1H-9CZ",
+    "provider": "azure",
+    "title": "RCA - Error notifications for service management operations - West US 2",
+    "description": "RCA - Error notifications for service management operations - West US 2",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2021-06-13T22:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-KN22-39Z",
+    "provider": "azure",
+    "title": "RCA - Issues accessing the Azure portal and other Microsoft services",
+    "description": "RCA - Issues accessing the Azure portal and other Microsoft services",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2021-05-20T16:20:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Issues accessing the Azure portal",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "other Microsoft services",
+        "category": "other",
+        "regions": []
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-GVD7-RDZ",
+    "provider": "azure",
+    "title": "Microsoft Azure Portal - Intermittent Portal Access Issues",
+    "description": "Microsoft Azure Portal - Intermittent Portal Access Issues",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2021-05-10T17:55:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Microsoft Azure Portal",
+        "category": "other",
+        "regions": []
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-LLL3-LTZ",
+    "provider": "azure",
+    "title": "Azure Speech Service - West Europe - Mitigated",
+    "description": "Azure Speech Service - West Europe - Mitigated",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2021-05-04T11:35:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Azure Speech Service - West Europe - Mitigated",
+        "category": "other",
+        "regions": [
+          "West Europe"
+        ]
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-0TK3-HPZ",
+    "provider": "azure",
+    "title": "Issues accessing Azure Portal - HTTP 500-level Errors / Performance issues - Mitigated",
+    "description": "Issues accessing Azure Portal - HTTP 500-level Errors / Performance issues - Mitigated",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2021-04-29T22:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Issues accessing Azure Portal - HTTP 500-level Errors / Performance issues - Mitigated",
+        "category": "other",
+        "regions": [
+          "UK South"
+        ]
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-HNS6-1SZ",
+    "provider": "azure",
+    "title": "RCA- Intermittent 503 errors accessing Azure Portal",
+    "description": "RCA- Intermittent 503 errors accessing Azure Portal",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2021-04-19T22:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Intermittent 503 errors accessing Azure Portal",
+        "category": "other",
+        "regions": [
+          "UK South",
+          "UK West"
+        ]
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-5LJ1-3CZ",
+    "provider": "azure",
+    "title": "RCA - Azure Key Vault - Intermittent failures",
+    "description": "RCA - Azure Key Vault - Intermittent failures",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2021-03-17T23:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Azure Key Vault",
+        "category": "security",
+        "regions": [
+          "West Europe",
+          "North Europe"
+        ]
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  }
+]

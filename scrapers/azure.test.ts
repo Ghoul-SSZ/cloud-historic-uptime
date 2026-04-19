@@ -1,23 +1,37 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
-import { fetchAzureIncidents, parseAzurePirHtml } from "./azure";
+import { fetchAzureIncidents, parseAzureHistoryHtml } from "./azure";
 
 const mockHtml = `
 <html><body>
-<div class="event-list">
-  <div class="event-row" data-tracking-id="PIR-123">
-    <div class="event-title">Virtual Machines - West Europe</div>
-    <div class="event-date">
-      <span class="start-date">2026-01-10T08:00:00Z</span>
-      <span class="end-date">2026-01-10T10:15:00Z</span>
+<input class="wa-historyResult-count" value="1" />
+<div class="incident-history-item">
+  <button class="incident-history-header">
+    <span class="hide-text">02/07/2026</span>
+    <div class="incident-history-title">
+      Post Incident Review (PIR) – Power event impacting multiple services – West US
     </div>
-    <div class="event-summary">
-      Customers using Virtual Machines in West Europe experienced degraded performance.
-      Impact was also observed on Azure Kubernetes Service (AKS) and Load Balancer.
+    <div class="incident-history-tracking-id">
+      Tracking ID: _SVS-5_G
     </div>
-    <div class="impacted-services">
-      <span class="service-tag">Virtual Machines</span>
-      <span class="service-tag">Azure Kubernetes Service (AKS)</span>
-      <span class="service-tag">Load Balancer</span>
+  </button>
+  <div class="incident-history-collapse">
+    <div class="card-body">
+      <p>What happened?</p>
+      <p>Between 07:58 UTC on 07 February 2026 and 04:24 UTC on 08 February 2026,
+        impacted customers experienced intermittent service unavailability in the West US region.</p>
+      <p>Impacted services included:</p>
+      <ul>
+        <li><strong>Azure App Service:</strong> Customers using Azure App Service in West US experienced failures.</li>
+        <li><strong>Azure Cache for Redis:</strong> Customers may have observed connectivity failures.</li>
+        <li><strong>Azure Cosmos DB:</strong> Customers experienced intermittent connectivity issues.</li>
+      </ul>
+      <p>How did we respond?</p>
+      <ul>
+        <li>07:54 UTC on 07 February 2026 \u2013 Initial electrical failure in an onsite transformer.</li>
+        <li>07:58 UTC on 07 February 2026 \u2013 Customers began experiencing unavailability.</li>
+        <li>09:31 UTC on 07 February 2026 \u2013 Power was restored to 90% of IT racks.</li>
+        <li>04:24 UTC on 08 February 2026 \u2013 All services confirmed fully recovered.</li>
+      </ul>
     </div>
   </div>
 </div>
@@ -28,34 +42,42 @@ beforeEach(() => {
   vi.restoreAllMocks();
 });
 
-describe("parseAzurePirHtml", () => {
-  it("extracts incidents from Azure PIR HTML", () => {
-    const incidents = parseAzurePirHtml(mockHtml);
+describe("parseAzureHistoryHtml", () => {
+  it("extracts incidents from Azure history API HTML", () => {
+    const incidents = parseAzureHistoryHtml(mockHtml);
 
     expect(incidents).toHaveLength(1);
     const inc = incidents[0];
-    expect(inc.id).toBe("azure-PIR-123");
+    expect(inc.id).toBe("azure-_SVS-5_G");
     expect(inc.provider).toBe("azure");
-    expect(inc.title).toBe("Virtual Machines - West Europe");
+    expect(inc.title).toContain("Power event impacting multiple services");
     expect(inc.severity).toBe("major");
     expect(inc.status).toBe("resolved");
+    expect(inc.startedAt).toBe("2026-02-07T07:54:00.000Z");
+    expect(inc.resolvedAt).toBe("2026-02-08T04:24:00.000Z");
+    expect(inc.durationMinutes).toBe(1230);
     expect(inc.affectedServices).toHaveLength(3);
     expect(inc.affectedServices[0]).toEqual({
-      serviceName: "Virtual Machines",
+      serviceName: "Azure App Service",
       category: "compute",
-      regions: [],
+      regions: ["West US"],
     });
-    expect(inc.durationMinutes).toBe(135);
+    expect(inc.affectedServices[1].serviceName).toBe("Azure Cache for Redis");
+    expect(inc.affectedServices[2].serviceName).toBe("Azure Cosmos DB");
+    expect(inc.description).toContain("07:58 UTC on 07 February 2026");
+    expect(inc.updates).toHaveLength(4);
+    expect(inc.updates[0].timestamp).toBe("2026-02-07T07:54:00.000Z");
+    expect(inc.updates[0].message).toContain("Initial electrical failure");
   });
 
   it("returns empty array for HTML with no incidents", () => {
-    const incidents = parseAzurePirHtml("<html><body></body></html>");
+    const incidents = parseAzureHistoryHtml("<html><body></body></html>");
     expect(incidents).toEqual([]);
   });
 });
 
 describe("fetchAzureIncidents", () => {
-  it("fetches and parses Azure status page", async () => {
+  it("fetches and parses Azure status history API", async () => {
     vi.spyOn(globalThis, "fetch").mockResolvedValue(
       new Response(mockHtml)
     );

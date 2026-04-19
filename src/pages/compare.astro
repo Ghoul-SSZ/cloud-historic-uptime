@@ -1,99 +1,49 @@
 ---
 import Base from "../layouts/Base.astro";
-import CategoryBar from "../components/CategoryBar";
-import { uptimeScores, PROVIDER_META } from "../lib/data";
+import CompareSection from "../components/CompareSection";
+import { uptimeScores, PROVIDER_META, getProviderIncidents } from "../lib/data";
 
 const scores = uptimeScores.providers;
 
-const headToHead = [
-  {
-    category: "Compute",
-    services: [
-      { provider: "aws", name: "Amazon EC2" },
-      { provider: "azure", name: "Azure Virtual Machines" },
-      { provider: "gcp", name: "Compute Engine" },
-    ],
-  },
-  {
-    category: "Storage",
-    services: [
-      { provider: "aws", name: "Amazon S3" },
-      { provider: "azure", name: "Blob Storage" },
-      { provider: "gcp", name: "Cloud Storage" },
-    ],
-  },
-  {
-    category: "Database",
-    services: [
-      { provider: "aws", name: "Amazon RDS" },
-      { provider: "azure", name: "Azure SQL Database" },
-      { provider: "gcp", name: "Cloud SQL" },
-    ],
-  },
-];
+function buildProviderData(provider: "aws" | "azure" | "gcp") {
+  const incidents = getProviderIncidents(provider);
+  const dates = incidents.map(i => new Date(i.startedAt).getTime()).sort((a, b) => a - b);
+  return {
+    incidents: incidents.map(i => ({ startedAt: i.startedAt, durationMinutes: i.durationMinutes })),
+    coverage: {
+      count: incidents.length,
+      earliest: dates.length > 0 ? new Date(dates[0]).toISOString().slice(0, 10) : null,
+      source: provider === "aws"
+        ? "AWS Health API + S3 history"
+        : provider === "azure"
+        ? "Azure PIRs (Post-Incident Reviews)"
+        : "GCP product history pages (204 products)",
+    },
+  };
+}
+
+const awsData = buildProviderData("aws");
+const azureData = buildProviderData("azure");
+const gcpData = buildProviderData("gcp");
+
+const incidentsByProvider = {
+  aws: awsData.incidents,
+  azure: azureData.incidents,
+  gcp: gcpData.incidents,
+};
+
+const coverageByProvider = {
+  aws: awsData.coverage,
+  azure: azureData.coverage,
+  gcp: gcpData.coverage,
+};
 ---
 
 <Base title="Compare Providers">
   <h1 class="page-title">Cross-Provider Comparison</h1>
-
-  <div class="chart-section">
-    <CategoryBar client:load scores={scores} period="90d" />
-  </div>
-
-  <h2 class="section-title">Head-to-Head</h2>
-
-  {headToHead.map((matchup) => (
-    <div class="matchup">
-      <h3 class="matchup-title">{matchup.category}</h3>
-      <div class="matchup-grid">
-        {matchup.services.map((svc) => {
-          const meta = PROVIDER_META[svc.provider as keyof typeof PROVIDER_META];
-          const catKey = matchup.category.toLowerCase().replace("/", "-");
-          const val = scores[svc.provider as keyof typeof scores]?.byCategory?.[catKey]?.["90d"];
-          const color = val === undefined ? "#8892a4"
-            : val >= 99.95 ? "#10b981"
-            : val >= 99.9 ? "#f59e0b"
-            : "#ef4444";
-          return (
-            <div class="matchup-card">
-              <div class="matchup-provider" style={`color: ${meta.color}`}>{svc.name}</div>
-              <div class="matchup-score" style={`color: ${color}`}>
-                {val !== undefined ? `${val.toFixed(2)}%` : "—"}
-              </div>
-              <div class="matchup-label">90-day uptime</div>
-            </div>
-          );
-        })}
-      </div>
-    </div>
-  ))}
+  <CompareSection client:load scores={scores} providerMeta={PROVIDER_META} incidentsByProvider={incidentsByProvider} coverageByProvider={coverageByProvider} />
 </Base>
 
 <style>
   .page-title { font-size: 1.5rem; margin-bottom: 1.5rem; }
-  .chart-section { margin-bottom: 2.5rem; }
-  .section-title { font-size: 1.1rem; margin-bottom: 1.25rem; }
-
-  .matchup { margin-bottom: 1.5rem; }
-  .matchup-title { font-size: 0.95rem; margin-bottom: 0.75rem; color: var(--text-muted); }
-
-  .matchup-grid {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-
-  .matchup-card {
-    flex: 1;
-    min-width: 150px;
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 1rem;
-    text-align: center;
-  }
-
-  .matchup-provider { font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; }
-  .matchup-score { font-size: 1.5rem; font-weight: 700; }
-  .matchup-label { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem; }
 </style>

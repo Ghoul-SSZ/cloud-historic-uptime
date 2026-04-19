@@ -1,23 +1,33 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
-import { fetchAwsIncidents } from "./aws";
-import type { AwsRawEvent } from "./types";
+import { fetchAwsIncidents, normalizeHistoryData } from "./aws";
+import type { AwsRawEvent, AwsHistoryData } from "./types";
 
-const mockAwsResponse: AwsRawEvent[] = [
+function utf16Response(data: unknown): Response {
+  const encoded = new TextEncoder().encode(JSON.stringify(data));
+  const utf16 = new Uint8Array(encoded.length * 2 + 2);
+  utf16[0] = 0xfe; // BOM (big-endian)
+  utf16[1] = 0xff;
+  for (let i = 0; i < encoded.length; i++) {
+    utf16[2 + i * 2] = 0;
+    utf16[2 + i * 2 + 1] = encoded[i];
+  }
+  return new Response(utf16);
+}
+
+const mockLiveEvents: AwsRawEvent[] = [
   {
     service: "S3",
-    service_name: "Amazon S3",
     region: "us-east-1",
-    region_name: "US East (N. Virginia)",
     typeCode: "AWS_S3_OPERATIONAL_ISSUE",
-    startTime: 1736935200,
-    endTime: 1736938020,
-    lastUpdatedTime: 1736938020,
-    statusCode: "closed",
+    startTime: 1736935200000,
+    endTime: 1736938020000,
+    lastUpdatedTime: 1736938020000,
     metadata: {
-      EVENT_LOG: [
+      EVENT_LOG: JSON.stringify([
         {
           summary: "Elevated error rates on S3",
-          message: "We are investigating elevated 5xx error rates for S3 in us-east-1.",
+          message:
+            "We are investigating elevated 5xx error rates for S3 in us-east-1.",
           status: 2,
           timestamp: 1736935200,
         },
@@ -27,60 +37,160 @@ const mockAwsResponse: AwsRawEvent[] = [
           status: 0,
           timestamp: 1736938020,
         },
-      ],
-    },
-    impacted_services: {
-      s3: { service_name: "Amazon S3", current: 0, max: 2 },
-      lambda: { service_name: "AWS Lambda", current: 0, max: 1 },
+      ]),
     },
   },
 ];
+
+const mockHistoryData: AwsHistoryData = {
+  "ec2-us-west-2": [
+    {
+      summary: "[RESOLVED] Increased Error Rates",
+      arn: "arn:aws:health:us-west-2::event/EC2/AWS_EC2_OPERATIONAL_ISSUE/AWS_EC2_ISSUE_ABC123",
+      status: "2",
+      date: "1718200000",
+      event_log: [
+        {
+          summary: "Increased Error Rates",
+          message: "We are investigating increased error rates.",
+          status: 2,
+          timestamp: 1718200000,
+        },
+        {
+          summary: "[RESOLVED] Increased Error Rates",
+          message: "The issue has been resolved.",
+          status: 0,
+          timestamp: 1718210000,
+        },
+      ],
+      impacted_services: {
+        "ec2-us-west-2": {
+          service_name: "Amazon EC2",
+          current: "0",
+          max: "2",
+        },
+        "ebs-us-west-2": {
+          service_name: "Amazon EBS",
+          current: "0",
+          max: "1",
+        },
+      },
+    },
+  ],
+};
 
 beforeEach(() => {
   vi.restoreAllMocks();
 });
 
 describe("fetchAwsIncidents", () => {
-  it("fetches and normalizes AWS incidents", async () => {
-    vi.spyOn(globalThis, "fetch").mockResolvedValue(
-      new Response(JSON.stringify(mockAwsResponse))
-    );
+  it("fetches from both live and history endpoints and merges", async () => {
+    vi.spyOn(globalThis, "fetch").mockImplementation(async (url) => {
+      const u = typeof url === "string" ? url : url.toString();
+      if (u.includes("public/events")) {
+        return utf16Response(mockLiveEvents);
+      }
+      if (u.includes("historyevents.json")) {
+        return new Response(JSON.stringify(mockHistoryData));
+      }
+      return new Response("", { status: 404 });
+    });
 
     const incidents = await fetchAwsIncidents();
 
+    // Should have 2 incidents: one from live, one from history
+    expect(incidents).toHaveLength(2);
+    expect(incidents.some((i) => i.title === "Elevated error rates on S3")).toBe(
+      true
+    );
+    expect(
+      incidents.some((i) => i.title === "Increased Error Rates")
+    ).toBe(true);
+  });
+});
+
+describe("normalizeHistoryData", () => {
+  it("normalizes S3 history events with impacted services", () => {
+    const incidents = normalizeHistoryData(mockHistoryData);
+
     expect(incidents).toHaveLength(1);
     const inc = incidents[0];
-    expect(inc.id).toBe("aws-AWS_S3_OPERATIONAL_ISSUE-1736935200");
     expect(inc.provider).toBe("aws");
-    expect(inc.title).toBe("Elevated error rates on S3");
+    expect(inc.title).toBe("Increased Error Rates");
     expect(inc.severity).toBe("major");
     expect(inc.status).toBe("resolved");
-    expect(inc.startedAt).toBe("2025-01-15T10:00:00.000Z");
-    expect(inc.resolvedAt).toBe("2025-01-15T10:47:00.000Z");
-    expect(inc.durationMinutes).toBe(47);
+    expect(inc.startedAt).toBe("2024-06-12T13:46:40.000Z");
+    expect(inc.resolvedAt).toBe("2024-06-12T16:33:20.000Z");
     expect(inc.affectedServices).toHaveLength(2);
     expect(inc.affectedServices[0]).toEqual({
-      serviceName: "Amazon S3",
-      category: "storage",
-      regions: ["us-east-1"],
+      serviceName: "Amazon EC2",
+      category: "compute",
+      regions: ["us-west-2"],
     });
     expect(inc.affectedServices[1]).toEqual({
-      serviceName: "AWS Lambda",
-      category: "compute",
-      regions: ["us-east-1"],
+      serviceName: "Amazon EBS",
+      category: "storage",
+      regions: ["us-west-2"],
     });
     expect(inc.updates).toHaveLength(2);
   });
 
-  it("handles ongoing incidents (no endTime)", async () => {
-    const ongoing = [{ ...mockAwsResponse[0], endTime: null, statusCode: "open" }];
-    vi.spyOn(globalThis, "fetch").mockResolvedValue(
-      new Response(JSON.stringify(ongoing))
-    );
+  it("handles ongoing history events", () => {
+    const ongoing: AwsHistoryData = {
+      "bedrock-us-east-1": [
+        {
+          summary: "Increased Error Rates",
+          arn: "arn:aws:health:us-east-1::event/BEDROCK/ISSUE/XYZ",
+          status: "1",
+          date: "1718200000",
+          event_log: [
+            {
+              summary: "Increased Error Rates",
+              message: "Investigating.",
+              status: 1,
+              timestamp: 1718200000,
+            },
+          ],
+        },
+      ],
+    };
 
-    const incidents = await fetchAwsIncidents();
+    const incidents = normalizeHistoryData(ongoing);
     expect(incidents[0].status).toBe("ongoing");
     expect(incidents[0].resolvedAt).toBeNull();
     expect(incidents[0].durationMinutes).toBeNull();
+    expect(incidents[0].affectedServices[0].serviceName).toBe("Amazon Bedrock");
+  });
+
+  it("deduplicates events with same ARN across service keys", () => {
+    const duped: AwsHistoryData = {
+      "bedrock-us-east-1": [
+        {
+          summary: "[RESOLVED] API issues",
+          arn: "arn:aws:health::event/BEDROCK/ISSUE/SAME_ID",
+          status: "2",
+          date: "1718200000",
+          event_log: [
+            { summary: "API issues", message: "Investigating.", status: 2, timestamp: 1718200000 },
+            { summary: "Resolved", message: "Fixed.", status: 0, timestamp: 1718210000 },
+          ],
+        },
+      ],
+      "bedrock-us-west-2": [
+        {
+          summary: "[RESOLVED] API issues",
+          arn: "arn:aws:health::event/BEDROCK/ISSUE/SAME_ID",
+          status: "2",
+          date: "1718200000",
+          event_log: [
+            { summary: "API issues", message: "Investigating.", status: 2, timestamp: 1718200000 },
+            { summary: "Resolved", message: "Fixed.", status: 0, timestamp: 1718210000 },
+          ],
+        },
+      ],
+    };
+
+    const incidents = normalizeHistoryData(duped);
+    expect(incidents).toHaveLength(1);
   });
 });
