@@ -4,7 +4,6 @@ import CompareSection from "../components/CompareSection";
 import { uptimeScores, PROVIDER_META, getProviderIncidents } from "../lib/data";
 
 const scores = uptimeScores.providers;
-const base = import.meta.env.BASE_URL;
 
 
 function buildProviderData(provider: "aws" | "azure" | "gcp") {
