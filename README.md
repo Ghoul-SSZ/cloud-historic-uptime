@@ -2,6 +2,9 @@
 
 Historical uptime comparison for **AWS**, **Microsoft Azure**, and **Google Cloud** — based on publicly reported incidents from official status pages.
 
+**[View the live site →](https://Ghoul-SSZ.github.io/cloud-historic-uptime/)**
+
+
 ## What's Tracked
 
 Incident data is collected from each provider's official status page and normalized into a common format. Services are grouped into categories (Compute, Storage, Networking, Database, AI/ML, Security, Analytics, Dev Tools, Messaging, Management) for cross-provider comparison.
