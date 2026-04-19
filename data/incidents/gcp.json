@@ -1,1 +1,826 @@
-[]
+[
+  {
+    "id": "gcp-41E5S3mkTGDfkZuJZH5k",
+    "provider": "gcp",
+    "title": "Vertex AI Gemini API customers experienced increased error rates when accessing the global endpoint.",
+    "description": "**Description** \\\nBetween Friday, 2026-02-27, 04:36 and 06:45 PST, customers experienced increased error rates when accessing the Vertex Gemini API Global endpoint. The issue impacted API requests to multiple Gemini models.\nThe incident also caused downstream impact to Dialogflow CX, Agent Assist, Google Cloud Support AI agent, and Customer Experience Agent Studio, which rely on Gemini APIs.\nPreliminary analysis indicates the issue was triggered by a recent configuration change. Service was fully restored after the configuration change was rolled back.\nWe thank you for your patience while we worked on resolving the issue.\n**Symptom**\n\\\nCustomers experienced increased error rates when sending API requests to impacted multiple Gemini models through the global endpoint.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2026-02-27T12:37:00+00:00",
+    "resolvedAt": "2026-02-27T14:35:00+00:00",
+    "durationMinutes": 118,
+    "affectedServices": [
+      {
+        "serviceName": "Agent Assist",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Dialogflow CX",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Cloud Support",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Vertex Gemini API",
+        "category": "other",
+        "regions": []
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-03-09T05:25:43+00:00",
+        "status": "AVAILABLE",
+        "message": "# Incident Report\n## Summary\nOn Friday, 27 February 2026 at 04:37 US/Pacific, customers using Vertex AI Gemini API models experienced increased error rates. Impacted services included Google Cloud Support, Agent Assist, Vertex Gemini API and Dialogflow CX in US regions and the global endpoint. The issue persisted for a duration of 1 hour and 58 minutes.\nThis is not the level of quality and reliability we strive to offer you, and we have taken immediate steps to improve the platform’s performance and availability.\n## Root Cause\nThis incident was caused by a configuration change to a safety filtering service that supports all Gemini models. For some specific requests, this created code paths that eventually led to service disruptions and capacity loss for the safety filtering service. Consequently, customers encountered overload (429 and 503) errors for their queries, with some users reporting elevated error rates for specific models in US regions.\n## Remediation and Prevention\nGoogle engineers were alerted to the issue via our automated monitoring system on Friday, 27 February 2026 04:54 US/Pacific and immediately started an investigation.\nEngineers identified the faulty configuration change and initiated a rollback to restore the previous stable configuration. Engineers also added more capacity to the service to stabilize it. Full service restoration was confirmed by 06:35 US/Pacific as the rollback propagated and servers became healthy. \\ \\\nGoogle is committed to preventing a repeat of this issue and is taking the following actions:\n* Reinforcing rollout processes to include mandatory validation checkpoints.\n* Improving alerting systems to monitor critical dependencies more closely.\n## ## Detailed Description of Impact\nOn Friday, 27 February 2026 between 04:37 and 06:35 US/Pacific, customers accessing Vertex Gemini APIs may have experienced the following:\n* **Affected Models:** All Vertex AI Gemini API models were affected, including gemini-2.5-flash, gemini-2.5-flash-lite, gemini-2.5-pro, gemini-3.0-flash-preview, gemini-3.0-pro-preview, gemini-2.0-flash, gemini-2.0-flash-lite.\n* **Error Experience:** * **PayGo Customers:** Experienced primarily 429 Resource Exhausted errors. * **Provisioned Throughput (PT) Customers:** Received 503 Service Unavailable errors. * For PT customers, most errors stopped at **06:00**. For PayGo customers, most errors stopped at **06:20**.\n* **Geographic Scope:** Global endpoint, us-central1, us-east4, and other US regions were impacted."
+      },
+      {
+        "timestamp": "2026-03-04T23:23:18+00:00",
+        "status": "AVAILABLE",
+        "message": "# Preliminary Incident Report\nWe apologize for the inconvenience this service disruption may have caused. We would like to provide some information about this incident below. Please note, this information is based on our best knowledge at the time of posting and is subject to change as our investigation continues. A final Incident Report with preventative actions will be posted once our investigation is complete. If you have experienced impact outside of what is listed below, please reach out to Google Cloud Support using https://cloud.google.com/support.\n## Date/Time of the Issue (All time US/Pacific)\nIncident Start: 27 February 2026 04:37\nIncident End: 27 February 2026 06:35\nDuration: 1 hour, 58 minutes\n## Summary\nOn Friday, 27 February 2026 at 04:37 US/Pacific, customers using Vertex AI Gemini API models (including Gemini 2.0, 2.5, and 3.0 previews) experienced increased error rates. Impacted services included Google Cloud Support, Agent Assist, the Vertex Gemini API and Dialogflow CX in US regions and the global endpoint for a duration of 1 hour and 58 minutes.\nThis is not the level of quality and reliability we strive to offer you, and we are taking immediate steps to improve the platform’s performance and availability.\n## Preliminary Root Cause\nThis incident was caused by a configuration change to a safety filtering service that supports all Gemini models. This configuration change enabled a code path that interacted poorly with specific requests, leading to service disruption for the safety filtering service. This in turn led to customers seeing overload (429 and 503) errors for their queries.\nGoogle engineers have begun a full root cause analysis and will provide additional information once it is available.\n## Remediation\nGoogle engineers were alerted to the service disruption via automated alert on Friday, 27 February 2026 04:54 US/Pacific and immediately started an investigation.\nEngineers identified the faulty configuration change for a safety filtering service and initiated a rollback to restore the previous stable configuration. Additionally, engineers added more capacity to the service. Full service restoration was confirmed by 06:35 US/Pacific as the rollback propagated and servers became healthy.\n## Description of Impact\nOn Friday, 27 February 2026 between 04:37 and 06:35 US/Pacific, customers accessing Vertex Gemini APIs may have experienced the following:\n- Affected Models: All Gemini versions were affected, including gemini-2.5-flash, gemini-2.5-flash-lite, gemini-2.5-pro, gemini-3.0-flash-preview, gemini-3.0-pro-preview, gemini-2.0-flash, gemini-2.0-flash-lite.\n- Error Experience: - PayGo Customers: Experienced primarily 429 Resource Exhausted errors. - Provisioned Throughput (PT) Customers: Received 503 Service Unavailable errors. - For PT customers, most errors stopped at 06:00. For PayGo customers, most errors stopped at 06:20.\n- Geographic Scope: Global endpoint, us-central1, us-east4, and other US regions were impacted."
+      },
+      {
+        "timestamp": "2026-02-27T16:12:30+00:00",
+        "status": "SERVICE_INFORMATION",
+        "message": "**Description** \\\nBetween Friday, 2026-02-27, 04:36 and 06:45 PST, customers experienced increased error rates when accessing the Vertex Gemini API Global endpoint. The issue impacted API requests to multiple Gemini models.\nThe incident also caused downstream impact to Dialogflow CX, Agent Assist, Google Cloud Support AI agent, and Customer Experience Agent Studio, which rely on Gemini APIs.\nPreliminary analysis indicates the issue was triggered by a recent configuration change. Service was fully restored after the configuration change was rolled back.\nWe thank you for your patience while we worked on resolving the issue.\n**Symptom**\n\\\nCustomers experienced increased error rates when sending API requests to impacted multiple Gemini models through the global endpoint."
+      }
+    ],
+    "sourceUrl": "https://status.cloud.google.com/incidents/41E5S3mkTGDfkZuJZH5k"
+  },
+  {
+    "id": "gcp-8cY8jdUpEGGbsSMSQk7J",
+    "provider": "gcp",
+    "title": "We are investigating elevated error rates with multiple products in us-east1",
+    "description": "We're currently experiencing elevated latency and error rates for several Cloud services in the us-east1 region, beginning at 7:06 AM PDT today, July 18, 2025. Our initial investigation points to a hardware infrastructure failure as the likely cause.\nWe apologize for any disruption this may be causing. We'll provide an update with more details by 9:15 AM PDT today.",
+    "severity": "major",
+    "status": "resolved",
+    "startedAt": "2025-07-18T14:42:00+00:00",
+    "resolvedAt": "2025-07-18T16:47:00+00:00",
+    "durationMinutes": 125,
+    "affectedServices": [
+      {
+        "serviceName": "AlloyDB for PostgreSQL",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Apigee",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Artifact Registry",
+        "category": "devtools",
+        "regions": []
+      },
+      {
+        "serviceName": "Certificate Authority Service",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Cloud Armor",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Cloud Billing",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Cloud Build",
+        "category": "devtools",
+        "regions": []
+      },
+      {
+        "serviceName": "Cloud External Key Manager",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Cloud Firestore",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Cloud HSM",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Cloud Key Management Service",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Cloud Load Balancing",
+        "category": "networking",
+        "regions": []
+      },
+      {
+        "serviceName": "Cloud Memorystore",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Cloud Monitoring",
+        "category": "management",
+        "regions": []
+      },
+      {
+        "serviceName": "Cloud Run",
+        "category": "compute",
+        "regions": []
+      },
+      {
+        "serviceName": "Cloud Spanner",
+        "category": "database",
+        "regions": []
+      },
+      {
+        "serviceName": "Cloud Storage for Firebase",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Cloud Workflows",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Database Migration Service",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Dataproc Metastore",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Dialogflow CX",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Eventarc",
+        "category": "messaging",
+        "regions": []
+      },
+      {
+        "serviceName": "Google App Engine",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Google BigQuery",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Cloud Bigtable",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Cloud Console",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Cloud Dataflow",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Cloud Dataproc",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Cloud Pub/Sub",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Cloud SQL",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Cloud Storage",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Cloud Support",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Cloud Tasks",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Compute Engine",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Kubernetes Engine",
+        "category": "compute",
+        "regions": []
+      },
+      {
+        "serviceName": "Hybrid Connectivity",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Identity and Access Management",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Media CDN",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Memorystore for Memcached",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Memorystore for Redis",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Memorystore for Redis Cluster",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Persistent Disk",
+        "category": "storage",
+        "regions": []
+      },
+      {
+        "serviceName": "Private Service Connect",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Secret Manager",
+        "category": "security",
+        "regions": []
+      },
+      {
+        "serviceName": "Service Directory",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Vertex AI Online Prediction",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Virtual Private Cloud (VPC)",
+        "category": "networking",
+        "regions": []
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2025-07-22T13:42:49+00:00",
+        "status": "AVAILABLE",
+        "message": "## \\# Incident Report\n## \\#\\# Summary\nOn Friday, 18 July 2025 07:50 US/Pacific, several Google Cloud Platform (GCP) and Google Workspace (GWS) products experienced elevated latencies and error rates in the us-east1 region for a duration of up to 1 hour and 57 minutes.\n**GCP Impact Duration:** 18 July 2025 07:50 \\- 09:47 US/Pacific : 1 hour 57 minutes\n**GWS Impact Duration:** 18 July 2025 07:50 \\- 08:40 US/Pacific : 50 minutes\nWe sincerely apologize for this incident, which does not reflect the level of quality and reliability we strive to offer. We are taking immediate steps to improve the platform’s performance and availability.\n##\n## \\#\\# Root Cause\nThe service interruption was triggered by a procedural error during a planned hardware replacement in our datacenter. An incorrect physical disconnection was made to the active network switch serving our control plane, rather than the redundant unit scheduled for removal. The redundant unit had been properly de-configured as part of the procedure, and the combination of these two events led to partitioning of the network control plane. Our network is designed to withstand this type of control plane failure by failing open, continuing operation.\nHowever, an operational topology change while the network control plane was in a failed open state caused our network fabric's topology information to become stale. This led to packet loss and service disruption until services were moved away from the fabric and control plane connectivity was restored.\n## \\#\\# Remediation and Prevention\nGoogle engineers were alerted to the outage by our monitoring system on 18 July 2025 07:06 US/Pacific and immediately started an investigation. The following timeline details the remediation and restoration efforts:\n* **07:39 US/Pacific**: The underlying root cause (device disconnect) was identified and onsite technicians were engaged to reconnect the control plane device and restore control plane connectivity. At that moment, network failure open mechanisms worked as expected and no impact was observed.\n* **07:50 US/Pacific**: A topology change led to traffic being routed suboptimally, due to the network being in a fail open state. This caused congestion on the subset of links, packet loss, and latency to customer traffic. Engineers made a decision to move traffic away from the affected fabric, which mitigated the impact for the majority of the services.\n* **08:40 US/Pacific**: Engineers mitigated Workspace impact by shifting traffic away from the affected region.\n* **09:47 US/Pacific**: Onsite technicians reconnected the device, control plane connectivity was fully restored and all services were back to stable state.\nGoogle is committed to preventing a repeat of the issue in the future, and is completing the following actions:\n* Pause non-critical workflows until safety controls are implemented (complete).\n* Strengthen safety controls for hardware upgrade workflows by end of Q3 2025\\.\n* Design and implement a mechanism to prevent control plane partitioning in case of dual failure of upstream routers by end of Q4 2025\\.\n## \\#\\# Detailed Description of Impact\n\\#\\#\\# GCP Impact:\nMultiple products in us-east1 were affected by the loss of network connectivity, with the most significant impacts seen in us-east1-b. Other regions were not affected.\nThe outage caused a range of issues for customers with zonal resources in the region, including packet loss across VPC networks, increased error rates and latency, service unavailable (503) errors, and slow or stuck operations up to loss of networking connectivity. While regional products were briefly impacted, they recovered quickly by failing over to unaffected zones.\nA small number (0.1%) of Persistent Disks in us-east1-b were unavailable for the duration of the outage: these disks became available once the outage was mitigated, with no customer data loss.\n\\#\\#\\# GWS Impact:\nA small subset of Workspace users, primarily around the Southeast US, experienced varying degrees of unavailability and increased delays across multiple products, including Gmail, Google Meet, Google Drive, Google Chat, Google Calendar, Google Groups, Google Doc/Editors, and Google Voice."
+      },
+      {
+        "timestamp": "2025-07-18T22:08:16+00:00",
+        "status": "AVAILABLE",
+        "message": "# Mini Incident Report\nWe apologize for the inconvenience this service disruption/outage may have caused. We would like to provide some information about this incident below. Please note, this information is based on our best knowledge at the time of posting and is subject to change as our investigation continues. If you have experienced impact outside of what is listed below, please reach out to Google Cloud Support using https://cloud.google.com/support or to Google Workspace Support using help article https://support.google.com/a/answer/1047213.\n(All Times US/Pacific)\n**GCP Impact start and end time:** 18 July 2025 08:10 - 09:47\n**Duration:** 1 hour 37 minutes\n**GWS Impact start and end time:** 18 July 2025 08:10 - 08:40\n**Duration:** 30 minutes\n**Regions/Zones:** us-east1\n**Description:**\nOn Friday, 18 July 2025 08:10 US/Pacific multiple GCP and GWS products experienced elevated latencies and error rates in the us-east1 region for a duration of up to 1 hour and 37 minutes.\nBased on the preliminary analysis, the root cause of the issue is a procedural error during a planned hardware maintenance in one of our data centers in the us-east1 region. Our engineering team mitigated the issue by draining traffic away from the clusters and then restoring the affected hardware.\nGoogle will be completing a full incident report in the following days that will provide a full root cause and preventive actions.\n**Customer Impact:**\nThe affected GCP and GWS products experienced elevated latencies and errors rates in the us-east1 region.\n**Affected Products:**\n**GCP :**\nAlloyDB for PostgreSQL, Apigee, Artifact Registry, Cloud Armor, Cloud Billing, Cloud Build, Cloud External Key Manager, Cloud Filestore, Cloud HSM, Cloud Key Management Service, Cloud Load Balancing, Cloud Monitoring, Cloud Run, Cloud Spanner, Cloud Storage for Firebase, Cloud Workflows, Database Migration Service, Dialogflow CX, Dialogflow ES, Google BigQuery, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Storage, Google Cloud Support, Google Cloud Tasks, Google Compute Engine, Hybrid Connectivity, Media CDN, Network Telemetry, Private Service Connect, Secret Manager, Service Directory, Vertex AI Online Prediction, Virtual Private Cloud (VPC)\n**Workspace :**\nGmail, Google Meet, Google Drive, Google Chat, Google Calendar, Google Groups, Google Doc/Editors, Google Voice\n**Google SecOps:**\nGoogle SecOps SOAR & Google SecOps"
+      },
+      {
+        "timestamp": "2025-07-18T18:03:11+00:00",
+        "status": "AVAILABLE",
+        "message": "The issue has been resolved for all affected products as of 2025-07-18 09:47 US/Pacific.\nFrom preliminary analysis, during a routine maintenance of our network in us-east1-b, we experienced elevated packet loss, causing service disruption in the zone.\nWe will publish a full Incident Report with root cause once we have completed our internal investigations.\nWe thank you for your patience while we worked on resolving the issue."
+      },
+      {
+        "timestamp": "2025-07-18T17:32:00+00:00",
+        "status": "SERVICE_DISRUPTION",
+        "message": "Our engineers have successfully recovered the network control plane in the affected us-east1 zones.\nWe're seeing multiple services reporting full recovery, and product engineers continue to validate the remaining services.\nWe'll provide another update with more details by 11:00 AM US/Pacific, July 18, 2025."
+      },
+      {
+        "timestamp": "2025-07-18T16:58:34+00:00",
+        "status": "SERVICE_DISRUPTION",
+        "message": "Our engineers have successfully recovered the network control plane in the affected us-east1 zones. We're seeing multiple services reporting full recovery, and product engineers are now validating the remaining services.\nWe'll provide another update with more details by 10:30 AM US/Pacific, July 18, 2025."
+      },
+      {
+        "timestamp": "2025-07-18T16:29:02+00:00",
+        "status": "SERVICE_DISRUPTION",
+        "message": "Our engineers have confirmed that us-east1-b is partially affected. All other zones in us-east1 are currently operating normally.\nOur engineers have recovered the failed hardware and are currently recovering the network control plane in the affected zones.\nWe'll provide another update by 10:00 AM US/Pacific, July 18, 2025."
+      },
+      {
+        "timestamp": "2025-07-18T15:54:23+00:00",
+        "status": "SERVICE_DISRUPTION",
+        "message": "We're currently experiencing elevated latency and error rates for several Cloud services in the us-east1 region, beginning at 7:06 AM PDT today, July 18, 2025. Our initial investigation points to a hardware infrastructure failure as the likely cause.\nWe apologize for any disruption this may be causing. We'll provide an update with more details by 9:15 AM PDT today."
+      }
+    ],
+    "sourceUrl": "https://status.cloud.google.com/incidents/8cY8jdUpEGGbsSMSQk7J"
+  },
+  {
+    "id": "gcp-ow5i3PPK96RduMcb1SsW",
+    "provider": "gcp",
+    "title": "Multiple GCP products are experiencing Service issues.",
+    "description": "**Summary:**\nMultiple GCP products are experiencing Service issues\n**Description**\nWe are experiencing service issues with multiple GCP products beginning at Thursday, 2025-06-12 10:51 PDT.\nOur engineering team continues to investigate the issue.\nWe will provide an update by Thursday, 2025-06-12 12:15 PDT with current details.\nWe apologize to all who are affected by the disruption.\n**Symptoms:**\nMultiple GCP products are experiencing varying level of service impacts.\n**Workaround:**\nNone at this time.",
+    "severity": "critical",
+    "status": "resolved",
+    "startedAt": "2025-06-12T17:51:00+00:00",
+    "resolvedAt": "2025-06-13T01:18:00+00:00",
+    "durationMinutes": 447,
+    "affectedServices": [
+      {
+        "serviceName": "API Gateway",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Agent Assist",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "AlloyDB for PostgreSQL",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Apigee",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Apigee Edge Public Cloud",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Apigee Hybrid",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Cloud Data Fusion",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Cloud Firestore",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Cloud Logging",
+        "category": "management",
+        "regions": []
+      },
+      {
+        "serviceName": "Cloud Memorystore",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Cloud Monitoring",
+        "category": "management",
+        "regions": []
+      },
+      {
+        "serviceName": "Cloud Run",
+        "category": "compute",
+        "regions": []
+      },
+      {
+        "serviceName": "Cloud Security Command Center",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Cloud Shell",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Cloud Spanner",
+        "category": "database",
+        "regions": []
+      },
+      {
+        "serviceName": "Cloud Workstations",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Contact Center AI Platform",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Contact Center Insights",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Data Catalog",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Database Migration Service",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Dataform",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Dataplex",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Dataproc Metastore",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Datastream",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Dialogflow CX",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Dialogflow ES",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Google App Engine",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Google BigQuery",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Cloud Bigtable",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Cloud Composer",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Cloud Console",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Cloud DNS",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Cloud Dataflow",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Cloud Dataproc",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Cloud Pub/Sub",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Cloud SQL",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Cloud Storage",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Compute Engine",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Identity Platform",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Identity and Access Management",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Looker Studio",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Managed Service for Apache Kafka",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Memorystore for Memcached",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Memorystore for Redis",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Memorystore for Redis Cluster",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Persistent Disk",
+        "category": "storage",
+        "regions": []
+      },
+      {
+        "serviceName": "Personalized Service Health",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Pub/Sub Lite",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Speech-to-Text",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Text-to-Speech",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Vertex AI Online Prediction",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Vertex AI Search",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Vertex Gemini API",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Vertex Imagen API",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "reCAPTCHA Enterprise",
+        "category": "other",
+        "regions": []
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2025-06-13T23:45:21+00:00",
+        "status": "AVAILABLE",
+        "message": "# Incident Report\n## **Summary**\n*Google Cloud, Google Workspace and Google Security Operations products experienced increased 503 errors in external API requests, impacting customers.*\n***We deeply apologize for the impact this outage has had. Google Cloud customers and their users trust their businesses to Google, and we will do better. We apologize for the impact this has had not only on our customers’ businesses and their users but also on the trust of our systems. We are committed to making improvements to help avoid outages like this moving forward.***\n### **What happened?**\nGoogle and Google Cloud APIs are served through our Google API management and control planes. Distributed regionally, these management and control planes are responsible for ensuring each API request that comes in is authorized, has the policy and appropriate checks (like quota) to meet their endpoints. The core binary that is part of this policy check system is known as Service Control. Service Control is a regional service that has a regional datastore that it reads quota and policy information from. This datastore metadata gets replicated almost instantly globally to manage quota policies for Google Cloud and our customers.\nOn May 29, 2025, a new feature was added to Service Control for additional quota policy checks. This code change and binary release went through our region by region rollout, but the code path that failed was never exercised during this rollout due to needing a policy change that would trigger the code. As a safety precaution, this code change came with a red-button to turn off that particular policy serving path. The issue with this change was that it did not have appropriate error handling nor was it feature flag protected. Without the appropriate error handling, the null pointer caused the binary to crash. Feature flags are used to gradually enable the feature region by region per project, starting with internal projects, to enable us to catch issues. If this had been flag protected, the issue would have been caught in staging.\nOn June 12, 2025 at \\~10:45am PDT, a policy change was inserted into the regional Spanner tables that Service Control uses for policies. Given the global nature of quota management, this metadata was replicated globally within seconds. This policy data contained unintended blank fields. Service Control, then regionally exercised quota checks on policies in each regional datastore. This pulled in blank fields for this respective policy change and exercised the code path that hit the null pointer causing the binaries to go into a crash loop. This occurred globally given each regional deployment.\nWithin 2 minutes, our Site Reliability Engineering team was triaging the incident. Within 10 minutes, the root cause was identified and the red-button (to disable the serving path) was being put in place. The red-button was ready to roll out \\~25 minutes from the start of the incident. Within 40 minutes of the incident, the red-button rollout was completed, and we started seeing recovery across regions, starting with the smaller ones first.\nWithin some of our larger regions, such as us-central-1, as Service Control tasks restarted, it created a herd effect on the underlying infrastructure it depends on (i.e. that Spanner table), overloading the infrastructure. Service Control did not have the appropriate randomized exponential backoff implemented to avoid this. It took up to \\~2h 40 mins to fully resolve in us-central-1 as we throttled task creation to minimize the impact on the underlying infrastructure and routed traffic to multi-regional databases to reduce the load. At that point, Service Control and API serving was fully recovered across all regions. Corresponding Google and Google Cloud products started recovering with some taking longer depending upon their architecture.\n### **What is our immediate path forward?**\nImmediately upon recovery, we froze all changes to the Service Control stack and manual policy pushes until we can completely remediate the system.\n### **How did we communicate?**\nWe posted our first incident report to Cloud Service Health about \\~1h after the start of the crashes, due to the Cloud Service Health infrastructure being down due to this outage. For some customers, the monitoring infrastructure they had running on Google Cloud was also failing, leaving them without a signal of the incident or an understanding of the impact to their business and/or infrastructure. We will address this going forward.\n### **What’s our approach moving forward?**\nBeyond freezing the system as mentioned above, we will prioritize and safely complete the following:\n* We will modularize Service Control’s architecture, so the functionality is isolated and fails open. Thus, if a corresponding check fails, Service Control can still serve API requests.\n* We will audit all systems that consume globally replicated data. Regardless of the business need for near instantaneous consistency of the data globally (i.e. quota management settings are global), data replication needs to be propagated incrementally with sufficient time to validate and detect issues.\n* We will enforce all changes to critical binaries to be feature flag protected and disabled by default.\n* We will improve our static analysis and testing practices to correctly handle errors and if need be fail open.\n* We will audit and ensure our systems employ randomized exponential backoff.\n* We will improve our external communications, both automated and human, so our customers get the information they need asap to react to issues, manage their systems and help their customers.\n* We'll ensure our monitoring and communication infrastructure remains operational to serve customers even when Google Cloud and our primary monitoring products are down, ensuring business continuity.\n-------"
+      },
+      {
+        "timestamp": "2025-06-13T06:34:31+00:00",
+        "status": "AVAILABLE",
+        "message": "# Mini Incident Report\nWe are deeply sorry for the impact to all of our users and their customers that this service disruption/outage caused. Businesses large and small trust Google Cloud with your workloads and we will do better. In the coming days, we will publish a full incident report of the root cause, detailed timeline and robust remediation steps we will be taking. Given the size and impact of this incident, we would like to provide some information below.\nPlease note, this information is based on our best knowledge at the time of posting and is subject to change as our investigation continues. If you have experienced impact outside of what is listed below, please reach out to Google Cloud Support using https://cloud.google.com/support or to Google Workspace Support using help article https://support.google.com/a/answer/1047213.\n**(All Times US/Pacific)**\n**Incident Start:** 12 June, 2025 10:49\n**All regions except us-central1 mitigated:** 12 June, 2025 12:48\n**Incident End:** 12 June, 2025 13:49\n**Duration:** 3 hours\n**Regions/Zones:** Global\n**Description:**\nMultiple Google Cloud and Google Workspace products experienced increased 503 errors in external API requests, impacting customers.\nFrom our initial analysis, the issue occurred due to an invalid automated quota update to our API management system which was distributed globally, causing external API requests to be rejected. To recover we bypassed the offending quota check, which allowed recovery in most regions within 2 hours. However, the quota policy database in us-central1 became overloaded, resulting in much longer recovery in that region. Several products had moderate residual impact (e.g. backlogs) for up to an hour after the primary issue was mitigated and a small number recovering after that.\nGoogle will complete a full Incident Report in the following days that will provide a detailed root cause.\n**Customer Impact:**\nCustomers had intermittent API and user-interface access issues to the impacted services. Existing streaming and IaaS resources were not impacted.\n**Additional details:**\nThis incident should not have happened, and we will take the following measures to prevent future recurrence:\n* Prevent our API management platform from failing due to invalid or corrupt data.\n* Prevent metadata from propagating globally without appropriate protection, testing and monitoring in place.\n* Improve system error handling and comprehensive testing for handling of invalid data.\n**Affected Services and Features:**\n**Google Cloud Products:**\n* Identity and Access Management\n* Cloud Build\n* Cloud Key Management Service\n* Google Cloud Storage\n* Cloud Monitoring\n* Google Cloud Dataproc\n* Cloud Security Command Center\n* Artifact Registry\n* Cloud Workflows\n* Cloud Healthcare\n* Resource Manager API\n* Dataproc Metastore\n* Cloud Run\n* VMWare engine\n* Dataplex\n* Migrate to Virtual Machines\n* Google BigQuery\n* Contact Center AI Platform\n* Google Cloud Deploy\n* Media CDN\n* Colab Enterprise\n* Vertex Gemini API\n* Cloud Data Fusion\n* Cloud Asset Inventory\n* Datastream\n* Integration Connectors\n* Apigee\n* Google Cloud NetApp Volumes\n* Google Cloud Bigtable\n* Looker (Google Cloud core)\n* Looker Studio\n* Google Cloud Functions\n* Cloud Load Balancing\n* Traffic Director\n* Document AI\n* AutoML Translation\n* Pub/Sub Lite\n* API Gateway\n* Agent Assist\n* AlloyDB for PostgreSQL\n* Cloud Firestore\n* Cloud Logging\n* Cloud Shell\n* Cloud Memorystore\n* Cloud Spanner\n* Contact Center Insights\n* Database Migration Service\n* Dialogflow CX\n* Dialogflow ES\n* Google App Engine\n* Google Cloud Composer\n* Google Cloud Console\n* Google Cloud DNS\n* Google Cloud Pub/Sub\n* Google Cloud SQL\n* Google Compute Engine\n* Identity Platform\n* Managed Service for Apache Kafka\n* Memorystore for Memcached\n* Memorystore for Redis\n* Memorystore for Redis Cluster\n* Persistent Disk\n* Personalized Service Health\n* Speech-to-Text\n* Text-to-Speech\n* Vertex AI Search\n* Retail API\n* Vertex AI Feature Store\n* BigQuery Data Transfer Service\n* Google Cloud Marketplace\n* Cloud NAT\n* Hybrid Connectivity\n* Cloud Vision\n* Network Connectivity Center\n* Cloud Workstations\n* Google Security Operations\n**Google Workspace Products:**\n* AppSheet\n* Gmail\n* Google Calendar\n* Google Drive\n* Google Chat\n* Google Voice\n* Google Docs\n* Google Meet\n* Google Cloud Search\n* Google Tasks"
+      },
+      {
+        "timestamp": "2025-06-13T01:27:32+00:00",
+        "status": "AVAILABLE",
+        "message": "Vertex AI Online Prediction is full recovered as of 18:18 PDT.\nAll the services are fully recovered from the service issue\nWe will publish analysis of this incident once we have completed our internal investigation.\nWe thank you for your patience while we worked on resolving the issue."
+      },
+      {
+        "timestamp": "2025-06-13T00:59:00+00:00",
+        "status": "SERVICE_DISRUPTION",
+        "message": "**Vertex AI Online Prediction:**\nThe issue causing elevated 5xx errors with some Model Garden models was fully resolved as of 17:05 PDT. Vertex AI serving is now back to normal in all regions except europe-west1 and asia-southeast1. Engineers are actively working to restore normal serving capacity in these two regions.\nThe ETA for restoring normal serving capacity in europe-west1 and asia-southeast1 is 19:45 PDT.\nWe will provide an update by Thursday, 2025-06-12 19:45 PDT with current details."
+      },
+      {
+        "timestamp": "2025-06-13T00:33:34+00:00",
+        "status": "SERVICE_OUTAGE",
+        "message": "The impact on Personalized Service Health is now resolved and the updates should be reflected without any issues.\nThe issue with Google Cloud Dataflow is fully resolved as of 17:10 PDT\nThe only remaining impact is on Vertex AI Online Prediction as follows:\n**Vertex AI Online Prediction:** Customers may continue to experience elevated 5xx errors with some of the models available in the Model Garden. We are seeing gradual decrease in error rates as our engineers perform appropriate mitigation actions.\nThe ETA for full resolution of these 5xx errors is 22:00 PDT\nWe will provide an update by Thursday, 2025-06-12 22:00 PDT with current details."
+      },
+      {
+        "timestamp": "2025-06-13T00:06:24+00:00",
+        "status": "SERVICE_OUTAGE",
+        "message": "The following Google Cloud products are still experiencing residual impact:\n**Google Cloud Dataflow:** Dataflow backlog has cleared up in all regions except us-central1. Customers may experience delays with Dataflow operations in us-central1 as the backlog clears up gradually. We do not have an ETA for Cloud Dataflow recovery in us-central1.\n**Vertex AI Online Prediction:** Customers may continue to experience elevated 5xx errors with some of the models available in the Model Garden. We are seeing gradual decrease in error rates as our engineers perform appropriate mitigation actions. The ETA for full resolution of these 5xx errors is 22:00 PDT\n**Personalized Service Health:** Updates on the Personalized Service Health are delayed and we recommend customers to continue using Cloud Service Health dashboard for updates.\nWe will provide an update by Thursday, 2025-06-12 17:45 PDT with current details."
+      },
+      {
+        "timestamp": "2025-06-12T23:13:50+00:00",
+        "status": "SERVICE_OUTAGE",
+        "message": "The following Google Cloud products are still experiencing residual impact:\n**Google Cloud Dataflow:** Customers may experience delays with Dataflow operations as the backlog is clearing up gradually.\n**Vertex AI Online Prediction:** Customers may continue to experience elevated 5xx errors with some of the models available in the Model Garden.\n**Personalized Service Health:** Updates on the Personalized Service Health are delayed and we recommend customers to continue using Cloud Service Health dashboard for updates.\nWe currently do not have an ETA for full mitigation of the above services.\nWe will provide an update by Thursday, 2025-06-12 17:00 PDT with current details."
+      },
+      {
+        "timestamp": "2025-06-12T22:16:06+00:00",
+        "status": "SERVICE_OUTAGE",
+        "message": "Most of the Google Cloud products are fully recovered as of 13:45 PDT.\nThere is some residual impact for the products currently marked as affected on the dashboard. Please continue to monitor the services and the dashboard for individual product recoveries.\nWe will provide an update by Thursday, 2025-06-12 16:00 PDT with current details."
+      },
+      {
+        "timestamp": "2025-06-12T21:23:42+00:00",
+        "status": "SERVICE_OUTAGE",
+        "message": "Most of the Google Cloud products have confirmed full service recovery.\nA few services are still seeing some residual impact and the respective engineering teams are actively working on recovery of those services.\nWe expect the recovery to complete in less than an hour.\nWe will provide an update by Thursday, 2025-06-12 15:00 PDT with current details."
+      },
+      {
+        "timestamp": "2025-06-12T21:00:07+00:00",
+        "status": "SERVICE_OUTAGE",
+        "message": "We have implemented mitigation for the issue in us-central1 and multi-region/us and we are seeing signs of recovery.\nWe have received confirmation from our internal monitoring and customers that the Google Cloud products are also seeing recovery in multiple regions and are also seeing signs of some recovery in us-central1 and mutli-region/us.\nWe expect the recovery to complete in less than an hour.\nWe will provide an update by Thursday, 2025-06-12 14:30 PDT with current details."
+      },
+      {
+        "timestamp": "2025-06-12T20:16:22+00:00",
+        "status": "SERVICE_OUTAGE",
+        "message": "We have identified the root cause and applied appropriate mitigations.\nOur infrastructure has recovered in all regions except us-central1.\nGoogle Cloud products that rely on the affected infrastructure are seeing recovery in multiple locations.\nOur engineers are aware of the customers still experiencing issues on us-central1 and multi-region/us and are actively working on full recovery.\nWe do not have an ETA for full recovery.\nWe will provide an update by Thursday, 2025-06-12 14:00 PDT with current details."
+      },
+      {
+        "timestamp": "2025-06-12T19:41:55+00:00",
+        "status": "SERVICE_OUTAGE",
+        "message": "Our engineers have identified the root cause and have applied appropriate mitigations.\nWhile our engineers have confirmed that the underlying dependency is recovered in all locations except us-central1, ***we are aware that customers are still experiencing varying degrees of impact on individual google cloud products***. All the respective engineering teams are actively engaged and working on service recovery. We do not have an ETA for full service recovery.\nWe will provide an update by Thursday, 2025-06-12 13:30 PDT with current details."
+      },
+      {
+        "timestamp": "2025-06-12T19:30:44+00:00",
+        "status": "SERVICE_OUTAGE",
+        "message": "All locations except us-central1 have fully recovered. us-central1 is mostly recovered. We do not have an ETA for full recovery in us-central1.\nWe will provide an update by Thursday, 2025-06-12 13:00 PDT with current details."
+      },
+      {
+        "timestamp": "2025-06-12T19:09:08+00:00",
+        "status": "SERVICE_OUTAGE",
+        "message": "Our engineers are continuing to mitigate the issue and we have confirmation that the issue is recovered in some locations.\nWe do not have an ETA on full mitigation at this point.\nWe will provide an update by Thursday, 2025-06-12 12:45 PDT with current details."
+      },
+      {
+        "timestamp": "2025-06-12T18:59:31+00:00",
+        "status": "SERVICE_OUTAGE",
+        "message": "**Summary:**\nMultiple GCP products are experiencing Service issues with API requests\n**Description**\nWe are experiencing service issues with multiple GCP products beginning at Thursday, 2025-06-12 10:51 PDT.\nOur engineering team continues to investigate the issue.\nWe will provide an update by Thursday, 2025-06-12 12:15 PDT with current details.\nWe apologize to all who are affected by the disruption.\n**Symptoms:**\nMultiple GCP products are experiencing varying level of service impacts with API requests.\n**Workaround:**\nNone at this time."
+      },
+      {
+        "timestamp": "2025-06-12T18:46:38+00:00",
+        "status": "SERVICE_OUTAGE",
+        "message": "**Summary:**\nMultiple GCP products are experiencing Service issues\n**Description**\nWe are experiencing service issues with multiple GCP products beginning at Thursday, 2025-06-12 10:51 PDT.\nOur engineering team continues to investigate the issue.\nWe will provide an update by Thursday, 2025-06-12 12:15 PDT with current details.\nWe apologize to all who are affected by the disruption.\n**Symptoms:**\nMultiple GCP products are experiencing varying level of service impacts.\n**Workaround:**\nNone at this time."
+      }
+    ],
+    "sourceUrl": "https://status.cloud.google.com/incidents/ow5i3PPK96RduMcb1SsW"
+  },
+  {
+    "id": "gcp-SXRPpPwx2RZ5VHjTwFLx",
+    "provider": "gcp",
+    "title": "Google Compute Engine (GCE) issue impacting multiple dependent GCP services across zones",
+    "description": "Description:\nWe are experiencing an issue with Google Compute Engine, Google Kubernetes Engine, Cloud Dataflow, Cloud SQL, AlloyDB for PostgreSQL, Cloud Composer, Cloud Build, Cloud Dataproc, Cloud Filestore, Google App Engine (Google App Engine Flexible) beginning on Monday, 2025-05-19 20:23 US/Pacific.\nMitigation work is currently underway by our engineering team.\nWe do not have an ETA for mitigation at this point.\nWe will provide more information by Tuesday, 2025-05-20 04:30 US/Pacific.\nDiagnosis:\nGoogle Compute Engine: Customers might experience increased latency or timeouts when performing VM instance operations, including creation and reservation consumption.\nGoogle Kubernetes Engine: Customers may experience latency while performing operations like creating or deleting clusters, adding or resizing nodepools, etc.\nGoogle Cloud Dataproc: Customers may experience elevated latency while performing operations like creating or deleting clusters, and scale up and scale down operations, etc.\nGoogle Cloud Dataflow: Customers may experience elevated latency for start-up / scaleup / shut-downs for Dataflow jobs..\nCloud Filestore: Customers may experience create instance failures.\nCloud Build: Customers may experience elevated latency in build completion or sporadic build failures due to workers failing to start. Default pools (including the legacy \"global\" region) and private pools are both impacted.\nCloud SQL: Customers may experience failures or elevated latency for instance creation, resizing and high-availability update operations. As a workaround, for failure in the create operations, customers can retry by deleting the failed instances and re-attempt the operation.\nCloud Composer: Customers may experience failures in creation of new Composer environments and in upgrade of Composer/Airflow versions, as well as delays in up-scaling of new airflow-workers and in KubernetesPodOperator tasks.\nAlloyDB for PostgreSQL: Customers may experience failures in instance creation operations. In addition, a small number of instance update operations may also see failures.\nGoogle App Engine (Google App Engine Flexible): Customers may experience failures in insert/update/create/delete operations.\nWorkaround:\nCustomers who are experiencing impact are advised to use alternate zones.",
+    "severity": "major",
+    "status": "resolved",
+    "startedAt": "2025-05-20T03:23:00+00:00",
+    "resolvedAt": "2025-05-20T12:05:00+00:00",
+    "durationMinutes": 522,
+    "affectedServices": [
+      {
+        "serviceName": "AlloyDB for PostgreSQL",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Cloud Build",
+        "category": "devtools",
+        "regions": []
+      },
+      {
+        "serviceName": "Cloud Filestore",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Colab Enterprise",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Google App Engine",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Cloud Composer",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Cloud Dataflow",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Cloud Dataproc",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Cloud Deploy",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Cloud SQL",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Compute Engine",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Kubernetes Engine",
+        "category": "compute",
+        "regions": []
+      },
+      {
+        "serviceName": "Managed Service for Apache Kafka",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Migrate to Virtual Machines",
+        "category": "other",
+        "regions": []
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2025-05-27T23:06:21+00:00",
+        "status": "AVAILABLE",
+        "message": "# Incident Report\n## Summary\nOn 19 May 2025, Google Compute Engine (GCE) encountered problems affecting Spot VM termination globally, and performance degradation and timeouts of reservation consumption / VM creation in us-central1 and us-east4 for a duration of 8 hours, 42 minutes. Consequently, multiple other Google Cloud Platform (GCP) products relying on GCE also experienced increased latencies and timeouts.\nTo our customers who were impacted during this disruption, we sincerely apologize. This is not the level of quality and reliability we strive to offer you, and we are taking immediate steps to improve the platform’s performance and availability.\n## Root Cause\nA recently deployed configuration change to a Google Compute Engine (GCE) component mistakenly disabled a feature flag that controlled how VM instance states are reported to other components. Safety checks intended to ensure gradual rollout of this type of change failed to be triggered, resulting in an unplanned rapid rollout of the change.\nThis caused Spot VMs to be stuck in an unexpected state. Consequently, Spot VMs that had initiated their standard termination process due to preemption began to accumulate as they failed to complete termination, creating a backlog that degraded performance for all VM types in some regions.\n## Remediation and Prevention\nGoogle engineers were alerted to the outage via internal monitoring on 19 May 2025, at 21:08 US/Pacific, and immediately started an investigation. Once the nature and scope of the issue became clear, Google engineers initiated a rollback of the change on 20 May 2025 at 03:29 US/Pacific.\nThe rollback completed at 03:55 US/Pacific, mitigating the impact.\nGoogle is committed to preventing a repeat of this issue in the future and is completing the following actions:\n* Google Cloud employs a robust and well-defined methodology for production updates, including a phased rollout approach as standard practice to avoid rapid global changes. This phased approach is meant to ensure that changes are introduced into production gradually and as safely as possible, however, in this case, the safety checks were not enforced. We have paused further feature flag rollouts for the affected system, while we undertake a comprehensive audit of safety checks and fix any exposed gaps that led to the unplanned rapid rollout of this change.\n* We will review and address scalability issues encountered by GCE during the incident.\n* We will improve monitoring coverage of Spot VM deletion workflows.\nGoogle is committed to quickly and continually improving our technology and operations to prevent service disruptions. We appreciate your patience and apologize again for the impact to your organization. We thank you for your business.\n## Detailed Description of Impact\nCustomers experienced increased latency for VM control plane operations in us-central1 and us-east4. VM control plane operations include creating, modifying, or deleting VMs. For some customers, Spot VM instances became stuck while terminating. Customers were not billed for Spot VM instances in this state. Furthermore, running virtual machines and the data plane were not impacted.\nVM control plane latency in the us-central1 and us-east4 regions began increasing at the start of the incident (19 May 2025 20:23 US/Pacific), and peaked around 20 May 2025 03:40 US/Pacific. At peak, median latency went from seconds to minutes, and tail latency went from minutes to hours. Several other regions experienced increased tail latency during the outage, but most operations in these regions completed as normal. Once mitigations took effect, median and tail latencies started falling and returned to normal by 05:15 US/Pacific.\nCustomers may have experienced similar latency increases in products which create, modify, failover or delete VM instances: GCE, GKE, Dataflow, Cloud SQL, Google Cloud Dataproc, Google App Engine, Cloud Deploy, Memorystore, Redis, Cloud Filestore, among others."
+      },
+      {
+        "timestamp": "2025-05-20T18:58:49+00:00",
+        "status": "AVAILABLE",
+        "message": "## \\# Mini Incident Report\nWe apologize for the inconvenience this service disruption may have caused. We would like to provide some information about this incident below. Please note, this information is based on our best knowledge at the time of posting and is subject to change as our investigation continues. If you have experienced impact outside of what is listed below, please reach out to Google Cloud Support using [***https://cloud.google.com/support***](https://cloud.google.com/support).\n(All Times US/Pacific)\n**Incident Start:** 19 May 2025 20:23:00\n**Incident End:** 20 May 2025 05:05:00\n**Duration:** 8 hours, 42 minutes\n**Affected Services and Features:**\nGoogle Compute Engine, Google Kubernetes Engine, Cloud Dataflow, Cloud SQL, AlloyDb for PostgreSQL, Cloud Composer, Cloud Build, Cloud Dataproc, Google App Engine, Migrate to Virtual Machines, Vertex GenAI, Cloud Deploy and Memorystore for Redis.\n**Regions/Zones:**\n***VM creation issues:***\n* us-central1 all zones\n* us-east4 all zones\n***VM termination issues:***\nasia-east1, asia-northeast1, asia-south1, asia-southeast1, australia-southeast1, europe-central2, europe-north1, europe-west1, europe-west12, europe-west2, europe-west3, europe-west4, me-central2, southamerica-east1, us-central1, us-east1, us-east4, us-east5, us-west1, us-west2, us-west4\n**Note:** VM terminate operations, products dependent on VM creations and terminations may have seen impact outside the above zones.\n**Description:**\nGoogle Compute Engine (GCE) encountered problems affecting VM creation, termination, and reservation consumption. Consequently, multiple Google Cloud products experienced increased latencies and timeouts during create, update, and terminate operations.\nPreliminary analysis indicates that a recent configuration change negatively impacted GCE handling of routine spot virtual machine (VM) terminations. As a result of this problem, GCE Control Plane services became overloaded causing disruptions for VM Instance creation, termination, and reservation consumption.\nThe issue was mitigated by changing the configuration to the previous state, thereby resolving the impact on all affected products.\nGoogle will complete a full Incident Report in the following days that will provide a full root cause.\n**Customer Impact:**\n**Google Compute Engine:** Customers may have observed elevated latency or timeouts for VM Instance operations like creation, reservation consumption, etc.\n**Google Kubernetes Engine:** Customers may have observed latency while performing operations like creating or deleting clusters, adding or resizing nodepools, etc.\n**Google Cloud Dataproc:** Customers may have observed elevated latency while performing operations like creating or deleting clusters, and scale up and scale down operations, etc.\n**Google Cloud Dataflow:** Customers may have observed elevated latency for start-up / scaleup / shut-downs for Dataflow jobs.\n**Cloud Filestore:** Customers may have observed create instance failures.\n**Cloud Build:** Customers using private pools may have observed elevated latency in build completion or sporadic build failures due to workers failing to start.\n**Cloud SQL:** Customers may have observed failures or elevated latency for instance creation, resizing and high-availability update operations. As a workaround, for failure in the create operations, customers can retry by deleting the failed instances and re-attempt the operation.\n**Cloud Composer:** Customers may have experienced failures in new Composer environment creation and in upgrade of Composer/Airflow versions, as well as delays in up-scaling of new airflow-workers and in KubernetesPodOperator tasks.\n**AlloyDB for PostgreSQL:** Customers may have experienced failures in instance creation operations. In addition, a small number of instance update operations may also see failures.\n**Google App Engine:** Customers may have experienced failures in insert/update/create/delete operations.\n**Migrate to Virtual Machines:** Customers may have experienced timeouts or errors.\n**Vertex GenAI:** Customers may have experienced issues in creating cluster operations.\n**Cloud Deploy:** Customers may have experienced Cloud Deploy operations (e.g. Render, Deploy, Verify, etc.) as “in progress” for a long time or failed to start.\n**Memorystore for Redis:** Customers may have experienced increased latency or timeouts for some CreateCluster operations.\n------"
+      },
+      {
+        "timestamp": "2025-05-20T12:17:55+00:00",
+        "status": "SERVICE_DISRUPTION",
+        "message": "The issue with multiple dependent GCP services has been resolved for all affected users as of Tuesday, 2025-05-20 05:05 US/Pacific.\nWe thank you for your patience while we worked on resolving the issue."
+      },
+      {
+        "timestamp": "2025-05-20T12:05:43+00:00",
+        "status": "SERVICE_DISRUPTION",
+        "message": "Description:\nWe are experiencing an issue with multiple dependent GCP services beginning on Monday, 2025-05-19 20:23 US/Pacific.\nOur engineering team has deployed a mitigation and are seeing improvement across all affected zones. Most of the impacted products have been mitigated and the work towards full mitigation is ongoing.\nWe will provide more information by Tuesday, 2025-05-20 05:30 US/Pacific.\nDiagnosis:\nGoogle Cloud Dataproc: Customers may experience elevated latency while performing operations like creating or deleting clusters, and scale up and scale down operations, etc.\nGoogle Compute Engine: Now Mitigated\nCustomers might experience increased latency or timeouts when performing VM instance operations, including creation and reservation consumption.\nGoogle Kubernetes Engine: Now Mitigated\nCustomers may experience latency while performing operations like creating or deleting clusters, adding or resizing nodepools, etc.\nGoogle Cloud Dataflow: Now Mitigated\nCustomers may experience elevated latency for start-up / scaleup / shut-downs for Dataflow jobs..\nCloud Filestore: Now Mitigated\nCustomers may experience create instance failures.\nCloud Build: Now Mitigated\nCustomers may experience elevated latency in build completion or sporadic build failures due to workers failing to start. Default pools (including the legacy \"global\" region) and private pools are both impacted.\nCloud SQL: Now Mitigated\nCustomers may experience failures or elevated latency for instance creation, resizing and high-availability update operations. As a workaround, for failure in the create operations, customers can retry by deleting the failed instances and re-attempt the operation.\nCloud Composer: Now Mitigated\nCustomers may experience failures in creation of new Composer environments and in upgrade of Composer/Airflow versions, as well as delays in up-scaling of new airflow-workers and in KubernetesPodOperator tasks.\nAlloyDB for PostgreSQL: Now Mitigated\nCustomers may experience failures in instance creation operations. In addition, a small number of instance update operations may also see failures.\nGoogle App Engine (Google App Engine Flexible): Customers may experience failures in insert/update/create/delete operations.\nMigrate to Virtual Machines: Now Mitigated\nCustomers may experience timeouts or errors.\nVertex GenAI: Now Mitigated\nCustomers may experience issues in creating cluster operations.\nCloud Deploy: Now Mitigated\nCustomers may see Cloud Deploy operations (e.g. Render, Deploy, Verify, etc.) as “in progress” for a long time or fail to start.\nMemorystore for Redis: Now Mitigated\nCustomers may experience increased latency or timeouts for some CreateCluster operations.\nWorkaround:\nCustomers who are experiencing impact are advised to use alternate zones."
+      },
+      {
+        "timestamp": "2025-05-20T11:28:15+00:00",
+        "status": "SERVICE_DISRUPTION",
+        "message": "Description:\nWe are experiencing an issue with Google Compute Engine, Google Kubernetes Engine, Cloud Dataflow, Cloud SQL, AlloyDB for PostgreSQL, Cloud Composer, Cloud Build, Cloud Dataproc, Cloud Filestore, Google App Engine (Google App Engine Flexible) beginning on Monday, 2025-05-19 20:23 US/Pacific.\nOur engineering team has deployed a mitigation and are seeing improvement across all affected zones.\nWe will provide more information by Tuesday, 2025-05-20 05:00 US/Pacific.\nDiagnosis:\nGoogle Compute Engine: Customers might experience increased latency or timeouts when performing VM instance operations, including creation and reservation consumption.\nGoogle Kubernetes Engine: Customers may experience latency while performing operations like creating or deleting clusters, adding or resizing nodepools, etc.\nGoogle Cloud Dataproc: Customers may experience elevated latency while performing operations like creating or deleting clusters, and scale up and scale down operations, etc.\nGoogle Cloud Dataflow: Customers may experience elevated latency for start-up / scaleup / shut-downs for Dataflow jobs..\nCloud Filestore: Customers may experience create instance failures.\nCloud Build: Customers may experience elevated latency in build completion or sporadic build failures due to workers failing to start. Default pools (including the legacy \"global\" region) and private pools are both impacted.\nCloud SQL: Customers may experience failures or elevated latency for instance creation, resizing and high-availability update operations. As a workaround, for failure in the create operations, customers can retry by deleting the failed instances and re-attempt the operation.\nCloud Composer: Customers may experience failures in creation of new Composer environments and in upgrade of Composer/Airflow versions, as well as delays in up-scaling of new airflow-workers and in KubernetesPodOperator tasks.\nAlloyDB for PostgreSQL: Customers may experience failures in instance creation operations. In addition, a small number of instance update operations may also see failures.\nGoogle App Engine (Google App Engine Flexible): Customers may experience failures in insert/update/create/delete operations.\nWorkaround:\nCustomers who are experiencing impact are advised to use alternate zones."
+      },
+      {
+        "timestamp": "2025-05-20T11:07:41+00:00",
+        "status": "SERVICE_DISRUPTION",
+        "message": "Description:\nWe are experiencing an issue with Google Compute Engine, Google Kubernetes Engine, Cloud Dataflow, Cloud SQL, AlloyDB for PostgreSQL, Cloud Composer, Cloud Build, Cloud Dataproc, Cloud Filestore, Google App Engine (Google App Engine Flexible) beginning on Monday, 2025-05-19 20:23 US/Pacific.\nMitigation work is currently underway by our engineering team.\nWe do not have an ETA for mitigation at this point.\nWe will provide more information by Tuesday, 2025-05-20 04:30 US/Pacific.\nDiagnosis:\nGoogle Compute Engine: Customers might experience increased latency or timeouts when performing VM instance operations, including creation and reservation consumption.\nGoogle Kubernetes Engine: Customers may experience latency while performing operations like creating or deleting clusters, adding or resizing nodepools, etc.\nGoogle Cloud Dataproc: Customers may experience elevated latency while performing operations like creating or deleting clusters, and scale up and scale down operations, etc.\nGoogle Cloud Dataflow: Customers may experience elevated latency for start-up / scaleup / shut-downs for Dataflow jobs..\nCloud Filestore: Customers may experience create instance failures.\nCloud Build: Customers may experience elevated latency in build completion or sporadic build failures due to workers failing to start. Default pools (including the legacy \"global\" region) and private pools are both impacted.\nCloud SQL: Customers may experience failures or elevated latency for instance creation, resizing and high-availability update operations. As a workaround, for failure in the create operations, customers can retry by deleting the failed instances and re-attempt the operation.\nCloud Composer: Customers may experience failures in creation of new Composer environments and in upgrade of Composer/Airflow versions, as well as delays in up-scaling of new airflow-workers and in KubernetesPodOperator tasks.\nAlloyDB for PostgreSQL: Customers may experience failures in instance creation operations. In addition, a small number of instance update operations may also see failures.\nGoogle App Engine (Google App Engine Flexible): Customers may experience failures in insert/update/create/delete operations.\nWorkaround:\nCustomers who are experiencing impact are advised to use alternate zones."
+      }
+    ],
+    "sourceUrl": "https://status.cloud.google.com/incidents/SXRPpPwx2RZ5VHjTwFLx"
+  }
+]
