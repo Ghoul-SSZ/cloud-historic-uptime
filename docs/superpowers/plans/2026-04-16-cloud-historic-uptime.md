@@ -103,7 +103,7 @@ import react from "@astrojs/react";
 
 export default defineConfig({
   integrations: [react()],
-  site: "https://YOUR_USERNAME.github.io",
+  site: "https://Ghoul-SSZ.github.io",
   base: "/cloud-historic-uptime",
   output: "static",
 });
@@ -3043,7 +3043,7 @@ import Base from "../layouts/Base.astro";
   <div class="card">
     <h2>Open Source</h2>
     <p>This project is fully open source. You can audit the scrapers, data pipeline, and every data point in the repository:</p>
-    <p><a href="https://github.com/YOUR_USERNAME/cloud-historic-uptime" target="_blank" rel="noopener">View on GitHub →</a></p>
+    <p><a href="https://github.com/Ghoul-SSZ/cloud-historic-uptime" target="_blank" rel="noopener">View on GitHub →</a></p>
   </div>
 </Base>
 
@@ -3250,7 +3250,7 @@ Create `README.md`:
 
 Historical uptime comparison for **AWS**, **Microsoft Azure**, and **Google Cloud** — based on publicly reported incidents from official status pages.
 
-**[View the live site →](https://YOUR_USERNAME.github.io/cloud-historic-uptime/)**
+**[View the live site →](https://Ghoul-SSZ.github.io/cloud-historic-uptime/)**
 
 ## What's Tracked
 
@@ -3272,7 +3272,7 @@ Uptime percentages are calculated as:
 uptime% = (total_minutes - incident_minutes) / total_minutes × 100
 ```
 
-Per-category scores only count incidents affecting services in that category. See the [About page](https://YOUR_USERNAME.github.io/cloud-historic-uptime/about) for full methodology details.
+Per-category scores only count incidents affecting services in that category. See the [About page](https://Ghoul-SSZ.github.io/cloud-historic-uptime/about) for full methodology details.
 
 ## Disclaimer
 

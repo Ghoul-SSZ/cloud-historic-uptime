@@ -3,7 +3,7 @@ import react from "@astrojs/react";
 
 export default defineConfig({
   integrations: [react()],
-  site: "https://YOUR_USERNAME.github.io",
+  site: "https://Ghoul-SSZ.github.io",
   base: "/cloud-historic-uptime/",
   output: "static",
 });
