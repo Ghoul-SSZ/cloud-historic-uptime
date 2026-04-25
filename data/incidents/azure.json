@@ -1,5 +1,108 @@
 [
   {
+    "id": "azure-5GP8-W0G",
+    "provider": "azure",
+    "title": "Mitigated - Multiservice impact for Azure Workloads in East US",
+    "description": "Between 11:39 UTC on 24th April and 00:15 UTC on 25 April 2026, a platform issue resulted in an impact to a subset of Azure services in the East US region. Impacted customers experienced failures or delays when provisioning, scaling, or updating Azure resources. Intermittent connectivity issues may also be seen on existing running workloads in Virtual Machines and Azure Virtual Desktop sessions.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2026-04-24T11:39:00.000Z",
+    "resolvedAt": "2026-04-25T00:15:00.000Z",
+    "durationMinutes": 756,
+    "affectedServices": [
+      {
+        "serviceName": "Mitigated - Multiservice impact for Azure Workloads in East US",
+        "category": "other",
+        "regions": [
+          "East US"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-04-24T11:39:00.000Z",
+        "status": "update",
+        "message": "Customer impact began."
+      },
+      {
+        "timestamp": "2026-04-24T11:59:00.000Z",
+        "status": "update",
+        "message": "We detected this issue with AZ01 through our automated service monitoring after identifying an unusual increase in failures when customers perform operations such as provisioning, scaling, and/or updating their resources in the Azure environment. This prompted us to start an investigation."
+      },
+      {
+        "timestamp": "2026-04-24T14:30:00.000Z",
+        "status": "update",
+        "message": "We identified that a recent change was deployed to the service in the region."
+      },
+      {
+        "timestamp": "2026-04-24T14:35:00.000Z",
+        "status": "update",
+        "message": "Additionally, our teams identified the same issue manifested in AZ03."
+      },
+      {
+        "timestamp": "2026-04-24T14:40:00.000Z",
+        "status": "update",
+        "message": "Our teams started rolling back to the last known good state of the service in AZ03."
+      },
+      {
+        "timestamp": "2026-04-24T15:04:00.000Z",
+        "status": "update",
+        "message": "Following successful validation in AZ03, the rollback was expanded to AZ01 to restore service."
+      },
+      {
+        "timestamp": "2026-04-24T18:52:00.000Z",
+        "status": "update",
+        "message": "Significant improvements were observed in AZ01 as the roll back progressed towards completion."
+      },
+      {
+        "timestamp": "2026-04-24T19:02:00.000Z",
+        "status": "update",
+        "message": "AZ01 was identified as healthy with availability returning to >99%."
+      },
+      {
+        "timestamp": "2026-04-24T19:05:00.000Z",
+        "status": "update",
+        "message": "AZ02 was also identified as presenting with the same issue."
+      },
+      {
+        "timestamp": "2026-04-24T19:10:00.000Z",
+        "status": "update",
+        "message": "Rollback began on AZ02."
+      },
+      {
+        "timestamp": "2026-04-24T20:30:00.000Z",
+        "status": "update",
+        "message": "Rollback completed on AZ01."
+      },
+      {
+        "timestamp": "2026-04-24T21:30:00.000Z",
+        "status": "update",
+        "message": "Impact observed again in AZ03 and partial rollback resumed."
+      },
+      {
+        "timestamp": "2026-04-24T22:39:00.000Z",
+        "status": "update",
+        "message": "Rollback completed on AZ03."
+      },
+      {
+        "timestamp": "2026-04-24T23:22:00.000Z",
+        "status": "update",
+        "message": "Rollback completed on AZ02."
+      },
+      {
+        "timestamp": "2026-04-25T00:03:00.000Z",
+        "status": "update",
+        "message": "Rollback effectively validated as successful in all Availability Zones. Monitoring started to ensure no further errors are rising to the surface."
+      },
+      {
+        "timestamp": "2026-04-25T00:15:00.000Z",
+        "status": "update",
+        "message": "Further monitoring completed and full-service restoration has been confirmed. We were confident to mark the incident as mitigated with no leftover impact."
+      }
+    ],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
     "id": "azure-8GCS-858",
     "provider": "azure",
     "title": "Post Incident Review (PIR) – Azure OpenAI – GPT-5.2 availability degradation in 7 regions",
