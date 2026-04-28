@@ -1,5 +1,452 @@
 [
   {
+    "id": "aws-AWS_EC2_OPERATIONAL_ISSUE_FB70E_B77B1D343FD",
+    "provider": "aws",
+    "title": "Increased Connectivity Issues",
+    "description": "Between 3:58 AM and 4:40 AM PDT, we experienced increased error rates and increased launch failures for EC2 instances in a single Availability Zone (euw3-az2) in the EU-WEST-3 Region. During this time, customers attempting to launch new EC2 instances in the affected Availability Zone would have experienced launch failures. Additionally, a subset of existing EC2 instances and EBS volumes in this Availability Zone were impacted and became unreachable.\n\nWe have identified the root cause to be a loss of power to infrastructure within the affected Availability Zone. Engineers were engaged at 4:02 AM and immediately began working to restore power and assess the scope of impact. By 4:20 AM, power was successfully restored to the affected infrastructure. We then focused our efforts on recovering impacted EC2 instances and EBS volumes. By 4:40 AM, all impacted EC2 instances and EBS volumes had been fully recovered and were operating normally.\n\nNo additional action is required for EC2 instances and EBS volumes that were impacted during the power loss event, as these have been fully recovered. While EC2 and EBS have recovered, some AWS services may take additional time to fully recover as they process backlogs and complete their own recovery procedures. The issue has been resolved and the service is operating normally.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2026-04-27T11:27:17.000Z",
+    "resolvedAt": "2026-04-27T12:05:57.000Z",
+    "durationMinutes": 39,
+    "affectedServices": [
+      {
+        "serviceName": "AWS Private Certificate Authority",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "Amazon API Gateway",
+        "category": "networking",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "AWS AppConfig",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "Amazon WorkSpaces Applications",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "AWS AppSync",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "Amazon Athena",
+        "category": "analytics",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "AWS IoT Core",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "AWS IoT Device Management",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "Bedrock AgentCore",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "AWS Certificate Manager",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "AWS Client VPN",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "AWS Cloud9",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "AWS CloudFormation",
+        "category": "management",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "Amazon CloudFront",
+        "category": "networking",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "AWS CloudShell",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "AWS Cloud WAN",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "AWS CodeArtifact",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "AWS CodeCommit",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "AWS CodeDeploy",
+        "category": "devtools",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "AWS Database Migration Service",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "Amazon DocumentDB",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "Amazon Elastic Container Service",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "Amazon Elastic Kubernetes Service",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "AWS Elastic Beanstalk",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "Amazon Elastic File System",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "Amazon Elastic Load Balancing",
+        "category": "networking",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "Amazon Elastic MapReduce",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "Amazon EventBridge",
+        "category": "messaging",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "AWS Fargate",
+        "category": "compute",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "Amazon FSx",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "AWS IoT Device Defender",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "Amazon Interactive Video Service",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "Amazon Kinesis Data Streams",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "AWS Key Management Service",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "AWS Lambda",
+        "category": "compute",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "Amazon MQ",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "AWS NAT Gateway",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "Network Access Analyzer",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "AWS Network Firewall",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "AWS Payment Cryptography",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "AWS Parallel Computing Service",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "AWS VPCE PrivateLink",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "Amazon Redshift",
+        "category": "database",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "Amazon Simple Storage Service",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "Amazon EventBridge Scheduler",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "Amazon Simple Notification Service",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "Amazon Simple Queue Service",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "AWS Step Functions",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "Amazon Simple Workflow Service",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "Traffic Mirroring",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "AWS Transfer Family",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "AWS Transit Gateway",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "AWS Site-to-Site VPN",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      },
+      {
+        "serviceName": "Amazon WorkSpaces",
+        "category": "other",
+        "regions": [
+          "eu-west-3"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-04-27T11:27:17.000Z",
+        "status": "1",
+        "message": "We are investigating instance connectivity issues in a single Availability Zone (euw3-az2) in the EU-WEST-3 Region."
+      },
+      {
+        "timestamp": "2026-04-27T12:05:57.000Z",
+        "status": "0",
+        "message": "Between 3:58 AM and 4:40 AM PDT, we experienced increased error rates and increased launch failures for EC2 instances in a single Availability Zone (euw3-az2) in the EU-WEST-3 Region. During this time, customers attempting to launch new EC2 instances in the affected Availability Zone would have experienced launch failures. Additionally, a subset of existing EC2 instances and EBS volumes in this Availability Zone were impacted and became unreachable.\n\nWe have identified the root cause to be a loss of power to infrastructure within the affected Availability Zone. Engineers were engaged at 4:02 AM and immediately began working to restore power and assess the scope of impact. By 4:20 AM, power was successfully restored to the affected infrastructure. We then focused our efforts on recovering impacted EC2 instances and EBS volumes. By 4:40 AM, all impacted EC2 instances and EBS volumes had been fully recovered and were operating normally.\n\nNo additional action is required for EC2 instances and EBS volumes that were impacted during the power loss event, as these have been fully recovered. While EC2 and EBS have recovered, some AWS services may take additional time to fully recover as they process backlogs and complete their own recovery procedures. The issue has been resolved and the service is operating normally."
+      }
+    ],
+    "sourceUrl": "https://health.aws.amazon.com/health/status"
+  },
+  {
+    "id": "aws-AWS_EC2_OPERATIONAL_ISSUE-1777289237000",
+    "provider": "aws",
+    "title": "Increased Connectivity Issues",
+    "description": "[[The following AWS services have been affected by this event:]]\nService: acm-pca Status: Operating normally\nService: apigateway Status: Operating normally\nService: appconfig Status: Operating normally\nService: appstream2 Status: Operating normally\nService: appsync Status: Operating normally\nService: athena Status: Operating normally\nService: awsiot Status: Operating normally\nService: awsiotdevicemanagement Status: Operating normally\nService: bedrock-agentcore Status: Operating normally\nService: certificatemanager Status: Operating normally\nService: clientvpn Status: Operating normally\nService: cloud9 Status: Operating normally\nService: cloudformation Status: Operating normally\nService: cloudfront Status: Operating normally\nService: cloudshell Status: Operating normally\nService: cloudwan Status: Operating normally\nService: codeartifact Status: Operating normally\nService: codecommit Status: Operating normally\nService: codedeploy Status: Operating normally\nService: dms Status: Operating normally\nService: docdb Status: Operating normally\nService: ecs Status: Operating normally\nService: eks Status: Operating normally\nService: elasticbeanstalk Status: Operating normally\nService: elasticfilesystem Status: Operating normally\nService: elb Status: Operating normally\nService: emr Status: Operating normally\nService: events Status: Operating normally\nService: fargate Status: Operating normally\nService: fsx Status: Operating normally\nService: iotdevicedefender Status: Operating normally\nService: ivs Status: Operating normally\nService: kinesis Status: Operating normally\nService: kms Status: Operating normally\nService: lambda Status: Operating normally\nService: mq Status: Operating normally\nService: natgateway Status: Operating normally\nService: networkaccessanalyzer Status: Operating normally\nService: networkfirewall Status: Operating normally\nService: paymentcryptography Status: Operating normally\nService: pcs Status: Operating normally\nService: privatelink Status: Operating normally\nService: redshift Status: Operating normally\nService: s3 Status: Operating normally\nService: scheduler Status: Operating normally\nService: sns Status: Operating normally\nService: sqs Status: Operating normally\nService: state Status: Operating normally\nService: swf Status: Operating normally\nService: trafficmirroring Status: Operating normally\nService: transfer Status: Operating normally\nService: transitgateway Status: Operating normally\nService: vpnvpc Status: Operating normally\nService: workspaces Status: Operating normally",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2026-04-27T11:27:17.000Z",
+    "resolvedAt": "2026-04-27T17:10:06.000Z",
+    "durationMinutes": 343,
+    "affectedServices": [
+      {
+        "serviceName": "Amazon EC2",
+        "category": "compute",
+        "regions": [
+          "eu-west-3"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-04-27T11:27:17.000Z",
+        "status": "1",
+        "message": "We are investigating instance connectivity issues in a single Availability Zone (euw3-az2) in the EU-WEST-3 Region."
+      },
+      {
+        "timestamp": "2026-04-27T11:27:17.000Z",
+        "status": "1",
+        "message": "[[The following AWS services have been affected by this event:]]\nService: acm-pca Status: Informational\nService: apigateway Status: Informational\nService: appconfig Status: Informational\nService: appstream2 Status: Informational\nService: appsync Status: Informational\nService: athena Status: Informational\nService: awsiot Status: Informational\nService: awsiotdevicemanagement Status: Informational\nService: bedrock-agentcore Status: Informational\nService: certificatemanager Status: Informational\nService: clientvpn Status: Informational\nService: cloud9 Status: Informational\nService: cloudformation Status: Informational\nService: cloudfront Status: Informational\nService: cloudshell Status: Informational\nService: cloudwan Status: Informational\nService: codeartifact Status: Informational\nService: codecommit Status: Informational\nService: codedeploy Status: Informational\nService: dms Status: Informational\nService: docdb Status: Informational\nService: ecs Status: Informational\nService: eks Status: Informational\nService: elasticbeanstalk Status: Informational\nService: elasticfilesystem Status: Informational\nService: elb Status: Informational\nService: emr Status: Informational\nService: events Status: Informational\nService: fargate Status: Informational\nService: fsx Status: Informational\nService: iotdevicedefender Status: Informational\nService: ivs Status: Informational\nService: kinesis Status: Informational\nService: kms Status: Informational\nService: lambda Status: Informational\nService: mq Status: Informational\nService: natgateway Status: Informational\nService: networkaccessanalyzer Status: Informational\nService: networkfirewall Status: Informational\nService: paymentcryptography Status: Informational\nService: pcs Status: Informational\nService: privatelink Status: Informational\nService: redshift Status: Informational\nService: s3 Status: Informational\nService: scheduler Status: Informational\nService: sns Status: Informational\nService: sqs Status: Informational\nService: state Status: Informational\nService: swf Status: Informational\nService: trafficmirroring Status: Informational\nService: transfer Status: Informational\nService: transitgateway Status: Informational\nService: vpnvpc Status: Informational\nService: workspaces Status: Informational"
+      },
+      {
+        "timestamp": "2026-04-27T12:05:57.000Z",
+        "status": "0",
+        "message": "Between 3:58 AM and 4:40 AM PDT, we experienced increased error rates and increased launch failures for EC2 instances in a single Availability Zone (euw3-az2) in the EU-WEST-3 Region. During this time, customers attempting to launch new EC2 instances in the affected Availability Zone would have experienced launch failures. Additionally, a subset of existing EC2 instances and EBS volumes in this Availability Zone were impacted and became unreachable.\n\nWe have identified the root cause to be a loss of power to infrastructure within the affected Availability Zone. Engineers were engaged at 4:02 AM and immediately began working to restore power and assess the scope of impact. By 4:20 AM, power was successfully restored to the affected infrastructure. We then focused our efforts on recovering impacted EC2 instances and EBS volumes. By 4:40 AM, all impacted EC2 instances and EBS volumes had been fully recovered and were operating normally.\n\nNo additional action is required for EC2 instances and EBS volumes that were impacted during the power loss event, as these have been fully recovered. While EC2 and EBS have recovered, some AWS services may take additional time to fully recover as they process backlogs and complete their own recovery procedures. The issue has been resolved and the service is operating normally."
+      },
+      {
+        "timestamp": "2026-04-27T17:10:06.000Z",
+        "status": "0",
+        "message": "[[The following AWS services have been affected by this event:]]\nService: acm-pca Status: Operating normally\nService: apigateway Status: Operating normally\nService: appconfig Status: Operating normally\nService: appstream2 Status: Operating normally\nService: appsync Status: Operating normally\nService: athena Status: Operating normally\nService: awsiot Status: Operating normally\nService: awsiotdevicemanagement Status: Operating normally\nService: bedrock-agentcore Status: Operating normally\nService: certificatemanager Status: Operating normally\nService: clientvpn Status: Operating normally\nService: cloud9 Status: Operating normally\nService: cloudformation Status: Operating normally\nService: cloudfront Status: Operating normally\nService: cloudshell Status: Operating normally\nService: cloudwan Status: Operating normally\nService: codeartifact Status: Operating normally\nService: codecommit Status: Operating normally\nService: codedeploy Status: Operating normally\nService: dms Status: Operating normally\nService: docdb Status: Operating normally\nService: ecs Status: Operating normally\nService: eks Status: Operating normally\nService: elasticbeanstalk Status: Operating normally\nService: elasticfilesystem Status: Operating normally\nService: elb Status: Operating normally\nService: emr Status: Operating normally\nService: events Status: Operating normally\nService: fargate Status: Operating normally\nService: fsx Status: Operating normally\nService: iotdevicedefender Status: Operating normally\nService: ivs Status: Operating normally\nService: kinesis Status: Operating normally\nService: kms Status: Operating normally\nService: lambda Status: Operating normally\nService: mq Status: Operating normally\nService: natgateway Status: Operating normally\nService: networkaccessanalyzer Status: Operating normally\nService: networkfirewall Status: Operating normally\nService: paymentcryptography Status: Operating normally\nService: pcs Status: Operating normally\nService: privatelink Status: Operating normally\nService: redshift Status: Operating normally\nService: s3 Status: Operating normally\nService: scheduler Status: Operating normally\nService: sns Status: Operating normally\nService: sqs Status: Operating normally\nService: state Status: Operating normally\nService: swf Status: Operating normally\nService: trafficmirroring Status: Operating normally\nService: transfer Status: Operating normally\nService: transitgateway Status: Operating normally\nService: vpnvpc Status: Operating normally\nService: workspaces Status: Operating normally"
+      }
+    ],
+    "sourceUrl": "https://health.aws.amazon.com/health/status"
+  },
+  {
     "id": "aws-AWS_S3_OPERATIONAL_ISSUE-1772913192000",
     "provider": "aws",
     "title": "Increased Error Rates",
