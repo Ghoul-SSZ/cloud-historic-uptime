@@ -784,7 +784,7 @@
     "id": "aws-AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE-1772430987000",
     "provider": "aws",
     "title": "Increased connectivity issues and API Error Rates",
-    "description": "[[The following AWS services have been affected by this event:]]\nService: appsync Status: Disruption\nService: autoscaling Status: Disruption\nService: awsiot Status: Disruption\nService: awsiotdevicemanagement Status: Disruption\nService: awswaf Status: Disruption\nService: clientvpn Status: Disruption\nService: cloud9 Status: Disruption\nService: cloudformation Status: Disruption\nService: cloudfront Status: Operating normally\nService: cloudhsm Status: Disruption\nService: cloudshell Status: Disruption\nService: cloudtrail Status: Disruption\nService: cloudwan Status: Operating normally\nService: cloudwatch Status: Disruption\nService: codebuild Status: Disruption\nService: codedeploy Status: Disruption\nService: codepipeline Status: Disruption\nService: cognito Status: Disruption\nService: computeoptimizer Status: Disruption\nService: controltower Status: Disruption\nService: datasync Status: Disruption\nService: directoryservice Status: Disruption\nService: dms Status: Disruption\nService: drs Status: Disruption\nService: ec2 Status: Disruption\nService: ecr Status: Disruption\nService: ecs Status: Disruption\nService: eks Status: Disruption\nService: elasticache Status: Disruption\nService: elasticbeanstalk Status: Disruption\nService: elasticfilesystem Status: Disruption\nService: elasticsearch Status: Disruption\nService: elb Status: Disruption\nService: emr Status: Disruption\nService: emrserverless Status: Disruption\nService: events Status: Disruption\nService: fargate Status: Disruption\nService: firehose Status: Disruption\nService: fsx Status: Disruption\nService: globalaccelerator Status: Operating normally\nService: glue Status: Disruption\nService: groundstation Status: Disruption\nService: iamidentitycenter Status: Disruption\nService: inspector Status: Disruption\nService: iotdevicedefender Status: Disruption\nService: kafka Status: Disruption\nService: kinesis Status: Disruption\nService: kms Status: Disruption\nService: lakeformation Status: Disruption\nService: lambda Status: Disruption\nService: management-console Status: Operating normally\nService: mq Status: Disruption\nService: natgateway Status: Disruption\nService: networkfirewall Status: Disruption\nService: privatelink Status: Disruption\nService: rds Status: Disruption\nService: redshift Status: Disruption\nService: resourceexplorer Status: Disruption\nService: resourcegroups Status: Disruption\nService: resourcegroupstaggingapi Status: Disruption\nService: route53 Status: Operating normally\nService: sagemaker Status: Disruption\nService: scheduler Status: Disruption\nService: servicecatalog Status: Disruption\nService: sns Status: Disruption\nService: ssmsap Status: Disruption\nService: state Status: Disruption\nService: storagegateway Status: Disruption\nService: swf Status: Disruption\nService: transcribe Status: Disruption\nService: transfer Status: Disruption\nService: transitgateway Status: Disruption\nService: vpclattice Status: Disruption\nService: vpnvpc Status: Disruption",
+    "description": "[[The following AWS services have been affected by this event:]]\nService: acm-pca Status: Disruption\nService: airflow Status: Disruption\nService: amplify Status: Disruption\nService: amplifyadmin Status: Disruption\nService: apigateway Status: Disruption\nService: appconfig Status: Disruption\nService: applicationinsights Status: Disruption\nService: appmesh Status: Disruption\nService: appsync Status: Disruption\nService: appwizard Status: Disruption\nService: athena Status: Disruption\nService: autoscaling Status: Disruption\nService: awsiot Status: Disruption\nService: awsiotdevicemanagement Status: Disruption\nService: awswaf Status: Disruption\nService: backup Status: Disruption\nService: batch Status: Disruption\nService: bedrock Status: Disruption\nService: cassandra Status: Disruption\nService: certificatemanager Status: Disruption\nService: clientvpn Status: Disruption\nService: cloud9 Status: Disruption\nService: cloudformation Status: Disruption\nService: cloudfront Status: Operating normally\nService: cloudhsm Status: Disruption\nService: cloudshell Status: Disruption\nService: cloudtrail Status: Disruption\nService: cloudwan Status: Operating normally\nService: cloudwatch Status: Disruption\nService: cloudwatchsynthetics Status: Disruption\nService: codebuild Status: Disruption\nService: codecommit Status: Disruption\nService: codedeploy Status: Disruption\nService: codepipeline Status: Disruption\nService: cognito Status: Disruption\nService: computeoptimizer Status: Disruption\nService: config Status: Disruption\nService: consolemobileapp Status: Disruption\nService: controlcatalog Status: Disruption\nService: controltower Status: Disruption\nService: datasync Status: Disruption\nService: detective Status: Disruption\nService: directconnect Status: Disruption\nService: directoryservice Status: Disruption\nService: dlm Status: Disruption\nService: dms Status: Disruption\nService: drs Status: Disruption\nService: dynamodb Status: Disruption\nService: ec2 Status: Disruption\nService: ec2serialconsole Status: Disruption\nService: ec2systemsmanager Status: Disruption\nService: ecr Status: Disruption\nService: ecs Status: Disruption\nService: eks Status: Disruption\nService: elasticache Status: Disruption\nService: elasticbeanstalk Status: Disruption\nService: elasticfilesystem Status: Disruption\nService: elasticsearch Status: Disruption\nService: elb Status: Disruption\nService: emr Status: Disruption\nService: emrserverless Status: Disruption\nService: endusermessaging Status: Disruption\nService: events Status: Disruption\nService: fargate Status: Disruption\nService: firehose Status: Disruption\nService: fis Status: Disruption\nService: fms Status: Disruption\nService: freertos Status: Disruption\nService: fsx Status: Disruption\nService: gameliftstreams Status: Disruption\nService: glacier Status: Disruption\nService: globalaccelerator Status: Operating normally\nService: glue Status: Disruption\nService: groundstation Status: Disruption\nService: guardduty Status: Disruption\nService: iamidentitycenter Status: Disruption\nService: iamrolesanywhere Status: Disruption\nService: imagebuilder Status: Disruption\nService: infrastructureperformance Status: Disruption\nService: inspector Status: Disruption\nService: internetconnectivity Status: Disruption\nService: internetmonitor Status: Disruption\nService: iotdevicedefender Status: Disruption\nService: ipam Status: Disruption\nService: kafka Status: Disruption\nService: kinesis Status: Disruption\nService: kinesisanalytics Status: Disruption\nService: kinesisvideo Status: Disruption\nService: kms Status: Disruption\nService: lakeformation Status: Disruption\nService: lambda Status: Disruption\nService: licensemanager Status: Disruption\nService: macie Status: Disruption\nService: managedssh Status: Disruption\nService: management-console Status: Operating normally\nService: mgn Status: Disruption\nService: mq Status: Disruption\nService: natgateway Status: Disruption\nService: neptune-db Status: Disruption\nService: networkaccessanalyzer Status: Disruption\nService: networkfirewall Status: Disruption\nService: outposts Status: Disruption\nService: pca-connector-scep Status: Disruption\nService: pcaconnectorad Status: Disruption\nService: polly Status: Disruption\nService: privatelink Status: Disruption\nService: ram Status: Disruption\nService: rds Status: Disruption\nService: reachabilityanalyzer Status: Disruption\nService: redshift Status: Disruption\nService: resiliencehub Status: Disruption\nService: resourceexplorer Status: Disruption\nService: resourcegroups Status: Disruption\nService: resourcegroupstaggingapi Status: Disruption\nService: route53 Status: Operating normally\nService: route53privatedns Status: Disruption\nService: route53resolver Status: Disruption\nService: rum Status: Disruption\nService: s3 Status: Disruption\nService: s3rtc Status: Disruption\nService: sagemaker Status: Disruption\nService: scheduler Status: Disruption\nService: secretsmanager Status: Disruption\nService: security-ir Status: Disruption\nService: securityhub Status: Disruption\nService: serverlessrepo Status: Disruption\nService: servicecatalog Status: Disruption\nService: servicediscovery Status: Disruption\nService: servicequotas Status: Disruption\nService: ses Status: Disruption\nService: signin Status: Disruption\nService: sns Status: Disruption\nService: sqs Status: Disruption\nService: ssmsap Status: Disruption\nService: state Status: Disruption\nService: storagegateway Status: Disruption\nService: sts Status: Disruption\nService: swf Status: Disruption\nService: trafficmirroring Status: Disruption\nService: transcribe Status: Disruption\nService: transfer Status: Disruption\nService: transitgateway Status: Disruption\nService: verifiedpermissions Status: Disruption\nService: vmimportexport Status: Disruption\nService: vpc Status: Disruption\nService: vpclattice Status: Disruption\nService: vpnvpc Status: Disruption\nService: wellarchitected Status: Disruption\nService: xray Status: Disruption",
     "severity": "critical",
     "status": "ongoing",
     "startedAt": "2026-03-02T05:56:27.000Z",
@@ -808,7 +808,7 @@
       {
         "timestamp": "2026-03-02T05:56:27.000Z",
         "status": "1",
-        "message": "[[The following AWS services have been affected by this event:]]\nService: appsync Status: Disruption\nService: autoscaling Status: Disruption\nService: awsiot Status: Disruption\nService: awsiotdevicemanagement Status: Disruption\nService: awswaf Status: Disruption\nService: clientvpn Status: Disruption\nService: cloud9 Status: Disruption\nService: cloudformation Status: Disruption\nService: cloudfront Status: Informational\nService: cloudhsm Status: Disruption\nService: cloudshell Status: Disruption\nService: cloudtrail Status: Disruption\nService: cloudwan Status: Informational\nService: cloudwatch Status: Disruption\nService: codebuild Status: Disruption\nService: codedeploy Status: Disruption\nService: codepipeline Status: Disruption\nService: cognito Status: Disruption\nService: computeoptimizer Status: Disruption\nService: controltower Status: Disruption\nService: datasync Status: Disruption\nService: directoryservice Status: Disruption\nService: dms Status: Disruption\nService: drs Status: Disruption\nService: ec2 Status: Disruption\nService: ecr Status: Disruption\nService: ecs Status: Disruption\nService: eks Status: Disruption\nService: elasticache Status: Disruption\nService: elasticbeanstalk Status: Disruption\nService: elasticfilesystem Status: Disruption\nService: elasticsearch Status: Disruption\nService: elb Status: Disruption\nService: emr Status: Disruption\nService: emrserverless Status: Disruption\nService: events Status: Disruption\nService: fargate Status: Disruption\nService: firehose Status: Disruption\nService: fsx Status: Disruption\nService: globalaccelerator Status: Informational\nService: glue Status: Disruption\nService: groundstation Status: Disruption\nService: iamidentitycenter Status: Disruption\nService: inspector Status: Disruption\nService: iotdevicedefender Status: Disruption\nService: kafka Status: Disruption\nService: kinesis Status: Disruption\nService: kms Status: Disruption\nService: lakeformation Status: Disruption\nService: lambda Status: Disruption\nService: management-console Status: Degradation\nService: mq Status: Disruption\nService: natgateway Status: Disruption\nService: networkfirewall Status: Disruption\nService: privatelink Status: Disruption\nService: rds Status: Disruption\nService: redshift Status: Disruption\nService: resourceexplorer Status: Disruption\nService: resourcegroups Status: Disruption\nService: resourcegroupstaggingapi Status: Disruption\nService: route53 Status: Informational\nService: sagemaker Status: Disruption\nService: scheduler Status: Disruption\nService: servicecatalog Status: Disruption\nService: sns Status: Disruption\nService: ssmsap Status: Disruption\nService: state Status: Disruption\nService: storagegateway Status: Disruption\nService: swf Status: Disruption\nService: transcribe Status: Disruption\nService: transfer Status: Disruption\nService: transitgateway Status: Disruption\nService: vpclattice Status: Disruption\nService: vpnvpc Status: Disruption"
+        "message": "[[The following AWS services have been affected by this event:]]\nService: acm-pca Status: Disruption\nService: airflow Status: Disruption\nService: amplify Status: Disruption\nService: amplifyadmin Status: Disruption\nService: apigateway Status: Disruption\nService: appconfig Status: Disruption\nService: applicationinsights Status: Disruption\nService: appmesh Status: Disruption\nService: appsync Status: Disruption\nService: appwizard Status: Disruption\nService: athena Status: Disruption\nService: autoscaling Status: Disruption\nService: awsiot Status: Disruption\nService: awsiotdevicemanagement Status: Disruption\nService: awswaf Status: Disruption\nService: backup Status: Disruption\nService: batch Status: Disruption\nService: bedrock Status: Disruption\nService: cassandra Status: Disruption\nService: certificatemanager Status: Disruption\nService: clientvpn Status: Disruption\nService: cloud9 Status: Disruption\nService: cloudformation Status: Disruption\nService: cloudfront Status: Informational\nService: cloudhsm Status: Disruption\nService: cloudshell Status: Disruption\nService: cloudtrail Status: Disruption\nService: cloudwan Status: Informational\nService: cloudwatch Status: Disruption\nService: cloudwatchsynthetics Status: Disruption\nService: codebuild Status: Disruption\nService: codecommit Status: Disruption\nService: codedeploy Status: Disruption\nService: codepipeline Status: Disruption\nService: cognito Status: Disruption\nService: computeoptimizer Status: Disruption\nService: config Status: Disruption\nService: consolemobileapp Status: Disruption\nService: controlcatalog Status: Disruption\nService: controltower Status: Disruption\nService: datasync Status: Disruption\nService: detective Status: Disruption\nService: directconnect Status: Disruption\nService: directoryservice Status: Disruption\nService: dlm Status: Disruption\nService: dms Status: Disruption\nService: drs Status: Disruption\nService: dynamodb Status: Disruption\nService: ec2 Status: Disruption\nService: ec2serialconsole Status: Disruption\nService: ec2systemsmanager Status: Disruption\nService: ecr Status: Disruption\nService: ecs Status: Disruption\nService: eks Status: Disruption\nService: elasticache Status: Disruption\nService: elasticbeanstalk Status: Disruption\nService: elasticfilesystem Status: Disruption\nService: elasticsearch Status: Disruption\nService: elb Status: Disruption\nService: emr Status: Disruption\nService: emrserverless Status: Disruption\nService: endusermessaging Status: Disruption\nService: events Status: Disruption\nService: fargate Status: Disruption\nService: firehose Status: Disruption\nService: fis Status: Disruption\nService: fms Status: Disruption\nService: freertos Status: Disruption\nService: fsx Status: Disruption\nService: gameliftstreams Status: Disruption\nService: glacier Status: Disruption\nService: globalaccelerator Status: Informational\nService: glue Status: Disruption\nService: groundstation Status: Disruption\nService: guardduty Status: Disruption\nService: iamidentitycenter Status: Disruption\nService: iamrolesanywhere Status: Disruption\nService: imagebuilder Status: Disruption\nService: infrastructureperformance Status: Disruption\nService: inspector Status: Disruption\nService: internetconnectivity Status: Disruption\nService: internetmonitor Status: Disruption\nService: iotdevicedefender Status: Disruption\nService: ipam Status: Disruption\nService: kafka Status: Disruption\nService: kinesis Status: Disruption\nService: kinesisanalytics Status: Disruption\nService: kinesisvideo Status: Disruption\nService: kms Status: Disruption\nService: lakeformation Status: Disruption\nService: lambda Status: Disruption\nService: licensemanager Status: Disruption\nService: macie Status: Disruption\nService: managedssh Status: Disruption\nService: management-console Status: Degradation\nService: mgn Status: Disruption\nService: mq Status: Disruption\nService: natgateway Status: Disruption\nService: neptune-db Status: Disruption\nService: networkaccessanalyzer Status: Disruption\nService: networkfirewall Status: Disruption\nService: outposts Status: Disruption\nService: pca-connector-scep Status: Disruption\nService: pcaconnectorad Status: Disruption\nService: polly Status: Disruption\nService: privatelink Status: Disruption\nService: ram Status: Disruption\nService: rds Status: Disruption\nService: reachabilityanalyzer Status: Disruption\nService: redshift Status: Disruption\nService: resiliencehub Status: Disruption\nService: resourceexplorer Status: Disruption\nService: resourcegroups Status: Disruption\nService: resourcegroupstaggingapi Status: Disruption\nService: route53 Status: Informational\nService: route53privatedns Status: Disruption\nService: route53resolver Status: Disruption\nService: rum Status: Disruption\nService: s3 Status: Disruption\nService: s3rtc Status: Disruption\nService: sagemaker Status: Disruption\nService: scheduler Status: Disruption\nService: secretsmanager Status: Disruption\nService: security-ir Status: Disruption\nService: securityhub Status: Disruption\nService: serverlessrepo Status: Disruption\nService: servicecatalog Status: Disruption\nService: servicediscovery Status: Disruption\nService: servicequotas Status: Disruption\nService: ses Status: Disruption\nService: signin Status: Disruption\nService: sns Status: Disruption\nService: sqs Status: Disruption\nService: ssmsap Status: Disruption\nService: state Status: Disruption\nService: storagegateway Status: Disruption\nService: sts Status: Disruption\nService: swf Status: Disruption\nService: trafficmirroring Status: Disruption\nService: transcribe Status: Disruption\nService: transfer Status: Disruption\nService: transitgateway Status: Disruption\nService: verifiedpermissions Status: Disruption\nService: vmimportexport Status: Disruption\nService: vpc Status: Disruption\nService: vpclattice Status: Disruption\nService: vpnvpc Status: Disruption\nService: wellarchitected Status: Disruption\nService: xray Status: Disruption"
       },
       {
         "timestamp": "2026-03-02T06:00:43.000Z",
@@ -951,9 +951,9 @@
         "message": "Increased Error Rates"
       },
       {
-        "timestamp": "2026-05-03T20:27:03.000Z",
+        "timestamp": "2026-05-06T07:50:12.000Z",
         "status": "3",
-        "message": "[[The following AWS services have been affected by this event:]]\nService: appsync Status: Disruption\nService: autoscaling Status: Disruption\nService: awsiot Status: Disruption\nService: awsiotdevicemanagement Status: Disruption\nService: awswaf Status: Disruption\nService: clientvpn Status: Disruption\nService: cloud9 Status: Disruption\nService: cloudformation Status: Disruption\nService: cloudfront Status: Operating normally\nService: cloudhsm Status: Disruption\nService: cloudshell Status: Disruption\nService: cloudtrail Status: Disruption\nService: cloudwan Status: Operating normally\nService: cloudwatch Status: Disruption\nService: codebuild Status: Disruption\nService: codedeploy Status: Disruption\nService: codepipeline Status: Disruption\nService: cognito Status: Disruption\nService: computeoptimizer Status: Disruption\nService: controltower Status: Disruption\nService: datasync Status: Disruption\nService: directoryservice Status: Disruption\nService: dms Status: Disruption\nService: drs Status: Disruption\nService: ec2 Status: Disruption\nService: ecr Status: Disruption\nService: ecs Status: Disruption\nService: eks Status: Disruption\nService: elasticache Status: Disruption\nService: elasticbeanstalk Status: Disruption\nService: elasticfilesystem Status: Disruption\nService: elasticsearch Status: Disruption\nService: elb Status: Disruption\nService: emr Status: Disruption\nService: emrserverless Status: Disruption\nService: events Status: Disruption\nService: fargate Status: Disruption\nService: firehose Status: Disruption\nService: fsx Status: Disruption\nService: globalaccelerator Status: Operating normally\nService: glue Status: Disruption\nService: groundstation Status: Disruption\nService: iamidentitycenter Status: Disruption\nService: inspector Status: Disruption\nService: iotdevicedefender Status: Disruption\nService: kafka Status: Disruption\nService: kinesis Status: Disruption\nService: kms Status: Disruption\nService: lakeformation Status: Disruption\nService: lambda Status: Disruption\nService: management-console Status: Operating normally\nService: mq Status: Disruption\nService: natgateway Status: Disruption\nService: networkfirewall Status: Disruption\nService: privatelink Status: Disruption\nService: rds Status: Disruption\nService: redshift Status: Disruption\nService: resourceexplorer Status: Disruption\nService: resourcegroups Status: Disruption\nService: resourcegroupstaggingapi Status: Disruption\nService: route53 Status: Operating normally\nService: sagemaker Status: Disruption\nService: scheduler Status: Disruption\nService: servicecatalog Status: Disruption\nService: sns Status: Disruption\nService: ssmsap Status: Disruption\nService: state Status: Disruption\nService: storagegateway Status: Disruption\nService: swf Status: Disruption\nService: transcribe Status: Disruption\nService: transfer Status: Disruption\nService: transitgateway Status: Disruption\nService: vpclattice Status: Disruption\nService: vpnvpc Status: Disruption"
+        "message": "[[The following AWS services have been affected by this event:]]\nService: acm-pca Status: Disruption\nService: airflow Status: Disruption\nService: amplify Status: Disruption\nService: amplifyadmin Status: Disruption\nService: apigateway Status: Disruption\nService: appconfig Status: Disruption\nService: applicationinsights Status: Disruption\nService: appmesh Status: Disruption\nService: appsync Status: Disruption\nService: appwizard Status: Disruption\nService: athena Status: Disruption\nService: autoscaling Status: Disruption\nService: awsiot Status: Disruption\nService: awsiotdevicemanagement Status: Disruption\nService: awswaf Status: Disruption\nService: backup Status: Disruption\nService: batch Status: Disruption\nService: bedrock Status: Disruption\nService: cassandra Status: Disruption\nService: certificatemanager Status: Disruption\nService: clientvpn Status: Disruption\nService: cloud9 Status: Disruption\nService: cloudformation Status: Disruption\nService: cloudfront Status: Operating normally\nService: cloudhsm Status: Disruption\nService: cloudshell Status: Disruption\nService: cloudtrail Status: Disruption\nService: cloudwan Status: Operating normally\nService: cloudwatch Status: Disruption\nService: cloudwatchsynthetics Status: Disruption\nService: codebuild Status: Disruption\nService: codecommit Status: Disruption\nService: codedeploy Status: Disruption\nService: codepipeline Status: Disruption\nService: cognito Status: Disruption\nService: computeoptimizer Status: Disruption\nService: config Status: Disruption\nService: consolemobileapp Status: Disruption\nService: controlcatalog Status: Disruption\nService: controltower Status: Disruption\nService: datasync Status: Disruption\nService: detective Status: Disruption\nService: directconnect Status: Disruption\nService: directoryservice Status: Disruption\nService: dlm Status: Disruption\nService: dms Status: Disruption\nService: drs Status: Disruption\nService: dynamodb Status: Disruption\nService: ec2 Status: Disruption\nService: ec2serialconsole Status: Disruption\nService: ec2systemsmanager Status: Disruption\nService: ecr Status: Disruption\nService: ecs Status: Disruption\nService: eks Status: Disruption\nService: elasticache Status: Disruption\nService: elasticbeanstalk Status: Disruption\nService: elasticfilesystem Status: Disruption\nService: elasticsearch Status: Disruption\nService: elb Status: Disruption\nService: emr Status: Disruption\nService: emrserverless Status: Disruption\nService: endusermessaging Status: Disruption\nService: events Status: Disruption\nService: fargate Status: Disruption\nService: firehose Status: Disruption\nService: fis Status: Disruption\nService: fms Status: Disruption\nService: freertos Status: Disruption\nService: fsx Status: Disruption\nService: gameliftstreams Status: Disruption\nService: glacier Status: Disruption\nService: globalaccelerator Status: Operating normally\nService: glue Status: Disruption\nService: groundstation Status: Disruption\nService: guardduty Status: Disruption\nService: iamidentitycenter Status: Disruption\nService: iamrolesanywhere Status: Disruption\nService: imagebuilder Status: Disruption\nService: infrastructureperformance Status: Disruption\nService: inspector Status: Disruption\nService: internetconnectivity Status: Disruption\nService: internetmonitor Status: Disruption\nService: iotdevicedefender Status: Disruption\nService: ipam Status: Disruption\nService: kafka Status: Disruption\nService: kinesis Status: Disruption\nService: kinesisanalytics Status: Disruption\nService: kinesisvideo Status: Disruption\nService: kms Status: Disruption\nService: lakeformation Status: Disruption\nService: lambda Status: Disruption\nService: licensemanager Status: Disruption\nService: macie Status: Disruption\nService: managedssh Status: Disruption\nService: management-console Status: Operating normally\nService: mgn Status: Disruption\nService: mq Status: Disruption\nService: natgateway Status: Disruption\nService: neptune-db Status: Disruption\nService: networkaccessanalyzer Status: Disruption\nService: networkfirewall Status: Disruption\nService: outposts Status: Disruption\nService: pca-connector-scep Status: Disruption\nService: pcaconnectorad Status: Disruption\nService: polly Status: Disruption\nService: privatelink Status: Disruption\nService: ram Status: Disruption\nService: rds Status: Disruption\nService: reachabilityanalyzer Status: Disruption\nService: redshift Status: Disruption\nService: resiliencehub Status: Disruption\nService: resourceexplorer Status: Disruption\nService: resourcegroups Status: Disruption\nService: resourcegroupstaggingapi Status: Disruption\nService: route53 Status: Operating normally\nService: route53privatedns Status: Disruption\nService: route53resolver Status: Disruption\nService: rum Status: Disruption\nService: s3 Status: Disruption\nService: s3rtc Status: Disruption\nService: sagemaker Status: Disruption\nService: scheduler Status: Disruption\nService: secretsmanager Status: Disruption\nService: security-ir Status: Disruption\nService: securityhub Status: Disruption\nService: serverlessrepo Status: Disruption\nService: servicecatalog Status: Disruption\nService: servicediscovery Status: Disruption\nService: servicequotas Status: Disruption\nService: ses Status: Disruption\nService: signin Status: Disruption\nService: sns Status: Disruption\nService: sqs Status: Disruption\nService: ssmsap Status: Disruption\nService: state Status: Disruption\nService: storagegateway Status: Disruption\nService: sts Status: Disruption\nService: swf Status: Disruption\nService: trafficmirroring Status: Disruption\nService: transcribe Status: Disruption\nService: transfer Status: Disruption\nService: transitgateway Status: Disruption\nService: verifiedpermissions Status: Disruption\nService: vmimportexport Status: Disruption\nService: vpc Status: Disruption\nService: vpclattice Status: Disruption\nService: vpnvpc Status: Disruption\nService: wellarchitected Status: Disruption\nService: xray Status: Disruption"
       }
     ],
     "sourceUrl": "https://health.aws.amazon.com/health/status"
@@ -970,8 +970,78 @@
     "durationMinutes": null,
     "affectedServices": [
       {
+        "serviceName": "AWS Private Certificate Authority",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Managed Workflows for Apache Airflow",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Amplify",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Amplify Admin",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon API Gateway",
+        "category": "networking",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "AWS AppConfig",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon CloudWatch Application Insights",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "AWS App Mesh",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
         "serviceName": "AWS AppSync",
         "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Launch Wizard",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Athena",
+        "category": "analytics",
         "regions": [
           "me-south-1"
         ]
@@ -999,6 +1069,41 @@
       },
       {
         "serviceName": "AWS WAF",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Backup",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Batch",
+        "category": "compute",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Bedrock",
+        "category": "ai-ml",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Keyspaces",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Certificate Manager",
         "category": "other",
         "regions": [
           "me-south-1"
@@ -1068,8 +1173,22 @@
         ]
       },
       {
+        "serviceName": "Amazon CloudWatch Synthetics",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
         "serviceName": "AWS CodeBuild",
         "category": "devtools",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "AWS CodeCommit",
+        "category": "other",
         "regions": [
           "me-south-1"
         ]
@@ -1103,6 +1222,27 @@
         ]
       },
       {
+        "serviceName": "AWS Config",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Console Mobile App",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "Control Catalog",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
         "serviceName": "AWS Control Tower",
         "category": "other",
         "regions": [
@@ -1117,7 +1257,28 @@
         ]
       },
       {
+        "serviceName": "Amazon Detective",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Direct Connect",
+        "category": "networking",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
         "serviceName": "AWS Directory Service",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Data Lifecycle Manager",
         "category": "other",
         "regions": [
           "me-south-1"
@@ -1138,8 +1299,29 @@
         ]
       },
       {
+        "serviceName": "Amazon DynamoDB",
+        "category": "database",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
         "serviceName": "Amazon Elastic Compute Cloud",
         "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "EC2 Serial Console",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Systems Manager",
+        "category": "management",
         "regions": [
           "me-south-1"
         ]
@@ -1215,6 +1397,13 @@
         ]
       },
       {
+        "serviceName": "AWS End User Messaging",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
         "serviceName": "Amazon EventBridge",
         "category": "messaging",
         "regions": [
@@ -1236,7 +1425,42 @@
         ]
       },
       {
+        "serviceName": "AWS Fault Injection Service",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Firewall Manager",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon FreeRTOS",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
         "serviceName": "Amazon FSx",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon GameLift Streams",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Glacier",
         "category": "other",
         "regions": [
           "me-south-1"
@@ -1264,7 +1488,35 @@
         ]
       },
       {
+        "serviceName": "Amazon GuardDuty",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
         "serviceName": "AWS IAM Identity Center",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Identity and Access Management Roles Anywhere",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "EC2 Image Builder",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "Infrastructure Performance",
         "category": "other",
         "regions": [
           "me-south-1"
@@ -1278,7 +1530,28 @@
         ]
       },
       {
+        "serviceName": "AWS Internet Connectivity",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon CloudWatch Internet Monitor",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
         "serviceName": "AWS IoT Device Defender",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon VPC IP Address Manager",
         "category": "other",
         "regions": [
           "me-south-1"
@@ -1293,6 +1566,20 @@
       },
       {
         "serviceName": "Amazon Kinesis Data Streams",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Managed Service for Apache Flink",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Kinesis Video Streams",
         "category": "other",
         "regions": [
           "me-south-1"
@@ -1320,7 +1607,35 @@
         ]
       },
       {
+        "serviceName": "AWS License Manager",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Macie",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon EC2 Instance Connect",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
         "serviceName": "AWS Management Console",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Application Migration Service",
         "category": "other",
         "regions": [
           "me-south-1"
@@ -1341,7 +1656,49 @@
         ]
       },
       {
+        "serviceName": "Amazon Neptune",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "Network Access Analyzer",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
         "serviceName": "AWS Network Firewall",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Outposts",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Private CA Connector for SCEP",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Private CA Connector for Active Directory",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Polly",
         "category": "other",
         "regions": [
           "me-south-1"
@@ -1355,7 +1712,21 @@
         ]
       },
       {
+        "serviceName": "AWS Resource Access Manager",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
         "serviceName": "Amazon Relational Database Service",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "Reachability Analyzer",
         "category": "other",
         "regions": [
           "me-south-1"
@@ -1364,6 +1735,13 @@
       {
         "serviceName": "Amazon Redshift",
         "category": "database",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Resilience Hub",
+        "category": "other",
         "regions": [
           "me-south-1"
         ]
@@ -1397,6 +1775,41 @@
         ]
       },
       {
+        "serviceName": "Amazon Route 53 Private DNS",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Route 53 Resolver",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon CloudWatch RUM",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Simple Storage Service",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon S3 Replication Time Control",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
         "serviceName": "Amazon SageMaker",
         "category": "ai-ml",
         "regions": [
@@ -1411,6 +1824,34 @@
         ]
       },
       {
+        "serviceName": "AWS Secrets Manager",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Security Incident Response",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Security Hub",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Serverless Application Repository",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
         "serviceName": "AWS Service Catalog",
         "category": "other",
         "regions": [
@@ -1418,7 +1859,42 @@
         ]
       },
       {
+        "serviceName": "AWS Cloud Map",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Service Quotas",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Simple Email Service",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Sign-In",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
         "serviceName": "Amazon Simple Notification Service",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Simple Queue Service",
         "category": "other",
         "regions": [
           "me-south-1"
@@ -1446,7 +1922,21 @@
         ]
       },
       {
+        "serviceName": "AWS Security Token Service",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
         "serviceName": "Amazon Simple Workflow Service",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "Traffic Mirroring",
         "category": "other",
         "regions": [
           "me-south-1"
@@ -1474,6 +1964,27 @@
         ]
       },
       {
+        "serviceName": "Amazon Verified Permissions",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "VM Import/Export",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Virtual Private Cloud",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
         "serviceName": "Amazon VPC Lattice",
         "category": "other",
         "regions": [
@@ -1482,6 +1993,20 @@
       },
       {
         "serviceName": "AWS Site-to-Site VPN",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Well-Architected Tool",
+        "category": "other",
+        "regions": [
+          "me-south-1"
+        ]
+      },
+      {
+        "serviceName": "AWS X-Ray",
         "category": "other",
         "regions": [
           "me-south-1"
@@ -1561,7 +2086,7 @@
     "id": "aws-AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE-1772369485000",
     "provider": "aws",
     "title": "Increased Error Rates",
-    "description": "[[The following AWS services have been affected by this event:]]\nService: acm-pca Status: Disruption\nService: amplify Status: Disruption\nService: apigateway Status: Disruption\nService: appconfig Status: Disruption\nService: appsync Status: Disruption\nService: aps Status: Disruption\nService: athena Status: Disruption\nService: autoscaling Status: Disruption\nService: awsiot Status: Disruption\nService: awsiotdevicemanagement Status: Disruption\nService: awswaf Status: Disruption\nService: backup Status: Disruption\nService: batch Status: Disruption\nService: certificatemanager Status: Disruption\nService: clientvpn Status: Disruption\nService: cloudformation Status: Disruption\nService: cloudfront Status: Operating normally\nService: cloudhsm Status: Disruption\nService: cloudshell Status: Disruption\nService: cloudtrail Status: Disruption\nService: cloudwan Status: Operating normally\nService: cloudwatch Status: Disruption\nService: codebuild Status: Disruption\nService: codecommit Status: Disruption\nService: codedeploy Status: Disruption\nService: codepipeline Status: Disruption\nService: cognito Status: Disruption\nService: computeoptimizer Status: Disruption\nService: config Status: Disruption\nService: controltower Status: Disruption\nService: datasync Status: Disruption\nService: directconnect Status: Disruption\nService: directoryservice Status: Disruption\nService: dms Status: Disruption\nService: docdb Status: Disruption\nService: drs Status: Disruption\nService: dynamodb Status: Disruption\nService: ec2 Status: Disruption\nService: ec2systemsmanager Status: Disruption\nService: ecr Status: Disruption\nService: ecs Status: Disruption\nService: eks Status: Disruption\nService: elasticache Status: Disruption\nService: elasticbeanstalk Status: Disruption\nService: elasticfilesystem Status: Disruption\nService: elasticsearch Status: Disruption\nService: elb Status: Disruption\nService: elemental Status: Disruption\nService: emr Status: Disruption\nService: emrserverless Status: Disruption\nService: endusermessaging Status: Disruption\nService: events Status: Disruption\nService: fargate Status: Disruption\nService: firehose Status: Disruption\nService: fms Status: Disruption\nService: fsx Status: Disruption\nService: glacier Status: Disruption\nService: globalaccelerator Status: Operating normally\nService: glue Status: Disruption\nService: grafana Status: Disruption\nService: guardduty Status: Disruption\nService: iamidentitycenter Status: Disruption\nService: iamrolesanywhere Status: Disruption\nService: imagebuilder Status: Disruption\nService: inspector Status: Disruption\nService: iotdevicedefender Status: Disruption\nService: ipam Status: Disruption\nService: kafka Status: Disruption\nService: kinesis Status: Disruption\nService: kinesisanalytics Status: Disruption\nService: kms Status: Disruption\nService: lakeformation Status: Disruption\nService: lambda Status: Disruption\nService: licensemanager Status: Disruption\nService: management-console Status: Operating normally\nService: mgn Status: Disruption\nService: mq Status: Disruption\nService: natgateway Status: Disruption\nService: neptune-db Status: Disruption\nService: networkfirewall Status: Disruption\nService: privatelink Status: Disruption\nService: rds Status: Disruption\nService: reachabilityanalyzer Status: Disruption\nService: redshift Status: Disruption\nService: resourceexplorer Status: Disruption\nService: resourcegroups Status: Disruption\nService: resourcegroupstaggingapi Status: Disruption\nService: route53 Status: Operating normally\nService: s3 Status: Disruption\nService: sagemaker Status: Disruption\nService: scheduler Status: Disruption\nService: secretsmanager Status: Disruption\nService: security-ir Status: Disruption\nService: securityhub Status: Disruption\nService: servicecatalog Status: Disruption\nService: servicediscovery Status: Disruption\nService: ses Status: Disruption\nService: signin Status: Disruption\nService: sns Status: Disruption\nService: sqs Status: Disruption\nService: ssmsap Status: Disruption\nService: state Status: Disruption\nService: storagegateway Status: Disruption\nService: sts Status: Disruption\nService: swf Status: Disruption\nService: trafficmirroring Status: Disruption\nService: transfer Status: Disruption\nService: transitgateway Status: Disruption\nService: verifiedaccess Status: Disruption\nService: vpc Status: Disruption\nService: vpclattice Status: Disruption\nService: vpnvpc Status: Disruption\nService: workspaces Status: Disruption",
+    "description": "[[The following AWS services have been affected by this event:]]\nService: acm-pca Status: Disruption\nService: airflow Status: Disruption\nService: amplify Status: Disruption\nService: apigateway Status: Disruption\nService: appconfig Status: Disruption\nService: applicationinsights Status: Disruption\nService: appsync Status: Disruption\nService: appwizard Status: Disruption\nService: aps Status: Disruption\nService: athena Status: Disruption\nService: autoscaling Status: Disruption\nService: awsiot Status: Disruption\nService: awsiotdevicemanagement Status: Disruption\nService: awswaf Status: Disruption\nService: backup Status: Disruption\nService: batch Status: Disruption\nService: bedrock Status: Disruption\nService: certificatemanager Status: Disruption\nService: clientvpn Status: Disruption\nService: cloudformation Status: Disruption\nService: cloudfront Status: Operating normally\nService: cloudhsm Status: Disruption\nService: cloudshell Status: Disruption\nService: cloudtrail Status: Disruption\nService: cloudwan Status: Operating normally\nService: cloudwatch Status: Disruption\nService: cloudwatchsynthetics Status: Disruption\nService: codebuild Status: Disruption\nService: codecommit Status: Disruption\nService: codedeploy Status: Disruption\nService: codepipeline Status: Disruption\nService: cognito Status: Disruption\nService: computeoptimizer Status: Disruption\nService: config Status: Disruption\nService: consolemobileapp Status: Disruption\nService: controlcatalog Status: Disruption\nService: controltower Status: Disruption\nService: datasync Status: Disruption\nService: directconnect Status: Disruption\nService: directoryservice Status: Disruption\nService: dlm Status: Disruption\nService: dms Status: Disruption\nService: docdb Status: Disruption\nService: drs Status: Disruption\nService: dynamodb Status: Disruption\nService: ec2 Status: Disruption\nService: ec2serialconsole Status: Disruption\nService: ec2systemsmanager Status: Disruption\nService: ecr Status: Disruption\nService: ecs Status: Disruption\nService: eks Status: Disruption\nService: elasticache Status: Disruption\nService: elasticbeanstalk Status: Disruption\nService: elasticfilesystem Status: Disruption\nService: elasticsearch Status: Disruption\nService: elb Status: Disruption\nService: elemental Status: Disruption\nService: emr Status: Disruption\nService: emrserverless Status: Disruption\nService: endusermessaging Status: Disruption\nService: events Status: Disruption\nService: fargate Status: Disruption\nService: firehose Status: Disruption\nService: fis Status: Disruption\nService: fms Status: Disruption\nService: fsx Status: Disruption\nService: glacier Status: Disruption\nService: globalaccelerator Status: Operating normally\nService: glue Status: Disruption\nService: grafana Status: Disruption\nService: guardduty Status: Disruption\nService: iamidentitycenter Status: Disruption\nService: iamrolesanywhere Status: Disruption\nService: imagebuilder Status: Disruption\nService: infrastructureperformance Status: Disruption\nService: inspector Status: Disruption\nService: internetconnectivity Status: Disruption\nService: internetmonitor Status: Disruption\nService: iotdevicedefender Status: Disruption\nService: ipam Status: Disruption\nService: kafka Status: Disruption\nService: kinesis Status: Disruption\nService: kinesisanalytics Status: Disruption\nService: kms Status: Disruption\nService: lakeformation Status: Disruption\nService: lambda Status: Disruption\nService: licensemanager Status: Disruption\nService: managedssh Status: Disruption\nService: management-console Status: Operating normally\nService: mgn Status: Disruption\nService: mq Status: Disruption\nService: natgateway Status: Disruption\nService: neptune-db Status: Disruption\nService: networkfirewall Status: Disruption\nService: outposts Status: Disruption\nService: pca-connector-scep Status: Disruption\nService: pcaconnectorad Status: Disruption\nService: privatelink Status: Disruption\nService: quicksight Status: Disruption\nService: ram Status: Disruption\nService: rds Status: Disruption\nService: reachabilityanalyzer Status: Disruption\nService: redshift Status: Disruption\nService: resourceexplorer Status: Disruption\nService: resourcegroups Status: Disruption\nService: resourcegroupstaggingapi Status: Disruption\nService: route53 Status: Operating normally\nService: route53privatedns Status: Disruption\nService: route53resolver Status: Disruption\nService: rum Status: Disruption\nService: s3 Status: Disruption\nService: s3rtc Status: Disruption\nService: sagemaker Status: Disruption\nService: scheduler Status: Disruption\nService: secretsmanager Status: Disruption\nService: security-ir Status: Disruption\nService: securityhub Status: Disruption\nService: servicecatalog Status: Disruption\nService: servicediscovery Status: Disruption\nService: servicequotas Status: Disruption\nService: ses Status: Disruption\nService: signin Status: Disruption\nService: sns Status: Disruption\nService: sqs Status: Disruption\nService: ssmsap Status: Disruption\nService: state Status: Disruption\nService: storagegateway Status: Disruption\nService: sts Status: Disruption\nService: swf Status: Disruption\nService: trafficmirroring Status: Disruption\nService: transfer Status: Disruption\nService: transitgateway Status: Disruption\nService: verifiedaccess Status: Disruption\nService: verifiedpermissions Status: Disruption\nService: vmimportexport Status: Disruption\nService: vpc Status: Disruption\nService: vpclattice Status: Disruption\nService: vpnvpc Status: Disruption\nService: workspaces Status: Disruption\nService: xray Status: Disruption",
     "severity": "critical",
     "status": "ongoing",
     "startedAt": "2026-03-01T12:51:25.000Z",
@@ -1585,7 +2110,7 @@
       {
         "timestamp": "2026-03-01T12:51:25.000Z",
         "status": "1",
-        "message": "[[The following AWS services have been affected by this event:]]\nService: acm-pca Status: Disruption\nService: amplify Status: Disruption\nService: apigateway Status: Disruption\nService: appconfig Status: Disruption\nService: appsync Status: Disruption\nService: aps Status: Disruption\nService: athena Status: Disruption\nService: autoscaling Status: Disruption\nService: awsiot Status: Disruption\nService: awsiotdevicemanagement Status: Disruption\nService: awswaf Status: Disruption\nService: backup Status: Disruption\nService: batch Status: Disruption\nService: certificatemanager Status: Disruption\nService: clientvpn Status: Disruption\nService: cloudformation Status: Disruption\nService: cloudfront Status: Informational\nService: cloudhsm Status: Disruption\nService: cloudshell Status: Disruption\nService: cloudtrail Status: Disruption\nService: cloudwan Status: Informational\nService: cloudwatch Status: Disruption\nService: codebuild Status: Disruption\nService: codecommit Status: Disruption\nService: codedeploy Status: Disruption\nService: codepipeline Status: Disruption\nService: cognito Status: Disruption\nService: computeoptimizer Status: Disruption\nService: config Status: Disruption\nService: controltower Status: Disruption\nService: datasync Status: Disruption\nService: directconnect Status: Disruption\nService: directoryservice Status: Disruption\nService: dms Status: Disruption\nService: docdb Status: Disruption\nService: drs Status: Disruption\nService: dynamodb Status: Disruption\nService: ec2 Status: Disruption\nService: ec2systemsmanager Status: Disruption\nService: ecr Status: Disruption\nService: ecs Status: Disruption\nService: eks Status: Disruption\nService: elasticache Status: Disruption\nService: elasticbeanstalk Status: Disruption\nService: elasticfilesystem Status: Disruption\nService: elasticsearch Status: Disruption\nService: elb Status: Disruption\nService: elemental Status: Disruption\nService: emr Status: Disruption\nService: emrserverless Status: Disruption\nService: endusermessaging Status: Disruption\nService: events Status: Disruption\nService: fargate Status: Disruption\nService: firehose Status: Disruption\nService: fms Status: Disruption\nService: fsx Status: Disruption\nService: glacier Status: Disruption\nService: globalaccelerator Status: Informational\nService: glue Status: Disruption\nService: grafana Status: Disruption\nService: guardduty Status: Disruption\nService: iamidentitycenter Status: Disruption\nService: iamrolesanywhere Status: Disruption\nService: imagebuilder Status: Disruption\nService: inspector Status: Disruption\nService: iotdevicedefender Status: Disruption\nService: ipam Status: Disruption\nService: kafka Status: Disruption\nService: kinesis Status: Disruption\nService: kinesisanalytics Status: Disruption\nService: kms Status: Disruption\nService: lakeformation Status: Disruption\nService: lambda Status: Disruption\nService: licensemanager Status: Disruption\nService: management-console Status: Disruption\nService: mgn Status: Disruption\nService: mq Status: Disruption\nService: natgateway Status: Disruption\nService: neptune-db Status: Disruption\nService: networkfirewall Status: Disruption\nService: privatelink Status: Disruption\nService: rds Status: Disruption\nService: reachabilityanalyzer Status: Disruption\nService: redshift Status: Disruption\nService: resourceexplorer Status: Disruption\nService: resourcegroups Status: Disruption\nService: resourcegroupstaggingapi Status: Disruption\nService: route53 Status: Degradation\nService: s3 Status: Disruption\nService: sagemaker Status: Disruption\nService: scheduler Status: Disruption\nService: secretsmanager Status: Disruption\nService: security-ir Status: Disruption\nService: securityhub Status: Disruption\nService: servicecatalog Status: Disruption\nService: servicediscovery Status: Disruption\nService: ses Status: Disruption\nService: signin Status: Disruption\nService: sns Status: Disruption\nService: sqs Status: Disruption\nService: ssmsap Status: Disruption\nService: state Status: Disruption\nService: storagegateway Status: Disruption\nService: sts Status: Disruption\nService: swf Status: Disruption\nService: trafficmirroring Status: Disruption\nService: transfer Status: Disruption\nService: transitgateway Status: Disruption\nService: verifiedaccess Status: Disruption\nService: vpc Status: Disruption\nService: vpclattice Status: Disruption\nService: vpnvpc Status: Disruption\nService: workspaces Status: Disruption"
+        "message": "[[The following AWS services have been affected by this event:]]\nService: acm-pca Status: Disruption\nService: airflow Status: Disruption\nService: amplify Status: Disruption\nService: apigateway Status: Disruption\nService: appconfig Status: Disruption\nService: applicationinsights Status: Disruption\nService: appsync Status: Disruption\nService: appwizard Status: Disruption\nService: aps Status: Disruption\nService: athena Status: Disruption\nService: autoscaling Status: Disruption\nService: awsiot Status: Disruption\nService: awsiotdevicemanagement Status: Disruption\nService: awswaf Status: Disruption\nService: backup Status: Disruption\nService: batch Status: Disruption\nService: bedrock Status: Disruption\nService: certificatemanager Status: Disruption\nService: clientvpn Status: Disruption\nService: cloudformation Status: Disruption\nService: cloudfront Status: Informational\nService: cloudhsm Status: Disruption\nService: cloudshell Status: Disruption\nService: cloudtrail Status: Disruption\nService: cloudwan Status: Informational\nService: cloudwatch Status: Disruption\nService: cloudwatchsynthetics Status: Disruption\nService: codebuild Status: Disruption\nService: codecommit Status: Disruption\nService: codedeploy Status: Disruption\nService: codepipeline Status: Disruption\nService: cognito Status: Disruption\nService: computeoptimizer Status: Disruption\nService: config Status: Disruption\nService: consolemobileapp Status: Disruption\nService: controlcatalog Status: Disruption\nService: controltower Status: Disruption\nService: datasync Status: Disruption\nService: directconnect Status: Disruption\nService: directoryservice Status: Disruption\nService: dlm Status: Disruption\nService: dms Status: Disruption\nService: docdb Status: Disruption\nService: drs Status: Disruption\nService: dynamodb Status: Disruption\nService: ec2 Status: Disruption\nService: ec2serialconsole Status: Disruption\nService: ec2systemsmanager Status: Disruption\nService: ecr Status: Disruption\nService: ecs Status: Disruption\nService: eks Status: Disruption\nService: elasticache Status: Disruption\nService: elasticbeanstalk Status: Disruption\nService: elasticfilesystem Status: Disruption\nService: elasticsearch Status: Disruption\nService: elb Status: Disruption\nService: elemental Status: Disruption\nService: emr Status: Disruption\nService: emrserverless Status: Disruption\nService: endusermessaging Status: Disruption\nService: events Status: Disruption\nService: fargate Status: Disruption\nService: firehose Status: Disruption\nService: fis Status: Disruption\nService: fms Status: Disruption\nService: fsx Status: Disruption\nService: glacier Status: Disruption\nService: globalaccelerator Status: Informational\nService: glue Status: Disruption\nService: grafana Status: Disruption\nService: guardduty Status: Disruption\nService: iamidentitycenter Status: Disruption\nService: iamrolesanywhere Status: Disruption\nService: imagebuilder Status: Disruption\nService: infrastructureperformance Status: Disruption\nService: inspector Status: Disruption\nService: internetconnectivity Status: Disruption\nService: internetmonitor Status: Disruption\nService: iotdevicedefender Status: Disruption\nService: ipam Status: Disruption\nService: kafka Status: Disruption\nService: kinesis Status: Disruption\nService: kinesisanalytics Status: Disruption\nService: kms Status: Disruption\nService: lakeformation Status: Disruption\nService: lambda Status: Disruption\nService: licensemanager Status: Disruption\nService: managedssh Status: Disruption\nService: management-console Status: Disruption\nService: mgn Status: Disruption\nService: mq Status: Disruption\nService: natgateway Status: Disruption\nService: neptune-db Status: Disruption\nService: networkfirewall Status: Disruption\nService: outposts Status: Disruption\nService: pca-connector-scep Status: Disruption\nService: pcaconnectorad Status: Disruption\nService: privatelink Status: Disruption\nService: quicksight Status: Disruption\nService: ram Status: Disruption\nService: rds Status: Disruption\nService: reachabilityanalyzer Status: Disruption\nService: redshift Status: Disruption\nService: resourceexplorer Status: Disruption\nService: resourcegroups Status: Disruption\nService: resourcegroupstaggingapi Status: Disruption\nService: route53 Status: Degradation\nService: route53privatedns Status: Disruption\nService: route53resolver Status: Disruption\nService: rum Status: Disruption\nService: s3 Status: Disruption\nService: s3rtc Status: Disruption\nService: sagemaker Status: Disruption\nService: scheduler Status: Disruption\nService: secretsmanager Status: Disruption\nService: security-ir Status: Disruption\nService: securityhub Status: Disruption\nService: servicecatalog Status: Disruption\nService: servicediscovery Status: Disruption\nService: servicequotas Status: Disruption\nService: ses Status: Disruption\nService: signin Status: Disruption\nService: sns Status: Disruption\nService: sqs Status: Disruption\nService: ssmsap Status: Disruption\nService: state Status: Disruption\nService: storagegateway Status: Disruption\nService: sts Status: Disruption\nService: swf Status: Disruption\nService: trafficmirroring Status: Disruption\nService: transfer Status: Disruption\nService: transitgateway Status: Disruption\nService: verifiedaccess Status: Disruption\nService: verifiedpermissions Status: Disruption\nService: vmimportexport Status: Disruption\nService: vpc Status: Disruption\nService: vpclattice Status: Disruption\nService: vpnvpc Status: Disruption\nService: workspaces Status: Disruption\nService: xray Status: Disruption"
       },
       {
         "timestamp": "2026-03-01T13:19:12.000Z",
@@ -1948,9 +2473,9 @@
         "message": "We are providing an update on the ongoing service disruption. The Middle East (UAE) Region (ME-CENTRAL-1) has suffered damage as a result of the conflict in the Middle East and is currently unable to reliably support customer applications. While some workloads continue to function normally, we strongly recommend customers migrate all accessible resources to other Regions and restore inaccessible resources from remote backups as soon as possible. Relevant billing operations are currently suspended while we restore normal operations in this AWS Region. This process is expected to take several months. "
       },
       {
-        "timestamp": "2026-04-30T07:39:42.000Z",
+        "timestamp": "2026-05-06T08:06:13.000Z",
         "status": "3",
-        "message": "[[The following AWS services have been affected by this event:]]\nService: acm-pca Status: Disruption\nService: amplify Status: Disruption\nService: apigateway Status: Disruption\nService: appconfig Status: Disruption\nService: appsync Status: Disruption\nService: aps Status: Disruption\nService: athena Status: Disruption\nService: autoscaling Status: Disruption\nService: awsiot Status: Disruption\nService: awsiotdevicemanagement Status: Disruption\nService: awswaf Status: Disruption\nService: backup Status: Disruption\nService: batch Status: Disruption\nService: certificatemanager Status: Disruption\nService: clientvpn Status: Disruption\nService: cloudformation Status: Disruption\nService: cloudfront Status: Operating normally\nService: cloudhsm Status: Disruption\nService: cloudshell Status: Disruption\nService: cloudtrail Status: Disruption\nService: cloudwan Status: Operating normally\nService: cloudwatch Status: Disruption\nService: codebuild Status: Disruption\nService: codecommit Status: Disruption\nService: codedeploy Status: Disruption\nService: codepipeline Status: Disruption\nService: cognito Status: Disruption\nService: computeoptimizer Status: Disruption\nService: config Status: Disruption\nService: controltower Status: Disruption\nService: datasync Status: Disruption\nService: directconnect Status: Disruption\nService: directoryservice Status: Disruption\nService: dms Status: Disruption\nService: docdb Status: Disruption\nService: drs Status: Disruption\nService: dynamodb Status: Disruption\nService: ec2 Status: Disruption\nService: ec2systemsmanager Status: Disruption\nService: ecr Status: Disruption\nService: ecs Status: Disruption\nService: eks Status: Disruption\nService: elasticache Status: Disruption\nService: elasticbeanstalk Status: Disruption\nService: elasticfilesystem Status: Disruption\nService: elasticsearch Status: Disruption\nService: elb Status: Disruption\nService: elemental Status: Disruption\nService: emr Status: Disruption\nService: emrserverless Status: Disruption\nService: endusermessaging Status: Disruption\nService: events Status: Disruption\nService: fargate Status: Disruption\nService: firehose Status: Disruption\nService: fms Status: Disruption\nService: fsx Status: Disruption\nService: glacier Status: Disruption\nService: globalaccelerator Status: Operating normally\nService: glue Status: Disruption\nService: grafana Status: Disruption\nService: guardduty Status: Disruption\nService: iamidentitycenter Status: Disruption\nService: iamrolesanywhere Status: Disruption\nService: imagebuilder Status: Disruption\nService: inspector Status: Disruption\nService: iotdevicedefender Status: Disruption\nService: ipam Status: Disruption\nService: kafka Status: Disruption\nService: kinesis Status: Disruption\nService: kinesisanalytics Status: Disruption\nService: kms Status: Disruption\nService: lakeformation Status: Disruption\nService: lambda Status: Disruption\nService: licensemanager Status: Disruption\nService: management-console Status: Operating normally\nService: mgn Status: Disruption\nService: mq Status: Disruption\nService: natgateway Status: Disruption\nService: neptune-db Status: Disruption\nService: networkfirewall Status: Disruption\nService: privatelink Status: Disruption\nService: rds Status: Disruption\nService: reachabilityanalyzer Status: Disruption\nService: redshift Status: Disruption\nService: resourceexplorer Status: Disruption\nService: resourcegroups Status: Disruption\nService: resourcegroupstaggingapi Status: Disruption\nService: route53 Status: Operating normally\nService: s3 Status: Disruption\nService: sagemaker Status: Disruption\nService: scheduler Status: Disruption\nService: secretsmanager Status: Disruption\nService: security-ir Status: Disruption\nService: securityhub Status: Disruption\nService: servicecatalog Status: Disruption\nService: servicediscovery Status: Disruption\nService: ses Status: Disruption\nService: signin Status: Disruption\nService: sns Status: Disruption\nService: sqs Status: Disruption\nService: ssmsap Status: Disruption\nService: state Status: Disruption\nService: storagegateway Status: Disruption\nService: sts Status: Disruption\nService: swf Status: Disruption\nService: trafficmirroring Status: Disruption\nService: transfer Status: Disruption\nService: transitgateway Status: Disruption\nService: verifiedaccess Status: Disruption\nService: vpc Status: Disruption\nService: vpclattice Status: Disruption\nService: vpnvpc Status: Disruption\nService: workspaces Status: Disruption"
+        "message": "[[The following AWS services have been affected by this event:]]\nService: acm-pca Status: Disruption\nService: airflow Status: Disruption\nService: amplify Status: Disruption\nService: apigateway Status: Disruption\nService: appconfig Status: Disruption\nService: applicationinsights Status: Disruption\nService: appsync Status: Disruption\nService: appwizard Status: Disruption\nService: aps Status: Disruption\nService: athena Status: Disruption\nService: autoscaling Status: Disruption\nService: awsiot Status: Disruption\nService: awsiotdevicemanagement Status: Disruption\nService: awswaf Status: Disruption\nService: backup Status: Disruption\nService: batch Status: Disruption\nService: bedrock Status: Disruption\nService: certificatemanager Status: Disruption\nService: clientvpn Status: Disruption\nService: cloudformation Status: Disruption\nService: cloudfront Status: Operating normally\nService: cloudhsm Status: Disruption\nService: cloudshell Status: Disruption\nService: cloudtrail Status: Disruption\nService: cloudwan Status: Operating normally\nService: cloudwatch Status: Disruption\nService: cloudwatchsynthetics Status: Disruption\nService: codebuild Status: Disruption\nService: codecommit Status: Disruption\nService: codedeploy Status: Disruption\nService: codepipeline Status: Disruption\nService: cognito Status: Disruption\nService: computeoptimizer Status: Disruption\nService: config Status: Disruption\nService: consolemobileapp Status: Disruption\nService: controlcatalog Status: Disruption\nService: controltower Status: Disruption\nService: datasync Status: Disruption\nService: directconnect Status: Disruption\nService: directoryservice Status: Disruption\nService: dlm Status: Disruption\nService: dms Status: Disruption\nService: docdb Status: Disruption\nService: drs Status: Disruption\nService: dynamodb Status: Disruption\nService: ec2 Status: Disruption\nService: ec2serialconsole Status: Disruption\nService: ec2systemsmanager Status: Disruption\nService: ecr Status: Disruption\nService: ecs Status: Disruption\nService: eks Status: Disruption\nService: elasticache Status: Disruption\nService: elasticbeanstalk Status: Disruption\nService: elasticfilesystem Status: Disruption\nService: elasticsearch Status: Disruption\nService: elb Status: Disruption\nService: elemental Status: Disruption\nService: emr Status: Disruption\nService: emrserverless Status: Disruption\nService: endusermessaging Status: Disruption\nService: events Status: Disruption\nService: fargate Status: Disruption\nService: firehose Status: Disruption\nService: fis Status: Disruption\nService: fms Status: Disruption\nService: fsx Status: Disruption\nService: glacier Status: Disruption\nService: globalaccelerator Status: Operating normally\nService: glue Status: Disruption\nService: grafana Status: Disruption\nService: guardduty Status: Disruption\nService: iamidentitycenter Status: Disruption\nService: iamrolesanywhere Status: Disruption\nService: imagebuilder Status: Disruption\nService: infrastructureperformance Status: Disruption\nService: inspector Status: Disruption\nService: internetconnectivity Status: Disruption\nService: internetmonitor Status: Disruption\nService: iotdevicedefender Status: Disruption\nService: ipam Status: Disruption\nService: kafka Status: Disruption\nService: kinesis Status: Disruption\nService: kinesisanalytics Status: Disruption\nService: kms Status: Disruption\nService: lakeformation Status: Disruption\nService: lambda Status: Disruption\nService: licensemanager Status: Disruption\nService: managedssh Status: Disruption\nService: management-console Status: Operating normally\nService: mgn Status: Disruption\nService: mq Status: Disruption\nService: natgateway Status: Disruption\nService: neptune-db Status: Disruption\nService: networkfirewall Status: Disruption\nService: outposts Status: Disruption\nService: pca-connector-scep Status: Disruption\nService: pcaconnectorad Status: Disruption\nService: privatelink Status: Disruption\nService: quicksight Status: Disruption\nService: ram Status: Disruption\nService: rds Status: Disruption\nService: reachabilityanalyzer Status: Disruption\nService: redshift Status: Disruption\nService: resourceexplorer Status: Disruption\nService: resourcegroups Status: Disruption\nService: resourcegroupstaggingapi Status: Disruption\nService: route53 Status: Operating normally\nService: route53privatedns Status: Disruption\nService: route53resolver Status: Disruption\nService: rum Status: Disruption\nService: s3 Status: Disruption\nService: s3rtc Status: Disruption\nService: sagemaker Status: Disruption\nService: scheduler Status: Disruption\nService: secretsmanager Status: Disruption\nService: security-ir Status: Disruption\nService: securityhub Status: Disruption\nService: servicecatalog Status: Disruption\nService: servicediscovery Status: Disruption\nService: servicequotas Status: Disruption\nService: ses Status: Disruption\nService: signin Status: Disruption\nService: sns Status: Disruption\nService: sqs Status: Disruption\nService: ssmsap Status: Disruption\nService: state Status: Disruption\nService: storagegateway Status: Disruption\nService: sts Status: Disruption\nService: swf Status: Disruption\nService: trafficmirroring Status: Disruption\nService: transfer Status: Disruption\nService: transitgateway Status: Disruption\nService: verifiedaccess Status: Disruption\nService: verifiedpermissions Status: Disruption\nService: vmimportexport Status: Disruption\nService: vpc Status: Disruption\nService: vpclattice Status: Disruption\nService: vpnvpc Status: Disruption\nService: workspaces Status: Disruption\nService: xray Status: Disruption"
       }
     ],
     "sourceUrl": "https://health.aws.amazon.com/health/status"
@@ -1968,6 +2493,13 @@
     "affectedServices": [
       {
         "serviceName": "AWS Private Certificate Authority",
+        "category": "other",
+        "regions": [
+          "me-central-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Managed Workflows for Apache Airflow",
         "category": "other",
         "regions": [
           "me-central-1"
@@ -1995,7 +2527,21 @@
         ]
       },
       {
+        "serviceName": "Amazon CloudWatch Application Insights",
+        "category": "other",
+        "regions": [
+          "me-central-1"
+        ]
+      },
+      {
         "serviceName": "AWS AppSync",
+        "category": "other",
+        "regions": [
+          "me-central-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Launch Wizard",
         "category": "other",
         "regions": [
           "me-central-1"
@@ -2053,6 +2599,13 @@
       {
         "serviceName": "AWS Batch",
         "category": "compute",
+        "regions": [
+          "me-central-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Bedrock",
+        "category": "ai-ml",
         "regions": [
           "me-central-1"
         ]
@@ -2121,6 +2674,13 @@
         ]
       },
       {
+        "serviceName": "Amazon CloudWatch Synthetics",
+        "category": "other",
+        "regions": [
+          "me-central-1"
+        ]
+      },
+      {
         "serviceName": "AWS CodeBuild",
         "category": "devtools",
         "regions": [
@@ -2170,6 +2730,20 @@
         ]
       },
       {
+        "serviceName": "AWS Console Mobile App",
+        "category": "other",
+        "regions": [
+          "me-central-1"
+        ]
+      },
+      {
+        "serviceName": "Control Catalog",
+        "category": "other",
+        "regions": [
+          "me-central-1"
+        ]
+      },
+      {
         "serviceName": "AWS Control Tower",
         "category": "other",
         "regions": [
@@ -2192,6 +2766,13 @@
       },
       {
         "serviceName": "AWS Directory Service",
+        "category": "other",
+        "regions": [
+          "me-central-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Data Lifecycle Manager",
         "category": "other",
         "regions": [
           "me-central-1"
@@ -2227,6 +2808,13 @@
       },
       {
         "serviceName": "Amazon Elastic Compute Cloud",
+        "category": "other",
+        "regions": [
+          "me-central-1"
+        ]
+      },
+      {
+        "serviceName": "EC2 Serial Console",
         "category": "other",
         "regions": [
           "me-central-1"
@@ -2345,6 +2933,13 @@
         ]
       },
       {
+        "serviceName": "AWS Fault Injection Service",
+        "category": "other",
+        "regions": [
+          "me-central-1"
+        ]
+      },
+      {
         "serviceName": "AWS Firewall Manager",
         "category": "other",
         "regions": [
@@ -2415,7 +3010,28 @@
         ]
       },
       {
+        "serviceName": "Infrastructure Performance",
+        "category": "other",
+        "regions": [
+          "me-central-1"
+        ]
+      },
+      {
         "serviceName": "Amazon Inspector",
+        "category": "other",
+        "regions": [
+          "me-central-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Internet Connectivity",
+        "category": "other",
+        "regions": [
+          "me-central-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon CloudWatch Internet Monitor",
         "category": "other",
         "regions": [
           "me-central-1"
@@ -2485,6 +3101,13 @@
         ]
       },
       {
+        "serviceName": "Amazon EC2 Instance Connect",
+        "category": "other",
+        "regions": [
+          "me-central-1"
+        ]
+      },
+      {
         "serviceName": "AWS Management Console",
         "category": "other",
         "regions": [
@@ -2527,7 +3150,42 @@
         ]
       },
       {
+        "serviceName": "AWS Outposts",
+        "category": "other",
+        "regions": [
+          "me-central-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Private CA Connector for SCEP",
+        "category": "other",
+        "regions": [
+          "me-central-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Private CA Connector for Active Directory",
+        "category": "other",
+        "regions": [
+          "me-central-1"
+        ]
+      },
+      {
         "serviceName": "AWS VPCE PrivateLink",
+        "category": "other",
+        "regions": [
+          "me-central-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Quick Suite",
+        "category": "other",
+        "regions": [
+          "me-central-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Resource Access Manager",
         "category": "other",
         "regions": [
           "me-central-1"
@@ -2583,7 +3241,35 @@
         ]
       },
       {
+        "serviceName": "Amazon Route 53 Private DNS",
+        "category": "other",
+        "regions": [
+          "me-central-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Route 53 Resolver",
+        "category": "other",
+        "regions": [
+          "me-central-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon CloudWatch RUM",
+        "category": "other",
+        "regions": [
+          "me-central-1"
+        ]
+      },
+      {
         "serviceName": "Amazon Simple Storage Service",
+        "category": "other",
+        "regions": [
+          "me-central-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon S3 Replication Time Control",
         "category": "other",
         "regions": [
           "me-central-1"
@@ -2633,6 +3319,13 @@
       },
       {
         "serviceName": "AWS Cloud Map",
+        "category": "other",
+        "regions": [
+          "me-central-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Service Quotas",
         "category": "other",
         "regions": [
           "me-central-1"
@@ -2730,6 +3423,20 @@
         ]
       },
       {
+        "serviceName": "Amazon Verified Permissions",
+        "category": "other",
+        "regions": [
+          "me-central-1"
+        ]
+      },
+      {
+        "serviceName": "VM Import/Export",
+        "category": "other",
+        "regions": [
+          "me-central-1"
+        ]
+      },
+      {
         "serviceName": "Amazon Virtual Private Cloud",
         "category": "other",
         "regions": [
@@ -2752,6 +3459,13 @@
       },
       {
         "serviceName": "Amazon WorkSpaces",
+        "category": "other",
+        "regions": [
+          "me-central-1"
+        ]
+      },
+      {
+        "serviceName": "AWS X-Ray",
         "category": "other",
         "regions": [
           "me-central-1"
