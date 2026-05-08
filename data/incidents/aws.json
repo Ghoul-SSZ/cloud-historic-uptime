@@ -1,5 +1,177 @@
 [
   {
+    "id": "aws-AWS_EC2_OPERATIONAL_ISSUE_FFA94_A4DC515D30F",
+    "provider": "aws",
+    "title": "Increased Error Rate and Latency",
+    "description": "We continue to make progress in resolving the impaired EC2 instances in the affected Availability Zone (use1-az4) in the US-EAST-1 Region, and are working towards full recovery. We are actively working to bring additional cooling system capacity online, which will enable us to recover the remaining affected racks in a controlled and safe manner.  In the impacted Availability Zone, EC2 Instances, EBS Volumes, and other AWS Services may continue to experience elevated error rates and latencies for some workflows. Customers will continue to see some of their affected EC2 instances and EBS volumes as impaired until we achieve full recovery. We will provide an update by May 8, 1:30 AM PDT, or sooner if we have additional information to share.",
+    "severity": "minor",
+    "status": "ongoing",
+    "startedAt": "2026-05-08T00:25:26.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "AWS IoT Core",
+        "category": "other",
+        "regions": [
+          "us-east-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Elastic Kubernetes Service",
+        "category": "other",
+        "regions": [
+          "us-east-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon ElastiCache",
+        "category": "database",
+        "regions": [
+          "us-east-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon OpenSearch Service",
+        "category": "other",
+        "regions": [
+          "us-east-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Elastic Load Balancing",
+        "category": "networking",
+        "regions": [
+          "us-east-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Managed Streaming for Apache Kafka",
+        "category": "other",
+        "regions": [
+          "us-east-1"
+        ]
+      },
+      {
+        "serviceName": "AWS NAT Gateway",
+        "category": "other",
+        "regions": [
+          "us-east-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Redshift",
+        "category": "database",
+        "regions": [
+          "us-east-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon SageMaker",
+        "category": "ai-ml",
+        "regions": [
+          "us-east-1"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-05-08T00:25:26.000Z",
+        "status": "1",
+        "message": "We are investigating instance impairments in a single Availability Zone (use1-az4) in the US-EAST-1 Region. Other Availability Zones are not affected by the event and we are working to resolve the issue."
+      },
+      {
+        "timestamp": "2026-05-08T00:53:52.000Z",
+        "status": "1",
+        "message": "We continue to investigate instance impairments to a single Availability Zone (use1-az4) in the US-EAST-1 Region. We have experienced an increase in temperatures within a single data center, which in some cases has caused impairments for instances in the Availability Zone. EC2 instances and EBS volumes hosted on impacted hardware are affected by the loss of power during the thermal event. Other AWS services that depend on the affected EC2 instances and EBS volumes in this Availability Zone, may also experience impairments. We will continue to provide updates as recovery continues."
+      },
+      {
+        "timestamp": "2026-05-08T01:47:03.000Z",
+        "status": "1",
+        "message": "We continue to work towards mitigating the increased temperatures to its normal levels in the affected Availability Zone (use1-az4) in the US-EAST-1 Region. Other AWS services that depend on the affected EC2 instances and EBS volumes in this Availability Zone, may also experience impairments. We have weighed away traffic for most services at this time. We recommend customers utilize one of the other Availability Zones in the US-EAST-1 Region at this time, as existing instances in other AZ's remain unaffected by this issue. Customers may experience longer than usual provisioning times. We will provide an update by 7:45 PM PDT, or sooner if we have additional information to share."
+      },
+      {
+        "timestamp": "2026-05-08T03:06:28.000Z",
+        "status": "1",
+        "message": "We are actively working to restore temperatures to normal levels in the affected Availability Zone (use1-az4) in the US-EAST-1 Region, though progress is slower than originally anticipated. Since our last update we have made incremental progress to restore cooling systems within the affected AZ, which will not be visible to external customers but are required for the restoration of affected services. In the impacted Availability Zone, EC2 Instances, EBS Volumes, and other AWS Services are also experiencing elevated error rates and latencies for some workflows. As part of our recovery effort, we have shifted traffic away from the impacted Availability Zone for most services. We recommend customers utilize one of the other Availability Zones in the US-EAST-1 Region, as existing instances in other AZs remain unaffected by this issue. If immediate recovery is required, we recommend customers restore from EBS Snapshots and/or replace affected resources by launching new replacement resources in one of the unaffected zones. We will provide an update by 10:00 PM PDT, or sooner if we have additional information to share."
+      },
+      {
+        "timestamp": "2026-05-08T05:11:09.000Z",
+        "status": "1",
+        "message": "We are observing early signs of recovery. We continue to work towards restoring temperatures to normal levels and bring impacted racks back online in the affected Availability Zone (use1-az4) in the US-EAST-1 Region. We have been able to get additional cooling system capacity online, which has allowed us to recover some affected racks and are actively working to recover additional racks in a controlled and safe manner. In the impacted Availability Zone, EC2 Instances, EBS Volumes, and other AWS Services may continue to experience elevated error rates and latencies for some workflows until full recovery is achieved. We will provide an update by 11:30 PM PDT, or sooner if we have additional information to share."
+      },
+      {
+        "timestamp": "2026-05-08T06:38:44.000Z",
+        "status": "1",
+        "message": "We continue to make progress in resolving the impaired EC2 instances in the affected Availability Zone (use1-az4) in the US-EAST-1 Region, and are working towards full recovery. We are actively working to bring additional cooling system capacity online, which will enable us to recover the remaining affected racks in a controlled and safe manner.  In the impacted Availability Zone, EC2 Instances, EBS Volumes, and other AWS Services may continue to experience elevated error rates and latencies for some workflows. Customers will continue to see some of their affected EC2 instances and EBS volumes as impaired until we achieve full recovery. We will provide an update by May 8, 1:30 AM PDT, or sooner if we have additional information to share."
+      }
+    ],
+    "sourceUrl": "https://health.aws.amazon.com/health/status"
+  },
+  {
+    "id": "aws-AWS_EC2_OPERATIONAL_ISSUE-1778199926000",
+    "provider": "aws",
+    "title": "Increased Error Rate and Latency",
+    "description": "[[The following AWS services have been affected by this event:]]\nService: awsiot Status: Operating normally\nService: eks Status: Operating normally\nService: elasticache Status: Informational\nService: elasticsearch Status: Informational\nService: elb Status: Operating normally\nService: kafka Status: Informational\nService: natgateway Status: Operating normally\nService: redshift Status: Operating normally\nService: sagemaker Status: Informational",
+    "severity": "minor",
+    "status": "ongoing",
+    "startedAt": "2026-05-08T00:25:26.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Amazon EC2",
+        "category": "compute",
+        "regions": [
+          "us-east-1"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-05-08T00:25:26.000Z",
+        "status": "1",
+        "message": "We are investigating instance impairments in a single Availability Zone (use1-az4) in the US-EAST-1 Region. Other Availability Zones are not affected by the event and we are working to resolve the issue."
+      },
+      {
+        "timestamp": "2026-05-08T00:25:26.000Z",
+        "status": "1",
+        "message": "[[The following AWS services have been affected by this event:]]\nService: awsiot Status: Informational\nService: eks Status: Informational\nService: elasticache Status: Informational\nService: elasticsearch Status: Informational\nService: elb Status: Informational\nService: kafka Status: Informational\nService: natgateway Status: Informational\nService: redshift Status: Informational\nService: sagemaker Status: Informational"
+      },
+      {
+        "timestamp": "2026-05-08T00:53:52.000Z",
+        "status": "1",
+        "message": "We continue to investigate instance impairments to a single Availability Zone (use1-az4) in the US-EAST-1 Region. We have experienced an increase in temperatures within a single data center, which in some cases has caused impairments for instances in the Availability Zone. EC2 instances and EBS volumes hosted on impacted hardware are affected by the loss of power during the thermal event. Other AWS services that depend on the affected EC2 instances and EBS volumes in this Availability Zone, may also experience impairments. We will continue to provide updates as recovery continues."
+      },
+      {
+        "timestamp": "2026-05-08T01:47:03.000Z",
+        "status": "1",
+        "message": "We continue to work towards mitigating the increased temperatures to its normal levels in the affected Availability Zone (use1-az4) in the US-EAST-1 Region. Other AWS services that depend on the affected EC2 instances and EBS volumes in this Availability Zone, may also experience impairments. We have weighed away traffic for most services at this time. We recommend customers utilize one of the other Availability Zones in the US-EAST-1 Region at this time, as existing instances in other AZ's remain unaffected by this issue. Customers may experience longer than usual provisioning times. We will provide an update by 7:45 PM PDT, or sooner if we have additional information to share."
+      },
+      {
+        "timestamp": "2026-05-08T03:06:28.000Z",
+        "status": "1",
+        "message": "We are actively working to restore temperatures to normal levels in the affected Availability Zone (use1-az4) in the US-EAST-1 Region, though progress is slower than originally anticipated. Since our last update we have made incremental progress to restore cooling systems within the affected AZ, which will not be visible to external customers but are required for the restoration of affected services. In the impacted Availability Zone, EC2 Instances, EBS Volumes, and other AWS Services are also experiencing elevated error rates and latencies for some workflows. As part of our recovery effort, we have shifted traffic away from the impacted Availability Zone for most services. We recommend customers utilize one of the other Availability Zones in the US-EAST-1 Region, as existing instances in other AZs remain unaffected by this issue. If immediate recovery is required, we recommend customers restore from EBS Snapshots and/or replace affected resources by launching new replacement resources in one of the unaffected zones. We will provide an update by 10:00 PM PDT, or sooner if we have additional information to share."
+      },
+      {
+        "timestamp": "2026-05-08T05:11:09.000Z",
+        "status": "1",
+        "message": "We are observing early signs of recovery. We continue to work towards restoring temperatures to normal levels and bring impacted racks back online in the affected Availability Zone (use1-az4) in the US-EAST-1 Region. We have been able to get additional cooling system capacity online, which has allowed us to recover some affected racks and are actively working to recover additional racks in a controlled and safe manner. In the impacted Availability Zone, EC2 Instances, EBS Volumes, and other AWS Services may continue to experience elevated error rates and latencies for some workflows until full recovery is achieved. We will provide an update by 11:30 PM PDT, or sooner if we have additional information to share."
+      },
+      {
+        "timestamp": "2026-05-08T06:38:44.000Z",
+        "status": "1",
+        "message": "We continue to make progress in resolving the impaired EC2 instances in the affected Availability Zone (use1-az4) in the US-EAST-1 Region, and are working towards full recovery. We are actively working to bring additional cooling system capacity online, which will enable us to recover the remaining affected racks in a controlled and safe manner.  In the impacted Availability Zone, EC2 Instances, EBS Volumes, and other AWS Services may continue to experience elevated error rates and latencies for some workflows. Customers will continue to see some of their affected EC2 instances and EBS volumes as impaired until we achieve full recovery. We will provide an update by May 8, 1:30 AM PDT, or sooner if we have additional information to share."
+      },
+      {
+        "timestamp": "2026-05-08T07:10:01.000Z",
+        "status": "1",
+        "message": "[[The following AWS services have been affected by this event:]]\nService: awsiot Status: Operating normally\nService: eks Status: Operating normally\nService: elasticache Status: Informational\nService: elasticsearch Status: Informational\nService: elb Status: Operating normally\nService: kafka Status: Informational\nService: natgateway Status: Operating normally\nService: redshift Status: Operating normally\nService: sagemaker Status: Informational"
+      }
+    ],
+    "sourceUrl": "https://health.aws.amazon.com/health/status"
+  },
+  {
     "id": "aws-AWS_EC2_OPERATIONAL_ISSUE_FB70E_B77B1D343FD",
     "provider": "aws",
     "title": "Increased Connectivity Issues",
