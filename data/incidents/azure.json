@@ -2,13 +2,13 @@
   {
     "id": "azure-5GP8-W0G",
     "provider": "azure",
-    "title": "Preliminary Post Incident Review (PIR) – Multiple services – Control plane issues in East US",
-    "description": "Between 11:30 UTC on 24 April and 00:15 UTC on 25 April 2026, customers may have experienced failures or delays when attempting to provision, scale, or update resources in East US. Beyond this, a smaller subset of impacted customers may have experienced intermittent connectivity issues on existing workloads (including Virtual Machines and Azure Virtual Desktop sessions) for scenarios dependent on unhealthy internal service dependencies.",
+    "title": "Post Incident Review (PIR) – Multiple services – Control plane issues in East US",
+    "description": "Between 11:30 and 23:22 UTC on 24 April 2026, customers may have experienced failures or delays when attempting to provision, scale, or update resources in East US.",
     "severity": "minor",
     "status": "resolved",
     "startedAt": "2026-04-24T11:30:00.000Z",
-    "resolvedAt": "2026-04-25T00:15:00.000Z",
-    "durationMinutes": 765,
+    "resolvedAt": "2026-04-24T23:22:00.000Z",
+    "durationMinutes": 712,
     "affectedServices": [
       {
         "serviceName": "Multiple services",
@@ -22,82 +22,87 @@
       {
         "timestamp": "2026-04-24T11:30:00.000Z",
         "status": "update",
-        "message": "Customer impact began. We observed failures or delays when customers attempted to provision, scale, or update resources in the affected region."
+        "message": "Customer impact began, including failures and delays when attempting to provision, scale, or update resources."
       },
       {
         "timestamp": "2026-04-24T11:38:00.000Z",
         "status": "update",
-        "message": "We detected an issue in AZ-01. A control plane partition became unhealthy and automatic failover attempts did not complete successfully."
+        "message": "We detected an issue in AZ-01. A control plane partition experienced lock contention, and automatic failover attempts to secondary replicas did not complete successfully."
       },
       {
         "timestamp": "2026-04-24T13:40:00.000Z",
         "status": "update",
-        "message": "11:38–We attempted manual failover in AZ-01. These efforts did not successfully restore service."
+        "message": "11:38–We attempted manual failover in AZ-01, but these efforts did not successfully restore service."
+      },
+      {
+        "timestamp": "2026-04-24T11:59:00.000Z",
+        "status": "update",
+        "message": "First targeted notifications were sent to a subset of impacted customers, via our “BRAIN” automated messaging system."
       },
       {
         "timestamp": "2026-04-24T13:40:00.000Z",
         "status": "update",
-        "message": "We identified a recently deployed update as the likely cause of the issue."
+        "message": "We identified a recently deployed update as the likely trigger condition for this issue."
       },
       {
         "timestamp": "2026-04-24T13:50:00.000Z",
         "status": "update",
-        "message": "We began observing similar symptoms in AZ-03, indicating the issue was affecting multiple availability zones."
+        "message": "We began observing impact in AZ-03, indicating the issue was now affecting multiple Availability Zones."
       },
       {
         "timestamp": "2026-04-24T14:07:00.000Z",
         "status": "update",
-        "message": "We initiated rollback to a previously known good version in AZ-03."
+        "message": "We initiated a rollback to the last known good version in AZ-03."
       },
       {
         "timestamp": "2026-04-24T15:03:00.000Z",
         "status": "update",
-        "message": "We observed significant recovery in AZ-03. Control plane availability exceeded 99%."
+        "message": "We observed significant recovery in AZ-03, control plane availability exceeded 99%."
       },
       {
         "timestamp": "2026-04-24T15:04:00.000Z",
         "status": "update",
-        "message": "We initiated rollback actions to AZ-01."
+        "message": "We initiated a rollback to the last known good version in AZ-01."
+      },
+      {
+        "timestamp": "2026-04-24T15:36:00.000Z",
+        "status": "update",
+        "message": "First public Azure Status page update, to ensure wider visibility."
       },
       {
         "timestamp": "2026-04-24T18:52:00.000Z",
         "status": "update",
-        "message": "We observed significant improvement in AZ-01 as rollback progressed."
+        "message": "We observed significant improvement in AZ-01, as the rollback progressed."
       },
       {
         "timestamp": "2026-04-24T19:02:00.000Z",
         "status": "update",
-        "message": "We confirmed AZ-01 had recovered to greater than 99% availability, while the rollback continued in the background."
+        "message": "We observed significant recovery in AZ-01, control plane availability exceeded 99%."
       },
       {
         "timestamp": "2026-04-24T19:05:00.000Z",
         "status": "update",
-        "message": "We observed similar symptoms in AZ-02 as load redistributed across the region."
+        "message": "We began observing impact in AZ-02, as load redistributed across the region."
       },
       {
         "timestamp": "2026-04-24T19:10:00.000Z",
         "status": "update",
-        "message": "We initiated rollback to a known good version in AZ-02."
+        "message": "We initiated a rollback to the last known good version in AZ-02."
       },
       {
         "timestamp": "2026-04-24T21:02:00.000Z",
         "status": "update",
-        "message": "We observed instability reappear in AZ-03. We determined this was because the rollback had not yet completed across all update domains. Consequently, we manually unblocked the rollback across remaining update domains in AZ03 to ensure stable recovery."
+        "message": "We observed instability reappear in AZ-03, determined that this was because the rollback had not yet completed across all update domains, so manually reinitialized the rollback."
       },
       {
         "timestamp": "2026-04-24T22:39:00.000Z",
         "status": "update",
-        "message": "We confirmed rollback was fully completed in AZ-03."
+        "message": "We confirmed the rollback was fully completed in AZ-03."
       },
       {
         "timestamp": "2026-04-24T23:22:00.000Z",
         "status": "update",
-        "message": "We confirmed rollback was fully completed in AZ-02, completing PubSub mitigation across all affected zones."
-      },
-      {
-        "timestamp": "2026-04-25T00:15:00.000Z",
-        "status": "update",
-        "message": "We validated downstream service recovery and PubSub health across all zones in the region."
+        "message": "All customer impact confirmed as mitigated."
       }
     ],
     "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"

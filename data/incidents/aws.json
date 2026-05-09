@@ -3,12 +3,12 @@
     "id": "aws-AWS_EC2_OPERATIONAL_ISSUE_FFA94_A4DC515D30F",
     "provider": "aws",
     "title": "Increased Error Rate and Latency",
-    "description": "We continue to make progress in resolving the impaired EC2 instances in the affected Availability Zone (use1-az4) in the US-EAST-1 Region, and are working towards full recovery. We are actively working to bring additional cooling system capacity online, which will enable us to recover the remaining affected racks in a controlled and safe manner.  In the impacted Availability Zone, EC2 Instances, EBS Volumes, and other AWS Services may continue to experience elevated error rates and latencies for some workflows. Customers will continue to see some of their affected EC2 instances and EBS volumes as impaired until we achieve full recovery. We will provide an update by May 8, 1:30 AM PDT, or sooner if we have additional information to share.",
+    "description": "Starting May 7 4:20 PM PDT, we experienced increased impaired EC2 instances and degraded EBS volumes in a single facility (data center) within a single Availability Zone (use1-az4) in the US-EAST-1 Region. The issue was caused by a thermal event resulting in a loss of power. As part of our recovery effort, we shifted traffic away from the impacted Availability Zone for most services at May 7 5:06 PM.\n\nAWS services, like Elastic Load Balancing, Elastic Kubernetes Service, ElastiCache, Redshift, OpenSearch, Managed Streaming for Apache Kafka among others, that depend on the affected EC2 instances and EBS volumes in this Availability Zone, also experienced elevated error rates and latencies for some workflows and/or configurations.\n\nOur main effort during the event mitigation strategy was to bring back our cooling systems capacity. By May 8 1:50 PM, we were able to stabilize cooling system capacity to pre-event levels, which helped us to restore the majority of the impaired EC2 instances and EBS volumes. A small number of instances and EBS volumes remain impaired and we continue to work to recover all affected remaining resources. \n\nWe will communicate with customers who are still impacted via the Your Account view of the AWS Health Dashboard. Customers that require further assistance with this event may contact AWS Support through the AWS Management Console or the AWS Support Center.",
     "severity": "minor",
-    "status": "ongoing",
+    "status": "resolved",
     "startedAt": "2026-05-08T00:25:26.000Z",
-    "resolvedAt": null,
-    "durationMinutes": null,
+    "resolvedAt": "2026-05-09T03:04:07.000Z",
+    "durationMinutes": 1599,
     "affectedServices": [
       {
         "serviceName": "AWS IoT Core",
@@ -104,6 +104,51 @@
         "timestamp": "2026-05-08T06:38:44.000Z",
         "status": "1",
         "message": "We continue to make progress in resolving the impaired EC2 instances in the affected Availability Zone (use1-az4) in the US-EAST-1 Region, and are working towards full recovery. We are actively working to bring additional cooling system capacity online, which will enable us to recover the remaining affected racks in a controlled and safe manner.  In the impacted Availability Zone, EC2 Instances, EBS Volumes, and other AWS Services may continue to experience elevated error rates and latencies for some workflows. Customers will continue to see some of their affected EC2 instances and EBS volumes as impaired until we achieve full recovery. We will provide an update by May 8, 1:30 AM PDT, or sooner if we have additional information to share."
+      },
+      {
+        "timestamp": "2026-05-08T08:32:41.000Z",
+        "status": "1",
+        "message": "Mitigation efforts remain underway to resolve the impaired EC2 instances and degraded EBS volumes in a single Availability Zone (use1-az4) in the US-EAST-1 Region. These EC2 instances and EBS volumes were impacted due to a loss of power during the thermal event. The work to bring additional cooling system capacity online, which will enable us to recover the remaining affected infrastructure in a controlled and safe manner, is taking longer than we had initially anticipated. Some services, such as IoT Core, ELB, NAT Gateway, and Redshift, have seen significant improvements in the recovery of their workflows. However, some customers will continue to see their affected EC2 instances and EBS volumes as impaired until we achieve full recovery. While we do not currently have an ETA for full recovery, we are prioritizing this issue and will provide another update by 3:30 AM PDT or sooner if additional information becomes available."
+      },
+      {
+        "timestamp": "2026-05-08T10:54:21.000Z",
+        "status": "1",
+        "message": "We continue to make progress towards resolving the impaired EC2 instances and degraded EBS volumes in a single Availability Zone (use1-az4) in the US-EAST-1 Region. At this time, we wanted to provide some more details on the issue. Beginning on May 7 at 4:20 PM PDT, we began experiencing an increase in instance impairments within the affected zone due to the loss of power during a thermal event. Engineers were automatically engaged within minutes and immediately began investigating multiple mitigations. By 9:12 PM PDT, we restored power to a subset of the affected infrastructure and observed some signs of recovery, which have remained stable. \n\nWe continue working to bring additional cooling system capacity online, which will enable us to recover the remaining affected hardware in the impacted zone in a controlled and safe manner. Some AWS services, such as IoT Core, ELB, NAT Gateway, and Redshift, continue to see significant improvements in the recovery of their workflows. However, some customers will continue to see their affected EC2 instances and EBS volumes as impaired until we achieve full recovery. If immediate recovery is required, we recommend customers restore from EBS snapshots and/or replace affected resources by launching new replacement resources in one of the unaffected zones. \n\nBased on our current mitigation efforts, we expect full recovery to take several hours. We are prioritizing this issue and will provide another update by 6:30 AM PDT or sooner if additional information becomes available.\n"
+      },
+      {
+        "timestamp": "2026-05-08T13:51:51.000Z",
+        "status": "1",
+        "message": "We continue working to resolve the impaired EC2 instances and degraded EBS volumes in a single Availability Zone (use1-az4) in the US-EAST-1 Region caused by a thermal event. During such an event, servers automatically shut down when the temperatures exceeded the operating thresholds in order to protect the hardware. We are actively working to bring additional cooling system capacity online, which will enable us to recover the remaining affected hardware in the impacted zone. Some customers will continue to see their affected EC2 instances and EBS volumes as impaired until we achieve full recovery. If immediate recovery is required, we recommend customers restore from EBS snapshots and/or replace affected resources by launching new replacement resources in one of the unaffected zones.\n\nIn parallel, we are investigating increased error rates and query failures for Redshift clusters in the US-EAST-1 Region. During this time, affected customers may see errors for resume and restart workflows, as well as failover operations and availability issues. Our engineers are actively working to resolve this issue.\n\nFull recovery is still expected to take several hours. We are prioritizing this issue and will provide another update by 9:00 AM PDT or sooner if additional information becomes available.\n"
+      },
+      {
+        "timestamp": "2026-05-08T15:58:56.000Z",
+        "status": "1",
+        "message": "We continue our efforts to work towards the recovery of the impaired EC2 instances and degraded EBS volumes in a single Availability Zone (use1-az4) in the US-EAST-1 Region. We are making progress towards the restoration of the cooling system capacity that is required to recover the affected hardware in the impacted zone. Some customers will continue to see their affected EC2 instances and EBS volumes as impaired until the affected racks are recovered. We continue to recommend that customers who require immediate recovery restore from EBS snapshots and/or replace affected resources by launching new replacement resources in one of the unaffected zones. \n\nAs part of our parallel investigation, we have identified the root cause of the increased error rates and query failures for Redshift clusters in the US-EAST-1 Region. This has been confirmed to be related to impact from an upstream dependency. Affected customers may continue to see errors for resume and restart workflows, failover operations, and impact to general availability. We are actively working to resolve the issue.\n\nOur timeline for full recovery is still expected to take several hours and will be incremental as we bring racks online in phases. We will provide an additional update by 12:30 PM or sooner if we have new information to provide. "
+      },
+      {
+        "timestamp": "2026-05-08T16:30:34.000Z",
+        "status": "1",
+        "message": "We have observed complete recovery of increased error rates and query failures for Redshift clusters in the US-EAST-1 Region. We were able to resolve the impact independently of the ongoing efforts to recover the affected hardware in the use1-az4 Availability Zone. The issue affecting Redshift has been resolved and the service is operating normally. We will provide an additional update regarding the efforts towards hardware restoration by 12:30 PM or sooner."
+      },
+      {
+        "timestamp": "2026-05-08T18:12:46.000Z",
+        "status": "1",
+        "message": "We are experiencing an increase in timeouts to Amazon Managed Streaming for Apache Kafka partitions on a subset of clusters as a result of the ongoing issue in a single Availability Zone (use1-az4) in the US-EAST-1 Region. We are working in parallel to determine a path towards mitigation for affected clusters. We will provide an additional update by 12:30 PM or sooner."
+      },
+      {
+        "timestamp": "2026-05-08T19:29:12.000Z",
+        "status": "1",
+        "message": "We continue to work towards the recovery of the impaired EC2 instances and degraded EBS volumes in a single Availability Zone (use1-az4) in the US-EAST-1 Region though efforts are slower than we had previously anticipated. We are taking measured steps to ensure that cooling capacity is brought online in a safe and controlled manner. As a result, EBS Volumes and EC2 instances affected by the issue will continue to experience impairments. We continue to recommend that customers who require immediate recovery restore from EBS snapshots and/or replace affected resourced by launching new replacement resources. \n\nFull recovery is still expected to take several hours. We will provide an additional update by 4:00 PM or sooner if we have new information to provide. "
+      },
+      {
+        "timestamp": "2026-05-08T23:00:52.000Z",
+        "status": "1",
+        "message": "We have begun to see improvements in the overall number of affected EC2 instances and degraded EBS volumes in a single Availability Zone (use1-az4) in the US-EAST-1 Region. The steps taken to supply additional cooling capacity have been showing steady signs of progress. Some EBS Volumes and EC2 instances affected by the issue will continue to experience impairments while we continue to drive these efforts. We continue to recommend that customers who require immediate recovery restore from EBS snapshots and/or replace affected resources by launching new replacement resources.\n\nIn parallel, we have seen some improvements in Amazon Managed Streaming for Apache Kafka as a result of the parallel mitigation efforts being performed. We are still experiencing timeouts to partitions but are seeing continued progress.\n\nWe do anticipate that recovery will still take several hours. We will provide an additional update by 7:30 PM or sooner if we have new information to provide."
+      },
+      {
+        "timestamp": "2026-05-09T03:04:07.000Z",
+        "status": "0",
+        "message": "Starting May 7 4:20 PM PDT, we experienced increased impaired EC2 instances and degraded EBS volumes in a single facility (data center) within a single Availability Zone (use1-az4) in the US-EAST-1 Region. The issue was caused by a thermal event resulting in a loss of power. As part of our recovery effort, we shifted traffic away from the impacted Availability Zone for most services at May 7 5:06 PM.\n\nAWS services, like Elastic Load Balancing, Elastic Kubernetes Service, ElastiCache, Redshift, OpenSearch, Managed Streaming for Apache Kafka among others, that depend on the affected EC2 instances and EBS volumes in this Availability Zone, also experienced elevated error rates and latencies for some workflows and/or configurations.\n\nOur main effort during the event mitigation strategy was to bring back our cooling systems capacity. By May 8 1:50 PM, we were able to stabilize cooling system capacity to pre-event levels, which helped us to restore the majority of the impaired EC2 instances and EBS volumes. A small number of instances and EBS volumes remain impaired and we continue to work to recover all affected remaining resources. \n\nWe will communicate with customers who are still impacted via the Your Account view of the AWS Health Dashboard. Customers that require further assistance with this event may contact AWS Support through the AWS Management Console or the AWS Support Center."
       }
     ],
     "sourceUrl": "https://health.aws.amazon.com/health/status"
@@ -112,12 +157,12 @@
     "id": "aws-AWS_EC2_OPERATIONAL_ISSUE-1778199926000",
     "provider": "aws",
     "title": "Increased Error Rate and Latency",
-    "description": "[[The following AWS services have been affected by this event:]]\nService: awsiot Status: Operating normally\nService: eks Status: Operating normally\nService: elasticache Status: Informational\nService: elasticsearch Status: Informational\nService: elb Status: Operating normally\nService: kafka Status: Informational\nService: natgateway Status: Operating normally\nService: redshift Status: Operating normally\nService: sagemaker Status: Informational",
+    "description": "Starting May 7 4:20 PM PDT, we experienced increased impaired EC2 instances and degraded EBS volumes in a single facility (data center) within a single Availability Zone (use1-az4) in the US-EAST-1 Region. The issue was caused by a thermal event resulting in a loss of power. As part of our recovery effort, we shifted traffic away from the impacted Availability Zone for most services at May 7 5:06 PM.\n\nAWS services, like Elastic Load Balancing, Elastic Kubernetes Service, ElastiCache, Redshift, OpenSearch, Managed Streaming for Apache Kafka among others, that depend on the affected EC2 instances and EBS volumes in this Availability Zone, also experienced elevated error rates and latencies for some workflows and/or configurations.\n\nOur main effort during the event mitigation strategy was to bring back our cooling systems capacity. By May 8 1:50 PM, we were able to stabilize cooling system capacity to pre-event levels, which helped us to restore the majority of the impaired EC2 instances and EBS volumes. A small number of instances and EBS volumes remain impaired and we continue to work to recover all affected remaining resources. \n\nWe will communicate with customers who are still impacted via the Your Account view of the AWS Health Dashboard. Customers that require further assistance with this event may contact AWS Support through the AWS Management Console or the AWS Support Center.",
     "severity": "minor",
-    "status": "ongoing",
+    "status": "resolved",
     "startedAt": "2026-05-08T00:25:26.000Z",
-    "resolvedAt": null,
-    "durationMinutes": null,
+    "resolvedAt": "2026-05-09T03:04:07.000Z",
+    "durationMinutes": 1599,
     "affectedServices": [
       {
         "serviceName": "Amazon EC2",
@@ -164,9 +209,54 @@
         "message": "We continue to make progress in resolving the impaired EC2 instances in the affected Availability Zone (use1-az4) in the US-EAST-1 Region, and are working towards full recovery. We are actively working to bring additional cooling system capacity online, which will enable us to recover the remaining affected racks in a controlled and safe manner.  In the impacted Availability Zone, EC2 Instances, EBS Volumes, and other AWS Services may continue to experience elevated error rates and latencies for some workflows. Customers will continue to see some of their affected EC2 instances and EBS volumes as impaired until we achieve full recovery. We will provide an update by May 8, 1:30 AM PDT, or sooner if we have additional information to share."
       },
       {
-        "timestamp": "2026-05-08T07:10:01.000Z",
+        "timestamp": "2026-05-08T08:32:41.000Z",
         "status": "1",
-        "message": "[[The following AWS services have been affected by this event:]]\nService: awsiot Status: Operating normally\nService: eks Status: Operating normally\nService: elasticache Status: Informational\nService: elasticsearch Status: Informational\nService: elb Status: Operating normally\nService: kafka Status: Informational\nService: natgateway Status: Operating normally\nService: redshift Status: Operating normally\nService: sagemaker Status: Informational"
+        "message": "Mitigation efforts remain underway to resolve the impaired EC2 instances and degraded EBS volumes in a single Availability Zone (use1-az4) in the US-EAST-1 Region. These EC2 instances and EBS volumes were impacted due to a loss of power during the thermal event. The work to bring additional cooling system capacity online, which will enable us to recover the remaining affected infrastructure in a controlled and safe manner, is taking longer than we had initially anticipated. Some services, such as IoT Core, ELB, NAT Gateway, and Redshift, have seen significant improvements in the recovery of their workflows. However, some customers will continue to see their affected EC2 instances and EBS volumes as impaired until we achieve full recovery. While we do not currently have an ETA for full recovery, we are prioritizing this issue and will provide another update by 3:30 AM PDT or sooner if additional information becomes available."
+      },
+      {
+        "timestamp": "2026-05-08T10:54:21.000Z",
+        "status": "1",
+        "message": "We continue to make progress towards resolving the impaired EC2 instances and degraded EBS volumes in a single Availability Zone (use1-az4) in the US-EAST-1 Region. At this time, we wanted to provide some more details on the issue. Beginning on May 7 at 4:20 PM PDT, we began experiencing an increase in instance impairments within the affected zone due to the loss of power during a thermal event. Engineers were automatically engaged within minutes and immediately began investigating multiple mitigations. By 9:12 PM PDT, we restored power to a subset of the affected infrastructure and observed some signs of recovery, which have remained stable. \n\nWe continue working to bring additional cooling system capacity online, which will enable us to recover the remaining affected hardware in the impacted zone in a controlled and safe manner. Some AWS services, such as IoT Core, ELB, NAT Gateway, and Redshift, continue to see significant improvements in the recovery of their workflows. However, some customers will continue to see their affected EC2 instances and EBS volumes as impaired until we achieve full recovery. If immediate recovery is required, we recommend customers restore from EBS snapshots and/or replace affected resources by launching new replacement resources in one of the unaffected zones. \n\nBased on our current mitigation efforts, we expect full recovery to take several hours. We are prioritizing this issue and will provide another update by 6:30 AM PDT or sooner if additional information becomes available.\n"
+      },
+      {
+        "timestamp": "2026-05-08T13:51:51.000Z",
+        "status": "1",
+        "message": "We continue working to resolve the impaired EC2 instances and degraded EBS volumes in a single Availability Zone (use1-az4) in the US-EAST-1 Region caused by a thermal event. During such an event, servers automatically shut down when the temperatures exceeded the operating thresholds in order to protect the hardware. We are actively working to bring additional cooling system capacity online, which will enable us to recover the remaining affected hardware in the impacted zone. Some customers will continue to see their affected EC2 instances and EBS volumes as impaired until we achieve full recovery. If immediate recovery is required, we recommend customers restore from EBS snapshots and/or replace affected resources by launching new replacement resources in one of the unaffected zones.\n\nIn parallel, we are investigating increased error rates and query failures for Redshift clusters in the US-EAST-1 Region. During this time, affected customers may see errors for resume and restart workflows, as well as failover operations and availability issues. Our engineers are actively working to resolve this issue.\n\nFull recovery is still expected to take several hours. We are prioritizing this issue and will provide another update by 9:00 AM PDT or sooner if additional information becomes available.\n"
+      },
+      {
+        "timestamp": "2026-05-08T15:58:56.000Z",
+        "status": "1",
+        "message": "We continue our efforts to work towards the recovery of the impaired EC2 instances and degraded EBS volumes in a single Availability Zone (use1-az4) in the US-EAST-1 Region. We are making progress towards the restoration of the cooling system capacity that is required to recover the affected hardware in the impacted zone. Some customers will continue to see their affected EC2 instances and EBS volumes as impaired until the affected racks are recovered. We continue to recommend that customers who require immediate recovery restore from EBS snapshots and/or replace affected resources by launching new replacement resources in one of the unaffected zones. \n\nAs part of our parallel investigation, we have identified the root cause of the increased error rates and query failures for Redshift clusters in the US-EAST-1 Region. This has been confirmed to be related to impact from an upstream dependency. Affected customers may continue to see errors for resume and restart workflows, failover operations, and impact to general availability. We are actively working to resolve the issue.\n\nOur timeline for full recovery is still expected to take several hours and will be incremental as we bring racks online in phases. We will provide an additional update by 12:30 PM or sooner if we have new information to provide. "
+      },
+      {
+        "timestamp": "2026-05-08T16:30:34.000Z",
+        "status": "1",
+        "message": "We have observed complete recovery of increased error rates and query failures for Redshift clusters in the US-EAST-1 Region. We were able to resolve the impact independently of the ongoing efforts to recover the affected hardware in the use1-az4 Availability Zone. The issue affecting Redshift has been resolved and the service is operating normally. We will provide an additional update regarding the efforts towards hardware restoration by 12:30 PM or sooner."
+      },
+      {
+        "timestamp": "2026-05-08T18:12:46.000Z",
+        "status": "1",
+        "message": "We are experiencing an increase in timeouts to Amazon Managed Streaming for Apache Kafka partitions on a subset of clusters as a result of the ongoing issue in a single Availability Zone (use1-az4) in the US-EAST-1 Region. We are working in parallel to determine a path towards mitigation for affected clusters. We will provide an additional update by 12:30 PM or sooner."
+      },
+      {
+        "timestamp": "2026-05-08T19:29:12.000Z",
+        "status": "1",
+        "message": "We continue to work towards the recovery of the impaired EC2 instances and degraded EBS volumes in a single Availability Zone (use1-az4) in the US-EAST-1 Region though efforts are slower than we had previously anticipated. We are taking measured steps to ensure that cooling capacity is brought online in a safe and controlled manner. As a result, EBS Volumes and EC2 instances affected by the issue will continue to experience impairments. We continue to recommend that customers who require immediate recovery restore from EBS snapshots and/or replace affected resourced by launching new replacement resources. \n\nFull recovery is still expected to take several hours. We will provide an additional update by 4:00 PM or sooner if we have new information to provide. "
+      },
+      {
+        "timestamp": "2026-05-08T23:00:52.000Z",
+        "status": "1",
+        "message": "We have begun to see improvements in the overall number of affected EC2 instances and degraded EBS volumes in a single Availability Zone (use1-az4) in the US-EAST-1 Region. The steps taken to supply additional cooling capacity have been showing steady signs of progress. Some EBS Volumes and EC2 instances affected by the issue will continue to experience impairments while we continue to drive these efforts. We continue to recommend that customers who require immediate recovery restore from EBS snapshots and/or replace affected resources by launching new replacement resources.\n\nIn parallel, we have seen some improvements in Amazon Managed Streaming for Apache Kafka as a result of the parallel mitigation efforts being performed. We are still experiencing timeouts to partitions but are seeing continued progress.\n\nWe do anticipate that recovery will still take several hours. We will provide an additional update by 7:30 PM or sooner if we have new information to provide."
+      },
+      {
+        "timestamp": "2026-05-09T03:04:07.000Z",
+        "status": "0",
+        "message": "[[The following AWS services have been affected by this event:]]\nService: awsiot Status: Operating normally\nService: eks Status: Operating normally\nService: elasticache Status: Operating normally\nService: elasticsearch Status: Operating normally\nService: elb Status: Operating normally\nService: kafka Status: Operating normally\nService: natgateway Status: Operating normally\nService: redshift Status: Operating normally\nService: sagemaker Status: Operating normally"
+      },
+      {
+        "timestamp": "2026-05-09T03:04:07.000Z",
+        "status": "0",
+        "message": "Starting May 7 4:20 PM PDT, we experienced increased impaired EC2 instances and degraded EBS volumes in a single facility (data center) within a single Availability Zone (use1-az4) in the US-EAST-1 Region. The issue was caused by a thermal event resulting in a loss of power. As part of our recovery effort, we shifted traffic away from the impacted Availability Zone for most services at May 7 5:06 PM.\n\nAWS services, like Elastic Load Balancing, Elastic Kubernetes Service, ElastiCache, Redshift, OpenSearch, Managed Streaming for Apache Kafka among others, that depend on the affected EC2 instances and EBS volumes in this Availability Zone, also experienced elevated error rates and latencies for some workflows and/or configurations.\n\nOur main effort during the event mitigation strategy was to bring back our cooling systems capacity. By May 8 1:50 PM, we were able to stabilize cooling system capacity to pre-event levels, which helped us to restore the majority of the impaired EC2 instances and EBS volumes. A small number of instances and EBS volumes remain impaired and we continue to work to recover all affected remaining resources. \n\nWe will communicate with customers who are still impacted via the Your Account view of the AWS Health Dashboard. Customers that require further assistance with this event may contact AWS Support through the AWS Management Console or the AWS Support Center."
       }
     ],
     "sourceUrl": "https://health.aws.amazon.com/health/status"
