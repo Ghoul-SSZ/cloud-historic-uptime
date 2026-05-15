@@ -906,7 +906,7 @@
         ]
       },
       {
-        "serviceName": "Amazon Kinesis Firehose",
+        "serviceName": "Amazon Data Firehose",
         "category": "other",
         "regions": [
           "eu-central-2"
@@ -1680,7 +1680,7 @@
         ]
       },
       {
-        "serviceName": "Amazon Kinesis Firehose",
+        "serviceName": "Amazon Data Firehose",
         "category": "other",
         "regions": [
           "me-south-1"
@@ -3188,7 +3188,7 @@
         ]
       },
       {
-        "serviceName": "Amazon Kinesis Firehose",
+        "serviceName": "Amazon Data Firehose",
         "category": "other",
         "regions": [
           "me-central-1"
