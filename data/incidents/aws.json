@@ -1,5 +1,71 @@
 [
   {
+    "id": "aws-AWS_ROUTE53_OPERATIONAL_ISSUE_67C7D_B6C0423B023",
+    "provider": "aws",
+    "title": "Increased API Error Rates",
+    "description": "Between 4:00 PM and 4:46 PM, we experienced increased error rates for the Route53 APIs. This issue did not impact resolution of existing DNS records. Engineers were automatically engaged and immediately began investigating the issue. During this time, customers may have received 500s for Route53 APIs and the Route53 Management Console. We have identified the root cause and have mitigated this issue. Other AWS Services that call the Route53 APIs in their workflows may also have been impacted during this time. We recommend retrying any failed operations or stuck workflows. We do not expect this issue to reoccur. The issue has been resolved and the service is operating normally.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2026-05-22T23:38:39.000Z",
+    "resolvedAt": "2026-05-23T00:13:37.000Z",
+    "durationMinutes": 35,
+    "affectedServices": [
+      {
+        "serviceName": "Amazon Route 53",
+        "category": "networking",
+        "regions": [
+          "global"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-05-22T23:38:39.000Z",
+        "status": "1",
+        "message": "We are investigating increased error rates for Route53 API calls."
+      },
+      {
+        "timestamp": "2026-05-23T00:13:37.000Z",
+        "status": "0",
+        "message": "Between 4:00 PM and 4:46 PM, we experienced increased error rates for the Route53 APIs. This issue did not impact resolution of existing DNS records. Engineers were automatically engaged and immediately began investigating the issue. During this time, customers may have received 500s for Route53 APIs and the Route53 Management Console. We have identified the root cause and have mitigated this issue. Other AWS Services that call the Route53 APIs in their workflows may also have been impacted during this time. We recommend retrying any failed operations or stuck workflows. We do not expect this issue to reoccur. The issue has been resolved and the service is operating normally."
+      }
+    ],
+    "sourceUrl": "https://health.aws.amazon.com/health/status"
+  },
+  {
+    "id": "aws-AWS_ROUTE53_OPERATIONAL_ISSUE-1779493119000",
+    "provider": "aws",
+    "title": "Increased API Error Rates",
+    "description": "Between 4:00 PM and 4:46 PM, we experienced increased error rates for the Route53 APIs. This issue did not impact resolution of existing DNS records. Engineers were automatically engaged and immediately began investigating the issue. During this time, customers may have received 500s for Route53 APIs and the Route53 Management Console. We have identified the root cause and have mitigated this issue. Other AWS Services that call the Route53 APIs in their workflows may also have been impacted during this time. We recommend retrying any failed operations or stuck workflows. We do not expect this issue to reoccur. The issue has been resolved and the service is operating normally.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2026-05-22T23:38:39.000Z",
+    "resolvedAt": "2026-05-23T00:13:37.000Z",
+    "durationMinutes": 35,
+    "affectedServices": [
+      {
+        "serviceName": "AWS ROUTE53",
+        "category": "other",
+        "regions": [
+          "global"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-05-22T23:38:39.000Z",
+        "status": "1",
+        "message": "We are investigating increased error rates for Route53 API calls."
+      },
+      {
+        "timestamp": "2026-05-23T00:13:37.000Z",
+        "status": "0",
+        "message": "Between 4:00 PM and 4:46 PM, we experienced increased error rates for the Route53 APIs. This issue did not impact resolution of existing DNS records. Engineers were automatically engaged and immediately began investigating the issue. During this time, customers may have received 500s for Route53 APIs and the Route53 Management Console. We have identified the root cause and have mitigated this issue. Other AWS Services that call the Route53 APIs in their workflows may also have been impacted during this time. We recommend retrying any failed operations or stuck workflows. We do not expect this issue to reoccur. The issue has been resolved and the service is operating normally."
+      }
+    ],
+    "sourceUrl": "https://health.aws.amazon.com/health/status"
+  },
+  {
     "id": "aws-AWS_EC2_OPERATIONAL_ISSUE_FFA94_A4DC515D30F",
     "provider": "aws",
     "title": "Increased Error Rate and Latency",
