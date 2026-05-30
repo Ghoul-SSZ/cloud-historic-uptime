@@ -1,5 +1,120 @@
 [
   {
+    "id": "azure-LYXT-C1Z",
+    "provider": "azure",
+    "title": "Mitigated - Azure OpenAI Service Elevated Error Rates in multiple regions",
+    "description": "Between 09:39 UTC and 17:05 UTC on 29 May 2026, a platform issue resulted in impact to the Azure OpenAI service across multiple regions. Customers may have experienced degraded service health where requests intermittently failed, returned HTTP 5XX errors, or experienced increased latency.",
+    "severity": "major",
+    "status": "resolved",
+    "startedAt": "2026-05-29T09:39:00.000Z",
+    "resolvedAt": "2026-05-29T17:05:00.000Z",
+    "durationMinutes": 446,
+    "affectedServices": [],
+    "updates": [
+      {
+        "timestamp": "2026-05-29T09:39:00.000Z",
+        "status": "update",
+        "message": "Initial impact detected with increased failures and latency across regions."
+      },
+      {
+        "timestamp": "2026-05-29T10:00:00.000Z",
+        "status": "update",
+        "message": "Investigation identified widespread service instability and correlated failures across models and regions."
+      },
+      {
+        "timestamp": "2026-05-29T12:17:00.000Z",
+        "status": "update",
+        "message": "Mitigation deployed globally by disabling the affected component causing instability."
+      },
+      {
+        "timestamp": "2026-05-29T12:40:00.000Z",
+        "status": "update",
+        "message": "Service health and performance began recovering across impacted regions; we monitored closely for full recovery."
+      },
+      {
+        "timestamp": "2026-05-29T14:40:00.000Z",
+        "status": "update",
+        "message": "We determined that the issue had reoccurred due to increased retry traffic that temporarily overloaded the system."
+      },
+      {
+        "timestamp": "2026-05-29T16:30:00.000Z",
+        "status": "update",
+        "message": "We identified the source of the elevated retry requests and failed it over to an isolated backend cluster to alleviate impact and prevent reoccurrence."
+      },
+      {
+        "timestamp": "2026-05-29T17:05:00.000Z",
+        "status": "update",
+        "message": "Service restored and customer impact mitigated."
+      }
+    ],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
+    "id": "azure-GHRP-84G",
+    "provider": "azure",
+    "title": "Mitigated - Multiple Services experiencing degradation in West US 2",
+    "description": "Between 04:24 UTC and 20:18 UTC on 29 May 2026, a service disruption affected multiple Azure services in the West US 2 region. Impacted customers experienced service connectivity failures, timeouts, and elevated error rates when attempting to access resources in the region. Additionally, customers may have experienced an inability to deploy new resources or scale existing workloads, intermittent availability where some requests succeeded while others failed depending on which infrastructure nodes had recovered, and both data plane and control plane impact across affected services. Impacted Azure services include, but are not limited to:",
+    "severity": "major",
+    "status": "resolved",
+    "startedAt": "2026-05-29T04:24:00.000Z",
+    "resolvedAt": "2026-05-29T20:18:00.000Z",
+    "durationMinutes": 954,
+    "affectedServices": [],
+    "updates": [
+      {
+        "timestamp": "2026-05-29T04:24:00.000Z",
+        "status": "update",
+        "message": "Customer impact began."
+      },
+      {
+        "timestamp": "2026-05-29T04:24:00.000Z",
+        "status": "update",
+        "message": "Service monitoring detected thermal and environmental alerts across affected regional facilities."
+      },
+      {
+        "timestamp": "2026-05-29T05:00:00.000Z",
+        "status": "update",
+        "message": "We determined that a power and thermal event had been caused by a severe thunderstorm in the region."
+      },
+      {
+        "timestamp": "2026-05-29T05:36:00.000Z",
+        "status": "update",
+        "message": "We began restoration of affected network components and dependent services."
+      },
+      {
+        "timestamp": "2026-05-29T10:00:00.000Z",
+        "status": "update",
+        "message": "We confirmed that datacenter power was showing initial signs of restoration."
+      },
+      {
+        "timestamp": "2026-05-29T12:50:00.000Z",
+        "status": "update",
+        "message": "We began to see initial recovery for affected downstream services."
+      },
+      {
+        "timestamp": "2026-05-29T18:15:00.000Z",
+        "status": "update",
+        "message": "Power was fully restored."
+      },
+      {
+        "timestamp": "2026-05-29T18:37:00.000Z",
+        "status": "update",
+        "message": "Recovery progress reached approximately 90%."
+      },
+      {
+        "timestamp": "2026-05-29T19:34:00.000Z",
+        "status": "update",
+        "message": "Recovery for the remaining affected services was confirmed."
+      },
+      {
+        "timestamp": "2026-05-29T20:18:00.000Z",
+        "status": "update",
+        "message": "After continued monitoring, we determined that remaining storage resources had recovered and final downstream services had been restored."
+      }
+    ],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
     "id": "azure-5GP8-W0G",
     "provider": "azure",
     "title": "Post Incident Review (PIR) – Multiple services – Control plane issues in East US",
