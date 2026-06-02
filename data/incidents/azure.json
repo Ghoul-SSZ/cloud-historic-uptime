@@ -1,5 +1,27 @@
 [
   {
+    "id": "azure-GHRP-84G",
+    "provider": "azure",
+    "title": "Preliminary Post Incident Review (PIR) – Multiple services – Power/cooling issues in West US 2",
+    "description": "Between 04:24 on 29 May 2026 and 02:30 UTC on 30 May 2026, customers with resources in the West US 2 region may have experienced failures when attempting to access or manage Azure services in the region. Impact included connectivity failures, resource unavailability, and failures when attempting to create, update, or scale resources. The issue was triggered by a severe thunderstorm with lightning strikes that resulted in utility power loss to multiple datacenter facilities serving the region.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2026-06-24T17:00:00.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Multiple services",
+        "category": "other",
+        "regions": [
+          "West US 2"
+        ]
+      }
+    ],
+    "updates": [],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
     "id": "azure-LYXT-C1Z",
     "provider": "azure",
     "title": "Mitigated - Azure OpenAI Service Elevated Error Rates in multiple regions",
@@ -45,71 +67,6 @@
         "timestamp": "2026-05-29T17:05:00.000Z",
         "status": "update",
         "message": "Service restored and customer impact mitigated."
-      }
-    ],
-    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
-  },
-  {
-    "id": "azure-GHRP-84G",
-    "provider": "azure",
-    "title": "Mitigated - Multiple Services experiencing degradation in West US 2",
-    "description": "Between 04:24 UTC and 20:18 UTC on 29 May 2026, a service disruption affected multiple Azure services in the West US 2 region. Impacted customers experienced service connectivity failures, timeouts, and elevated error rates when attempting to access resources in the region. Additionally, customers may have experienced an inability to deploy new resources or scale existing workloads, intermittent availability where some requests succeeded while others failed depending on which infrastructure nodes had recovered, and both data plane and control plane impact across affected services. Impacted Azure services include, but are not limited to:",
-    "severity": "major",
-    "status": "resolved",
-    "startedAt": "2026-05-29T04:24:00.000Z",
-    "resolvedAt": "2026-05-29T20:18:00.000Z",
-    "durationMinutes": 954,
-    "affectedServices": [],
-    "updates": [
-      {
-        "timestamp": "2026-05-29T04:24:00.000Z",
-        "status": "update",
-        "message": "Customer impact began."
-      },
-      {
-        "timestamp": "2026-05-29T04:24:00.000Z",
-        "status": "update",
-        "message": "Service monitoring detected thermal and environmental alerts across affected regional facilities."
-      },
-      {
-        "timestamp": "2026-05-29T05:00:00.000Z",
-        "status": "update",
-        "message": "We determined that a power and thermal event had been caused by a severe thunderstorm in the region."
-      },
-      {
-        "timestamp": "2026-05-29T05:36:00.000Z",
-        "status": "update",
-        "message": "We began restoration of affected network components and dependent services."
-      },
-      {
-        "timestamp": "2026-05-29T10:00:00.000Z",
-        "status": "update",
-        "message": "We confirmed that datacenter power was showing initial signs of restoration."
-      },
-      {
-        "timestamp": "2026-05-29T12:50:00.000Z",
-        "status": "update",
-        "message": "We began to see initial recovery for affected downstream services."
-      },
-      {
-        "timestamp": "2026-05-29T18:15:00.000Z",
-        "status": "update",
-        "message": "Power was fully restored."
-      },
-      {
-        "timestamp": "2026-05-29T18:37:00.000Z",
-        "status": "update",
-        "message": "Recovery progress reached approximately 90%."
-      },
-      {
-        "timestamp": "2026-05-29T19:34:00.000Z",
-        "status": "update",
-        "message": "Recovery for the remaining affected services was confirmed."
-      },
-      {
-        "timestamp": "2026-05-29T20:18:00.000Z",
-        "status": "update",
-        "message": "After continued monitoring, we determined that remaining storage resources had recovered and final downstream services had been restored."
       }
     ],
     "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
