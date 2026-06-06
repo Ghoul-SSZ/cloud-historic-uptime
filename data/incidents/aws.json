@@ -1,5 +1,66 @@
 [
   {
+    "id": "aws-AWS_INTERNETCONNECTIVITY_OPERATIONAL_ISSUE_4FB91_017AE394449",
+    "provider": "aws",
+    "title": "Internet Connectivity Issues",
+    "description": "Between 5:50 PM and 7:15 PM PDT, we experienced connectivity issues that may have impacted Internet performance for some customers in the SA-EAST-1 Region. During this time, connectivity to instances and services within the Region was not affected. Our engineering team was automatically engaged at 5:51 PM PDT and immediately began investigating the issue. We identified the root cause and implemented a fix, which mitigated the issue at 7:15 PM PDT. The issue has been resolved and the service is operating normally.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2026-06-06T04:24:38.000Z",
+    "resolvedAt": "2026-06-06T04:24:38.000Z",
+    "durationMinutes": 0,
+    "affectedServices": [
+      {
+        "serviceName": "Internet Connectivity",
+        "category": "other",
+        "regions": [
+          "sa-east-1"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-06-06T04:24:38.000Z",
+        "status": "1",
+        "message": "Between 5:50 PM and 7:15 PM PDT, we experienced connectivity issues that may have impacted Internet performance for some customers in the SA-EAST-1 Region. During this time, connectivity to instances and services within the Region was not affected. Our engineering team was automatically engaged at 5:51 PM PDT and immediately began investigating the issue. We identified the root cause and implemented a fix, which mitigated the issue at 7:15 PM PDT. The issue has been resolved and the service is operating normally."
+      }
+    ],
+    "sourceUrl": "https://health.aws.amazon.com/health/status"
+  },
+  {
+    "id": "aws-AWS_INTERNETCONNECTIVITY_OPERATIONAL_ISSUE-1780719878000",
+    "provider": "aws",
+    "title": "Internet Connectivity Issues",
+    "description": "Internet Connectivity Issues",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2026-06-06T04:24:38.000Z",
+    "resolvedAt": "2026-06-06T04:25:46.000Z",
+    "durationMinutes": 1,
+    "affectedServices": [
+      {
+        "serviceName": "Internet Connectivity",
+        "category": "other",
+        "regions": [
+          "sa-east-1"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-06-06T04:24:38.000Z",
+        "status": "1",
+        "message": "Between 5:50 PM and 7:15 PM PDT, we experienced connectivity issues that may have impacted Internet performance for some customers in the SA-EAST-1 Region. During this time, connectivity to instances and services within the Region was not affected. Our engineering team was automatically engaged at 5:51 PM PDT and immediately began investigating the issue. We identified the root cause and implemented a fix, which mitigated the issue at 7:15 PM PDT. The issue has been resolved and the service is operating normally."
+      },
+      {
+        "timestamp": "2026-06-06T04:25:46.000Z",
+        "status": "0",
+        "message": "[RESOLVED] Internet Connectivity Issues"
+      }
+    ],
+    "sourceUrl": "https://health.aws.amazon.com/health/status"
+  },
+  {
     "id": "aws-AWS_ROUTE53_OPERATIONAL_ISSUE_67C7D_B6C0423B023",
     "provider": "aws",
     "title": "Increased API Error Rates",
