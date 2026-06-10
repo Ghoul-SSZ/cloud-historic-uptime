@@ -1,5 +1,36 @@
 [
   {
+    "id": "gcp-5fGQt4VbkDnr3Yp8PXPr",
+    "provider": "gcp",
+    "title": "Network traffic to Google Cloud originating from Delhi, Chennai, Mumbai and surrounding areas is experiencing intermittent periods of elevated latency and possible packet loss.",
+    "description": "**Summary**\nNetwork traffic to Google Cloud originating from Delhi, Chennai, Mumbai and surrounding areas is experiencing intermittent periods of elevated latency and possible packet loss.\n**Description**\nA fire at a third-party data center facility required an emergency power shutdown of networking equipment, isolating a non-compute local Point of Presence (POP) in Delhi and reducing available network capacity in the metro area.\nWe rerouted significant traffic from the impacted facility in Delhi to address reduced local serving capabilities. As a result, a subset of Hybrid Connectivity and Virtual Private Cloud (VPC) customers may be impacted by the routing changes made to address reduced local, latency-optimized serving capabilities in Delhi. Affected customers may experience intermittent latency spikes due to demand exceeding capacity across Indian metros and regional ISPs.\nWe are investigating additional traffic mitigations and Internet Edge peering augmentation to alleviate the latency issues affecting our customers.\nWe will provide our next update by Wednesday, 2026-06-10 17:00 PDT.\n**Symptoms**\nCustomers may experience slightly elevated latency and non-optimal network routing into Google Cloud until the affected facility is fully restored.\n**Workaround**\nThere is no workaround at this time.",
+    "severity": "major",
+    "status": "ongoing",
+    "startedAt": "2026-06-09T18:22:00+00:00",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Hybrid Connectivity",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Virtual Private Cloud (VPC)",
+        "category": "networking",
+        "regions": []
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-06-10T01:13:50+00:00",
+        "status": "SERVICE_DISRUPTION",
+        "message": "**Summary**\nNetwork traffic to Google Cloud originating from Delhi, Chennai, Mumbai and surrounding areas is experiencing intermittent periods of elevated latency and possible packet loss.\n**Description**\nA fire at a third-party data center facility required an emergency power shutdown of networking equipment, isolating a non-compute local Point of Presence (POP) in Delhi and reducing available network capacity in the metro area.\nWe rerouted significant traffic from the impacted facility in Delhi to address reduced local serving capabilities. As a result, a subset of Hybrid Connectivity and Virtual Private Cloud (VPC) customers may be impacted by the routing changes made to address reduced local, latency-optimized serving capabilities in Delhi. Affected customers may experience intermittent latency spikes due to demand exceeding capacity across Indian metros and regional ISPs.\nWe are investigating additional traffic mitigations and Internet Edge peering augmentation to alleviate the latency issues affecting our customers.\nWe will provide our next update by Wednesday, 2026-06-10 17:00 PDT.\n**Symptoms**\nCustomers may experience slightly elevated latency and non-optimal network routing into Google Cloud until the affected facility is fully restored.\n**Workaround**\nThere is no workaround at this time."
+      }
+    ],
+    "sourceUrl": "https://status.cloud.google.com/incidents/5fGQt4VbkDnr3Yp8PXPr"
+  },
+  {
     "id": "gcp-41E5S3mkTGDfkZuJZH5k",
     "provider": "gcp",
     "title": "Vertex AI Gemini API customers experienced increased error rates when accessing the global endpoint.",
