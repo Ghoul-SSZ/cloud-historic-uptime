@@ -6,7 +6,7 @@
     "description": "Between 04:24 on 29 May 2026 and 02:30 UTC on 30 May 2026, customers with resources in the West US 2 region may have experienced failures when attempting to access or manage Azure services in the region. Impact included connectivity failures, resource unavailability, and failures when attempting to create, update, or scale resources. The issue was triggered by a severe thunderstorm with lightning strikes that resulted in utility power loss to multiple datacenter facilities serving the region.",
     "severity": "minor",
     "status": "resolved",
-    "startedAt": "2026-06-24T17:00:00.000Z",
+    "startedAt": "2026-06-25T17:00:00.000Z",
     "resolvedAt": null,
     "durationMinutes": null,
     "affectedServices": [
@@ -24,49 +24,82 @@
   {
     "id": "azure-LYXT-C1Z",
     "provider": "azure",
-    "title": "Mitigated - Azure OpenAI Service Elevated Error Rates in multiple regions",
-    "description": "Between 09:39 UTC and 17:05 UTC on 29 May 2026, a platform issue resulted in impact to the Azure OpenAI service across multiple regions. Customers may have experienced degraded service health where requests intermittently failed, returned HTTP 5XX errors, or experienced increased latency.",
-    "severity": "major",
+    "title": "Post Incident Review (PIR) – Azure OpenAI Service – Latency and intermittent failures in multiple regions",
+    "description": "Between 09:39 UTC and 17:05 UTC on 29 May 2026, customers using the Azure OpenAI Service may have experienced increased latency, intermittent request failures, timeouts, and/or HTTP 5XX errors when submitting inference requests. The impact was more pronounced in regions in Europe and Australia East that were directly processing the highest levels of affected traffic.",
+    "severity": "minor",
     "status": "resolved",
-    "startedAt": "2026-05-29T09:39:00.000Z",
+    "startedAt": "2026-05-29T09:20:00.000Z",
     "resolvedAt": "2026-05-29T17:05:00.000Z",
-    "durationMinutes": 446,
-    "affectedServices": [],
+    "durationMinutes": 465,
+    "affectedServices": [
+      {
+        "serviceName": "Azure OpenAI Service",
+        "category": "ai-ml",
+        "regions": [
+          "Australia East"
+        ]
+      }
+    ],
     "updates": [
+      {
+        "timestamp": "2026-05-29T09:20:00.000Z",
+        "status": "update",
+        "message": "Initial customer impact began as the first wave of retry amplification, associated with the upstream rollout in Australia East, caused increased failures and latency across multiple regions."
+      },
       {
         "timestamp": "2026-05-29T09:39:00.000Z",
         "status": "update",
-        "message": "Initial impact detected with increased failures and latency across regions."
+        "message": "Automated monitoring detected a drop in request success rates and initiated incident investigation."
       },
       {
-        "timestamp": "2026-05-29T10:00:00.000Z",
+        "timestamp": "2026-05-29T10:10:00.000Z",
         "status": "update",
-        "message": "Investigation identified widespread service instability and correlated failures across models and regions."
+        "message": "We identified widespread service instability and correlated failures across regions and models."
       },
       {
         "timestamp": "2026-05-29T12:17:00.000Z",
         "status": "update",
-        "message": "Mitigation deployed globally by disabling the affected component causing instability."
+        "message": "Based on early crash diagnostics, we disabled a component that was suspected of contributing to the instability."
       },
       {
         "timestamp": "2026-05-29T12:40:00.000Z",
         "status": "update",
-        "message": "Service health and performance began recovering across impacted regions; we monitored closely for full recovery."
+        "message": "Service health began improving as traffic conditions in Australia East eased, which initially made the earlier mitigation appear effective."
+      },
+      {
+        "timestamp": "2026-05-29T14:20:00.000Z",
+        "status": "update",
+        "message": "The upstream rollout expanded to Sweden Central, where significantly higher traffic volume increased the impact of the retry amplification."
       },
       {
         "timestamp": "2026-05-29T14:40:00.000Z",
         "status": "update",
-        "message": "We determined that the issue had reoccurred due to increased retry traffic that temporarily overloaded the system."
+        "message": "The issue reoccurred after the upstream rollout reached Sweden Central, where higher traffic volume magnified the retry amplification and overloaded the system at greater scale."
+      },
+      {
+        "timestamp": "2026-05-29T16:20:00.000Z",
+        "status": "update",
+        "message": "We identified that the earlier mitigation had addressed a secondary symptom rather than the underlying cause, and refocused the investigation on upstream retry behavior."
+      },
+      {
+        "timestamp": "2026-05-29T16:27:00.000Z",
+        "status": "update",
+        "message": "We confirmed that the amplified traffic was originating from an internal first-party workload and began targeted mitigation planning."
       },
       {
         "timestamp": "2026-05-29T16:30:00.000Z",
         "status": "update",
-        "message": "We identified the source of the elevated retry requests and failed it over to an isolated backend cluster to alleviate impact and prevent reoccurrence."
+        "message": "We identified the source of the amplified retry traffic, isolated the offending internal workload onto dedicated infrastructure, and coordinated with the upstream service to roll back the triggering change and reduce traffic volume."
+      },
+      {
+        "timestamp": "2026-05-29T16:25:00.000Z",
+        "status": "update",
+        "message": "The upstream service began rollback of the triggering change and took additional actions to reduce retry-driven traffic volume."
       },
       {
         "timestamp": "2026-05-29T17:05:00.000Z",
         "status": "update",
-        "message": "Service restored and customer impact mitigated."
+        "message": "Following the completion of the isolation and rollback, and all backlogged requests were cleared, customer impact was confirmed as mitigated."
       }
     ],
     "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
