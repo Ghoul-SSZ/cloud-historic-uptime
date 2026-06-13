@@ -2,8 +2,8 @@
   {
     "id": "azure-GHRP-84G",
     "provider": "azure",
-    "title": "Preliminary Post Incident Review (PIR) – Multiple services – Power/cooling issues in West US 2",
-    "description": "Between 04:24 on 29 May 2026 and 02:30 UTC on 30 May 2026, customers with resources in the West US 2 region may have experienced failures when attempting to access or manage Azure services in the region. Impact included connectivity failures, resource unavailability, and failures when attempting to create, update, or scale resources. The issue was triggered by a severe thunderstorm with lightning strikes that resulted in utility power loss to multiple datacenter facilities serving the region.",
+    "title": "Post Incident Review (PIR) – Multiple services – Power/cooling issues in West US 2",
+    "description": "Between 04:24 UTC on 29 May and 02:30 UTC on 30 May 2026, customers with resources in the West US 2 region may have experienced failures when attempting to access or manage some Azure services in the region. Impact included connectivity failures, resource unavailability, and service management failures.",
     "severity": "minor",
     "status": "resolved",
     "startedAt": "2026-06-25T17:00:00.000Z",

@@ -1,5 +1,61 @@
 [
   {
+    "id": "aws-AWS_BEDROCK_OPERATIONAL_ISSUE_588F5_70C147423A3",
+    "provider": "aws",
+    "title": "Fable 5 and Mythos 5 Access",
+    "description": "To support compliance with the US Government export control directive, Anthropic has asked us to revoke access to Claude Fable 5 and Claude Mythos 5 for all users in all regions. All other models, including Opus4.8, are not affected and you can continue using them in full confidence. Please view the <a href=\"https://www.anthropic.com/news/fable-mythos-access\">Anthropic statement</a> for further details.",
+    "severity": "minor",
+    "status": "ongoing",
+    "startedAt": "2026-06-13T01:26:58.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Amazon Bedrock",
+        "category": "ai-ml",
+        "regions": [
+          "us-east-1"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-06-13T01:26:58.000Z",
+        "status": "1",
+        "message": "To support compliance with the US Government export control directive, Anthropic has asked us to revoke access to Claude Fable 5 and Claude Mythos 5 for all users in all regions. All other models, including Opus4.8, are not affected and you can continue using them in full confidence. Please view the <a href=\"https://www.anthropic.com/news/fable-mythos-access\">Anthropic statement</a> for further details."
+      }
+    ],
+    "sourceUrl": "https://health.aws.amazon.com/health/status"
+  },
+  {
+    "id": "aws-AWS_BEDROCK_OPERATIONAL_ISSUE-1781314018000",
+    "provider": "aws",
+    "title": "Fable 5 and Mythos 5 Access",
+    "description": "To support compliance with the US Government export control directive, Anthropic has asked us to revoke access to Claude Fable 5 and Claude Mythos 5 for all users in all regions. All other models, including Opus4.8, are not affected and you can continue using them in full confidence. Please view the <a href=\"https://www.anthropic.com/news/fable-mythos-access\">Anthropic statement</a> for further details.",
+    "severity": "minor",
+    "status": "ongoing",
+    "startedAt": "2026-06-13T01:26:58.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "AWS BEDROCK",
+        "category": "other",
+        "regions": [
+          "us-east-1"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-06-13T01:26:58.000Z",
+        "status": "1",
+        "message": "To support compliance with the US Government export control directive, Anthropic has asked us to revoke access to Claude Fable 5 and Claude Mythos 5 for all users in all regions. All other models, including Opus4.8, are not affected and you can continue using them in full confidence. Please view the <a href=\"https://www.anthropic.com/news/fable-mythos-access\">Anthropic statement</a> for further details."
+      }
+    ],
+    "sourceUrl": "https://health.aws.amazon.com/health/status"
+  },
+  {
     "id": "aws-AWS_INTERNETCONNECTIVITY_OPERATIONAL_ISSUE_4FB91_017AE394449",
     "provider": "aws",
     "title": "Internet Connectivity Issues",
