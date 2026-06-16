@@ -16,12 +16,22 @@
         "regions": []
       },
       {
+        "serviceName": "Media CDN",
+        "category": "other",
+        "regions": []
+      },
+      {
         "serviceName": "Virtual Private Cloud (VPC)",
         "category": "networking",
         "regions": []
       }
     ],
     "updates": [
+      {
+        "timestamp": "2026-06-15T23:11:38+00:00",
+        "status": "SERVICE_DISRUPTION",
+        "message": "**Summary**\nNetwork traffic to Google Cloud originating from Delhi, Chennai, Mumbai and surrounding areas is experiencing intermittent periods of elevated latency and possible packet loss.\n**Description**\nA fire at a third-party data center facility required an emergency power shutdown of networking equipment, isolating a non-compute local Point of Presence (POP) in Delhi and reducing available network capacity in the metro area.\nWe rerouted significant traffic from the impacted facility in Delhi to address reduced local serving capabilities. As a result, a subset of Hybrid Connectivity and Virtual Private Cloud (VPC) customers may be impacted by the routing changes made to address reduced local, latency-optimized serving capabilities in Delhi. Affected customers may experience intermittent latency spikes due to demand exceeding capacity across Indian metros and regional ISPs. Media CDN customers may have experienced higher latencies than normal.\nInitial traffic mitigations have yielded positive results for some Cloud customers. We have restored a portion of Internet Edge peering capacity to reduce latency in the local Delhi metropolitan area. Further, we are augmenting out-of-region Internet Edge regional peering capacity in Chennai to provide additional load-balancing and redundancy to large ISPs in India (expected to be done by Wednesday, 2026-06-17 PDT). We have optimized capacity across network backbones to increase available headroom. Additionally, we have augmented our Delhi backbone capacity over the weekend. We will continue to closely monitor latency deviations and packet drops.\nWe will provide our next update by Wednesday, 2026-06-17 at 17:00 PDT.\n**Symptoms**\nCustomers may experience slightly elevated latency and non-optimal network routing into Google Cloud until the affected facility is fully restored.\n**Workaround**\nThere is no workaround at this time."
+      },
       {
         "timestamp": "2026-06-12T22:50:20+00:00",
         "status": "SERVICE_DISRUPTION",
