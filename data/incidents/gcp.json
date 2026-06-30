@@ -5,10 +5,10 @@
     "title": "Network traffic to Google Cloud originating from Delhi, Chennai, Mumbai and surrounding areas is experiencing intermittent periods of elevated latency and possible packet loss.",
     "description": "**Summary**\nNetwork traffic to Google Cloud originating from Delhi, Chennai, Mumbai and surrounding areas is experiencing intermittent periods of elevated latency and possible packet loss.\n**Description**\nA fire at a third-party data center facility required an emergency power shutdown of networking equipment, isolating a non-compute local Point of Presence (POP) in Delhi and reducing available network capacity in the metro area.\nWe rerouted significant traffic from the impacted facility in Delhi to address reduced local serving capabilities. As a result, a subset of Hybrid Connectivity and Virtual Private Cloud (VPC) customers may be impacted by the routing changes made to address reduced local, latency-optimized serving capabilities in Delhi. Affected customers may experience intermittent latency spikes due to demand exceeding capacity across Indian metros and regional ISPs.\nWe are investigating additional traffic mitigations and Internet Edge peering augmentation to alleviate the latency issues affecting our customers.\nWe will provide our next update by Wednesday, 2026-06-10 17:00 PDT.\n**Symptoms**\nCustomers may experience slightly elevated latency and non-optimal network routing into Google Cloud until the affected facility is fully restored.\n**Workaround**\nThere is no workaround at this time.",
     "severity": "major",
-    "status": "ongoing",
+    "status": "resolved",
     "startedAt": "2026-06-05T07:00:00+00:00",
-    "resolvedAt": null,
-    "durationMinutes": null,
+    "resolvedAt": "2026-06-26T19:00:00+00:00",
+    "durationMinutes": 30960,
     "affectedServices": [
       {
         "serviceName": "Hybrid Connectivity",
@@ -27,6 +27,11 @@
       }
     ],
     "updates": [
+      {
+        "timestamp": "2026-06-29T23:06:10+00:00",
+        "status": "AVAILABLE",
+        "message": "**Summary**\nNetwork traffic to Google Cloud originating from Delhi, Chennai, Mumbai and surrounding areas experienced intermittent periods of elevated latency and possible packet loss.\n**Description**\nTraffic rerouting from the impacted Delhi facility caused a subset of Hybrid Connectivity, Virtual Private Cloud (VPC) and Media CDN customers to experience intermittent latency spikes as demand exceeded regional capacity.\nWe completed the augmentation of out-of-region Internet Edge regional peering capacity in Chennai to provide additional load-balancing and redundancy to large ISPs in India. Service to a large portion of Internet Edge peering capacity has been restored to reduce latency in the local Delhi metropolitan area. We are now recovered and returned to normal service as of Friday, 2026-06-26 PDT.\nFollowing safety clearance, our team restored all lost capacity. We have restored capacity between Delhi-Chennai and Delhi-Mumbai and will continue to closely monitor latency deviations and packet drops.\nWe thank you for your patience during the resolution of this issue.\n**Symptoms**\nThe impacted customers may have experienced slightly elevated latency and non-optimal network routing into Google Cloud.\n**Workaround**\nNone"
+      },
       {
         "timestamp": "2026-06-23T22:52:49+00:00",
         "status": "SERVICE_DISRUPTION",
