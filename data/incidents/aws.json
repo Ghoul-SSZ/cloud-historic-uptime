@@ -1,5 +1,162 @@
 [
   {
+    "id": "aws-AWS_EC2_OPERATIONAL_ISSUE_77410_461A699110A",
+    "provider": "aws",
+    "title": "Increased Error Rates and Latencies",
+    "description": "Between 1:42 PM and 2:25 PM PDT we experienced increased error rates and latencies for EC2 APIs in the EU-NORTH-1 Region. This issue also affected new instance launches. Other AWS Services that launch new instances or call EC2 APIs as part of their workflows were also affected by this issue. Existing EC2 instances were unaffected by this issue. During this time, customers would have received an Internal Server Error in the Management Console and APIs. Engineers were automatically engaged and began investigating the root cause. We identified the root cause as a planned configuration change. This change was reverted and we began observing recovery at 2:19 PM. By 2:25 PM, the issue was fully mitigated. We do not expect this issue to reoccur. Since the issue was mitigated at 2:25 PM, we have been processing a backlog for ELB workflows and expect this backlog to complete within the next 30 minutes. We recommend customers retry requests that failed during this time. The issue has been resolved and all services are operating normally. ",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2026-06-30T21:02:20.000Z",
+    "resolvedAt": "2026-06-30T21:53:23.000Z",
+    "durationMinutes": 51,
+    "affectedServices": [
+      {
+        "serviceName": "AWS AppSync",
+        "category": "other",
+        "regions": [
+          "eu-north-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Elastic Load Balancing",
+        "category": "networking",
+        "regions": [
+          "eu-north-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Elastic MapReduce",
+        "category": "other",
+        "regions": [
+          "eu-north-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon EMR Serverless",
+        "category": "other",
+        "regions": [
+          "eu-north-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Glue",
+        "category": "other",
+        "regions": [
+          "eu-north-1"
+        ]
+      },
+      {
+        "serviceName": "AWS NAT Gateway",
+        "category": "other",
+        "regions": [
+          "eu-north-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Parallel Computing Service",
+        "category": "other",
+        "regions": [
+          "eu-north-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Relational Database Service",
+        "category": "other",
+        "regions": [
+          "eu-north-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon SageMaker",
+        "category": "ai-ml",
+        "regions": [
+          "eu-north-1"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-06-30T21:02:20.000Z",
+        "status": "1",
+        "message": "We are investigating increased launch errors and API errors in the EU-NORTH-1 Region. Existing instances are not affected by this issue."
+      },
+      {
+        "timestamp": "2026-06-30T21:21:53.000Z",
+        "status": "1",
+        "message": "We can confirm increased error rates for the EC2 APIs, as well as errors launching new EC2 instances in the EU-NORTH-1 Region. Other AWS Services that launch new instances or call the EC2 APIs as part of their workflows may also be affected by this issue. During this time, customers may receive an Internal Server Error in the Management Console and APIs. Engineers were automatically engaged and began investigating the issue. We are actively working on identifying the root cause. Existing instances are unaffected by this issue. We will provide an update by 3:15 PM, or sooner if we have additional information to share. "
+      },
+      {
+        "timestamp": "2026-06-30T21:29:35.000Z",
+        "status": "1",
+        "message": "We are seeing early signs of recovery and continue to work toward full recovery. "
+      },
+      {
+        "timestamp": "2026-06-30T21:53:23.000Z",
+        "status": "0",
+        "message": "Between 1:42 PM and 2:25 PM PDT we experienced increased error rates and latencies for EC2 APIs in the EU-NORTH-1 Region. This issue also affected new instance launches. Other AWS Services that launch new instances or call EC2 APIs as part of their workflows were also affected by this issue. Existing EC2 instances were unaffected by this issue. During this time, customers would have received an Internal Server Error in the Management Console and APIs. Engineers were automatically engaged and began investigating the root cause. We identified the root cause as a planned configuration change. This change was reverted and we began observing recovery at 2:19 PM. By 2:25 PM, the issue was fully mitigated. We do not expect this issue to reoccur. Since the issue was mitigated at 2:25 PM, we have been processing a backlog for ELB workflows and expect this backlog to complete within the next 30 minutes. We recommend customers retry requests that failed during this time. The issue has been resolved and all services are operating normally. "
+      }
+    ],
+    "sourceUrl": "https://health.aws.amazon.com/health/status"
+  },
+  {
+    "id": "aws-AWS_EC2_OPERATIONAL_ISSUE-1782853340000",
+    "provider": "aws",
+    "title": "EC2 API Errors",
+    "description": "Between 1:42 PM and 2:25 PM PDT we experienced increased error rates and latencies for EC2 APIs in the EU-NORTH-1 Region. This issue also affected new instance launches. Other AWS Services that launch new instances or call EC2 APIs as part of their workflows were also affected by this issue. Existing EC2 instances were unaffected by this issue. During this time, customers would have received an Internal Server Error in the Management Console and APIs. Engineers were automatically engaged and began investigating the root cause. We identified the root cause as a planned configuration change. This change was reverted and we began observing recovery at 2:19 PM. By 2:25 PM, the issue was fully mitigated. We do not expect this issue to reoccur. Since the issue was mitigated at 2:25 PM, we have been processing a backlog for ELB workflows and expect this backlog to complete within the next 30 minutes. We recommend customers retry requests that failed during this time. The issue has been resolved and all services are operating normally. ",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2026-06-30T21:02:20.000Z",
+    "resolvedAt": "2026-06-30T22:38:48.000Z",
+    "durationMinutes": 96,
+    "affectedServices": [
+      {
+        "serviceName": "Amazon EC2",
+        "category": "compute",
+        "regions": [
+          "eu-north-1"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-06-30T21:02:20.000Z",
+        "status": "1",
+        "message": "We are investigating increased launch errors and API errors in the EU-NORTH-1 Region. Existing instances are not affected by this issue."
+      },
+      {
+        "timestamp": "2026-06-30T21:02:20.000Z",
+        "status": "1",
+        "message": "[[The following AWS services have been affected by this event:]]\nService: appsync Status: Informational\nService: elb Status: Informational\nService: emr Status: Informational\nService: emrserverless Status: Informational\nService: glue Status: Informational\nService: natgateway Status: Informational\nService: pcs Status: Informational\nService: rds Status: Informational\nService: sagemaker Status: Informational"
+      },
+      {
+        "timestamp": "2026-06-30T21:21:53.000Z",
+        "status": "1",
+        "message": "We can confirm increased error rates for the EC2 APIs, as well as errors launching new EC2 instances in the EU-NORTH-1 Region. Other AWS Services that launch new instances or call the EC2 APIs as part of their workflows may also be affected by this issue. During this time, customers may receive an Internal Server Error in the Management Console and APIs. Engineers were automatically engaged and began investigating the issue. We are actively working on identifying the root cause. Existing instances are unaffected by this issue. We will provide an update by 3:15 PM, or sooner if we have additional information to share. "
+      },
+      {
+        "timestamp": "2026-06-30T21:26:39.000Z",
+        "status": "1",
+        "message": "Increased Error Rates and Latencies"
+      },
+      {
+        "timestamp": "2026-06-30T21:29:35.000Z",
+        "status": "1",
+        "message": "We are seeing early signs of recovery and continue to work toward full recovery. "
+      },
+      {
+        "timestamp": "2026-06-30T21:53:23.000Z",
+        "status": "0",
+        "message": "[[The following AWS services have been affected by this event:]]\nService: appsync Status: Operating normally\nService: elb Status: Operating normally\nService: emr Status: Operating normally\nService: emrserverless Status: Operating normally\nService: glue Status: Operating normally\nService: natgateway Status: Operating normally\nService: pcs Status: Operating normally\nService: rds Status: Operating normally\nService: sagemaker Status: Operating normally"
+      },
+      {
+        "timestamp": "2026-06-30T21:53:23.000Z",
+        "status": "0",
+        "message": "Between 1:42 PM and 2:25 PM PDT we experienced increased error rates and latencies for EC2 APIs in the EU-NORTH-1 Region. This issue also affected new instance launches. Other AWS Services that launch new instances or call EC2 APIs as part of their workflows were also affected by this issue. Existing EC2 instances were unaffected by this issue. During this time, customers would have received an Internal Server Error in the Management Console and APIs. Engineers were automatically engaged and began investigating the root cause. We identified the root cause as a planned configuration change. This change was reverted and we began observing recovery at 2:19 PM. By 2:25 PM, the issue was fully mitigated. We do not expect this issue to reoccur. Since the issue was mitigated at 2:25 PM, we have been processing a backlog for ELB workflows and expect this backlog to complete within the next 30 minutes. We recommend customers retry requests that failed during this time. The issue has been resolved and all services are operating normally. "
+      }
+    ],
+    "sourceUrl": "https://health.aws.amazon.com/health/status"
+  },
+  {
     "id": "aws-AWS_BEDROCK_OPERATIONAL_ISSUE_588F5_70C147423A3",
     "provider": "aws",
     "title": "Fable 5 and Mythos 5 Access",
