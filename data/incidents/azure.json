@@ -6,7 +6,7 @@
     "description": "Between 04:24 UTC on 29 May and 02:30 UTC on 30 May 2026, customers with resources in the West US 2 region may have experienced failures when attempting to access or manage some Azure services in the region. Impact included connectivity failures, resource unavailability, and service management failures.",
     "severity": "minor",
     "status": "resolved",
-    "startedAt": "2026-06-25T17:00:00.000Z",
+    "startedAt": "2026-05-30T02:30:00.000Z",
     "resolvedAt": null,
     "durationMinutes": null,
     "affectedServices": [

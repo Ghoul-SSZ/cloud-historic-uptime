@@ -1,5 +1,101 @@
 [
   {
+    "id": "aws-AWS_EC2_OPERATIONAL_ISSUE_5269E_F1B7AF74706",
+    "provider": "aws",
+    "title": "Increased Launch Template API Error Rates",
+    "description": "Between 2:56 AM and 6:54 AM PDT, we experienced increased error rates when calling EC2 Launch Template APIs in the US-EAST-1 Region. During this time, affected customers may have experienced errors when creating, modifying, or describing Launch Templates. Other AWS services that rely on Launch Templates were also impacted. Amazon EC2 instances and Amazon EKS workloads already running on provisioned nodes continued to operate normally. Cluster modification operations, and Managed Node Group creation were also impacted. For EKS Auto Mode, impact was limited to operations requiring new capacity or changes, including node provisioning and pod scheduling. Our engineers were automatically engaged and immediately began investigating the root cause. We identified the root cause as a congestion issue within an EC2 internal subsystem responsible for processing EC2 launch template workflows. At 3:26 AM PDT, we took mitigation actions by introducing throttling for the affected APIs and we saw some recovery which was communicated directly with a subset of customers via the 'Your Account view' of the AWS Health Dashboard. We took multiple additional mitigation paths, incrementally lifting these throttle limits, and by 6:54 AM PDT, the issue was fully mitigated. We recommend that customers retry any failed requests. The issue has been resolved and all AWS services are now operating normally.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2026-07-06T12:45:29.000Z",
+    "resolvedAt": "2026-07-06T14:53:11.000Z",
+    "durationMinutes": 128,
+    "affectedServices": [
+      {
+        "serviceName": "Amazon Elastic Kubernetes Service",
+        "category": "other",
+        "regions": [
+          "us-east-1"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-07-06T12:45:29.000Z",
+        "status": "1",
+        "message": "We are investigating increased error rates when calling EC2 Launch Template APIs in US-EAST-1 Region. During this time, affected customers may experience errors when creating, modifying, or referencing launch templates. Other AWS services that rely on launch templates may also be impacted. We will provide another update by 6:30 AM PDT or sooner, if we have additional information to share."
+      },
+      {
+        "timestamp": "2026-07-06T13:34:47.000Z",
+        "status": "1",
+        "message": "Starting at 2:56 AM PDT, we began experiencing increased error rates when calling EC2 Launch Template APIs in the US-EAST-1 Region. Our engineers have been engaged and are actively working to mitigate the impact. Additionally, Amazon Elastic Kubernetes (EKS) customers may experience errors when creating or updating clusters, or when launching and scaling nodes via Managed Node Groups, EKS Auto Mode, or Karpenter; this issue does not impact existing clusters and nodes. We have identified the root cause to be a congestion issue within an EC2 internal subsystem responsible for processing EC2 launch template workflows. We are pursuing multiple mitigation paths. We recommend that customers retry any failed requests during the impact window. While we do not currently have an ETA for full recovery, we are prioritizing this issue and will provide another update by 7:15 AM PDT or sooner if we have additional information to share."
+      },
+      {
+        "timestamp": "2026-07-06T14:12:24.000Z",
+        "status": "1",
+        "message": "We are seeing initial signs of recovery and continue to work toward full recovery."
+      },
+      {
+        "timestamp": "2026-07-06T14:53:11.000Z",
+        "status": "0",
+        "message": "Between 2:56 AM and 6:54 AM PDT, we experienced increased error rates when calling EC2 Launch Template APIs in the US-EAST-1 Region. During this time, affected customers may have experienced errors when creating, modifying, or describing Launch Templates. Other AWS services that rely on Launch Templates were also impacted. Amazon EC2 instances and Amazon EKS workloads already running on provisioned nodes continued to operate normally. Cluster modification operations, and Managed Node Group creation were also impacted. For EKS Auto Mode, impact was limited to operations requiring new capacity or changes, including node provisioning and pod scheduling. Our engineers were automatically engaged and immediately began investigating the root cause. We identified the root cause as a congestion issue within an EC2 internal subsystem responsible for processing EC2 launch template workflows. At 3:26 AM PDT, we took mitigation actions by introducing throttling for the affected APIs and we saw some recovery which was communicated directly with a subset of customers via the 'Your Account view' of the AWS Health Dashboard. We took multiple additional mitigation paths, incrementally lifting these throttle limits, and by 6:54 AM PDT, the issue was fully mitigated. We recommend that customers retry any failed requests. The issue has been resolved and all AWS services are now operating normally."
+      }
+    ],
+    "sourceUrl": "https://health.aws.amazon.com/health/status"
+  },
+  {
+    "id": "aws-AWS_EC2_OPERATIONAL_ISSUE-1783341929000",
+    "provider": "aws",
+    "title": "Increased Launch Template API Error Rates",
+    "description": "Between 2:56 AM and 6:54 AM PDT, we experienced increased error rates when calling EC2 Launch Template APIs in the US-EAST-1 Region. During this time, affected customers may have experienced errors when creating, modifying, or describing Launch Templates. Other AWS services that rely on Launch Templates were also impacted. Amazon EC2 instances and Amazon EKS workloads already running on provisioned nodes continued to operate normally. Cluster modification operations, and Managed Node Group creation were also impacted. For EKS Auto Mode, impact was limited to operations requiring new capacity or changes, including node provisioning and pod scheduling. Our engineers were automatically engaged and immediately began investigating the root cause. We identified the root cause as a congestion issue within an EC2 internal subsystem responsible for processing EC2 launch template workflows. At 3:26 AM PDT, we took mitigation actions by introducing throttling for the affected APIs and we saw some recovery which was communicated directly with a subset of customers via the 'Your Account view' of the AWS Health Dashboard. We took multiple additional mitigation paths, incrementally lifting these throttle limits, and by 6:54 AM PDT, the issue was fully mitigated. We recommend that customers retry any failed requests. The issue has been resolved and all AWS services are now operating normally.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2026-07-06T12:45:29.000Z",
+    "resolvedAt": "2026-07-06T14:53:11.000Z",
+    "durationMinutes": 128,
+    "affectedServices": [
+      {
+        "serviceName": "Amazon EC2",
+        "category": "compute",
+        "regions": [
+          "us-east-1"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-07-06T12:45:29.000Z",
+        "status": "1",
+        "message": "We are investigating increased error rates when calling EC2 Launch Template APIs in US-EAST-1 Region. During this time, affected customers may experience errors when creating, modifying, or referencing launch templates. Other AWS services that rely on launch templates may also be impacted. We will provide another update by 6:30 AM PDT or sooner, if we have additional information to share."
+      },
+      {
+        "timestamp": "2026-07-06T12:45:29.000Z",
+        "status": "1",
+        "message": "[[The following AWS services have been affected by this event:]]\nService: eks Status: Informational"
+      },
+      {
+        "timestamp": "2026-07-06T13:34:47.000Z",
+        "status": "1",
+        "message": "Starting at 2:56 AM PDT, we began experiencing increased error rates when calling EC2 Launch Template APIs in the US-EAST-1 Region. Our engineers have been engaged and are actively working to mitigate the impact. Additionally, Amazon Elastic Kubernetes (EKS) customers may experience errors when creating or updating clusters, or when launching and scaling nodes via Managed Node Groups, EKS Auto Mode, or Karpenter; this issue does not impact existing clusters and nodes. We have identified the root cause to be a congestion issue within an EC2 internal subsystem responsible for processing EC2 launch template workflows. We are pursuing multiple mitigation paths. We recommend that customers retry any failed requests during the impact window. While we do not currently have an ETA for full recovery, we are prioritizing this issue and will provide another update by 7:15 AM PDT or sooner if we have additional information to share."
+      },
+      {
+        "timestamp": "2026-07-06T14:12:24.000Z",
+        "status": "1",
+        "message": "We are seeing initial signs of recovery and continue to work toward full recovery."
+      },
+      {
+        "timestamp": "2026-07-06T14:53:11.000Z",
+        "status": "0",
+        "message": "[[The following AWS services have been affected by this event:]]\nService: eks Status: Operating normally"
+      },
+      {
+        "timestamp": "2026-07-06T14:53:11.000Z",
+        "status": "0",
+        "message": "Between 2:56 AM and 6:54 AM PDT, we experienced increased error rates when calling EC2 Launch Template APIs in the US-EAST-1 Region. During this time, affected customers may have experienced errors when creating, modifying, or describing Launch Templates. Other AWS services that rely on Launch Templates were also impacted. Amazon EC2 instances and Amazon EKS workloads already running on provisioned nodes continued to operate normally. Cluster modification operations, and Managed Node Group creation were also impacted. For EKS Auto Mode, impact was limited to operations requiring new capacity or changes, including node provisioning and pod scheduling. Our engineers were automatically engaged and immediately began investigating the root cause. We identified the root cause as a congestion issue within an EC2 internal subsystem responsible for processing EC2 launch template workflows. At 3:26 AM PDT, we took mitigation actions by introducing throttling for the affected APIs and we saw some recovery which was communicated directly with a subset of customers via the 'Your Account view' of the AWS Health Dashboard. We took multiple additional mitigation paths, incrementally lifting these throttle limits, and by 6:54 AM PDT, the issue was fully mitigated. We recommend that customers retry any failed requests. The issue has been resolved and all AWS services are now operating normally."
+      }
+    ],
+    "sourceUrl": "https://health.aws.amazon.com/health/status"
+  },
+  {
     "id": "aws-AWS_EC2_OPERATIONAL_ISSUE_77410_461A699110A",
     "provider": "aws",
     "title": "Increased Error Rates and Latencies",
