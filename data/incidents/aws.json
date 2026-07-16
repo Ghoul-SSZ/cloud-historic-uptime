@@ -1,5 +1,119 @@
 [
   {
+    "id": "aws-AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE_25DBE_2EF1D48B613",
+    "provider": "aws",
+    "title": "Elevated connectivity issues with a single Avalability zone",
+    "description": "Between 2:56 PM and 6:07 PM PDT, we experienced connectivity issues to a subset of EC2 instances in a single Availability Zone (euc1-az2) in the EU-CENTRAL-1 Region. During this time, customers may also have experienced increased error rates and latencies for new instance launches in the affected zone, along with some AWS APIs that use the affected EC2 instances. Some AWS Services also experienced connectivity issues and increased error rates within the affected zone. Engineers were automatically engaged and immediately began investigating. As part of our recovery effort, we shifted traffic away from the impacted Availability Zone for affected services at 3:04 PM. At 3:05 PM we identified the root cause to be a recent networking change causing the impact. Engineers immediately began reverting this change which completed at 4:28 PM. This resulted in restoration of network connectivity to the affected zone at 4:30 PM. We continued to work until we fully recovered the impacts at 6:07 PM. We do not expect this issue to reoccur. The issue has been resolved and the service is operating normally.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2026-07-15T23:11:07.000Z",
+    "resolvedAt": "2026-07-16T01:24:35.000Z",
+    "durationMinutes": 133,
+    "affectedServices": [
+      {
+        "serviceName": "Amazon Elastic Compute Cloud",
+        "category": "other",
+        "regions": [
+          "eu-central-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon ElastiCache",
+        "category": "database",
+        "regions": [
+          "eu-central-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Managed Streaming for Apache Kafka",
+        "category": "other",
+        "regions": [
+          "eu-central-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Relational Database Service",
+        "category": "other",
+        "regions": [
+          "eu-central-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon SageMaker",
+        "category": "ai-ml",
+        "regions": [
+          "eu-central-1"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-07-15T23:11:07.000Z",
+        "status": "1",
+        "message": "We are investigating elevated connectivity issues with a single Avalability zone (euc1-az2) in the EU-CENTRAL-1 Region."
+      },
+      {
+        "timestamp": "2026-07-15T23:36:01.000Z",
+        "status": "1",
+        "message": "We are seeing early signs of recovery and continue to work toward full resolution. We will continue to provide updates."
+      },
+      {
+        "timestamp": "2026-07-16T01:24:35.000Z",
+        "status": "0",
+        "message": "Between 2:56 PM and 6:07 PM PDT, we experienced connectivity issues to a subset of EC2 instances in a single Availability Zone (euc1-az2) in the EU-CENTRAL-1 Region. During this time, customers may also have experienced increased error rates and latencies for new instance launches in the affected zone, along with some AWS APIs that use the affected EC2 instances. Some AWS Services also experienced connectivity issues and increased error rates within the affected zone. Engineers were automatically engaged and immediately began investigating. As part of our recovery effort, we shifted traffic away from the impacted Availability Zone for affected services at 3:04 PM. At 3:05 PM we identified the root cause to be a recent networking change causing the impact. Engineers immediately began reverting this change which completed at 4:28 PM. This resulted in restoration of network connectivity to the affected zone at 4:30 PM. We continued to work until we fully recovered the impacts at 6:07 PM. We do not expect this issue to reoccur. The issue has been resolved and the service is operating normally."
+      }
+    ],
+    "sourceUrl": "https://health.aws.amazon.com/health/status"
+  },
+  {
+    "id": "aws-AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE-1784157067000",
+    "provider": "aws",
+    "title": "Elevated connectivity issues with a single Avalability zone",
+    "description": "Between 2:56 PM and 6:07 PM PDT, we experienced connectivity issues to a subset of EC2 instances in a single Availability Zone (euc1-az2) in the EU-CENTRAL-1 Region. During this time, customers may also have experienced increased error rates and latencies for new instance launches in the affected zone, along with some AWS APIs that use the affected EC2 instances. Some AWS Services also experienced connectivity issues and increased error rates within the affected zone. Engineers were automatically engaged and immediately began investigating. As part of our recovery effort, we shifted traffic away from the impacted Availability Zone for affected services at 3:04 PM. At 3:05 PM we identified the root cause to be a recent networking change causing the impact. Engineers immediately began reverting this change which completed at 4:28 PM. This resulted in restoration of network connectivity to the affected zone at 4:30 PM. We continued to work until we fully recovered the impacts at 6:07 PM. We do not expect this issue to reoccur. The issue has been resolved and the service is operating normally.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2026-07-15T23:11:07.000Z",
+    "resolvedAt": "2026-07-16T01:24:35.000Z",
+    "durationMinutes": 133,
+    "affectedServices": [
+      {
+        "serviceName": "Multiple Services",
+        "category": "other",
+        "regions": [
+          "eu-central-1"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-07-15T23:11:07.000Z",
+        "status": "1",
+        "message": "We are investigating elevated connectivity issues with a single Avalability zone (euc1-az2) in the EU-CENTRAL-1 Region."
+      },
+      {
+        "timestamp": "2026-07-15T23:11:07.000Z",
+        "status": "1",
+        "message": "[[The following AWS services have been affected by this event:]]\nService: ec2 Status: Informational\nService: elasticache Status: Informational\nService: kafka Status: Informational\nService: rds Status: Informational\nService: sagemaker Status: Informational"
+      },
+      {
+        "timestamp": "2026-07-15T23:36:01.000Z",
+        "status": "1",
+        "message": "We are seeing early signs of recovery and continue to work toward full resolution. We will continue to provide updates."
+      },
+      {
+        "timestamp": "2026-07-16T01:24:35.000Z",
+        "status": "0",
+        "message": "[[The following AWS services have been affected by this event:]]\nService: ec2 Status: Operating normally\nService: elasticache Status: Operating normally\nService: kafka Status: Operating normally\nService: rds Status: Operating normally\nService: sagemaker Status: Operating normally"
+      },
+      {
+        "timestamp": "2026-07-16T01:24:35.000Z",
+        "status": "0",
+        "message": "Between 2:56 PM and 6:07 PM PDT, we experienced connectivity issues to a subset of EC2 instances in a single Availability Zone (euc1-az2) in the EU-CENTRAL-1 Region. During this time, customers may also have experienced increased error rates and latencies for new instance launches in the affected zone, along with some AWS APIs that use the affected EC2 instances. Some AWS Services also experienced connectivity issues and increased error rates within the affected zone. Engineers were automatically engaged and immediately began investigating. As part of our recovery effort, we shifted traffic away from the impacted Availability Zone for affected services at 3:04 PM. At 3:05 PM we identified the root cause to be a recent networking change causing the impact. Engineers immediately began reverting this change which completed at 4:28 PM. This resulted in restoration of network connectivity to the affected zone at 4:30 PM. We continued to work until we fully recovered the impacts at 6:07 PM. We do not expect this issue to reoccur. The issue has been resolved and the service is operating normally."
+      }
+    ],
+    "sourceUrl": "https://health.aws.amazon.com/health/status"
+  },
+  {
     "id": "aws-AWS_EC2_OPERATIONAL_ISSUE_5269E_F1B7AF74706",
     "provider": "aws",
     "title": "Increased Launch Template API Error Rates",
