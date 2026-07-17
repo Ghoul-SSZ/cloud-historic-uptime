@@ -1,5 +1,126 @@
 [
   {
+    "id": "aws-AWS_CLOUDFRONT_OPERATIONAL_ISSUE_EDF4C_83808542A4E",
+    "provider": "aws",
+    "title": "Increased 5xx Errors",
+    "description": "Between 12:45 AM and 4:18 AM PDT, we experienced increased 5xx errors for CloudFront customers utilizing VPC Origins connectivity. Our engineers were automatically engaged and immediately began investigating the root cause. By 2:57 AM PDT, we identified the root cause of the issue as an internal constraint on the fleet that manages connections to private VPC origins. When this constraint was reached, the system responsible for distributing routing configuration to our network processors failed to load the updated configuration data correctly, affecting routing of VPC Origin connections. At 3:52 AM PDT, we took multiple mitigation actions that led to to full recovery at 4:18 AM PDT. Now that the issue has been mitigated, customers who temporarily changed their origin type can safely revert these changes. Customers utilizing other origin types were not affected by this issue. The issue has been resolved and the service is operating normally.",
+    "severity": "major",
+    "status": "resolved",
+    "startedAt": "2026-07-16T08:44:00.000Z",
+    "resolvedAt": "2026-07-16T12:21:59.000Z",
+    "durationMinutes": 218,
+    "affectedServices": [
+      {
+        "serviceName": "Amazon CloudFront",
+        "category": "networking",
+        "regions": [
+          "global"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-07-16T08:44:00.000Z",
+        "status": "1",
+        "message": "We are investigating increased 5xx errors for Cloudfront customers utilizing VPC Origins connectivity. "
+      },
+      {
+        "timestamp": "2026-07-16T09:21:19.000Z",
+        "status": "1",
+        "message": "Starting at 12:45 AM PDT, we are experiencing increased 5xx errors for CloudFront customers utilizing VPC Origins connectivity. We have confirmed that customers utilizing other origin types are not impacted by this issue. Our engineers are engaged and are actively working to mitigate impact. As a workaround, customers who do not require VPC Origins can change their origin type to resolve the errors. We will provide another update by 3:15 AM PDT, or sooner if more information becomes available."
+      },
+      {
+        "timestamp": "2026-07-16T10:18:33.000Z",
+        "status": "2",
+        "message": "We continue working to resolve the increased 5xx errors for CloudFront customers utilizing VPC Origins connectivity. Customers utilizing other origin types remain unaffected by this issue. Based on our investigation, we believe the root cause is related to a packet processing subsystem responsible for routing requests from CloudFront's edge locations to resources within customer VPCs. We continue to recommend that customers who are able to do so temporarily change their origin type to resolve the errors. We will provide another update by 4:15 AM PDT, or sooner if additional information becomes available."
+      },
+      {
+        "timestamp": "2026-07-16T11:16:05.000Z",
+        "status": "2",
+        "message": "We continue working to resolve the increased 5xx errors for CloudFront customers utilizing VPC Origins connectivity. Customers utilizing other origin types remain unaffected by this issue. We have further scoped the issue down to routing table capacity within the packet processing subsystem responsible for routing requests from CloudFront's edge locations to resources within customer VPCs. We have identified and are currently testing a mitigation strategy to resolve the issue. Once testing is complete, we will deploy the mitigation in a phased approach. Based on the results from these tests, we will provide a clearer estimated time for resolution in our next update. We continue to recommend that customers who are able to do so temporarily change their origin type to resolve the errors. We will provide another update by 5:15 AM PDT, or sooner if additional information becomes available."
+      },
+      {
+        "timestamp": "2026-07-16T11:27:23.000Z",
+        "status": "2",
+        "message": "We are seeing initial signs of recovery and continue to work toward full recovery."
+      },
+      {
+        "timestamp": "2026-07-16T11:57:25.000Z",
+        "status": "1",
+        "message": "We continue to see significant signs of recovery as a result of our mitigation efforts, with full recovery expected within the next 45 minutes."
+      },
+      {
+        "timestamp": "2026-07-16T12:21:59.000Z",
+        "status": "0",
+        "message": "Between 12:45 AM and 4:18 AM PDT, we experienced increased 5xx errors for CloudFront customers utilizing VPC Origins connectivity. Our engineers were automatically engaged and immediately began investigating the root cause. By 2:57 AM PDT, we identified the root cause of the issue as an internal constraint on the fleet that manages connections to private VPC origins. When this constraint was reached, the system responsible for distributing routing configuration to our network processors failed to load the updated configuration data correctly, affecting routing of VPC Origin connections. At 3:52 AM PDT, we took multiple mitigation actions that led to to full recovery at 4:18 AM PDT. Now that the issue has been mitigated, customers who temporarily changed their origin type can safely revert these changes. Customers utilizing other origin types were not affected by this issue. The issue has been resolved and the service is operating normally."
+      }
+    ],
+    "sourceUrl": "https://health.aws.amazon.com/health/status"
+  },
+  {
+    "id": "aws-AWS_CLOUDFRONT_OPERATIONAL_ISSUE-1784191440000",
+    "provider": "aws",
+    "title": "Increased 5xx Errors",
+    "description": "Between 12:45 AM and 4:18 AM PDT, we experienced increased 5xx errors for CloudFront customers utilizing VPC Origins connectivity. Our engineers were automatically engaged and immediately began investigating the root cause. By 2:57 AM PDT, we identified the root cause of the issue as an internal constraint on the fleet that manages connections to private VPC origins. When this constraint was reached, the system responsible for distributing routing configuration to our network processors failed to load the updated configuration data correctly, affecting routing of VPC Origin connections. At 3:52 AM PDT, we took multiple mitigation actions that led to to full recovery at 4:18 AM PDT. Now that the issue has been mitigated, customers who temporarily changed their origin type can safely revert these changes. Customers utilizing other origin types were not affected by this issue. The issue has been resolved and the service is operating normally.",
+    "severity": "major",
+    "status": "resolved",
+    "startedAt": "2026-07-16T08:44:00.000Z",
+    "resolvedAt": "2026-07-16T12:21:59.000Z",
+    "durationMinutes": 218,
+    "affectedServices": [
+      {
+        "serviceName": "Amazon CloudFront",
+        "category": "networking",
+        "regions": [
+          "global"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-07-16T08:44:00.000Z",
+        "status": "1",
+        "message": "We are investigating increased 5xx errors for Cloudfront customers utilizing VPC Origins connectivity. "
+      },
+      {
+        "timestamp": "2026-07-16T09:21:19.000Z",
+        "status": "1",
+        "message": "Starting at 12:45 AM PDT, we are experiencing increased 5xx errors for CloudFront customers utilizing VPC Origins connectivity. We have confirmed that customers utilizing other origin types are not impacted by this issue. Our engineers are engaged and are actively working to mitigate impact. As a workaround, customers who do not require VPC Origins can change their origin type to resolve the errors. We will provide another update by 3:15 AM PDT, or sooner if more information becomes available."
+      },
+      {
+        "timestamp": "2026-07-16T09:45:25.000Z",
+        "status": "2",
+        "message": "Increased 5xx Errors"
+      },
+      {
+        "timestamp": "2026-07-16T10:18:33.000Z",
+        "status": "2",
+        "message": "We continue working to resolve the increased 5xx errors for CloudFront customers utilizing VPC Origins connectivity. Customers utilizing other origin types remain unaffected by this issue. Based on our investigation, we believe the root cause is related to a packet processing subsystem responsible for routing requests from CloudFront's edge locations to resources within customer VPCs. We continue to recommend that customers who are able to do so temporarily change their origin type to resolve the errors. We will provide another update by 4:15 AM PDT, or sooner if additional information becomes available."
+      },
+      {
+        "timestamp": "2026-07-16T11:16:05.000Z",
+        "status": "2",
+        "message": "We continue working to resolve the increased 5xx errors for CloudFront customers utilizing VPC Origins connectivity. Customers utilizing other origin types remain unaffected by this issue. We have further scoped the issue down to routing table capacity within the packet processing subsystem responsible for routing requests from CloudFront's edge locations to resources within customer VPCs. We have identified and are currently testing a mitigation strategy to resolve the issue. Once testing is complete, we will deploy the mitigation in a phased approach. Based on the results from these tests, we will provide a clearer estimated time for resolution in our next update. We continue to recommend that customers who are able to do so temporarily change their origin type to resolve the errors. We will provide another update by 5:15 AM PDT, or sooner if additional information becomes available."
+      },
+      {
+        "timestamp": "2026-07-16T11:27:23.000Z",
+        "status": "2",
+        "message": "We are seeing initial signs of recovery and continue to work toward full recovery."
+      },
+      {
+        "timestamp": "2026-07-16T11:57:25.000Z",
+        "status": "1",
+        "message": "We continue to see significant signs of recovery as a result of our mitigation efforts, with full recovery expected within the next 45 minutes."
+      },
+      {
+        "timestamp": "2026-07-16T12:21:59.000Z",
+        "status": "0",
+        "message": "Between 12:45 AM and 4:18 AM PDT, we experienced increased 5xx errors for CloudFront customers utilizing VPC Origins connectivity. Our engineers were automatically engaged and immediately began investigating the root cause. By 2:57 AM PDT, we identified the root cause of the issue as an internal constraint on the fleet that manages connections to private VPC origins. When this constraint was reached, the system responsible for distributing routing configuration to our network processors failed to load the updated configuration data correctly, affecting routing of VPC Origin connections. At 3:52 AM PDT, we took multiple mitigation actions that led to to full recovery at 4:18 AM PDT. Now that the issue has been mitigated, customers who temporarily changed their origin type can safely revert these changes. Customers utilizing other origin types were not affected by this issue. The issue has been resolved and the service is operating normally."
+      }
+    ],
+    "sourceUrl": "https://health.aws.amazon.com/health/status"
+  },
+  {
     "id": "aws-AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE_25DBE_2EF1D48B613",
     "provider": "aws",
     "title": "Elevated connectivity issues with a single Avalability zone",
