@@ -1,5 +1,151 @@
 [
   {
+    "id": "aws-AWS_BILLING_OPERATIONAL_ISSUE_47B68_BACBD91434F",
+    "provider": "aws",
+    "title": "Inaccurate Estimated Billing Data",
+    "description": "We continue to make steady progress toward resolving the issue affecting estimated cost and usage data displayed in the Billing and Cost Management Console. Our efforts to backfill corrected data remain underway, and we expect all affected accounts to be fully recovered by July 19, 12:00 AM PDT. Until the backfill is complete, some customers may still observe incorrect cost and usage data in the Billing and Cost Management Console and Cost and Usage Reports. These estimates do not reflect actual usage or charges. Customers who configured their Cost and Usage Report with the \"Overwrite\" option require no action — their report will be automatically updated with corrected data once the backfill completes. Customers who configured their Cost and Usage Report with the \"Create new report versions\" option retain all previous report deliveries in their S3 bucket. The report version delivered during the impacted window may contain inaccurate data. Once the data backfill is complete, a corrected report version will be delivered under a new assemblyId. Customers using this configuration should update any downstream processes (Athena tables, Redshift pipelines, Amazon QuickSight, or custom ETL) to reference the latest assemblyId for the affected billing period, and may delete or archive the impacted report version to prevent processing stale data. To identify the latest report, customers can follow the steps in our <a href=\"https://docs.aws.amazon.com/cur/latest/userguide/view-latest-cur.html\">documentation</a>. We will provide another update by July 18, 1:00 AM PDT, or sooner if additional information becomes available.",
+    "severity": "minor",
+    "status": "ongoing",
+    "startedAt": "2026-07-17T08:33:36.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "AWS Billing Console",
+        "category": "other",
+        "regions": [
+          "global"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-07-17T08:33:36.000Z",
+        "status": "1",
+        "message": "We are investigating issues with Cost Explorer reflecting inaccurate estimated billing data."
+      },
+      {
+        "timestamp": "2026-07-17T09:07:33.000Z",
+        "status": "1",
+        "message": "Beginning on July 16 7:38 PM PDT, we began displaying incorrect estimated billing data in the Billing and Cost Management Console. Our engineering teams are engaged and investigating root cause. We will provide another update by 3:00 AM PDT or sooner if more information becomes available."
+      },
+      {
+        "timestamp": "2026-07-17T10:03:26.000Z",
+        "status": "1",
+        "message": "We continue to work to resolve the issue affecting estimated cost and usage data displayed in the Billing and Cost Management Console. We have identified the root cause as an issue with unit pricing within the estimated billing computation subsystem and we are working on a mitigation. The displayed billing estimates do not reflect actual usage and charges. There are no customer actions required at this time. Once the issue has been mitigated, we expect full resolution to take multiple hours as we work through recomputing the estimated billing data. We will provide another update by 4:00 AM PDT or sooner if more information becomes available."
+      },
+      {
+        "timestamp": "2026-07-17T10:52:48.000Z",
+        "status": "1",
+        "message": "We continue to work to resolve the issue affecting estimated cost and usage data displayed in the Billing and Cost Management Console. As previously shared, we have identified the root cause as an issue with unit pricing within the estimated billing computation subsystem. To prevent further inaccurate billing estimates from being displayed, we have paused estimated billing computations. Customers who are currently seeing normal bill estimates will continue to see those estimates, and customers who are seeing inflated estimates will not see them increase further while we work toward resolution. The displayed billing estimates do not reflect actual usage and charges. We continue to work on fully mitigating the issue. Once the issue has been mitigated, we expect full resolution to take multiple hours as we work through recomputing the estimated billing data. There are no customer actions required at this time. We will provide another update by 5:00 AM PDT or sooner if more information becomes available."
+      },
+      {
+        "timestamp": "2026-07-17T11:58:39.000Z",
+        "status": "1",
+        "message": "We continue to work to resolve the issue affecting estimated cost and usage data displayed in the Billing and Cost Management Console. We are actively working on multiple mitigation paths in parallel. The first path involves reverting to the last known good estimated bill computation. With this approach, customers will only see cost and usage data through July 15, however the inflated cost data will be removed. The second path involves rolling back a recent change to the billing computation subsystem. The displayed billing estimates do not reflect actual usage and charges. There are no customer actions required at this time. Once the issue has been mitigated, we expect full resolution to take multiple hours as we work through recomputing the estimated billing data. We will provide another update by 6:00 AM PDT or sooner if more information becomes available."
+      },
+      {
+        "timestamp": "2026-07-17T12:54:46.000Z",
+        "status": "1",
+        "message": "We continue to work on multiple mitigation paths in parallel to resolve the issue affecting estimated cost and usage data displayed in the Billing and Cost Management Console, including the Cost and Usage Report. We are evaluating resuming estimated billing computations, as our internal monitoring indicates the billing computation subsystem is now producing accurate estimates. We are conducting additional validation before proceeding with this path. The displayed billing estimates do not reflect actual usage and charges. There are no customer actions required at this time. We will provide another update by 8:00 AM PDT or sooner if more information becomes available."
+      },
+      {
+        "timestamp": "2026-07-17T14:53:08.000Z",
+        "status": "1",
+        "message": "We continue to work to resolve the issue affecting estimated cost and usage data displayed in the Billing and Cost Management Console, including the Cost and Usage Report. The rollback of a recent change did not resolve the issue and we are continuing to investigate multiple mitigation paths. Estimated bill updates remain paused. We are in the process of reverting to the last accurate estimated billing data. The displayed billing estimates do not reflect actual usage and charges. There are no customer actions required at this time. We expect this mitigation to take several hours to complete as we work through recomputing the estimated billing data. We will provide another update by 10:00 AM PDT or sooner if more information becomes available."
+      },
+      {
+        "timestamp": "2026-07-17T16:59:36.000Z",
+        "status": "1",
+        "message": "We have identified the root cause and mitigated the underlying issue causing incorrect estimated cost and usage data to be displayed in the Billing and Cost Management Console, and Cost and Usage Reports. We have begun backfilling data to correct cost data for all customers. We expect some customers to begin seeing recovery within the next three hours, and full recovery for all customers by July 18 12:00 PM PDT. Until the backfill is complete, some customers may still see incorrect cost and usage data. The displayed billing estimates do not reflect actual usage and charges. There are no customer actions required at this time. We will provide another update by 1:00 PM, or sooner if information becomes available."
+      },
+      {
+        "timestamp": "2026-07-17T19:56:18.000Z",
+        "status": "1",
+        "message": "Our efforts to backfill corrected estimated cost and usage data are still underway. We are progressing slower than anticipated. While we are seeing some accounts recover with correct cost and usage data, we expect all affected accounts to be recovered by July 19 12:00 AM PDT. Until the backfill is complete, some customers may still see incorrect cost and usage data. The displayed billing estimates do not reflect actual usage and charges. There are no customer actions required at this time. We will provide another update by 7:00 PM, or sooner if information becomes available."
+      },
+      {
+        "timestamp": "2026-07-18T01:38:01.000Z",
+        "status": "1",
+        "message": "We continue to make steady progress toward resolving the issue affecting estimated cost and usage data displayed in the Billing and Cost Management Console. Our efforts to backfill corrected data remain underway, and we expect all affected accounts to be fully recovered by July 19, 12:00 AM PDT. Until the backfill is complete, some customers may still observe incorrect cost and usage data in the Billing and Cost Management Console and Cost and Usage Reports. These estimates do not reflect actual usage or charges. Customers who configured their Cost and Usage Report with the \"Overwrite\" option require no action — their report will be automatically updated with corrected data once the backfill completes. Customers who configured their Cost and Usage Report with the \"Create new report versions\" option retain all previous report deliveries in their S3 bucket. The report version delivered during the impacted window may contain inaccurate data. Once the data backfill is complete, a corrected report version will be delivered under a new assemblyId. Customers using this configuration should update any downstream processes (Athena tables, Redshift pipelines, Amazon QuickSight, or custom ETL) to reference the latest assemblyId for the affected billing period, and may delete or archive the impacted report version to prevent processing stale data. To identify the latest report, customers can follow the steps in our <a href=\"https://docs.aws.amazon.com/cur/latest/userguide/view-latest-cur.html\">documentation</a>. We will provide another update by July 18, 1:00 AM PDT, or sooner if additional information becomes available."
+      }
+    ],
+    "sourceUrl": "https://health.aws.amazon.com/health/status"
+  },
+  {
+    "id": "aws-AWS_BILLING_OPERATIONAL_ISSUE-1784277216000",
+    "provider": "aws",
+    "title": "Inaccurate Estimated Billing Data",
+    "description": "We continue to make steady progress toward resolving the issue affecting estimated cost and usage data displayed in the Billing and Cost Management Console. Our efforts to backfill corrected data remain underway, and we expect all affected accounts to be fully recovered by July 19, 12:00 AM PDT. Until the backfill is complete, some customers may still observe incorrect cost and usage data in the Billing and Cost Management Console and Cost and Usage Reports. These estimates do not reflect actual usage or charges. Customers who configured their Cost and Usage Report with the \"Overwrite\" option require no action — their report will be automatically updated with corrected data once the backfill completes. Customers who configured their Cost and Usage Report with the \"Create new report versions\" option retain all previous report deliveries in their S3 bucket. The report version delivered during the impacted window may contain inaccurate data. Once the data backfill is complete, a corrected report version will be delivered under a new assemblyId. Customers using this configuration should update any downstream processes (Athena tables, Redshift pipelines, Amazon QuickSight, or custom ETL) to reference the latest assemblyId for the affected billing period, and may delete or archive the impacted report version to prevent processing stale data. To identify the latest report, customers can follow the steps in our <a href=\"https://docs.aws.amazon.com/cur/latest/userguide/view-latest-cur.html\">documentation</a>. We will provide another update by July 18, 1:00 AM PDT, or sooner if additional information becomes available.",
+    "severity": "minor",
+    "status": "ongoing",
+    "startedAt": "2026-07-17T08:33:36.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "AWS BILLING",
+        "category": "other",
+        "regions": [
+          "global"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-07-17T08:33:36.000Z",
+        "status": "1",
+        "message": "We are investigating issues with Cost Explorer reflecting inaccurate estimated billing data."
+      },
+      {
+        "timestamp": "2026-07-17T09:07:33.000Z",
+        "status": "1",
+        "message": "Beginning on July 16 7:38 PM PDT, we began displaying incorrect estimated billing data in the Billing and Cost Management Console. Our engineering teams are engaged and investigating root cause. We will provide another update by 3:00 AM PDT or sooner if more information becomes available."
+      },
+      {
+        "timestamp": "2026-07-17T10:03:26.000Z",
+        "status": "1",
+        "message": "We continue to work to resolve the issue affecting estimated cost and usage data displayed in the Billing and Cost Management Console. We have identified the root cause as an issue with unit pricing within the estimated billing computation subsystem and we are working on a mitigation. The displayed billing estimates do not reflect actual usage and charges. There are no customer actions required at this time. Once the issue has been mitigated, we expect full resolution to take multiple hours as we work through recomputing the estimated billing data. We will provide another update by 4:00 AM PDT or sooner if more information becomes available."
+      },
+      {
+        "timestamp": "2026-07-17T10:52:48.000Z",
+        "status": "1",
+        "message": "We continue to work to resolve the issue affecting estimated cost and usage data displayed in the Billing and Cost Management Console. As previously shared, we have identified the root cause as an issue with unit pricing within the estimated billing computation subsystem. To prevent further inaccurate billing estimates from being displayed, we have paused estimated billing computations. Customers who are currently seeing normal bill estimates will continue to see those estimates, and customers who are seeing inflated estimates will not see them increase further while we work toward resolution. The displayed billing estimates do not reflect actual usage and charges. We continue to work on fully mitigating the issue. Once the issue has been mitigated, we expect full resolution to take multiple hours as we work through recomputing the estimated billing data. There are no customer actions required at this time. We will provide another update by 5:00 AM PDT or sooner if more information becomes available."
+      },
+      {
+        "timestamp": "2026-07-17T11:58:39.000Z",
+        "status": "1",
+        "message": "We continue to work to resolve the issue affecting estimated cost and usage data displayed in the Billing and Cost Management Console. We are actively working on multiple mitigation paths in parallel. The first path involves reverting to the last known good estimated bill computation. With this approach, customers will only see cost and usage data through July 15, however the inflated cost data will be removed. The second path involves rolling back a recent change to the billing computation subsystem. The displayed billing estimates do not reflect actual usage and charges. There are no customer actions required at this time. Once the issue has been mitigated, we expect full resolution to take multiple hours as we work through recomputing the estimated billing data. We will provide another update by 6:00 AM PDT or sooner if more information becomes available."
+      },
+      {
+        "timestamp": "2026-07-17T12:54:46.000Z",
+        "status": "1",
+        "message": "We continue to work on multiple mitigation paths in parallel to resolve the issue affecting estimated cost and usage data displayed in the Billing and Cost Management Console, including the Cost and Usage Report. We are evaluating resuming estimated billing computations, as our internal monitoring indicates the billing computation subsystem is now producing accurate estimates. We are conducting additional validation before proceeding with this path. The displayed billing estimates do not reflect actual usage and charges. There are no customer actions required at this time. We will provide another update by 8:00 AM PDT or sooner if more information becomes available."
+      },
+      {
+        "timestamp": "2026-07-17T14:53:08.000Z",
+        "status": "1",
+        "message": "We continue to work to resolve the issue affecting estimated cost and usage data displayed in the Billing and Cost Management Console, including the Cost and Usage Report. The rollback of a recent change did not resolve the issue and we are continuing to investigate multiple mitigation paths. Estimated bill updates remain paused. We are in the process of reverting to the last accurate estimated billing data. The displayed billing estimates do not reflect actual usage and charges. There are no customer actions required at this time. We expect this mitigation to take several hours to complete as we work through recomputing the estimated billing data. We will provide another update by 10:00 AM PDT or sooner if more information becomes available."
+      },
+      {
+        "timestamp": "2026-07-17T16:59:36.000Z",
+        "status": "1",
+        "message": "We have identified the root cause and mitigated the underlying issue causing incorrect estimated cost and usage data to be displayed in the Billing and Cost Management Console, and Cost and Usage Reports. We have begun backfilling data to correct cost data for all customers. We expect some customers to begin seeing recovery within the next three hours, and full recovery for all customers by July 18 12:00 PM PDT. Until the backfill is complete, some customers may still see incorrect cost and usage data. The displayed billing estimates do not reflect actual usage and charges. There are no customer actions required at this time. We will provide another update by 1:00 PM, or sooner if information becomes available."
+      },
+      {
+        "timestamp": "2026-07-17T19:56:18.000Z",
+        "status": "1",
+        "message": "Our efforts to backfill corrected estimated cost and usage data are still underway. We are progressing slower than anticipated. While we are seeing some accounts recover with correct cost and usage data, we expect all affected accounts to be recovered by July 19 12:00 AM PDT. Until the backfill is complete, some customers may still see incorrect cost and usage data. The displayed billing estimates do not reflect actual usage and charges. There are no customer actions required at this time. We will provide another update by 7:00 PM, or sooner if information becomes available."
+      },
+      {
+        "timestamp": "2026-07-18T01:38:01.000Z",
+        "status": "1",
+        "message": "We continue to make steady progress toward resolving the issue affecting estimated cost and usage data displayed in the Billing and Cost Management Console. Our efforts to backfill corrected data remain underway, and we expect all affected accounts to be fully recovered by July 19, 12:00 AM PDT. Until the backfill is complete, some customers may still observe incorrect cost and usage data in the Billing and Cost Management Console and Cost and Usage Reports. These estimates do not reflect actual usage or charges. Customers who configured their Cost and Usage Report with the \"Overwrite\" option require no action — their report will be automatically updated with corrected data once the backfill completes. Customers who configured their Cost and Usage Report with the \"Create new report versions\" option retain all previous report deliveries in their S3 bucket. The report version delivered during the impacted window may contain inaccurate data. Once the data backfill is complete, a corrected report version will be delivered under a new assemblyId. Customers using this configuration should update any downstream processes (Athena tables, Redshift pipelines, Amazon QuickSight, or custom ETL) to reference the latest assemblyId for the affected billing period, and may delete or archive the impacted report version to prevent processing stale data. To identify the latest report, customers can follow the steps in our <a href=\"https://docs.aws.amazon.com/cur/latest/userguide/view-latest-cur.html\">documentation</a>. We will provide another update by July 18, 1:00 AM PDT, or sooner if additional information becomes available."
+      }
+    ],
+    "sourceUrl": "https://health.aws.amazon.com/health/status"
+  },
+  {
     "id": "aws-AWS_CLOUDFRONT_OPERATIONAL_ISSUE_EDF4C_83808542A4E",
     "provider": "aws",
     "title": "Increased 5xx Errors",
