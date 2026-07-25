@@ -1,5 +1,164 @@
 [
   {
+    "id": "aws-AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE_83A36_24C89B493A6",
+    "provider": "aws",
+    "title": "Connectivity Issues",
+    "description": "Between 3:55 AM and 4:15 AM PDT, we experienced connectivity issues that impacted connectivity to the US-WEST-2 Region. This impacted multiple AWS services in the Region. Some customers may have also experienced issues accessing the AWS Management Console, with connection timeouts and unresponsive pages. Connectivity within the Region was not affected. Our engineers were automatically engaged at 4:01 AM PDT, and immediately began investigating this issue. We identified the root cause as an issue with networking devices responsible for network routing from the Region to the Seattle Metro, and began working in parallel on multiple paths to mitigate the impact. We took mitigation measures that led to initial recovery at 4:15 AM PDT. As the network continued to stabilize following our mitigation actions, a brief reconvergence event occurred between 4:47 AM and 4:59 AM PDT. During this reconvergence period, some customers may have experienced intermittent connectivity issues to the Region as network routes were re-established. By 4:59 AM PDT, all routes had been fully restored and service metrics returned to pre-event levels. \n\nCustomers using AWS Direct Connect through EqSe2, Westin Building Exchange, Seattle experienced an extended impact window from 3:55 AM to 5:12 AM PDT. These customers would have experienced connectivity issues until network routes for this specific path were fully restored at 5:12 AM PDT. Customers connected redundantly through other AWS Direct Connect locations were not impacted by this event.\n\nThe issue has been resolved and all AWS services are operating normally.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2026-07-24T11:40:00.000Z",
+    "resolvedAt": "2026-07-24T13:01:21.000Z",
+    "durationMinutes": 81,
+    "affectedServices": [
+      {
+        "serviceName": "Amazon API Gateway",
+        "category": "networking",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "AWS IoT Core",
+        "category": "other",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "AWS Direct Connect",
+        "category": "networking",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "Amazon Elastic Compute Cloud",
+        "category": "other",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "Amazon Elastic Container Service",
+        "category": "other",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "Amazon Elastic Load Balancing",
+        "category": "networking",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "AWS Global Accelerator",
+        "category": "other",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "AWS Internet Connectivity",
+        "category": "other",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "Amazon Virtual Private Cloud",
+        "category": "other",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "AWS Site-to-Site VPN",
+        "category": "other",
+        "regions": [
+          "us-west-2"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-07-24T11:40:00.000Z",
+        "status": "1",
+        "message": "We are investigating connecivity issues impacting multiple AWS services in the US-WEST-2 Region."
+      },
+      {
+        "timestamp": "2026-07-24T11:56:21.000Z",
+        "status": "1",
+        "message": "We are seeing initial signs of recovery and continue to work toward full recovery."
+      },
+      {
+        "timestamp": "2026-07-24T12:30:20.000Z",
+        "status": "1",
+        "message": "We continue to see significant signs of recovery as a result of our mitigation efforts for the connectivity issues impacting multiple AWS services in the US-WEST-2 Region. We have identified the root cause as an issue with a networking device responsible for network routing from the Region to the Seattle Metro. Engineers have finished all mitigation work. As routes continue to be restored, customers should see a continued reduction in error rates and timeouts when connecting to affected services. We are monitoring recovery progress closely and will continue working until all routes have been fully restored and service metrics return to pre-event levels. We will provide another update in the next 30-45 minutes."
+      },
+      {
+        "timestamp": "2026-07-24T13:01:21.000Z",
+        "status": "0",
+        "message": "Between 3:55 AM and 4:15 AM PDT, we experienced connectivity issues that impacted connectivity to the US-WEST-2 Region. This impacted multiple AWS services in the Region. Some customers may have also experienced issues accessing the AWS Management Console, with connection timeouts and unresponsive pages. Connectivity within the Region was not affected. Our engineers were automatically engaged at 4:01 AM PDT, and immediately began investigating this issue. We identified the root cause as an issue with networking devices responsible for network routing from the Region to the Seattle Metro, and began working in parallel on multiple paths to mitigate the impact. We took mitigation measures that led to initial recovery at 4:15 AM PDT. As the network continued to stabilize following our mitigation actions, a brief reconvergence event occurred between 4:47 AM and 4:59 AM PDT. During this reconvergence period, some customers may have experienced intermittent connectivity issues to the Region as network routes were re-established. By 4:59 AM PDT, all routes had been fully restored and service metrics returned to pre-event levels. \n\nCustomers using AWS Direct Connect through EqSe2, Westin Building Exchange, Seattle experienced an extended impact window from 3:55 AM to 5:12 AM PDT. These customers would have experienced connectivity issues until network routes for this specific path were fully restored at 5:12 AM PDT. Customers connected redundantly through other AWS Direct Connect locations were not impacted by this event.\n\nThe issue has been resolved and all AWS services are operating normally."
+      }
+    ],
+    "sourceUrl": "https://health.aws.amazon.com/health/status"
+  },
+  {
+    "id": "aws-AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE-1784893200000",
+    "provider": "aws",
+    "title": "Connectivity Issues",
+    "description": "Between 3:55 AM and 4:15 AM PDT, we experienced connectivity issues that impacted connectivity to the US-WEST-2 Region. This impacted multiple AWS services in the Region. Some customers may have also experienced issues accessing the AWS Management Console, with connection timeouts and unresponsive pages. Connectivity within the Region was not affected. Our engineers were automatically engaged at 4:01 AM PDT, and immediately began investigating this issue. We identified the root cause as an issue with networking devices responsible for network routing from the Region to the Seattle Metro, and began working in parallel on multiple paths to mitigate the impact. We took mitigation measures that led to initial recovery at 4:15 AM PDT. As the network continued to stabilize following our mitigation actions, a brief reconvergence event occurred between 4:47 AM and 4:59 AM PDT. During this reconvergence period, some customers may have experienced intermittent connectivity issues to the Region as network routes were re-established. By 4:59 AM PDT, all routes had been fully restored and service metrics returned to pre-event levels. \n\nCustomers using AWS Direct Connect through EqSe2, Westin Building Exchange, Seattle experienced an extended impact window from 3:55 AM to 5:12 AM PDT. These customers would have experienced connectivity issues until network routes for this specific path were fully restored at 5:12 AM PDT. Customers connected redundantly through other AWS Direct Connect locations were not impacted by this event.\n\nThe issue has been resolved and all AWS services are operating normally.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2026-07-24T11:40:00.000Z",
+    "resolvedAt": "2026-07-24T13:10:44.000Z",
+    "durationMinutes": 91,
+    "affectedServices": [
+      {
+        "serviceName": "Multiple Services",
+        "category": "other",
+        "regions": [
+          "us-west-2"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-07-24T11:40:00.000Z",
+        "status": "1",
+        "message": "We are investigating connecivity issues impacting multiple AWS services in the US-WEST-2 Region."
+      },
+      {
+        "timestamp": "2026-07-24T11:40:00.000Z",
+        "status": "1",
+        "message": "[[The following AWS services have been affected by this event:]]\nService: apigateway Status: Informational\nService: awsiot Status: Informational\nService: directconnect Status: Informational\nService: ec2 Status: Informational\nService: ecs Status: Informational\nService: elb Status: Informational\nService: globalaccelerator Status: Informational\nService: internetconnectivity Status: Informational\nService: vpc Status: Informational\nService: vpnvpc Status: Informational"
+      },
+      {
+        "timestamp": "2026-07-24T11:56:21.000Z",
+        "status": "1",
+        "message": "We are seeing initial signs of recovery and continue to work toward full recovery."
+      },
+      {
+        "timestamp": "2026-07-24T12:30:20.000Z",
+        "status": "1",
+        "message": "We continue to see significant signs of recovery as a result of our mitigation efforts for the connectivity issues impacting multiple AWS services in the US-WEST-2 Region. We have identified the root cause as an issue with a networking device responsible for network routing from the Region to the Seattle Metro. Engineers have finished all mitigation work. As routes continue to be restored, customers should see a continued reduction in error rates and timeouts when connecting to affected services. We are monitoring recovery progress closely and will continue working until all routes have been fully restored and service metrics return to pre-event levels. We will provide another update in the next 30-45 minutes."
+      },
+      {
+        "timestamp": "2026-07-24T13:01:21.000Z",
+        "status": "0",
+        "message": "[[The following AWS services have been affected by this event:]]\nService: apigateway Status: Operating normally\nService: awsiot Status: Operating normally\nService: directconnect Status: Operating normally\nService: ec2 Status: Operating normally\nService: ecs Status: Operating normally\nService: elb Status: Operating normally\nService: globalaccelerator Status: Operating normally\nService: internetconnectivity Status: Operating normally\nService: vpc Status: Operating normally\nService: vpnvpc Status: Operating normally"
+      },
+      {
+        "timestamp": "2026-07-24T13:01:21.000Z",
+        "status": "0",
+        "message": "Between 3:55 AM and 4:15 AM PDT, we experienced connectivity issues that impacted connectivity to the US-WEST-2 Region. This impacted multiple AWS services in the Region. Some customers may have also experienced issues accessing the AWS Management Console, with connection timeouts and unresponsive pages. Connectivity within the Region was not affected. Our engineers were automatically engaged at 4:01 AM PDT, and immediately began investigating this issue. We identified the root cause as an issue with networking devices responsible for network routing from the Region to the Seattle Metro, and began working in parallel on multiple paths to mitigate the impact. We took mitigation measures that led to initial recovery at 4:15 AM PDT. As the network continued to stabilize following our mitigation actions, a brief reconvergence event occurred between 4:47 AM and 4:59 AM PDT. During this reconvergence period, some customers may have experienced intermittent connectivity issues to the Region as network routes were re-established. By 4:59 AM PDT, all routes had been fully restored and service metrics returned to pre-event levels. \n\nCustomers using AWS Direct Connect through EqSe2, Westin Building Exchange, Seattle experienced an extended impact window from 3:55 AM to 5:12 AM PDT. These customers would have experienced connectivity issues until network routes for this specific path were fully restored at 5:12 AM PDT. Customers connected redundantly through other AWS Direct Connect locations were not impacted by this event.\n\nThe issue has been resolved and all AWS services are operating normally."
+      }
+    ],
+    "sourceUrl": "https://health.aws.amazon.com/health/status"
+  },
+  {
     "id": "aws-AWS_BILLING_OPERATIONAL_ISSUE_47B68_BACBD91434F",
     "provider": "aws",
     "title": "Inaccurate Estimated Billing Data",
