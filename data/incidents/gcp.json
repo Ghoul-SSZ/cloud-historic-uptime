@@ -264,12 +264,12 @@
         "regions": []
       },
       {
-        "serviceName": "Google Cloud Support",
+        "serviceName": "Vertex Gemini API",
         "category": "other",
         "regions": []
       },
       {
-        "serviceName": "Vertex Gemini API",
+        "serviceName": "Google Cloud Support",
         "category": "other",
         "regions": []
       }
@@ -304,6 +304,11 @@
     "resolvedAt": "2025-07-18T17:47:00.000Z",
     "durationMinutes": 125,
     "affectedServices": [
+      {
+        "serviceName": "Agent Platform Online Inference",
+        "category": "other",
+        "regions": []
+      },
       {
         "serviceName": "AlloyDB for PostgreSQL",
         "category": "other",
@@ -530,11 +535,6 @@
         "regions": []
       },
       {
-        "serviceName": "Vertex AI Online Prediction",
-        "category": "other",
-        "regions": []
-      },
-      {
         "serviceName": "Virtual Private Cloud (VPC)",
         "category": "networking",
         "regions": []
@@ -597,6 +597,16 @@
       },
       {
         "serviceName": "Agent Assist",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Agent Platform Online Inference",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Agent Search on Agent Platform",
         "category": "other",
         "regions": []
       },
@@ -721,6 +731,11 @@
         "regions": []
       },
       {
+        "serviceName": "Gemini on Agent Platform",
+        "category": "other",
+        "regions": []
+      },
+      {
         "serviceName": "Google App Engine",
         "category": "compute",
         "regions": []
@@ -791,6 +806,11 @@
         "regions": []
       },
       {
+        "serviceName": "Imagen on Agent Platform",
+        "category": "other",
+        "regions": []
+      },
+      {
         "serviceName": "Looker Studio",
         "category": "other",
         "regions": []
@@ -837,26 +857,6 @@
       },
       {
         "serviceName": "Text-to-Speech",
-        "category": "other",
-        "regions": []
-      },
-      {
-        "serviceName": "Vertex AI Online Prediction",
-        "category": "other",
-        "regions": []
-      },
-      {
-        "serviceName": "Vertex AI Search",
-        "category": "other",
-        "regions": []
-      },
-      {
-        "serviceName": "Vertex Gemini API",
-        "category": "other",
-        "regions": []
-      },
-      {
-        "serviceName": "Vertex Imagen API",
         "category": "other",
         "regions": []
       },
@@ -1317,12 +1317,12 @@
     "durationMinutes": 181,
     "affectedServices": [
       {
-        "serviceName": "Recommendation AI",
+        "serviceName": "Agent Search on Agent Platform",
         "category": "other",
         "regions": []
       },
       {
-        "serviceName": "Vertex AI Search",
+        "serviceName": "Recommendation AI",
         "category": "other",
         "regions": []
       }
@@ -1635,7 +1635,7 @@
     "durationMinutes": 4000,
     "affectedServices": [
       {
-        "serviceName": "Vertex Gemini API",
+        "serviceName": "Gemini on Agent Platform",
         "category": "other",
         "regions": []
       }
@@ -1794,7 +1794,7 @@
     "durationMinutes": 470,
     "affectedServices": [
       {
-        "serviceName": "Vertex Gemini API",
+        "serviceName": "Gemini on Agent Platform",
         "category": "other",
         "regions": []
       }
@@ -1927,7 +1927,7 @@
     "durationMinutes": 359,
     "affectedServices": [
       {
-        "serviceName": "Vertex Gemini API",
+        "serviceName": "Gemini on Agent Platform",
         "category": "other",
         "regions": []
       }
@@ -1978,7 +1978,7 @@
     "durationMinutes": 160,
     "affectedServices": [
       {
-        "serviceName": "Vertex Gemini API",
+        "serviceName": "Gemini on Agent Platform",
         "category": "other",
         "regions": []
       }
@@ -2187,7 +2187,7 @@
     "durationMinutes": 594,
     "affectedServices": [
       {
-        "serviceName": "Vertex Gemini API",
+        "serviceName": "Gemini on Agent Platform",
         "category": "other",
         "regions": []
       }
@@ -2223,7 +2223,7 @@
     "durationMinutes": 2208,
     "affectedServices": [
       {
-        "serviceName": "Vertex Gemini API",
+        "serviceName": "Gemini on Agent Platform",
         "category": "other",
         "regions": []
       }
@@ -2376,17 +2376,17 @@
     "durationMinutes": 738,
     "affectedServices": [
       {
+        "serviceName": "Agent Search on Agent Platform",
+        "category": "other",
+        "regions": []
+      },
+      {
         "serviceName": "Cloud Machine Learning",
         "category": "other",
         "regions": []
       },
       {
         "serviceName": "Recommendation AI",
-        "category": "other",
-        "regions": []
-      },
-      {
-        "serviceName": "Vertex AI Search",
         "category": "other",
         "regions": []
       }
@@ -2422,17 +2422,17 @@
     "durationMinutes": 2038,
     "affectedServices": [
       {
+        "serviceName": "Agent Search on Agent Platform",
+        "category": "other",
+        "regions": []
+      },
+      {
         "serviceName": "Cloud Machine Learning",
         "category": "other",
         "regions": []
       },
       {
         "serviceName": "Recommendation AI",
-        "category": "other",
-        "regions": []
-      },
-      {
-        "serviceName": "Vertex AI Search",
         "category": "other",
         "regions": []
       }
@@ -2961,7 +2961,7 @@
     "durationMinutes": 6878,
     "affectedServices": [
       {
-        "serviceName": "Vertex Gemini API",
+        "serviceName": "Gemini on Agent Platform",
         "category": "other",
         "regions": []
       }
@@ -3063,7 +3063,7 @@
     "durationMinutes": 284,
     "affectedServices": [
       {
-        "serviceName": "Vertex Gemini API",
+        "serviceName": "Gemini on Agent Platform",
         "category": "other",
         "regions": []
       }
@@ -3593,6 +3593,11 @@
     "durationMinutes": 459,
     "affectedServices": [
       {
+        "serviceName": "Agent Platform Batch Inference",
+        "category": "other",
+        "regions": []
+      },
+      {
         "serviceName": "Cloud Build",
         "category": "devtools",
         "regions": []
@@ -3635,11 +3640,6 @@
       {
         "serviceName": "Persistent Disk",
         "category": "storage",
-        "regions": []
-      },
-      {
-        "serviceName": "Vertex AI Batch Prediction",
-        "category": "other",
         "regions": []
       }
     ],
@@ -3719,12 +3719,12 @@
     "durationMinutes": 19102,
     "affectedServices": [
       {
-        "serviceName": "Cloud Machine Learning",
+        "serviceName": "Agent Platform Online Inference",
         "category": "other",
         "regions": []
       },
       {
-        "serviceName": "Vertex AI Online Prediction",
+        "serviceName": "Cloud Machine Learning",
         "category": "other",
         "regions": []
       }
@@ -4101,12 +4101,12 @@
     "durationMinutes": 35,
     "affectedServices": [
       {
-        "serviceName": "Cloud Machine Learning",
+        "serviceName": "Agent Search on Agent Platform",
         "category": "other",
         "regions": []
       },
       {
-        "serviceName": "Vertex AI Search",
+        "serviceName": "Cloud Machine Learning",
         "category": "other",
         "regions": []
       }
@@ -5004,12 +5004,12 @@
     "durationMinutes": 279,
     "affectedServices": [
       {
-        "serviceName": "Cloud Machine Learning",
+        "serviceName": "Agent Platform Managed Training",
         "category": "other",
         "regions": []
       },
       {
-        "serviceName": "Vertex AI Training",
+        "serviceName": "Cloud Machine Learning",
         "category": "other",
         "regions": []
       }
@@ -5173,12 +5173,12 @@
     "durationMinutes": 1003,
     "affectedServices": [
       {
-        "serviceName": "Cloud Machine Learning",
+        "serviceName": "Agent Platform Online Inference",
         "category": "other",
         "regions": []
       },
       {
-        "serviceName": "Vertex AI Online Prediction",
+        "serviceName": "Cloud Machine Learning",
         "category": "other",
         "regions": []
       }
@@ -5269,17 +5269,17 @@
     "durationMinutes": 231,
     "affectedServices": [
       {
+        "serviceName": "Agent Platform Managed Training",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Agent Platform Online Inference",
+        "category": "other",
+        "regions": []
+      },
+      {
         "serviceName": "Cloud Machine Learning",
-        "category": "other",
-        "regions": []
-      },
-      {
-        "serviceName": "Vertex AI Online Prediction",
-        "category": "other",
-        "regions": []
-      },
-      {
-        "serviceName": "Vertex AI Training",
         "category": "other",
         "regions": []
       }
@@ -6502,7 +6502,7 @@
     "durationMinutes": 164,
     "affectedServices": [
       {
-        "serviceName": "Vertex AI Search",
+        "serviceName": "Agent Search on Agent Platform",
         "category": "other",
         "regions": []
       }
@@ -6701,17 +6701,17 @@
         "regions": []
       },
       {
+        "serviceName": "Agent Platform Online Inference",
+        "category": "other",
+        "regions": []
+      },
+      {
         "serviceName": "Cloud Machine Learning",
         "category": "other",
         "regions": []
       },
       {
         "serviceName": "Dialogflow CX",
-        "category": "other",
-        "regions": []
-      },
-      {
-        "serviceName": "Vertex AI Online Prediction",
         "category": "other",
         "regions": []
       }
@@ -7396,7 +7396,7 @@
     "durationMinutes": 1619,
     "affectedServices": [
       {
-        "serviceName": "Vertex AI Search",
+        "serviceName": "Agent Search on Agent Platform",
         "category": "other",
         "regions": []
       }
@@ -7565,6 +7565,11 @@
     "durationMinutes": 168,
     "affectedServices": [
       {
+        "serviceName": "Agent Platform Workbench Instances",
+        "category": "other",
+        "regions": []
+      },
+      {
         "serviceName": "AlloyDB for PostgreSQL",
         "category": "other",
         "regions": []
@@ -7711,11 +7716,6 @@
       },
       {
         "serviceName": "Memorystore for Redis",
-        "category": "other",
-        "regions": []
-      },
-      {
-        "serviceName": "Vertex AI Workbench User Managed Notebooks",
         "category": "other",
         "regions": []
       },
@@ -9849,7 +9849,7 @@
         "regions": []
       },
       {
-        "serviceName": "Vertex AI TensorBoard",
+        "serviceName": "Agent Platform Tensor Board",
         "category": "other",
         "regions": []
       },
@@ -9889,7 +9889,7 @@
         "regions": []
       },
       {
-        "serviceName": "Vertex AI Workbench User Managed Notebooks",
+        "serviceName": "Agent Platform Workbench Instances",
         "category": "other",
         "regions": []
       },
@@ -9949,7 +9949,7 @@
         "regions": []
       },
       {
-        "serviceName": "Vertex AI Model Registry",
+        "serviceName": "Model Registry on Agent Platform",
         "category": "other",
         "regions": []
       },
@@ -9974,7 +9974,7 @@
         "regions": []
       },
       {
-        "serviceName": "Vertex AI Training",
+        "serviceName": "Agent Platform Managed Training",
         "category": "other",
         "regions": []
       },
@@ -10004,27 +10004,27 @@
         "regions": []
       },
       {
-        "serviceName": "Vertex AI Pipelines",
+        "serviceName": "Agent Platform Pipelines",
         "category": "other",
         "regions": []
       },
       {
-        "serviceName": "Vertex AI Feature Store",
+        "serviceName": "Agent Platform Feature Store",
         "category": "other",
         "regions": []
       },
       {
-        "serviceName": "Vertex AI ML Metadata",
+        "serviceName": "Agent Platform ML Metadata",
         "category": "other",
         "regions": []
       },
       {
-        "serviceName": "Vertex AI Online Prediction",
+        "serviceName": "Agent Platform Online Inference",
         "category": "other",
         "regions": []
       },
       {
-        "serviceName": "Vertex AI Model Monitoring",
+        "serviceName": "Model Monitoring on Agent Platform",
         "category": "other",
         "regions": []
       },
@@ -10034,7 +10034,7 @@
         "regions": []
       },
       {
-        "serviceName": "Vertex AI Batch Prediction",
+        "serviceName": "Agent Platform Batch Inference",
         "category": "other",
         "regions": []
       },
@@ -15114,12 +15114,12 @@
     "durationMinutes": 4,
     "affectedServices": [
       {
-        "serviceName": "Vertex AI Training",
+        "serviceName": "Agent Platform Managed Training",
         "category": "other",
         "regions": []
       },
       {
-        "serviceName": "Vertex AI Online Prediction",
+        "serviceName": "Agent Platform Online Inference",
         "category": "other",
         "regions": []
       },
@@ -17789,7 +17789,7 @@
     "durationMinutes": 468,
     "affectedServices": [
       {
-        "serviceName": "Vertex AI Training",
+        "serviceName": "Agent Platform Managed Training",
         "category": "other",
         "regions": []
       },
@@ -21238,12 +21238,12 @@
     "durationMinutes": 1016,
     "affectedServices": [
       {
-        "serviceName": "Vertex AI Online Prediction",
+        "serviceName": "Agent Platform Online Inference",
         "category": "other",
         "regions": []
       },
       {
-        "serviceName": "Vertex AI Batch Prediction",
+        "serviceName": "Agent Platform Batch Inference",
         "category": "other",
         "regions": []
       },
@@ -22507,7 +22507,7 @@
         "regions": []
       },
       {
-        "serviceName": "Vertex AI Batch Prediction",
+        "serviceName": "Agent Platform Batch Inference",
         "category": "other",
         "regions": []
       },
@@ -24587,7 +24587,7 @@
     "durationMinutes": 989,
     "affectedServices": [
       {
-        "serviceName": "Vertex AI Feature Store",
+        "serviceName": "Agent Platform Feature Store",
         "category": "other",
         "regions": []
       },
@@ -25484,7 +25484,7 @@
     "durationMinutes": 1484,
     "affectedServices": [
       {
-        "serviceName": "Vertex AI Training",
+        "serviceName": "Agent Platform Managed Training",
         "category": "other",
         "regions": []
       },
@@ -26122,7 +26122,7 @@
     "durationMinutes": 263,
     "affectedServices": [
       {
-        "serviceName": "Retail API",
+        "serviceName": "AI Commerce Search",
         "category": "other",
         "regions": []
       }
@@ -26383,12 +26383,12 @@
         "regions": []
       },
       {
-        "serviceName": "Vertex AI Online Prediction",
+        "serviceName": "Agent Platform Online Inference",
         "category": "other",
         "regions": []
       },
       {
-        "serviceName": "Vertex AI Batch Prediction",
+        "serviceName": "Agent Platform Batch Inference",
         "category": "other",
         "regions": []
       },
@@ -28262,12 +28262,12 @@
         "regions": []
       },
       {
-        "serviceName": "Vertex AI Online Prediction",
+        "serviceName": "Agent Platform Online Inference",
         "category": "other",
         "regions": []
       },
       {
-        "serviceName": "Vertex AI Batch Prediction",
+        "serviceName": "Agent Platform Batch Inference",
         "category": "other",
         "regions": []
       },
@@ -34506,7 +34506,7 @@
         "regions": []
       },
       {
-        "serviceName": "Vertex AI Online Prediction",
+        "serviceName": "Agent Platform Online Inference",
         "category": "other",
         "regions": []
       },
@@ -36896,7 +36896,7 @@
     "durationMinutes": 260,
     "affectedServices": [
       {
-        "serviceName": "Vertex AI Online Prediction",
+        "serviceName": "Agent Platform Online Inference",
         "category": "other",
         "regions": []
       },
@@ -41757,7 +41757,7 @@
         "regions": []
       },
       {
-        "serviceName": "Vertex AI Training",
+        "serviceName": "Agent Platform Managed Training",
         "category": "other",
         "regions": []
       }
