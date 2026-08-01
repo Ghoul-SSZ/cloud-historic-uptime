@@ -1,5 +1,81 @@
 [
   {
+    "id": "aws-AWS_DIRECTCONNECT_OPERATIONAL_ISSUE_00B73_1C6411F1489",
+    "provider": "aws",
+    "title": "Elevated Packet Loss",
+    "description": "Between 9:42 AM and 11:44 AM PDT, we experienced elevated network packet loss impacting AWS Direct Connect connectivity in the AP-SOUTH-1 Region. Our engineering team was automatically engaged at 9:46 AM to begin investigating. By 10:51 AM, we understood the root cause to be a configuration change made to a system responsible for assigning routes to devices. As we gained confidence in our mitigation steps, we parallelized our efforts to further reduce the packet loss. The issue is resolved and the service is operating normally.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2026-07-31T17:33:18.000Z",
+    "resolvedAt": "2026-07-31T18:54:35.000Z",
+    "durationMinutes": 81,
+    "affectedServices": [
+      {
+        "serviceName": "AWS Direct Connect",
+        "category": "networking",
+        "regions": [
+          "ap-south-1"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-07-31T17:33:18.000Z",
+        "status": "1",
+        "message": "We can confirm elevated network packet loss, impacting AWS Direct Connect connectivity in AP-SOUTH-1 Region. Our engineering team was automatically engaged at 9:54 AM to begin investigating the issue. There are no workarounds available at this time. We will provide another update by 11:30 AM PDT."
+      },
+      {
+        "timestamp": "2026-07-31T18:27:24.000Z",
+        "status": "1",
+        "message": "We have identified the root cause to be related to a change made to a configuration system responsible for assigning routes to the devices. We have begun the work to reduce the packet loss that is impacting AWS Direct Connect in the AP-SOUTH-1 Region, and we expect recovery to take place gradually over the next 30 minutes. As we gain confidence in these efforts, we will seek to parallelize our efforts to speed recovery. We will provide another update by 12:00 PM PDT."
+      },
+      {
+        "timestamp": "2026-07-31T18:54:35.000Z",
+        "status": "0",
+        "message": "Between 9:42 AM and 11:44 AM PDT, we experienced elevated network packet loss impacting AWS Direct Connect connectivity in the AP-SOUTH-1 Region. Our engineering team was automatically engaged at 9:46 AM to begin investigating. By 10:51 AM, we understood the root cause to be a configuration change made to a system responsible for assigning routes to devices. As we gained confidence in our mitigation steps, we parallelized our efforts to further reduce the packet loss. The issue is resolved and the service is operating normally."
+      }
+    ],
+    "sourceUrl": "https://health.aws.amazon.com/health/status"
+  },
+  {
+    "id": "aws-AWS_DIRECTCONNECT_OPERATIONAL_ISSUE-1785519198000",
+    "provider": "aws",
+    "title": "Elevated Packet Loss",
+    "description": "Between 9:42 AM and 11:44 AM PDT, we experienced elevated network packet loss impacting AWS Direct Connect connectivity in the AP-SOUTH-1 Region. Our engineering team was automatically engaged at 9:46 AM to begin investigating. By 10:51 AM, we understood the root cause to be a configuration change made to a system responsible for assigning routes to devices. As we gained confidence in our mitigation steps, we parallelized our efforts to further reduce the packet loss. The issue is resolved and the service is operating normally.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2026-07-31T17:33:18.000Z",
+    "resolvedAt": "2026-07-31T18:54:35.000Z",
+    "durationMinutes": 81,
+    "affectedServices": [
+      {
+        "serviceName": "AWS Direct Connect",
+        "category": "networking",
+        "regions": [
+          "ap-south-1"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-07-31T17:33:18.000Z",
+        "status": "1",
+        "message": "We can confirm elevated network packet loss, impacting AWS Direct Connect connectivity in AP-SOUTH-1 Region. Our engineering team was automatically engaged at 9:54 AM to begin investigating the issue. There are no workarounds available at this time. We will provide another update by 11:30 AM PDT."
+      },
+      {
+        "timestamp": "2026-07-31T18:27:24.000Z",
+        "status": "1",
+        "message": "We have identified the root cause to be related to a change made to a configuration system responsible for assigning routes to the devices. We have begun the work to reduce the packet loss that is impacting AWS Direct Connect in the AP-SOUTH-1 Region, and we expect recovery to take place gradually over the next 30 minutes. As we gain confidence in these efforts, we will seek to parallelize our efforts to speed recovery. We will provide another update by 12:00 PM PDT."
+      },
+      {
+        "timestamp": "2026-07-31T18:54:35.000Z",
+        "status": "0",
+        "message": "Between 9:42 AM and 11:44 AM PDT, we experienced elevated network packet loss impacting AWS Direct Connect connectivity in the AP-SOUTH-1 Region. Our engineering team was automatically engaged at 9:46 AM to begin investigating. By 10:51 AM, we understood the root cause to be a configuration change made to a system responsible for assigning routes to devices. As we gained confidence in our mitigation steps, we parallelized our efforts to further reduce the packet loss. The issue is resolved and the service is operating normally."
+      }
+    ],
+    "sourceUrl": "https://health.aws.amazon.com/health/status"
+  },
+  {
     "id": "aws-AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE_83A36_24C89B493A6",
     "provider": "aws",
     "title": "Connectivity Issues",
