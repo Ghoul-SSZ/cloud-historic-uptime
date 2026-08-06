@@ -2,8 +2,8 @@
   {
     "id": "azure-ZJV6-SGG",
     "provider": "azure",
-    "title": "Preliminary Post Incident Review (PIR) - Issues connecting to resources in West US",
-    "description": "Between 14:44 UTC and 19:41 UTC on 23 July 2026, customers may have experienced connectivity failures, increased latency, or difficulty accessing Azure and other Microsoft cloud services hosted within the West US region. Impact was limited to network traffic entering or exiting the West US region; traffic that remained entirely within the region was not affected.",
+    "title": "Post Incident Review (PIR) – Network connectivity – Issues accessing resources in West US",
+    "description": "Between 14:44 and 19:41 UTC on 23 July 2026, a subset of customers experienced connectivity failures, increased latency, and/or difficulty accessing Azure services hosted within the West US region. Impact was limited to network traffic entering or exiting the region, traffic that remained entirely within the region was not affected.",
     "severity": "minor",
     "status": "resolved",
     "startedAt": "2026-07-23T14:44:00.000Z",
@@ -11,7 +11,7 @@
     "durationMinutes": 297,
     "affectedServices": [
       {
-        "serviceName": "Issues connecting to resources in West US",
+        "serviceName": "Network connectivity",
         "category": "other",
         "regions": [
           "West US"
@@ -22,37 +22,47 @@
       {
         "timestamp": "2026-07-23T14:44:00.000Z",
         "status": "update",
-        "message": "Device maintenance began. Earliest time when customers may have begun to experience impact. Multiple Azure services began to detect and correlate service degradation."
+        "message": "Device break-fix began. Earliest potential customer impact time."
       },
       {
         "timestamp": "2026-07-23T14:45:00.000Z",
         "status": "update",
-        "message": "Networking, service teams, and incident responders begin reviewing traffic anomalies, routing behavior, packet loss signals, and recent changes."
+        "message": "Service alerts fired and multiple Azure service teams started investigating the traffic anomalies."
       },
       {
-        "timestamp": "2026-07-23T16:00:00.000Z",
+        "timestamp": "2026-07-23T14:54:00.000Z",
         "status": "update",
-        "message": "15:00 - We validated impact reports and telemetry to determine impact scope and blast radius. Began ruling out components, including addressing the large-scale route churn occurring in our WAN."
+        "message": "Automated recovery system started performing multiple retries to recover the devices that were affected by the over scoping that happened during the break-fix issue."
+      },
+      {
+        "timestamp": "2026-07-23T15:26:00.000Z",
+        "status": "update",
+        "message": "Routing anomaly alert incorrectly triaged to WAN issue and was sent to engineers to investigate further."
+      },
+      {
+        "timestamp": "2026-07-23T16:58:00.000Z",
+        "status": "update",
+        "message": "After multiple retries, automated recovery system raised an alert to engineers to investigate. Engineers tried to recover the devices manually."
+      },
+      {
+        "timestamp": "2026-07-23T17:19:00.000Z",
+        "status": "update",
+        "message": "Engineers correlated the routing anomaly with the initial break-fix trigger event and began attempting auto-rollback."
       },
       {
         "timestamp": "2026-07-23T17:45:00.000Z",
         "status": "update",
-        "message": "16:00 - Following continued degradation, we continued narrowing down our investigation. Identifying abnormal network routing behavior due to indications of improper advertising of some routes. Then identified the recent fiber maintenance activity, which we correlated to the identified routing behavior."
-      },
-      {
-        "timestamp": "2026-07-23T17:45:00.000Z",
-        "status": "update",
-        "message": "We initiated the rollback of the maintenance change request."
+        "message": "Engineers initiated manual rollback of the break-fix."
       },
       {
         "timestamp": "2026-07-23T18:26:00.000Z",
         "status": "update",
-        "message": "We completed the rollback and began monitoring recovering telemetry and services."
+        "message": "Rollback was successful on all affected devices, engineers continued monitoring recovery of affected services."
       },
       {
         "timestamp": "2026-07-23T19:41:00.000Z",
         "status": "update",
-        "message": "All services recovered. Networking confirmed services can failback to West US as needed."
+        "message": "Customer impact confirmed as mitigated, after all services returned to expected operating levels."
       }
     ],
     "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
