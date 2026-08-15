@@ -1,5 +1,81 @@
 [
   {
+    "id": "aws-AWS_DIRECTCONNECT_OPERATIONAL_ISSUE_E23AA_ADAB9D3D11F",
+    "provider": "aws",
+    "title": "Increased Packet loss",
+    "description": "Starting at 7:33 PM PDT, we began experiencing increased packet loss impacting AWS Direct Connect connectivity for some customers in the EU-CENTRAL-1 Region. While we have made progress, connections to the following Direct Connect location are still impaired: Equinix FR5, Frankfurt, DEU. Customers who have multi-site redundancy configured with their Direct Connect paths should not be observing impact at this time. Customers whom only have connections at the Equinix FR5, Frankfurt, DEU location will continue to experience connectivity issues. We are actively working to mitigate the impact and work toward full recovery, but expect full recovery is multiple hours away. We will provide an update in 90 minutes, or sooner if we have additional information to share.",
+    "severity": "minor",
+    "status": "ongoing",
+    "startedAt": "2026-08-15T03:42:59.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "AWS Direct Connect",
+        "category": "networking",
+        "regions": [
+          "eu-central-1"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-08-15T03:42:59.000Z",
+        "status": "1",
+        "message": "We are investigating increased packet loss, impacting AWS Direct Connect connectivity for some customers in the EU-CENTRAL-1 Region."
+      },
+      {
+        "timestamp": "2026-08-15T04:42:50.000Z",
+        "status": "1",
+        "message": "We can confirm packet loss impacting Direct Connect connections in the EU-CENTRAL-1 Region. Engineers were automatically engaged and immediately began working to both identify the root cause, and identify multiple parallel paths to mitigate the issue. At this time, we are seeing early signs of recovery. We will provide another update in 60 minutes, or sooner if we have additional information to share."
+      },
+      {
+        "timestamp": "2026-08-15T05:55:13.000Z",
+        "status": "1",
+        "message": "Starting at 7:33 PM PDT, we began experiencing increased packet loss impacting AWS Direct Connect connectivity for some customers in the EU-CENTRAL-1 Region. While we have made progress, connections to the following Direct Connect location are still impaired: Equinix FR5, Frankfurt, DEU. Customers who have multi-site redundancy configured with their Direct Connect paths should not be observing impact at this time. Customers whom only have connections at the Equinix FR5, Frankfurt, DEU location will continue to experience connectivity issues. We are actively working to mitigate the impact and work toward full recovery, but expect full recovery is multiple hours away. We will provide an update in 90 minutes, or sooner if we have additional information to share."
+      }
+    ],
+    "sourceUrl": "https://health.aws.amazon.com/health/status"
+  },
+  {
+    "id": "aws-AWS_DIRECTCONNECT_OPERATIONAL_ISSUE-1786765379000",
+    "provider": "aws",
+    "title": "Increased Packet loss",
+    "description": "Starting at 7:33 PM PDT, we began experiencing increased packet loss impacting AWS Direct Connect connectivity for some customers in the EU-CENTRAL-1 Region. While we have made progress, connections to the following Direct Connect location are still impaired: Equinix FR5, Frankfurt, DEU. Customers who have multi-site redundancy configured with their Direct Connect paths should not be observing impact at this time. Customers whom only have connections at the Equinix FR5, Frankfurt, DEU location will continue to experience connectivity issues. We are actively working to mitigate the impact and work toward full recovery, but expect full recovery is multiple hours away. We will provide an update in 90 minutes, or sooner if we have additional information to share.",
+    "severity": "minor",
+    "status": "ongoing",
+    "startedAt": "2026-08-15T03:42:59.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "AWS Direct Connect",
+        "category": "networking",
+        "regions": [
+          "eu-central-1"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-08-15T03:42:59.000Z",
+        "status": "1",
+        "message": "We are investigating increased packet loss, impacting AWS Direct Connect connectivity for some customers in the EU-CENTRAL-1 Region."
+      },
+      {
+        "timestamp": "2026-08-15T04:42:50.000Z",
+        "status": "1",
+        "message": "We can confirm packet loss impacting Direct Connect connections in the EU-CENTRAL-1 Region. Engineers were automatically engaged and immediately began working to both identify the root cause, and identify multiple parallel paths to mitigate the issue. At this time, we are seeing early signs of recovery. We will provide another update in 60 minutes, or sooner if we have additional information to share."
+      },
+      {
+        "timestamp": "2026-08-15T05:55:13.000Z",
+        "status": "1",
+        "message": "Starting at 7:33 PM PDT, we began experiencing increased packet loss impacting AWS Direct Connect connectivity for some customers in the EU-CENTRAL-1 Region. While we have made progress, connections to the following Direct Connect location are still impaired: Equinix FR5, Frankfurt, DEU. Customers who have multi-site redundancy configured with their Direct Connect paths should not be observing impact at this time. Customers whom only have connections at the Equinix FR5, Frankfurt, DEU location will continue to experience connectivity issues. We are actively working to mitigate the impact and work toward full recovery, but expect full recovery is multiple hours away. We will provide an update in 90 minutes, or sooner if we have additional information to share."
+      }
+    ],
+    "sourceUrl": "https://health.aws.amazon.com/health/status"
+  },
+  {
     "id": "aws-AWS_DIRECTCONNECT_OPERATIONAL_ISSUE_00B73_1C6411F1489",
     "provider": "aws",
     "title": "Elevated Packet Loss",
