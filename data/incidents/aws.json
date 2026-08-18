@@ -3,12 +3,12 @@
     "id": "aws-AWS_DIRECTCONNECT_OPERATIONAL_ISSUE_E23AA_ADAB9D3D11F",
     "provider": "aws",
     "title": "Increased Packet loss",
-    "description": "We continue to make progress in our phased remediation at the Equinix FR5 location in Frankfurt, DEU. Since our last update, some dependent network infrastructure has been restored. Remediation of remaining infrastructure is ongoing, with a portion of recovery dependent on the delivery of replacement hardware. Cooling has been fully restored, with environmental conditions stable within normal operating thresholds.\n\nCustomers with connections exclusively at this location will continue to experience packet loss as remediation progresses. Customers with multi-site or redundant configurations across other Direct Connect locations are not affected. Previously communicated mitigation guidance and recommendations remain unchanged at this time. We will provide another update by August 17 4:30 AM PDT, or sooner as remediation progresses.",
+    "description": "Starting August 14 7:33 PM PDT, we experienced increased packet loss impacting AWS Direct Connect connectivity for customers with connections at the Equinix FR5 location in Frankfurt, DEU. Engineers were automatically engaged at 7:45 PM on August 14 and immediately began investigating mitigations. By 8:30 PM, we identified that network equipment at the FR5 location was impaired due to water ingress into the co-location facility. As a result, cooling system was impaired which resulted in devices overheating and shutting down. Water also affected power distribution systems which disabled the power for the network devices. Initial recovery efforts were delayed as environmental conditions within the facility required stabilization before engineers could safely access the affected area. Throughout August 15 and 16, our engineers worked in coordination with the facility operator to restore impaired network devices while the underlying infrastructure issue was addressed. By 7:26 PM on August 17, all impaired network equipment was successfully restored and connectivity to the location was verified as fully operational with sustained recovery. We do not expect this issue to recur. \n\nCustomers with redundant connections across other Direct Connect locations maintained connectivity through their alternate paths throughout this event and require no further action. Customers who implemented VPN failover as a workaround may now safely revert to their primary Direct Connect paths. Connectivity has been verified as stable and fully operational. Customers requiring further assistance may contact AWS Support through the AWS Management Console or the <a href=\"https://console.aws.amazon.com/support\">AWS Support Center</a>.",
     "severity": "minor",
-    "status": "ongoing",
+    "status": "resolved",
     "startedAt": "2026-08-15T03:42:59.000Z",
-    "resolvedAt": null,
-    "durationMinutes": null,
+    "resolvedAt": "2026-08-18T04:01:19.000Z",
+    "durationMinutes": 4338,
     "affectedServices": [
       {
         "serviceName": "AWS Direct Connect",
@@ -88,6 +88,36 @@
         "timestamp": "2026-08-17T05:38:04.000Z",
         "status": "1",
         "message": "We continue to make progress in our phased remediation at the Equinix FR5 location in Frankfurt, DEU. Since our last update, some dependent network infrastructure has been restored. Remediation of remaining infrastructure is ongoing, with a portion of recovery dependent on the delivery of replacement hardware. Cooling has been fully restored, with environmental conditions stable within normal operating thresholds.\n\nCustomers with connections exclusively at this location will continue to experience packet loss as remediation progresses. Customers with multi-site or redundant configurations across other Direct Connect locations are not affected. Previously communicated mitigation guidance and recommendations remain unchanged at this time. We will provide another update by August 17 4:30 AM PDT, or sooner as remediation progresses."
+      },
+      {
+        "timestamp": "2026-08-17T11:22:30.000Z",
+        "status": "1",
+        "message": "We continue to make progress in our phased remediation at the Equinix FR5 location in Frankfurt, DEU. Network infrastructure and dependent systems continue to improve as we bring affected hardware back online. Some replacement hardware has been delivered and installation is proceeding as components arrive on-site. In parallel, we are shifting network traffic to allow restored devices to begin serving customers as they come online. \n\nAs we progress through recovery, customers will observe restoration occurring in two stages. In the first stage, BGP sessions will re-establish but IP prefixes will not yet be advertised, this indicates that recovery is still in progress and the underlying infrastructure is not yet ready to carry traffic. In the second stage, IP prefix advertisement will resume, at which point the infrastructure is fully remediated and connectivity is restored.\n\nWhile we do not currently have an ETA for full recovery, we continue to work as quickly and safely as possible to mitigate the impact for customers. We will provide another update by August 17 10:30 AM PDT, or sooner as remediation progresses."
+      },
+      {
+        "timestamp": "2026-08-17T16:25:22.000Z",
+        "status": "1",
+        "message": "We continue to work on phased remediation incrementally at the Equinix FR5 location in Frankfurt, DEU. We are seeing early signs of recovery while we continue to fully remediate the issue. We are actively working to bring the remaining affected hardware back online and we will provide another update by 12:30 PM PDT, or sooner as remediation progresses."
+      },
+      {
+        "timestamp": "2026-08-17T17:59:20.000Z",
+        "status": "1",
+        "message": "We are seeing broad signs of recovery at the Equinix FR5 location in Frankfurt, DEU. We have restored connectivity for the majority of affected hardware and most of the connections are fully recovered and stable. There are a small number of customers that will remain affected until the remaining devices are fully restored. We will provide another update by 2:00 PM PDT, or sooner as remediation progresses."
+      },
+      {
+        "timestamp": "2026-08-17T21:00:11.000Z",
+        "status": "1",
+        "message": "We continue to work on bringing affected hardware back online. Since our last update we have made progress that will not be visible to customers, but is required for recovery. We are working in parallel to bring all devices online as safely as possible. This work is expected to take several hours to complete and validate.\n\nFor customers that require workarounds, we recommend that you consider failing over to VPN. For customers using Direct Connect gateway and Transit Gateway, you can create an AWS Site-to-Site VPN and attach it to your Transit Gateway, refer to steps <a href=\"https://aws.amazon.com/premiumsupport/knowledge-center/dx-configure-dx-and-vpn-failover-tgw/\">here</a>. For other customers, we recommend establishing an AWS Site-to-Site VPN as a temporary backup path, refer to steps <a href=\"https://docs.aws.amazon.com/vpn/latest/s2svpn/SetUpVPNConnections.html\">here</a>.\n\nWe will provide another update by 7:00 PM PDT or sooner as new information becomes available."
+      },
+      {
+        "timestamp": "2026-08-18T01:50:12.000Z",
+        "status": "1",
+        "message": "We are seeing significant recovery for most of the customer connections at this stage. While we are not yet fully recovered, restoration efforts are progressing as expected at the Equinix FR5 location in Frankfurt, DEU. Remediation of remaining infrastructure involves completion of hardware replacements and traffic validation, both of which are actively underway. We anticipate further customer-visible recovery as the remaining infrastructure is brought back into service. \n\nCustomers with connections exclusively at this location will continue to experience packet loss until remediation is complete. Previously communicated mitigation guidance and recommendations remain unchanged at this time. We will provide another update by August 17 11:00 PM PDT or sooner."
+      },
+      {
+        "timestamp": "2026-08-18T04:01:19.000Z",
+        "status": "0",
+        "message": "Starting August 14 7:33 PM PDT, we experienced increased packet loss impacting AWS Direct Connect connectivity for customers with connections at the Equinix FR5 location in Frankfurt, DEU. Engineers were automatically engaged at 7:45 PM on August 14 and immediately began investigating mitigations. By 8:30 PM, we identified that network equipment at the FR5 location was impaired due to water ingress into the co-location facility. As a result, cooling system was impaired which resulted in devices overheating and shutting down. Water also affected power distribution systems which disabled the power for the network devices. Initial recovery efforts were delayed as environmental conditions within the facility required stabilization before engineers could safely access the affected area. Throughout August 15 and 16, our engineers worked in coordination with the facility operator to restore impaired network devices while the underlying infrastructure issue was addressed. By 7:26 PM on August 17, all impaired network equipment was successfully restored and connectivity to the location was verified as fully operational with sustained recovery. We do not expect this issue to recur. \n\nCustomers with redundant connections across other Direct Connect locations maintained connectivity through their alternate paths throughout this event and require no further action. Customers who implemented VPN failover as a workaround may now safely revert to their primary Direct Connect paths. Connectivity has been verified as stable and fully operational. Customers requiring further assistance may contact AWS Support through the AWS Management Console or the <a href=\"https://console.aws.amazon.com/support\">AWS Support Center</a>."
       }
     ],
     "sourceUrl": "https://health.aws.amazon.com/health/status"
@@ -96,12 +126,12 @@
     "id": "aws-AWS_DIRECTCONNECT_OPERATIONAL_ISSUE-1786765379000",
     "provider": "aws",
     "title": "Increased Packet loss",
-    "description": "We continue to make progress in our phased remediation at the Equinix FR5 location in Frankfurt, DEU. Since our last update, some dependent network infrastructure has been restored. Remediation of remaining infrastructure is ongoing, with a portion of recovery dependent on the delivery of replacement hardware. Cooling has been fully restored, with environmental conditions stable within normal operating thresholds.\n\nCustomers with connections exclusively at this location will continue to experience packet loss as remediation progresses. Customers with multi-site or redundant configurations across other Direct Connect locations are not affected. Previously communicated mitigation guidance and recommendations remain unchanged at this time. We will provide another update by August 17 4:30 AM PDT, or sooner as remediation progresses.",
+    "description": "Starting August 14 7:33 PM PDT, we experienced increased packet loss impacting AWS Direct Connect connectivity for customers with connections at the Equinix FR5 location in Frankfurt, DEU. Engineers were automatically engaged at 7:45 PM on August 14 and immediately began investigating mitigations. By 8:30 PM, we identified that network equipment at the FR5 location was impaired due to water ingress into the co-location facility. As a result, cooling system was impaired which resulted in devices overheating and shutting down. Water also affected power distribution systems which disabled the power for the network devices. Initial recovery efforts were delayed as environmental conditions within the facility required stabilization before engineers could safely access the affected area. Throughout August 15 and 16, our engineers worked in coordination with the facility operator to restore impaired network devices while the underlying infrastructure issue was addressed. By 7:26 PM on August 17, all impaired network equipment was successfully restored and connectivity to the location was verified as fully operational with sustained recovery. We do not expect this issue to recur. \n\nCustomers with redundant connections across other Direct Connect locations maintained connectivity through their alternate paths throughout this event and require no further action. Customers who implemented VPN failover as a workaround may now safely revert to their primary Direct Connect paths. Connectivity has been verified as stable and fully operational. Customers requiring further assistance may contact AWS Support through the AWS Management Console or the <a href=\"https://console.aws.amazon.com/support\">AWS Support Center</a>.",
     "severity": "minor",
-    "status": "ongoing",
+    "status": "resolved",
     "startedAt": "2026-08-15T03:42:59.000Z",
-    "resolvedAt": null,
-    "durationMinutes": null,
+    "resolvedAt": "2026-08-18T04:01:19.000Z",
+    "durationMinutes": 4338,
     "affectedServices": [
       {
         "serviceName": "AWS Direct Connect",
@@ -181,6 +211,36 @@
         "timestamp": "2026-08-17T05:38:04.000Z",
         "status": "1",
         "message": "We continue to make progress in our phased remediation at the Equinix FR5 location in Frankfurt, DEU. Since our last update, some dependent network infrastructure has been restored. Remediation of remaining infrastructure is ongoing, with a portion of recovery dependent on the delivery of replacement hardware. Cooling has been fully restored, with environmental conditions stable within normal operating thresholds.\n\nCustomers with connections exclusively at this location will continue to experience packet loss as remediation progresses. Customers with multi-site or redundant configurations across other Direct Connect locations are not affected. Previously communicated mitigation guidance and recommendations remain unchanged at this time. We will provide another update by August 17 4:30 AM PDT, or sooner as remediation progresses."
+      },
+      {
+        "timestamp": "2026-08-17T11:22:30.000Z",
+        "status": "1",
+        "message": "We continue to make progress in our phased remediation at the Equinix FR5 location in Frankfurt, DEU. Network infrastructure and dependent systems continue to improve as we bring affected hardware back online. Some replacement hardware has been delivered and installation is proceeding as components arrive on-site. In parallel, we are shifting network traffic to allow restored devices to begin serving customers as they come online. \n\nAs we progress through recovery, customers will observe restoration occurring in two stages. In the first stage, BGP sessions will re-establish but IP prefixes will not yet be advertised, this indicates that recovery is still in progress and the underlying infrastructure is not yet ready to carry traffic. In the second stage, IP prefix advertisement will resume, at which point the infrastructure is fully remediated and connectivity is restored.\n\nWhile we do not currently have an ETA for full recovery, we continue to work as quickly and safely as possible to mitigate the impact for customers. We will provide another update by August 17 10:30 AM PDT, or sooner as remediation progresses."
+      },
+      {
+        "timestamp": "2026-08-17T16:25:22.000Z",
+        "status": "1",
+        "message": "We continue to work on phased remediation incrementally at the Equinix FR5 location in Frankfurt, DEU. We are seeing early signs of recovery while we continue to fully remediate the issue. We are actively working to bring the remaining affected hardware back online and we will provide another update by 12:30 PM PDT, or sooner as remediation progresses."
+      },
+      {
+        "timestamp": "2026-08-17T17:59:20.000Z",
+        "status": "1",
+        "message": "We are seeing broad signs of recovery at the Equinix FR5 location in Frankfurt, DEU. We have restored connectivity for the majority of affected hardware and most of the connections are fully recovered and stable. There are a small number of customers that will remain affected until the remaining devices are fully restored. We will provide another update by 2:00 PM PDT, or sooner as remediation progresses."
+      },
+      {
+        "timestamp": "2026-08-17T21:00:11.000Z",
+        "status": "1",
+        "message": "We continue to work on bringing affected hardware back online. Since our last update we have made progress that will not be visible to customers, but is required for recovery. We are working in parallel to bring all devices online as safely as possible. This work is expected to take several hours to complete and validate.\n\nFor customers that require workarounds, we recommend that you consider failing over to VPN. For customers using Direct Connect gateway and Transit Gateway, you can create an AWS Site-to-Site VPN and attach it to your Transit Gateway, refer to steps <a href=\"https://aws.amazon.com/premiumsupport/knowledge-center/dx-configure-dx-and-vpn-failover-tgw/\">here</a>. For other customers, we recommend establishing an AWS Site-to-Site VPN as a temporary backup path, refer to steps <a href=\"https://docs.aws.amazon.com/vpn/latest/s2svpn/SetUpVPNConnections.html\">here</a>.\n\nWe will provide another update by 7:00 PM PDT or sooner as new information becomes available."
+      },
+      {
+        "timestamp": "2026-08-18T01:50:12.000Z",
+        "status": "1",
+        "message": "We are seeing significant recovery for most of the customer connections at this stage. While we are not yet fully recovered, restoration efforts are progressing as expected at the Equinix FR5 location in Frankfurt, DEU. Remediation of remaining infrastructure involves completion of hardware replacements and traffic validation, both of which are actively underway. We anticipate further customer-visible recovery as the remaining infrastructure is brought back into service. \n\nCustomers with connections exclusively at this location will continue to experience packet loss until remediation is complete. Previously communicated mitigation guidance and recommendations remain unchanged at this time. We will provide another update by August 17 11:00 PM PDT or sooner."
+      },
+      {
+        "timestamp": "2026-08-18T04:01:19.000Z",
+        "status": "0",
+        "message": "Starting August 14 7:33 PM PDT, we experienced increased packet loss impacting AWS Direct Connect connectivity for customers with connections at the Equinix FR5 location in Frankfurt, DEU. Engineers were automatically engaged at 7:45 PM on August 14 and immediately began investigating mitigations. By 8:30 PM, we identified that network equipment at the FR5 location was impaired due to water ingress into the co-location facility. As a result, cooling system was impaired which resulted in devices overheating and shutting down. Water also affected power distribution systems which disabled the power for the network devices. Initial recovery efforts were delayed as environmental conditions within the facility required stabilization before engineers could safely access the affected area. Throughout August 15 and 16, our engineers worked in coordination with the facility operator to restore impaired network devices while the underlying infrastructure issue was addressed. By 7:26 PM on August 17, all impaired network equipment was successfully restored and connectivity to the location was verified as fully operational with sustained recovery. We do not expect this issue to recur. \n\nCustomers with redundant connections across other Direct Connect locations maintained connectivity through their alternate paths throughout this event and require no further action. Customers who implemented VPN failover as a workaround may now safely revert to their primary Direct Connect paths. Connectivity has been verified as stable and fully operational. Customers requiring further assistance may contact AWS Support through the AWS Management Console or the <a href=\"https://console.aws.amazon.com/support\">AWS Support Center</a>."
       }
     ],
     "sourceUrl": "https://health.aws.amazon.com/health/status"
