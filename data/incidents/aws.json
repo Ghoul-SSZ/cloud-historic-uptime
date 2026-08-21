@@ -1,5 +1,71 @@
 [
   {
+    "id": "aws-AWS_CONNECT_OPERATIONAL_ISSUE_BFE2B_2DD530F8C5B",
+    "provider": "aws",
+    "title": "Increased Error Rates",
+    "description": "日本時間 8:58 AM から 10:34 AM の間、AP-NORTHEAST-1 リージョンにおける Amazon Connect のリアルタイムメトリクスに影響する遅延が増加し、データが欠落する、またはデータが最新の状態に更新されない事象が発生しました。この間、お客様は分析レポート内で一部のデータが反映されない状況を経験した可能性があり、また、コンタクトフロー内でリアルタイムメトリクス (例: 人員の確認ブロック) にアクセスする際に問題が発生した可能性があります。根本原因は、メトリクスイベント配信を担うサブシステムの問題であると特定しました。日本時間 10:13 AM に緩和策の適用を開始し、 10:34 AM までに影響を解消しました。本事象は解決済みであり、サービスは正常に稼働しています。| Between 4:58 PM and 6:34 PM PDT, we experienced increased delays affecting real-time metrics for Amazon Connect in the AP-NORTHEAST-1 Region, resulting in missing or stale data. During this time, customers may have experienced missing data within analytics reports, and may have observed issues if accessing realtime metrics within contact Flows, such as checking agent staffing. We identified the root cause to be an issue with the subsystem responsible for metric event delivery. We started applying the mitigations at 6:13 PM and mitigated the issue by 6:34 PM. The issue has been resolved and the service is operating normally.\n",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2026-08-21T02:02:22.000Z",
+    "resolvedAt": "2026-08-21T02:40:02.000Z",
+    "durationMinutes": 38,
+    "affectedServices": [
+      {
+        "serviceName": "Amazon Connect",
+        "category": "other",
+        "regions": [
+          "ap-northeast-1"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-08-21T02:02:22.000Z",
+        "status": "1",
+        "message": "AP-NORTHEAST-1リージョンにおいて、エラー率が上昇しており、リアルタイムメトリクスに影響が出ています。お客様はリアルタイムメトリクスデータの欠落または遅延を経験する可能性があります。| We are experiencing increased error rates affecting real-time metrics in the AP-NORTHEAST-1 Region. Customers may experience missing or delayed real-time metric data.\n"
+      },
+      {
+        "timestamp": "2026-08-21T02:40:02.000Z",
+        "status": "0",
+        "message": "日本時間 8:58 AM から 10:34 AM の間、AP-NORTHEAST-1 リージョンにおける Amazon Connect のリアルタイムメトリクスに影響する遅延が増加し、データが欠落する、またはデータが最新の状態に更新されない事象が発生しました。この間、お客様は分析レポート内で一部のデータが反映されない状況を経験した可能性があり、また、コンタクトフロー内でリアルタイムメトリクス (例: 人員の確認ブロック) にアクセスする際に問題が発生した可能性があります。根本原因は、メトリクスイベント配信を担うサブシステムの問題であると特定しました。日本時間 10:13 AM に緩和策の適用を開始し、 10:34 AM までに影響を解消しました。本事象は解決済みであり、サービスは正常に稼働しています。| Between 4:58 PM and 6:34 PM PDT, we experienced increased delays affecting real-time metrics for Amazon Connect in the AP-NORTHEAST-1 Region, resulting in missing or stale data. During this time, customers may have experienced missing data within analytics reports, and may have observed issues if accessing realtime metrics within contact Flows, such as checking agent staffing. We identified the root cause to be an issue with the subsystem responsible for metric event delivery. We started applying the mitigations at 6:13 PM and mitigated the issue by 6:34 PM. The issue has been resolved and the service is operating normally.\n"
+      }
+    ],
+    "sourceUrl": "https://health.aws.amazon.com/health/status"
+  },
+  {
+    "id": "aws-AWS_CONNECT_OPERATIONAL_ISSUE-1787277742000",
+    "provider": "aws",
+    "title": "Increased Error Rates",
+    "description": "日本時間 8:58 AM から 10:34 AM の間、AP-NORTHEAST-1 リージョンにおける Amazon Connect のリアルタイムメトリクスに影響する遅延が増加し、データが欠落する、またはデータが最新の状態に更新されない事象が発生しました。この間、お客様は分析レポート内で一部のデータが反映されない状況を経験した可能性があり、また、コンタクトフロー内でリアルタイムメトリクス (例: 人員の確認ブロック) にアクセスする際に問題が発生した可能性があります。根本原因は、メトリクスイベント配信を担うサブシステムの問題であると特定しました。日本時間 10:13 AM に緩和策の適用を開始し、 10:34 AM までに影響を解消しました。本事象は解決済みであり、サービスは正常に稼働しています。| Between 4:58 PM and 6:34 PM PDT, we experienced increased delays affecting real-time metrics for Amazon Connect in the AP-NORTHEAST-1 Region, resulting in missing or stale data. During this time, customers may have experienced missing data within analytics reports, and may have observed issues if accessing realtime metrics within contact Flows, such as checking agent staffing. We identified the root cause to be an issue with the subsystem responsible for metric event delivery. We started applying the mitigations at 6:13 PM and mitigated the issue by 6:34 PM. The issue has been resolved and the service is operating normally.\n",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2026-08-21T02:02:22.000Z",
+    "resolvedAt": "2026-08-21T02:40:02.000Z",
+    "durationMinutes": 38,
+    "affectedServices": [
+      {
+        "serviceName": "AWS CONNECT",
+        "category": "other",
+        "regions": [
+          "ap-northeast-1"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-08-21T02:02:22.000Z",
+        "status": "1",
+        "message": "AP-NORTHEAST-1リージョンにおいて、エラー率が上昇しており、リアルタイムメトリクスに影響が出ています。お客様はリアルタイムメトリクスデータの欠落または遅延を経験する可能性があります。| We are experiencing increased error rates affecting real-time metrics in the AP-NORTHEAST-1 Region. Customers may experience missing or delayed real-time metric data.\n"
+      },
+      {
+        "timestamp": "2026-08-21T02:40:02.000Z",
+        "status": "0",
+        "message": "日本時間 8:58 AM から 10:34 AM の間、AP-NORTHEAST-1 リージョンにおける Amazon Connect のリアルタイムメトリクスに影響する遅延が増加し、データが欠落する、またはデータが最新の状態に更新されない事象が発生しました。この間、お客様は分析レポート内で一部のデータが反映されない状況を経験した可能性があり、また、コンタクトフロー内でリアルタイムメトリクス (例: 人員の確認ブロック) にアクセスする際に問題が発生した可能性があります。根本原因は、メトリクスイベント配信を担うサブシステムの問題であると特定しました。日本時間 10:13 AM に緩和策の適用を開始し、 10:34 AM までに影響を解消しました。本事象は解決済みであり、サービスは正常に稼働しています。| Between 4:58 PM and 6:34 PM PDT, we experienced increased delays affecting real-time metrics for Amazon Connect in the AP-NORTHEAST-1 Region, resulting in missing or stale data. During this time, customers may have experienced missing data within analytics reports, and may have observed issues if accessing realtime metrics within contact Flows, such as checking agent staffing. We identified the root cause to be an issue with the subsystem responsible for metric event delivery. We started applying the mitigations at 6:13 PM and mitigated the issue by 6:34 PM. The issue has been resolved and the service is operating normally.\n"
+      }
+    ],
+    "sourceUrl": "https://health.aws.amazon.com/health/status"
+  },
+  {
     "id": "aws-AWS_EC2_OPERATIONAL_ISSUE_25280_73B0FC79387",
     "provider": "aws",
     "title": "Increased Error Rates",
