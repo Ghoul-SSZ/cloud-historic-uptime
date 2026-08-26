@@ -1976,6 +1976,11 @@
         "regions": []
       },
       {
+        "serviceName": "Cloud Healthcare",
+        "category": "other",
+        "regions": []
+      },
+      {
         "serviceName": "Cloud Load Balancing",
         "category": "networking",
         "regions": []
@@ -2038,11 +2043,6 @@
       {
         "serviceName": "Google Kubernetes Engine",
         "category": "compute",
-        "regions": []
-      },
-      {
-        "serviceName": "Healthcare and Life Sciences",
-        "category": "other",
         "regions": []
       },
       {
@@ -5956,7 +5956,7 @@
         "regions": []
       },
       {
-        "serviceName": "Healthcare and Life Sciences",
+        "serviceName": "Cloud Healthcare",
         "category": "other",
         "regions": []
       },
@@ -8956,7 +8956,7 @@
     "durationMinutes": 14,
     "affectedServices": [
       {
-        "serviceName": "Healthcare and Life Sciences",
+        "serviceName": "Cloud Healthcare",
         "category": "other",
         "regions": []
       }
@@ -9806,7 +9806,7 @@
     "durationMinutes": 4680,
     "affectedServices": [
       {
-        "serviceName": "Healthcare and Life Sciences",
+        "serviceName": "Cloud Healthcare",
         "category": "other",
         "regions": []
       }
