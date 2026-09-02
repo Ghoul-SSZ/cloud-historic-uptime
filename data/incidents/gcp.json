@@ -1,5 +1,126 @@
 [
   {
+    "id": "gcp-J5ia5t9p3g9Q5Wi7r8Ev",
+    "provider": "gcp",
+    "title": "Multiple products in us-central1-b are experiencing network service degradation.",
+    "description": "**Summary**\nMultiple products in us-central1-b are experiencing network service degradation. \n**Description**\nWe are experiencing a networking issue starting Tuesday, 2026-09-01 07:41 US/Pacific.\nThe issue is affecting a portion of the us-central1-b zone. The remaining zones in the region are unaffected.\nOur network engineering team has put in mitigations and we are seeing services starting to recover.\nWe will provide more information by Tuesday, 2026-09-01 09:30 US/Pacific with current details.\nWe apologize to all who are affected by the disruption.\n**Customer Symptoms**\nCustomers are experiencing elevated packet loss and errors.\n* BigQuery\n* Cloud Dataflow\n* Cloud SQL\n* App Engine\n* Cloud Run\n* AlloyDB\n* Cloud Bigtable\n* Cloud Spanner\n* Compute Engine\n* Cloud VPN\n* Cloud Interconnect\n* Cloud NAT\n* Cloud Filestore\n* Cloud Hybrid Connectivity\n* Virtual Private Cloud\n* Google Kubernetes Engine\n* Looker (Google Cloud core)\n**Workaround**\n* Customers with service layer retries may see successful completions as only a portion of the zone is affected.\n* Customers that are severely affected and have services available in alternate zones can failover to alternate zones.",
+    "severity": "major",
+    "status": "resolved",
+    "startedAt": "2026-09-01T14:44:00+00:00",
+    "resolvedAt": "2026-09-01T18:52:00+00:00",
+    "durationMinutes": 248,
+    "affectedServices": [
+      {
+        "serviceName": "AlloyDB for PostgreSQL",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Apigee",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Cloud Filestore",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Cloud Run",
+        "category": "compute",
+        "regions": []
+      },
+      {
+        "serviceName": "Cloud Spanner",
+        "category": "database",
+        "regions": []
+      },
+      {
+        "serviceName": "Google App Engine",
+        "category": "compute",
+        "regions": []
+      },
+      {
+        "serviceName": "Google BigQuery",
+        "category": "analytics",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Cloud Bigtable",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Cloud Dataflow",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Cloud SQL",
+        "category": "database",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Compute Engine",
+        "category": "compute",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Kubernetes Engine",
+        "category": "compute",
+        "regions": []
+      },
+      {
+        "serviceName": "Hybrid Connectivity",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Looker (Google Cloud core)",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Virtual Private Cloud (VPC)",
+        "category": "networking",
+        "regions": []
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-09-01T19:12:28+00:00",
+        "status": "AVAILABLE",
+        "message": "**Summary**\nMultiple products in us-central1-b experienced network service degradation.\n**Description**\nThe issue was affecting a portion of the us-central1-b zone. The remaining zones in the region were unaffected.\nAll the impacted products have recovered.\nFrom preliminary analysis, routine network fabric path maintenance triggered unexpected issues in one cluster in us-central1-b. We have recovered the network capacity that was impacted and restored all zonal and regional services. Maintenance in the region has been halted while proactive audits are carried out.\nWe thank you for your patience while we worked on resolving the issue.\n**Customer Symptoms**\nCustomers experienced elevated packet loss and errors.\n**Workaround**\nThe issue has been mitigated."
+      },
+      {
+        "timestamp": "2026-09-01T18:36:56+00:00",
+        "status": "SERVICE_DISRUPTION",
+        "message": "**Summary**\nMultiple products in us-central1-b are experiencing network service degradation.\n**Description**\nThe issue is affecting a portion of the us-central1-b zone. The remaining zones in the region are unaffected.\nMost of the products have recovered. The impacted products Cloud Run and App Engine are also seeing recovery and the errors have lowered pre-incident levels. Engineering continues to monitor and validate.\nRoutine network fabric path maintenance triggered unexpected issues in two clusters in us-central1-b. We have recovered the network capacity that was impacted and restored all zonal and regional services. Maintenance in the region has been halted while proactive audits are carried out.\nWe will provide more information by Tuesday, 2026-09-01 12:30 US/Pacific with current details.\n**Customer Symptoms**\nCustomers are experiencing elevated packet loss and errors.\n* Cloud Run\n* App Engine\nFollowing products have recovered\n* BigQuery\n* Cloud Dataflow\n* Cloud Bigtable\n* Compute Engine\n* Cloud Hybrid Connectivity\n* Cloud Filestore\n* Virtual Private Cloud\n* Cloud Spanner\n* Google Kubernetes Engine\n* Cloud SQL\n* AlloyDBCloud VPN\n* Apigee\n* Cloud Interconnect\n* Cloud NAT\n* Looker (Google Cloud core)\n* Google SecOps SOAR\n* Cloud Firestore\n**Workaround**\n* Customers with service layer retries may see successful completions as only a portion of the zone is affected."
+      },
+      {
+        "timestamp": "2026-09-01T18:01:09+00:00",
+        "status": "SERVICE_DISRUPTION",
+        "message": "**Summary**\nMultiple products in us-central1-b are experiencing network service degradation.\n**Description**\nThe issue is affecting a portion of the us-central1-b zone. The remaining zones in the region are unaffected.\nMost of the products have recovered and the engineering team is still validating a few remaining product impacts.\nRoutine network maintenance triggered issues in us-central1-b. We have recovered the network capacity that was impacted and restored all zonal and regional services. Maintenance in the region has been halted while proactive audits are carried out.\nWe will provide more information by Tuesday, 2026-09-01 12:30 US/Pacific with current details.\n**Customer Symptoms**\nCustomers are experiencing elevated packet loss and errors.\n* Cloud Run\n* App Engine\nFollowing products have recovered\n* BigQuery\n* Cloud Dataflow\n* Cloud Bigtable\n* Compute Engine\n* Cloud Hybrid Connectivity\n* Cloud Filestore\n* Virtual Private Cloud\n* Cloud Spanner\n* Google Kubernetes Engine\n* Cloud SQL\n* AlloyDBCloud VPN\n* Apigee\n* Cloud Interconnect\n* Cloud NAT\n* Looker (Google Cloud core)\n* Google SecOps SOAR\n* Cloud Firestore\n**Workaround**\n* Customers with service layer retries may see successful completions as only a portion of the zone is affected."
+      },
+      {
+        "timestamp": "2026-09-01T17:09:04+00:00",
+        "status": "SERVICE_DISRUPTION",
+        "message": "**Summary**\nMultiple products in us-central1-b are experiencing network service degradation.\n**Description**\nThe issue is affecting a portion of the us-central1-b zone. The remaining zones in the region are unaffected.\nMost of the products have recovered and the engineering team is still validating a few remaining product impacts.\nWe will provide more information by Tuesday, 2026-09-01 11:00 US/Pacific with current details.\n**Customer Symptoms**\nCustomers are experiencing elevated packet loss and errors.\n* Cloud Run\n* App Engine\nFollowing products have recovered\n* BigQuery\n* Cloud Dataflow\n* Cloud Bigtable\n* Compute Engine\n* Cloud Hybrid Connectivity\n* Cloud Filestore\n* Virtual Private Cloud\n* Cloud Spanner\n* Google Kubernetes Engine\n* Cloud SQL\n* AlloyDBCloud VPN\n* Apigee\n* Cloud Interconnect\n* Cloud NAT\n* Looker (Google Cloud core)\n* Google SecOps SOAR\n* Cloud Firestore\n**Workaround**\n* Customers with service layer retries may see successful completions as only a portion of the zone is affected.\n* Customers that are severely affected and have services available in alternate zones can failover to alternate zones."
+      },
+      {
+        "timestamp": "2026-09-01T16:19:12+00:00",
+        "status": "SERVICE_DISRUPTION",
+        "message": "**Summary**\nMultiple products in us-central1-b are experiencing network service degradation.\n**Description**\nThe issue is affecting a portion of the us-central1-b zone. The remaining zones in the region are unaffected.\nFollowing network-level mitigation efforts, the underlying network infrastructure has fully recovered. Product engineering teams across Cloud are currently validating the recovery status of individual services.\nWe will provide more information by Tuesday, 2026-09-01 10:00 US/Pacific with current details.\n**Customer Symptoms**\nCustomers are experiencing elevated packet loss and errors.\n* BigQuery\n* Cloud Dataflow\n* Cloud SQL\n* App Engine\n* Cloud Run\n* AlloyDB\n* Cloud Bigtable\n* Cloud Spanner\n* Compute Engine\n* Cloud VPN\n* Cloud Interconnect\n* Cloud NAT\n* Cloud Filestore\n* Cloud Hybrid Connectivity\n* Virtual Private Cloud\n* Google Kubernetes Engine\n* Looker (Google Cloud core)\n* Apigee\n* Google SecOps SOAR\n**Workaround**\n* Customers with service layer retries may see successful completions as only a portion of the zone is affected.\n* Customers that are severely affected and have services available in alternate zones can failover to alternate zones."
+      },
+      {
+        "timestamp": "2026-09-01T16:03:12+00:00",
+        "status": "SERVICE_DISRUPTION",
+        "message": "**Summary**\nMultiple products in us-central1-b are experiencing network service degradation. \n**Description**\nWe are experiencing a networking issue starting Tuesday, 2026-09-01 07:41 US/Pacific.\nThe issue is affecting a portion of the us-central1-b zone. The remaining zones in the region are unaffected.\nOur network engineering team has put in mitigations and we are seeing services starting to recover.\nWe will provide more information by Tuesday, 2026-09-01 09:30 US/Pacific with current details.\nWe apologize to all who are affected by the disruption.\n**Customer Symptoms**\nCustomers are experiencing elevated packet loss and errors.\n* BigQuery\n* Cloud Dataflow\n* Cloud SQL\n* App Engine\n* Cloud Run\n* AlloyDB\n* Cloud Bigtable\n* Cloud Spanner\n* Compute Engine\n* Cloud VPN\n* Cloud Interconnect\n* Cloud NAT\n* Cloud Filestore\n* Cloud Hybrid Connectivity\n* Virtual Private Cloud\n* Google Kubernetes Engine\n* Looker (Google Cloud core)\n**Workaround**\n* Customers with service layer retries may see successful completions as only a portion of the zone is affected.\n* Customers that are severely affected and have services available in alternate zones can failover to alternate zones."
+      }
+    ],
+    "sourceUrl": "https://status.cloud.google.com/incidents/J5ia5t9p3g9Q5Wi7r8Ev"
+  },
+  {
     "id": "gcp-utF3FMFdQfwBzJcGG6vf",
     "provider": "gcp",
     "title": "We are investigating an issue where customers may experience timeouts, service degradations, errors, and elevated latencies across multiple products in the us-west1 region.",
