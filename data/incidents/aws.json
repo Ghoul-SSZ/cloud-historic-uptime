@@ -1,5 +1,122 @@
 [
   {
+    "id": "aws-AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE_926DB_F0036494EA4",
+    "provider": "aws",
+    "title": "Increased API Error Rates",
+    "description": "Between 2:12 PM and 3:18 PM PDT, we experienced increased API error rates affecting the STS AssumeRoleWithSAML  and AssumeRoleWithWebIdentity APIs in the US-WEST-2 Region. The root cause was determined to be due to an issue with an STS subsystem responsible for communicating with external identity providers. Other AWS Services that rely on these identity federation protocols were also affected. At 3:18 PM, we observed signs of recovery and continued to monitor to ensure stability and full recovery. The issue is resolved and the service is operating normally at this time.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2026-09-03T21:49:58.000Z",
+    "resolvedAt": "2026-09-04T00:07:54.000Z",
+    "durationMinutes": 138,
+    "affectedServices": [
+      {
+        "serviceName": "Amazon Connect",
+        "category": "other",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "AWS IAM Identity Center",
+        "category": "other",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "AWS Sign-In",
+        "category": "other",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "AWS Security Token Service",
+        "category": "other",
+        "regions": [
+          "us-west-2"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-09-03T21:49:58.000Z",
+        "status": "1",
+        "message": "Starting at 2:12 PM PDT, we began experiencing increased API error rates for STS and Sign In when using SAML in the US-WEST-2 Region. Our engineering team was automatically engaged at 2:19 PM to begin investigating the root cause. There is no work around available at this time. We will provide another update by 3:30 PM PDT."
+      },
+      {
+        "timestamp": "2026-09-03T22:26:28.000Z",
+        "status": "1",
+        "message": "We are seeing early signs of recovery and continue to monitor for full recovery. We will provide another update at 4:15 PM, or sooner if we have additional information to share."
+      },
+      {
+        "timestamp": "2026-09-03T23:20:09.000Z",
+        "status": "1",
+        "message": "We continue to see recovery holding steady for the STS AssumeRoleWithSAML and AssumeRoleWithWebIdentity APIs in the US-WEST-2 Region. Error rates are now back to pre-event levels, and we continue actively monitoring to confirm full recovery. We will provide another update by 5:15 PM or earlier."
+      },
+      {
+        "timestamp": "2026-09-04T00:07:54.000Z",
+        "status": "0",
+        "message": "Between 2:12 PM and 3:18 PM PDT, we experienced increased API error rates affecting the STS AssumeRoleWithSAML  and AssumeRoleWithWebIdentity APIs in the US-WEST-2 Region. The root cause was determined to be due to an issue with an STS subsystem responsible for communicating with external identity providers. Other AWS Services that rely on these identity federation protocols were also affected. At 3:18 PM, we observed signs of recovery and continued to monitor to ensure stability and full recovery. The issue is resolved and the service is operating normally at this time."
+      }
+    ],
+    "sourceUrl": "https://health.aws.amazon.com/health/status"
+  },
+  {
+    "id": "aws-AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE-1788472198000",
+    "provider": "aws",
+    "title": "Increased API Error Rates",
+    "description": "Between 2:12 PM and 3:18 PM PDT, we experienced increased API error rates affecting the STS AssumeRoleWithSAML  and AssumeRoleWithWebIdentity APIs in the US-WEST-2 Region. The root cause was determined to be due to an issue with an STS subsystem responsible for communicating with external identity providers. Other AWS Services that rely on these identity federation protocols were also affected. At 3:18 PM, we observed signs of recovery and continued to monitor to ensure stability and full recovery. The issue is resolved and the service is operating normally at this time.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2026-09-03T21:49:58.000Z",
+    "resolvedAt": "2026-09-04T00:07:54.000Z",
+    "durationMinutes": 138,
+    "affectedServices": [
+      {
+        "serviceName": "Multiple Services",
+        "category": "other",
+        "regions": [
+          "us-west-2"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-09-03T21:49:58.000Z",
+        "status": "1",
+        "message": "Starting at 2:12 PM PDT, we began experiencing increased API error rates for STS and Sign In when using SAML in the US-WEST-2 Region. Our engineering team was automatically engaged at 2:19 PM to begin investigating the root cause. There is no work around available at this time. We will provide another update by 3:30 PM PDT."
+      },
+      {
+        "timestamp": "2026-09-03T21:49:58.000Z",
+        "status": "1",
+        "message": "[[The following AWS services have been affected by this event:]]\nService: connect Status: Informational\nService: iamidentitycenter Status: Informational\nService: signin Status: Informational\nService: sts Status: Informational"
+      },
+      {
+        "timestamp": "2026-09-03T22:26:28.000Z",
+        "status": "1",
+        "message": "We are seeing early signs of recovery and continue to monitor for full recovery. We will provide another update at 4:15 PM, or sooner if we have additional information to share."
+      },
+      {
+        "timestamp": "2026-09-03T23:20:09.000Z",
+        "status": "1",
+        "message": "We continue to see recovery holding steady for the STS AssumeRoleWithSAML and AssumeRoleWithWebIdentity APIs in the US-WEST-2 Region. Error rates are now back to pre-event levels, and we continue actively monitoring to confirm full recovery. We will provide another update by 5:15 PM or earlier."
+      },
+      {
+        "timestamp": "2026-09-04T00:07:54.000Z",
+        "status": "0",
+        "message": "[[The following AWS services have been affected by this event:]]\nService: connect Status: Operating normally\nService: iamidentitycenter Status: Operating normally\nService: signin Status: Operating normally\nService: sts Status: Operating normally"
+      },
+      {
+        "timestamp": "2026-09-04T00:07:54.000Z",
+        "status": "0",
+        "message": "Between 2:12 PM and 3:18 PM PDT, we experienced increased API error rates affecting the STS AssumeRoleWithSAML  and AssumeRoleWithWebIdentity APIs in the US-WEST-2 Region. The root cause was determined to be due to an issue with an STS subsystem responsible for communicating with external identity providers. Other AWS Services that rely on these identity federation protocols were also affected. At 3:18 PM, we observed signs of recovery and continued to monitor to ensure stability and full recovery. The issue is resolved and the service is operating normally at this time."
+      }
+    ],
+    "sourceUrl": "https://health.aws.amazon.com/health/status"
+  },
+  {
     "id": "aws-AWS_CONNECT_OPERATIONAL_ISSUE_BFE2B_2DD530F8C5B",
     "provider": "aws",
     "title": "Increased Error Rates",
