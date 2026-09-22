@@ -1,5 +1,222 @@
 [
   {
+    "id": "aws-AWS_EC2_OPERATIONAL_ISSUE_79073_047629764F9",
+    "provider": "aws",
+    "title": "Increased Error Rates",
+    "description": "Between 3:49 PM and 5:06 PM PDT, we experienced increased error rates affecting new instance launches in the US-EAST-1 Region. During this time, customers may have experienced elevated error rates when attempting to launch new EC2 instances through RunInstances, CreateFleet, and related EC2 launch workflows. AWS services that launch EC2 instances on behalf of customers, including Amazon ECS, AWS Fargate, Amazon EMR, amongst others were also impacted during this period. We identified the root cause as a recent deployment to a subsystem within the EC2 service responsible for processing instance launch requests. We initiated a rollback of the problematic deployment and began observing initial signs of recovery at 4:44 PM. Existing instances remain unaffected. The issue has been resolved and the service is operating normally.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2026-09-21T23:26:48.000Z",
+    "resolvedAt": "2026-09-22T00:24:18.000Z",
+    "durationMinutes": 58,
+    "affectedServices": [
+      {
+        "serviceName": "Amazon WorkSpaces Applications",
+        "category": "other",
+        "regions": [
+          "us-east-1"
+        ]
+      },
+      {
+        "serviceName": "AWS AppSync",
+        "category": "other",
+        "regions": [
+          "us-east-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon CloudFront",
+        "category": "networking",
+        "regions": [
+          "us-east-1"
+        ]
+      },
+      {
+        "serviceName": "AWS DataSync",
+        "category": "other",
+        "regions": [
+          "us-east-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Elastic Container Service",
+        "category": "other",
+        "regions": [
+          "us-east-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Elastic Kubernetes Service",
+        "category": "other",
+        "regions": [
+          "us-east-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon OpenSearch Service",
+        "category": "other",
+        "regions": [
+          "us-east-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Elastic Load Balancing",
+        "category": "networking",
+        "regions": [
+          "us-east-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Elastic MapReduce",
+        "category": "other",
+        "regions": [
+          "us-east-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Fargate",
+        "category": "compute",
+        "regions": [
+          "us-east-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Global Accelerator",
+        "category": "other",
+        "regions": [
+          "us-east-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon VPC IP Address Manager",
+        "category": "other",
+        "regions": [
+          "us-east-1"
+        ]
+      },
+      {
+        "serviceName": "AWS NAT Gateway",
+        "category": "other",
+        "regions": [
+          "us-east-1"
+        ]
+      },
+      {
+        "serviceName": "AWS VPCE PrivateLink",
+        "category": "other",
+        "regions": [
+          "us-east-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon SageMaker",
+        "category": "ai-ml",
+        "regions": [
+          "us-east-1"
+        ]
+      },
+      {
+        "serviceName": "Traffic Mirroring",
+        "category": "other",
+        "regions": [
+          "us-east-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Transit Gateway",
+        "category": "other",
+        "regions": [
+          "us-east-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Site-to-Site VPN",
+        "category": "other",
+        "regions": [
+          "us-east-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon WorkSpaces",
+        "category": "other",
+        "regions": [
+          "us-east-1"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-09-21T23:26:48.000Z",
+        "status": "1",
+        "message": "We are investigating increased API error rates in the US-EAST-1 Region."
+      },
+      {
+        "timestamp": "2026-09-21T23:44:15.000Z",
+        "status": "1",
+        "message": "We can confirm increased error rates affecting new instance launches, including elevated API error rates for RunInstances, CreateFleet, and related EC2 launch workflows in the US-EAST-1 Region. Customers attempting to launch new EC2 instances may experience launch failures or elevated API response latency. Our engineers are actively engaged and working towards recovering the issue. We are seeing initial signs of recovery. Existing instances remain unaffected. We recommend retrying failed RunInstances and CreateFleet API calls. We will provide an update by 5:30 PM PDT or sooner. "
+      },
+      {
+        "timestamp": "2026-09-22T00:24:18.000Z",
+        "status": "1",
+        "message": "Between 3:49 PM and 5:06 PM PDT, we experienced increased error rates affecting new instance launches in the US-EAST-1 Region. During this time, customers may have experienced elevated error rates when attempting to launch new EC2 instances through RunInstances, CreateFleet, and related EC2 launch workflows. AWS services that launch EC2 instances on behalf of customers, including Amazon ECS, AWS Fargate, Amazon EMR, amongst others were also impacted during this period. We identified the root cause as a recent deployment to a subsystem within the EC2 service responsible for processing instance launch requests. We initiated a rollback of the problematic deployment and began observing initial signs of recovery at 4:44 PM. Existing instances remain unaffected. The issue has been resolved and the service is operating normally."
+      }
+    ],
+    "sourceUrl": "https://health.aws.amazon.com/health/status"
+  },
+  {
+    "id": "aws-AWS_EC2_OPERATIONAL_ISSUE-1790033208000",
+    "provider": "aws",
+    "title": "Increased Error Rates",
+    "description": "Increased Error Rates",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2026-09-21T23:26:48.000Z",
+    "resolvedAt": "2026-09-22T00:25:35.000Z",
+    "durationMinutes": 59,
+    "affectedServices": [
+      {
+        "serviceName": "Amazon EC2",
+        "category": "compute",
+        "regions": [
+          "us-east-1"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-09-21T23:26:48.000Z",
+        "status": "1",
+        "message": "We are investigating increased API error rates in the US-EAST-1 Region."
+      },
+      {
+        "timestamp": "2026-09-21T23:26:48.000Z",
+        "status": "1",
+        "message": "[[The following AWS services have been affected by this event:]]\nService: appstream2 Status: Informational\nService: appsync Status: Informational\nService: cloudfront Status: Informational\nService: datasync Status: Informational\nService: ecs Status: Informational\nService: eks Status: Informational\nService: elasticsearch Status: Informational\nService: elb Status: Informational\nService: emr Status: Informational\nService: fargate Status: Informational\nService: globalaccelerator Status: Informational\nService: ipam Status: Informational\nService: natgateway Status: Informational\nService: privatelink Status: Informational\nService: sagemaker Status: Informational\nService: trafficmirroring Status: Informational\nService: transitgateway Status: Informational\nService: vpnvpc Status: Informational\nService: workspaces Status: Informational"
+      },
+      {
+        "timestamp": "2026-09-21T23:44:15.000Z",
+        "status": "1",
+        "message": "We can confirm increased error rates affecting new instance launches, including elevated API error rates for RunInstances, CreateFleet, and related EC2 launch workflows in the US-EAST-1 Region. Customers attempting to launch new EC2 instances may experience launch failures or elevated API response latency. Our engineers are actively engaged and working towards recovering the issue. We are seeing initial signs of recovery. Existing instances remain unaffected. We recommend retrying failed RunInstances and CreateFleet API calls. We will provide an update by 5:30 PM PDT or sooner. "
+      },
+      {
+        "timestamp": "2026-09-22T00:24:18.000Z",
+        "status": "1",
+        "message": "Between 3:49 PM and 5:06 PM PDT, we experienced increased error rates affecting new instance launches in the US-EAST-1 Region. During this time, customers may have experienced elevated error rates when attempting to launch new EC2 instances through RunInstances, CreateFleet, and related EC2 launch workflows. AWS services that launch EC2 instances on behalf of customers, including Amazon ECS, AWS Fargate, Amazon EMR, amongst others were also impacted during this period. We identified the root cause as a recent deployment to a subsystem within the EC2 service responsible for processing instance launch requests. We initiated a rollback of the problematic deployment and began observing initial signs of recovery at 4:44 PM. Existing instances remain unaffected. The issue has been resolved and the service is operating normally."
+      },
+      {
+        "timestamp": "2026-09-22T00:25:35.000Z",
+        "status": "0",
+        "message": "[[The following AWS services have been affected by this event:]]\nService: appstream2 Status: Operating normally\nService: appsync Status: Operating normally\nService: cloudfront Status: Operating normally\nService: datasync Status: Operating normally\nService: ecs Status: Operating normally\nService: eks Status: Operating normally\nService: elasticsearch Status: Operating normally\nService: elb Status: Operating normally\nService: emr Status: Operating normally\nService: fargate Status: Operating normally\nService: globalaccelerator Status: Operating normally\nService: ipam Status: Operating normally\nService: natgateway Status: Operating normally\nService: privatelink Status: Operating normally\nService: sagemaker Status: Operating normally\nService: trafficmirroring Status: Operating normally\nService: transitgateway Status: Operating normally\nService: vpnvpc Status: Operating normally\nService: workspaces Status: Operating normally"
+      },
+      {
+        "timestamp": "2026-09-22T00:25:35.000Z",
+        "status": "0",
+        "message": "[RESOLVED] Increased Error Rates"
+      }
+    ],
+    "sourceUrl": "https://health.aws.amazon.com/health/status"
+  },
+  {
     "id": "aws-AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE_926DB_F0036494EA4",
     "provider": "aws",
     "title": "Increased API Error Rates",
