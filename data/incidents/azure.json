@@ -1,5 +1,60 @@
 [
   {
+    "id": "azure-7QL5-Z50",
+    "provider": "azure",
+    "title": "Mitigated - Intermittent request failures and increased latency across Azure OpenAI, Azure AI Foundry, and Cognitive Services",
+    "description": "Between 10:03 UTC and 15:58 UTC on 29 September 2026, a platform issue resulted in impact to Azure OpenAI Service, Foundry Agent Service, Foundry Models, and Cognitive Services in the Sweden Central region. Impacted customers experienced intermittent request failures, increased latency, and HTTP 5XX errors when submitting requests to affected models and data-plane APIs hosted in this region.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2026-09-29T10:03:00.000Z",
+    "resolvedAt": "2026-09-29T18:00:00.000Z",
+    "durationMinutes": 477,
+    "affectedServices": [],
+    "updates": [
+      {
+        "timestamp": "2026-09-29T10:03:00.000Z",
+        "status": "update",
+        "message": "Initial impact began."
+      },
+      {
+        "timestamp": "2026-09-29T10:14:00.000Z",
+        "status": "update",
+        "message": "Service monitoring detected elevated failure rates in the backend service that retrieves resource metadata for requests in the region."
+      },
+      {
+        "timestamp": "2026-09-29T11:29:00.000Z",
+        "status": "update",
+        "message": "Engineers identified timeouts between the backend service and its dependent database layer."
+      },
+      {
+        "timestamp": "2026-09-29T12:58:00.000Z",
+        "status": "update",
+        "message": "Engineers reviewed ongoing deployments to determine whether any recent change correlated with the issue."
+      },
+      {
+        "timestamp": "2026-09-29T13:28:00.000Z",
+        "status": "update",
+        "message": "Engineers made attempts to mitigate through scaling adjustments of service instances to limit repeated restarts."
+      },
+      {
+        "timestamp": "2026-09-29T15:22:00.000Z",
+        "status": "update",
+        "message": "Engineers scaled out the backend service and increased its resource limits to address throttling. In parallel, we investigated infrastructure health for the affected service instances and restarted infrastructure nodes."
+      },
+      {
+        "timestamp": "2026-09-29T15:58:00.000Z",
+        "status": "update",
+        "message": "Following the scale-out and the disabling of an automated health check, service availability recovered and customers began to experience improvements. Customer impact was mitigated."
+      },
+      {
+        "timestamp": "2026-09-29T18:00:00.000Z",
+        "status": "update",
+        "message": "After a period of monitoring confirmed that service health remained stable, we further investigated the contributing factors. We will be implementing additional improvements to throttling and rate-limiting of internal processes, and making further service reconfigurations to help prevent recurrence."
+      }
+    ],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
     "id": "azure-ZJV6-SGG",
     "provider": "azure",
     "title": "Post Incident Review (PIR) – Network connectivity – Issues accessing resources in West US",
