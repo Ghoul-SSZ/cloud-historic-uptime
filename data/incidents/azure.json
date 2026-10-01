@@ -1,5 +1,50 @@
 [
   {
+    "id": "azure-7Q30-010",
+    "provider": "azure",
+    "title": "Mitigated- Multiple services experiencing connectivity issues in multiple regions",
+    "description": "Between 20:30 UTC on 30 September 2026 and 02:15 UTC on 01 October 2026, a subset of customers using gateway services in multiple regions experienced degraded or interrupted network connectivity. Impacted customers may have observed gateways failing to load in the Azure Portal, along with failures or delays in network management operations across the following impacted services.",
+    "severity": "major",
+    "status": "resolved",
+    "startedAt": "2026-09-30T20:30:00.000Z",
+    "resolvedAt": "2026-10-01T02:15:00.000Z",
+    "durationMinutes": 345,
+    "affectedServices": [],
+    "updates": [
+      {
+        "timestamp": "2026-09-30T20:30:00.000Z",
+        "status": "update",
+        "message": "Customer impact began."
+      },
+      {
+        "timestamp": "2026-09-30T21:29:00.000Z",
+        "status": "update",
+        "message": "We began investigating connectivity issues affecting Azure ExpressRoute Gateway in UK South."
+      },
+      {
+        "timestamp": "2026-09-30T22:27:00.000Z",
+        "status": "update",
+        "message": "We identified that the issue was affecting multiple Azure regions and expanded our investigation."
+      },
+      {
+        "timestamp": "2026-09-30T23:05:00.000Z",
+        "status": "update",
+        "message": "We identified a correlation with operating system servicing activity and paused further servicing while we worked to restore affected services."
+      },
+      {
+        "timestamp": "2026-10-01T01:36:00.000Z",
+        "status": "update",
+        "message": "Recovery progressed across most affected regions, while configuration changes were applied to remaining impacted regions, including France Central, North Europe, Southeast Asia, UK South, and UK West."
+      },
+      {
+        "timestamp": "2026-10-01T02:15:00.000Z",
+        "status": "update",
+        "message": "We confirmed that the issue was mitigated."
+      }
+    ],
+    "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
+  },
+  {
     "id": "azure-7QL5-Z50",
     "provider": "azure",
     "title": "Mitigated - Intermittent request failures and increased latency across Azure OpenAI, Azure AI Foundry, and Cognitive Services",
