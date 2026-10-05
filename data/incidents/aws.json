@@ -1,5 +1,338 @@
 [
   {
+    "id": "aws-AWS_INTERNETCONNECTIVITY_OPERATIONAL_ISSUE_F4DC4_40592306093",
+    "provider": "aws",
+    "title": "Elevated packet loss",
+    "description": "Between 8:48 AM and 11:28 AM PDT, we experienced elevated packet loss within a single Availability Zone (eus2-az1) in the EU-SOUTH-2 Region. This issue resulted in elevated API latencies and error rates for multiple workflows and AWS Services. We were automatically alerted to the issue at 8:54 AM, and immediately began work to identify the root cause while taking multiple parallel paths to mitigate the issue. By 10:00 AM, our mitigation efforts had led to some improvements. By 10:38 AM, we identified the root cause as related to a networking configuration change that we were able to revert the change which led to full mitigation by 11:28 AM. The issue has been resolved and the service is operating normally.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2026-10-04T16:14:56.000Z",
+    "resolvedAt": "2026-10-04T18:56:53.000Z",
+    "durationMinutes": 162,
+    "affectedServices": [
+      {
+        "serviceName": "Amazon Athena",
+        "category": "analytics",
+        "regions": [
+          "eu-south-2"
+        ]
+      },
+      {
+        "serviceName": "AWS IoT Core",
+        "category": "other",
+        "regions": [
+          "eu-south-2"
+        ]
+      },
+      {
+        "serviceName": "AWS IoT Device Management",
+        "category": "other",
+        "regions": [
+          "eu-south-2"
+        ]
+      },
+      {
+        "serviceName": "AWS WAF",
+        "category": "other",
+        "regions": [
+          "eu-south-2"
+        ]
+      },
+      {
+        "serviceName": "Bedrock AgentCore",
+        "category": "other",
+        "regions": [
+          "eu-south-2"
+        ]
+      },
+      {
+        "serviceName": "AWS Certificate Manager",
+        "category": "other",
+        "regions": [
+          "eu-south-2"
+        ]
+      },
+      {
+        "serviceName": "AWS CloudTrail",
+        "category": "other",
+        "regions": [
+          "eu-south-2"
+        ]
+      },
+      {
+        "serviceName": "AWS Cloud WAN",
+        "category": "other",
+        "regions": [
+          "eu-south-2"
+        ]
+      },
+      {
+        "serviceName": "Amazon Cognito",
+        "category": "security",
+        "regions": [
+          "eu-south-2"
+        ]
+      },
+      {
+        "serviceName": "AWS Direct Connect",
+        "category": "networking",
+        "regions": [
+          "eu-south-2"
+        ]
+      },
+      {
+        "serviceName": "Amazon DynamoDB",
+        "category": "database",
+        "regions": [
+          "eu-south-2"
+        ]
+      },
+      {
+        "serviceName": "Amazon Elastic Compute Cloud",
+        "category": "other",
+        "regions": [
+          "eu-south-2"
+        ]
+      },
+      {
+        "serviceName": "AWS Systems Manager",
+        "category": "management",
+        "regions": [
+          "eu-south-2"
+        ]
+      },
+      {
+        "serviceName": "Amazon Elastic Container Service",
+        "category": "other",
+        "regions": [
+          "eu-south-2"
+        ]
+      },
+      {
+        "serviceName": "Amazon Elastic Kubernetes Service",
+        "category": "other",
+        "regions": [
+          "eu-south-2"
+        ]
+      },
+      {
+        "serviceName": "Amazon Elastic File System",
+        "category": "other",
+        "regions": [
+          "eu-south-2"
+        ]
+      },
+      {
+        "serviceName": "Amazon Elastic Load Balancing",
+        "category": "networking",
+        "regions": [
+          "eu-south-2"
+        ]
+      },
+      {
+        "serviceName": "Amazon Elastic MapReduce",
+        "category": "other",
+        "regions": [
+          "eu-south-2"
+        ]
+      },
+      {
+        "serviceName": "AWS Fargate",
+        "category": "compute",
+        "regions": [
+          "eu-south-2"
+        ]
+      },
+      {
+        "serviceName": "Amazon FSx",
+        "category": "other",
+        "regions": [
+          "eu-south-2"
+        ]
+      },
+      {
+        "serviceName": "AWS Glue",
+        "category": "other",
+        "regions": [
+          "eu-south-2"
+        ]
+      },
+      {
+        "serviceName": "AWS NAT Gateway",
+        "category": "other",
+        "regions": [
+          "eu-south-2"
+        ]
+      },
+      {
+        "serviceName": "AWS Network Firewall",
+        "category": "other",
+        "regions": [
+          "eu-south-2"
+        ]
+      },
+      {
+        "serviceName": "AWS Parallel Computing Service",
+        "category": "other",
+        "regions": [
+          "eu-south-2"
+        ]
+      },
+      {
+        "serviceName": "AWS VPCE PrivateLink",
+        "category": "other",
+        "regions": [
+          "eu-south-2"
+        ]
+      },
+      {
+        "serviceName": "Amazon Redshift",
+        "category": "database",
+        "regions": [
+          "eu-south-2"
+        ]
+      },
+      {
+        "serviceName": "Amazon Rekognition",
+        "category": "ai-ml",
+        "regions": [
+          "eu-south-2"
+        ]
+      },
+      {
+        "serviceName": "Amazon SageMaker",
+        "category": "ai-ml",
+        "regions": [
+          "eu-south-2"
+        ]
+      },
+      {
+        "serviceName": "AWS Step Functions",
+        "category": "other",
+        "regions": [
+          "eu-south-2"
+        ]
+      },
+      {
+        "serviceName": "AWS Transfer Family",
+        "category": "other",
+        "regions": [
+          "eu-south-2"
+        ]
+      },
+      {
+        "serviceName": "AWS Transit Gateway",
+        "category": "other",
+        "regions": [
+          "eu-south-2"
+        ]
+      },
+      {
+        "serviceName": "Amazon Virtual Private Cloud",
+        "category": "other",
+        "regions": [
+          "eu-south-2"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-10-04T16:14:56.000Z",
+        "status": "1",
+        "message": "We are investigating elevated packet loss in the EU-SOUTH-2 Region."
+      },
+      {
+        "timestamp": "2026-10-04T16:36:48.000Z",
+        "status": "1",
+        "message": "We are experiencing elevated packet loss with a single Availability Zone (eus2-az1) in the EU-SOUTH-2 Region. This issue is also resulting in elevated API latencies and error rates for other workflows and AWS Services. Engineers were automatically engaged and are working to identify the root cause and to mitigate the issue. We will provide you with another update by 10:15 AM PDT or sooner as new information becomes available."
+      },
+      {
+        "timestamp": "2026-10-04T17:06:14.000Z",
+        "status": "1",
+        "message": "Our efforts to mitigate the elevated packet loss with a single Availability Zone (eus2-az1) in the EU-SOUTH-2 Region is still underway. We are seeing some signs of improvement as a result of multiple parallel efforts. We continue to work to confirm root cause and fully mitigate the issue. While we currently do not have an estimate for how long our actions will take, we will keep you informed of our progress and provide you with another update by 11:00 AM PDT or sooner as new information becomes available."
+      },
+      {
+        "timestamp": "2026-10-04T17:56:24.000Z",
+        "status": "1",
+        "message": "We have identified the root cause and are currently focusing our mitigation efforts to drive full recovery. While we don't have an exact estimate for how long our current efforts will take, we do expect to see incremental improvements as our efforts proceed. We will provide you with another update by 11:45 AM PDT, or sooner if new information becomes available."
+      },
+      {
+        "timestamp": "2026-10-04T18:45:47.000Z",
+        "status": "1",
+        "message": "We are seeing early signs of recovery. We will provide you with another update by 12:00 PM PDT."
+      },
+      {
+        "timestamp": "2026-10-04T18:56:53.000Z",
+        "status": "0",
+        "message": "Between 8:48 AM and 11:28 AM PDT, we experienced elevated packet loss within a single Availability Zone (eus2-az1) in the EU-SOUTH-2 Region. This issue resulted in elevated API latencies and error rates for multiple workflows and AWS Services. We were automatically alerted to the issue at 8:54 AM, and immediately began work to identify the root cause while taking multiple parallel paths to mitigate the issue. By 10:00 AM, our mitigation efforts had led to some improvements. By 10:38 AM, we identified the root cause as related to a networking configuration change that we were able to revert the change which led to full mitigation by 11:28 AM. The issue has been resolved and the service is operating normally."
+      }
+    ],
+    "sourceUrl": "https://health.aws.amazon.com/health/status"
+  },
+  {
+    "id": "aws-AWS_INTERNETCONNECTIVITY_OPERATIONAL_ISSUE-1791130496000",
+    "provider": "aws",
+    "title": "Elevated packet loss",
+    "description": "Between 8:48 AM and 11:28 AM PDT, we experienced elevated packet loss within a single Availability Zone (eus2-az1) in the EU-SOUTH-2 Region. This issue resulted in elevated API latencies and error rates for multiple workflows and AWS Services. We were automatically alerted to the issue at 8:54 AM, and immediately began work to identify the root cause while taking multiple parallel paths to mitigate the issue. By 10:00 AM, our mitigation efforts had led to some improvements. By 10:38 AM, we identified the root cause as related to a networking configuration change that we were able to revert the change which led to full mitigation by 11:28 AM. The issue has been resolved and the service is operating normally.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2026-10-04T16:14:56.000Z",
+    "resolvedAt": "2026-10-04T18:56:53.000Z",
+    "durationMinutes": 162,
+    "affectedServices": [
+      {
+        "serviceName": "Internet Connectivity",
+        "category": "other",
+        "regions": [
+          "eu-south-2"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-10-04T16:14:56.000Z",
+        "status": "1",
+        "message": "We are investigating elevated packet loss in the EU-SOUTH-2 Region."
+      },
+      {
+        "timestamp": "2026-10-04T16:14:56.000Z",
+        "status": "1",
+        "message": "[[The following AWS services have been affected by this event:]]\nService: athena Status: Informational\nService: awsiot Status: Informational\nService: awsiotdevicemanagement Status: Informational\nService: awswaf Status: Informational\nService: bedrock-agentcore Status: Informational\nService: certificatemanager Status: Informational\nService: cloudtrail Status: Informational\nService: cloudwan Status: Informational\nService: cognito Status: Informational\nService: directconnect Status: Informational\nService: dynamodb Status: Informational\nService: ec2 Status: Informational\nService: ec2systemsmanager Status: Informational\nService: ecs Status: Informational\nService: eks Status: Informational\nService: elasticfilesystem Status: Informational\nService: elb Status: Informational\nService: emr Status: Informational\nService: fargate Status: Informational\nService: fsx Status: Informational\nService: glue Status: Informational\nService: natgateway Status: Informational\nService: networkfirewall Status: Informational\nService: pcs Status: Informational\nService: privatelink Status: Informational\nService: redshift Status: Informational\nService: rekognition Status: Informational\nService: sagemaker Status: Informational\nService: state Status: Informational\nService: transfer Status: Informational\nService: transitgateway Status: Informational\nService: vpc Status: Informational"
+      },
+      {
+        "timestamp": "2026-10-04T16:36:48.000Z",
+        "status": "1",
+        "message": "We are experiencing elevated packet loss with a single Availability Zone (eus2-az1) in the EU-SOUTH-2 Region. This issue is also resulting in elevated API latencies and error rates for other workflows and AWS Services. Engineers were automatically engaged and are working to identify the root cause and to mitigate the issue. We will provide you with another update by 10:15 AM PDT or sooner as new information becomes available."
+      },
+      {
+        "timestamp": "2026-10-04T17:06:14.000Z",
+        "status": "1",
+        "message": "Our efforts to mitigate the elevated packet loss with a single Availability Zone (eus2-az1) in the EU-SOUTH-2 Region is still underway. We are seeing some signs of improvement as a result of multiple parallel efforts. We continue to work to confirm root cause and fully mitigate the issue. While we currently do not have an estimate for how long our actions will take, we will keep you informed of our progress and provide you with another update by 11:00 AM PDT or sooner as new information becomes available."
+      },
+      {
+        "timestamp": "2026-10-04T17:56:24.000Z",
+        "status": "1",
+        "message": "We have identified the root cause and are currently focusing our mitigation efforts to drive full recovery. While we don't have an exact estimate for how long our current efforts will take, we do expect to see incremental improvements as our efforts proceed. We will provide you with another update by 11:45 AM PDT, or sooner if new information becomes available."
+      },
+      {
+        "timestamp": "2026-10-04T18:45:47.000Z",
+        "status": "1",
+        "message": "We are seeing early signs of recovery. We will provide you with another update by 12:00 PM PDT."
+      },
+      {
+        "timestamp": "2026-10-04T18:56:53.000Z",
+        "status": "0",
+        "message": "[[The following AWS services have been affected by this event:]]\nService: athena Status: Operating normally\nService: awsiot Status: Operating normally\nService: awsiotdevicemanagement Status: Operating normally\nService: awswaf Status: Operating normally\nService: bedrock-agentcore Status: Operating normally\nService: certificatemanager Status: Operating normally\nService: cloudtrail Status: Operating normally\nService: cloudwan Status: Operating normally\nService: cognito Status: Operating normally\nService: directconnect Status: Operating normally\nService: dynamodb Status: Operating normally\nService: ec2 Status: Operating normally\nService: ec2systemsmanager Status: Operating normally\nService: ecs Status: Operating normally\nService: eks Status: Operating normally\nService: elasticfilesystem Status: Operating normally\nService: elb Status: Operating normally\nService: emr Status: Operating normally\nService: fargate Status: Operating normally\nService: fsx Status: Operating normally\nService: glue Status: Operating normally\nService: natgateway Status: Operating normally\nService: networkfirewall Status: Operating normally\nService: pcs Status: Operating normally\nService: privatelink Status: Operating normally\nService: redshift Status: Operating normally\nService: rekognition Status: Operating normally\nService: sagemaker Status: Operating normally\nService: state Status: Operating normally\nService: transfer Status: Operating normally\nService: transitgateway Status: Operating normally\nService: vpc Status: Operating normally"
+      },
+      {
+        "timestamp": "2026-10-04T18:56:53.000Z",
+        "status": "0",
+        "message": "Between 8:48 AM and 11:28 AM PDT, we experienced elevated packet loss within a single Availability Zone (eus2-az1) in the EU-SOUTH-2 Region. This issue resulted in elevated API latencies and error rates for multiple workflows and AWS Services. We were automatically alerted to the issue at 8:54 AM, and immediately began work to identify the root cause while taking multiple parallel paths to mitigate the issue. By 10:00 AM, our mitigation efforts had led to some improvements. By 10:38 AM, we identified the root cause as related to a networking configuration change that we were able to revert the change which led to full mitigation by 11:28 AM. The issue has been resolved and the service is operating normally."
+      }
+    ],
+    "sourceUrl": "https://health.aws.amazon.com/health/status"
+  },
+  {
     "id": "aws-AWS_EC2_OPERATIONAL_ISSUE_79073_047629764F9",
     "provider": "aws",
     "title": "Increased Error Rates",
