@@ -47,54 +47,80 @@
   {
     "id": "azure-7QL5-Z50",
     "provider": "azure",
-    "title": "Mitigated - Intermittent request failures and increased latency across Azure OpenAI, Azure AI Foundry, and Cognitive Services",
-    "description": "Between 10:03 UTC and 15:58 UTC on 29 September 2026, a platform issue resulted in impact to Azure OpenAI Service, Foundry Agent Service, Foundry Models, and Cognitive Services in the Sweden Central region. Impacted customers experienced intermittent request failures, increased latency, and HTTP 5XX errors when submitting requests to affected models and data-plane APIs hosted in this region.",
+    "title": "Post Incident Review (PIR) – Azure OpenAI Service, Foundry Agent Service, Foundry Models, and Azure AI services – Intermittent request failures and latency in Sweden Central",
+    "description": "Between 10:03 UTC and 15:58 UTC on 29 September 2026, a platform issue resulted in impact to Azure OpenAI Service, Foundry Agent Service, Foundry Models, and Azure AI services in the Sweden Central region. Impacted customers experienced intermittent request failures, increased latency, and/or HTTP 500 and 503 errors when submitting requests to affected models and data plane APIs hosted in this region.",
     "severity": "minor",
     "status": "resolved",
-    "startedAt": "2026-09-29T10:03:00.000Z",
-    "resolvedAt": "2026-09-29T18:00:00.000Z",
-    "durationMinutes": 477,
-    "affectedServices": [],
+    "startedAt": "2026-09-29T09:38:00.000Z",
+    "resolvedAt": "2026-09-29T16:30:00.000Z",
+    "durationMinutes": 412,
+    "affectedServices": [
+      {
+        "serviceName": "Azure OpenAI Service, Foundry Agent Service, Foundry Models, and Azure AI services",
+        "category": "other",
+        "regions": []
+      }
+    ],
     "updates": [
+      {
+        "timestamp": "2026-09-29T09:38:00.000Z",
+        "status": "update",
+        "message": "A deployment of an internal service in Sweden Central began, which cleared its caches."
+      },
+      {
+        "timestamp": "2026-09-29T10:00:00.000Z",
+        "status": "update",
+        "message": "Traffic to the backend service began increasing sharply."
+      },
       {
         "timestamp": "2026-09-29T10:03:00.000Z",
         "status": "update",
-        "message": "Initial impact began."
+        "message": "Customer impact began because of service instance instability."
       },
       {
-        "timestamp": "2026-09-29T10:14:00.000Z",
+        "timestamp": "2026-09-29T10:17:00.000Z",
         "status": "update",
-        "message": "Service monitoring detected elevated failure rates in the backend service that retrieves resource metadata for requests in the region."
+        "message": "Service monitoring detected elevated failure rates for Azure OpenAI Service requests in the region, and alerted our engineering teams."
       },
       {
-        "timestamp": "2026-09-29T11:29:00.000Z",
+        "timestamp": "2026-09-29T10:28:00.000Z",
         "status": "update",
-        "message": "Engineers identified timeouts between the backend service and its dependent database layer."
+        "message": "Engineers were engaged and investigating the issue."
       },
       {
-        "timestamp": "2026-09-29T12:58:00.000Z",
+        "timestamp": "2026-09-29T11:21:00.000Z",
         "status": "update",
-        "message": "Engineers reviewed ongoing deployments to determine whether any recent change correlated with the issue."
+        "message": "Additional engineering teams were engaged, ongoing deployments were reviewed for the Azure OpenAI Service in Sweden Central to determine whether any recent change correlated with the issue."
       },
       {
-        "timestamp": "2026-09-29T13:28:00.000Z",
+        "timestamp": "2026-09-29T11:30:00.000Z",
         "status": "update",
-        "message": "Engineers made attempts to mitigate through scaling adjustments of service instances to limit repeated restarts."
+        "message": "We identified that infrastructure node service instances were experiencing timeouts when attempting to connect to the backend service's caching and database layers."
       },
       {
-        "timestamp": "2026-09-29T15:22:00.000Z",
+        "timestamp": "2026-09-29T13:55:00.000Z",
         "status": "update",
-        "message": "Engineers scaled out the backend service and increased its resource limits to address throttling. In parallel, we investigated infrastructure health for the affected service instances and restarted infrastructure nodes."
+        "message": "We confirmed that the database layer was healthy. We made attempts to mitigate through different scaling adjustments of service instances to lower the number of outbound connections, which did not result in significant improvements."
+      },
+      {
+        "timestamp": "2026-09-29T15:00:00.000Z",
+        "status": "update",
+        "message": "We further increased compute resources for the backend service and increased its resource limits. In parallel, we investigated infrastructure health for affected service instances and restarted service instances."
+      },
+      {
+        "timestamp": "2026-09-29T15:40:00.000Z",
+        "status": "update",
+        "message": "We reconfigured the automated health check to no longer depend on remote connectivity, which stopped the restart loop. Service availability began to recover."
       },
       {
         "timestamp": "2026-09-29T15:58:00.000Z",
         "status": "update",
-        "message": "Following the scale-out and the disabling of an automated health check, service availability recovered and customers began to experience improvements. Customer impact was mitigated."
+        "message": "Service availability had recovered, and customer impact was mitigated."
       },
       {
-        "timestamp": "2026-09-29T18:00:00.000Z",
+        "timestamp": "2026-09-29T16:30:00.000Z",
         "status": "update",
-        "message": "After a period of monitoring confirmed that service health remained stable, we further investigated the contributing factors. We will be implementing additional improvements to throttling and rate-limiting of internal processes, and making further service reconfigurations to help prevent recurrence."
+        "message": "We identified the source of the increased traffic and correlated it with the internal service deployment, while monitoring confirmed that services were stable."
       }
     ],
     "sourceUrl": "https://azure.status.microsoft/en-us/status/history/"
