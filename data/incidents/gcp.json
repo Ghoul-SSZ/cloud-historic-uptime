@@ -62,9 +62,9 @@
     "description": "**Summary**\nMultiple products in us-central1-b are experiencing network service degradation. \n**Description**\nWe are experiencing a networking issue starting Tuesday, 2026-09-01 07:41 US/Pacific.\nThe issue is affecting a portion of the us-central1-b zone. The remaining zones in the region are unaffected.\nOur network engineering team has put in mitigations and we are seeing services starting to recover.\nWe will provide more information by Tuesday, 2026-09-01 09:30 US/Pacific with current details.\nWe apologize to all who are affected by the disruption.\n**Customer Symptoms**\nCustomers are experiencing elevated packet loss and errors.\n* BigQuery\n* Cloud Dataflow\n* Cloud SQL\n* App Engine\n* Cloud Run\n* AlloyDB\n* Cloud Bigtable\n* Cloud Spanner\n* Compute Engine\n* Cloud VPN\n* Cloud Interconnect\n* Cloud NAT\n* Cloud Filestore\n* Cloud Hybrid Connectivity\n* Virtual Private Cloud\n* Google Kubernetes Engine\n* Looker (Google Cloud core)\n**Workaround**\n* Customers with service layer retries may see successful completions as only a portion of the zone is affected.\n* Customers that are severely affected and have services available in alternate zones can failover to alternate zones.",
     "severity": "major",
     "status": "resolved",
-    "startedAt": "2026-09-01T14:44:00+00:00",
+    "startedAt": "2026-09-01T14:42:00+00:00",
     "resolvedAt": "2026-09-01T18:52:00+00:00",
-    "durationMinutes": 248,
+    "durationMinutes": 250,
     "affectedServices": [
       {
         "serviceName": "AlloyDB for PostgreSQL",
@@ -78,6 +78,11 @@
       },
       {
         "serviceName": "Cloud Filestore",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Cloud Firestore",
         "category": "other",
         "regions": []
       },
