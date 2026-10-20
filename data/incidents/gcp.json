@@ -1,5 +1,231 @@
 [
   {
+    "id": "gcp-Xs2XTHzAVC9YnafnPyzj",
+    "provider": "gcp",
+    "title": "Multiple services are experiencing issues in the europe-west2 region.",
+    "description": "**Summary**\nMultiple services are experiencing issues in the europe-west2 region.\n**Description**\nWe are experiencing an issue with multiple services in europe-west2 beginning on Monday, 2026-10-19 23:08 PDT.\nOur engineering team continues to investigate the issue.\nWe will provide an update by Tuesday, 2026-10-20 02:30 PDT with current details.\nWe apologize to all who are affected by the disruption.\n**Symptoms**\nMultiple Google Cloud services are experiencing elevated errors and intermittent network failures in europe-west2 region.\n**Workaround**\nNone for now",
+    "severity": "major",
+    "status": "ongoing",
+    "startedAt": "2026-10-20T06:08:00+00:00",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "AlloyDB for PostgreSQL",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Apigee",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "BigQuery Data Transfer Service",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Cloud Data Fusion",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Cloud Filestore",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Cloud Firestore",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Cloud Load Balancing",
+        "category": "networking",
+        "regions": []
+      },
+      {
+        "serviceName": "Cloud Memorystore",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Cloud NAT",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Cloud Run",
+        "category": "compute",
+        "regions": []
+      },
+      {
+        "serviceName": "Cloud Spanner",
+        "category": "database",
+        "regions": []
+      },
+      {
+        "serviceName": "Cloud Workstations",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Datastream",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Google App Engine",
+        "category": "compute",
+        "regions": []
+      },
+      {
+        "serviceName": "Google BigQuery",
+        "category": "analytics",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Cloud Bigtable",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Cloud Dataflow",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Cloud Dataproc",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Cloud NetApp Volumes",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Cloud Pub/Sub",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Cloud SQL",
+        "category": "database",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Cloud Storage",
+        "category": "storage",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Compute Engine",
+        "category": "compute",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Kubernetes Engine",
+        "category": "compute",
+        "regions": []
+      },
+      {
+        "serviceName": "Looker (Google Cloud core)",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Google Cloud Composer",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Managed Service for Apache Kafka",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Memorystore for Memcached",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Memorystore for Redis",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Memorystore for Redis Cluster",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Memorystore for Valkey",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Network Connectivity Center",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Persistent Disk",
+        "category": "storage",
+        "regions": []
+      },
+      {
+        "serviceName": "Private Service Connect",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Speech-to-Text",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Storage Transfer Service",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "VMWare engine",
+        "category": "other",
+        "regions": []
+      },
+      {
+        "serviceName": "Virtual Private Cloud (VPC)",
+        "category": "networking",
+        "regions": []
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-10-20T11:12:42+00:00",
+        "status": "SERVICE_DISRUPTION",
+        "message": "**Summary**\nMultiple services are experiencing issues in the europe-west2 region.\n**Description**\nWe are experiencing an issue with multiple services in europe-west2 beginning on Monday, 2026-10-19 23:08 PDT.\nDue to a power event we had suffered an outage within europe-west2-b zone. The power event is mitigated. Partial mitigation to infrastructure services will be observed within the next 30 minutes and the remaining services will be mitigated there after.\nWe will provide an update by Tuesday, 2026-10-20 05:00 PDT with current details.\nWe apologize to all who are affected by the disruption.\n**Symptoms**\nGoogle Cloud services are unavailable in europe-west2-b zone; some services in europe-west2 region may experience elevated errors and intermittent network issues.\n**Workaround**\nIf feasible, the impacted customer may try to migrate their workload impacted to another available location (zone or region)."
+      },
+      {
+        "timestamp": "2026-10-20T11:00:28+00:00",
+        "status": "SERVICE_DISRUPTION",
+        "message": "**Summary**\nMultiple services are experiencing issues in the europe-west2 region.\n**Description**\nWe are experiencing an issue with multiple services in europe-west2 beginning on Monday, 2026-10-19 23:08 PDT.\nOur engineering team continues to investigate the issue.\nWe will provide an update by Tuesday, 2026-10-20 05:00 PDT with current details.\nWe apologize to all who are affected by the disruption.\n**Symptoms**\nMultiple Google Cloud services are experiencing elevated errors and\nintermittent network failures in europe-west2 region.\nNote: Looker Studio is not impacted by this outage.\n**Workaround**\nIf feasible, the impacted customer may try to migrate their workload impacted to another available location (zone or region)."
+      },
+      {
+        "timestamp": "2026-10-20T09:24:19+00:00",
+        "status": "SERVICE_DISRUPTION",
+        "message": "**Summary**\nMultiple services are experiencing issues in the europe-west2 region.\n**Description**\nWe are experiencing an issue with multiple services in europe-west2 beginning on Monday, 2026-10-19 23:08 PDT.\nOur engineering team continues to investigate the issue.\nWe will provide an update by Tuesday, 2026-10-20 04:00 PDT with current details.\nWe apologize to all who are affected by the disruption.\n**Symptoms**\nMultiple Google Cloud services are experiencing elevated errors and\nintermittent network failures in europe-west2 region.\nNote: Looker Studio is not impacted by this outage.\n**Workaround**\nIf feasible, the impacted customer may try to migrate their workload impacted to another available location (zone or region)."
+      },
+      {
+        "timestamp": "2026-10-20T08:35:37+00:00",
+        "status": "SERVICE_DISRUPTION",
+        "message": "**Summary**\nMultiple services are experiencing issues in the europe-west2 region.\n**Description**\nWe are experiencing an issue with multiple services in europe-west2 beginning on Monday, 2026-10-19 23:08 PDT.\nOur engineering team continues to investigate the issue.\nWe will provide an update by Tuesday, 2026-10-20 02:30 PDT with current details.\nWe apologize to all who are affected by the disruption.\n**Symptoms**\nMultiple Google Cloud services are experiencing elevated errors and intermittent network failures in europe-west2 region.\n**Workaround**\nNone for now"
+      }
+    ],
+    "sourceUrl": "https://status.cloud.google.com/incidents/Xs2XTHzAVC9YnafnPyzj"
+  },
+  {
     "id": "gcp-mSFVt6PiP557bjRyYsut",
     "provider": "gcp",
     "title": "Google Cloud Storage (GCS) customers experienced elevated latencies and error rates when performing upload or write operations.",
