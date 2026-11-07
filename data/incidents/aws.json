@@ -1,5 +1,323 @@
 [
   {
+    "id": "aws-AWS_EC2_OPERATIONAL_ISSUE_62978_C9C1126888D",
+    "provider": "aws",
+    "title": "Elevated Launch Failures",
+    "description": "Between 2:35 PM and 4:21 PM PST, we experienced elevated EC2 instance launch failures affecting all AZs (usw2-az1, usw2-az2, usw2-az3, usw2-az4) in the US-WEST-2 Region. EC2 Instance Launches, AWS services that instantiated new instances, as well as services such as DataSync or AWS Backup which require new instances to support data transfers to or from the US-WEST-2 Region were affected. Our engineers were automatically engaged and immediately began investigating the root cause. We identified the issue to be caused by a subsystem that supports EBS Volumes required during instance launch. We began remediation of that issue at 3:20 PM, and completed full recovery at 4:21 PM. We recommend customers retry requests that failed during this time. Running EC2 instances and already created EBS volumes were not impacted and continued to operate as normal. The issue has been resolved and all AWS services are now operating normally.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2026-11-06T22:51:05.000Z",
+    "resolvedAt": "2026-11-07T01:12:16.000Z",
+    "durationMinutes": 141,
+    "affectedServices": [
+      {
+        "serviceName": "Amazon Managed Workflows for Apache Airflow",
+        "category": "other",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "Amazon WorkSpaces Applications",
+        "category": "other",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "AWS Backup",
+        "category": "other",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "AWS Batch",
+        "category": "compute",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "Bedrock AgentCore",
+        "category": "other",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "AWS CloudShell",
+        "category": "other",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "Amazon CloudWatch",
+        "category": "management",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "AWS CodeBuild",
+        "category": "devtools",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "AWS CodePipeline",
+        "category": "devtools",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "AWS DataSync",
+        "category": "other",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "AWS Device Farm",
+        "category": "other",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "Amazon DocumentDB",
+        "category": "other",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "Amazon Elastic Container Service",
+        "category": "other",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "AWS Elastic Beanstalk",
+        "category": "other",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "Amazon Elastic Load Balancing",
+        "category": "networking",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "AWS Elemental",
+        "category": "other",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "Amazon Elastic MapReduce",
+        "category": "other",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "Amazon EMR Serverless",
+        "category": "other",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "Amazon EventBridge",
+        "category": "messaging",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "AWS Fargate",
+        "category": "compute",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "Amazon GameLift Servers",
+        "category": "other",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "Amazon GameLift Streams",
+        "category": "other",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "AWS Glue",
+        "category": "other",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "AWS HealthImaging",
+        "category": "other",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "Amazon MQ",
+        "category": "other",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "AWS HealthOmics",
+        "category": "other",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "AWS Parallel Computing Service",
+        "category": "other",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "Amazon Relational Database Service",
+        "category": "other",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "Amazon SageMaker",
+        "category": "ai-ml",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "AWS Step Functions",
+        "category": "other",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "VM Import/Export",
+        "category": "other",
+        "regions": [
+          "us-west-2"
+        ]
+      },
+      {
+        "serviceName": "Amazon WorkSpaces",
+        "category": "other",
+        "regions": [
+          "us-west-2"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-11-06T22:51:05.000Z",
+        "status": "1",
+        "message": "We are experiencing elevated launch failures in the US-WEST-2 Region."
+      },
+      {
+        "timestamp": "2026-11-06T23:19:12.000Z",
+        "status": "1",
+        "message": "We are experiencing elevated launch failures in the US-WEST-2 Region caused by an issue with the EBS service. Services that depend on EBS or EC2 will experience failure rates of their own. We are working to mitigate the issues. We will provide you with another update by 4:00 PM PST or sooner if new information becomes available."
+      },
+      {
+        "timestamp": "2026-11-07T00:08:32.000Z",
+        "status": "1",
+        "message": "We can confirm EC2 instance launch failures affecting all AZs (usw2-az1, usw2-az2, usw2-az3, usw2-az4) in the US-WEST-2 Region. We have identified the issue to be caused by a  subsystem that supports EBS Volumes required during instance launch. Services that instantiate new instances, such as cross-region data copy for DataSync, within the US-WEST-2 Region as either the source or destination are also affected. We recommend that customers do not mutate running instances at this time that would result in the replacement or creation of a new EC2 instance in the Region. Running EC2 instances and already created EBS volumes continue to operate as normal. \n\nWe are seeing early signs of recovery, and continue to take steps to restore launches within the Region. We will update this post by 5:30 PM PST or earlier if we have new information to share."
+      },
+      {
+        "timestamp": "2026-11-07T01:12:16.000Z",
+        "status": "0",
+        "message": "Between 2:35 PM and 4:21 PM PST, we experienced elevated EC2 instance launch failures affecting all AZs (usw2-az1, usw2-az2, usw2-az3, usw2-az4) in the US-WEST-2 Region. EC2 Instance Launches, AWS services that instantiated new instances, as well as services such as DataSync or AWS Backup which require new instances to support data transfers to or from the US-WEST-2 Region were affected. Our engineers were automatically engaged and immediately began investigating the root cause. We identified the issue to be caused by a subsystem that supports EBS Volumes required during instance launch. We began remediation of that issue at 3:20 PM, and completed full recovery at 4:21 PM. We recommend customers retry requests that failed during this time. Running EC2 instances and already created EBS volumes were not impacted and continued to operate as normal. The issue has been resolved and all AWS services are now operating normally."
+      }
+    ],
+    "sourceUrl": "https://health.aws.amazon.com/health/status"
+  },
+  {
+    "id": "aws-AWS_EC2_OPERATIONAL_ISSUE-1794005465000",
+    "provider": "aws",
+    "title": "Elevated Launch Failures",
+    "description": "Between 2:35 PM and 4:21 PM PST, we experienced elevated EC2 instance launch failures affecting all AZs (usw2-az1, usw2-az2, usw2-az3, usw2-az4) in the US-WEST-2 Region. EC2 Instance Launches, AWS services that instantiated new instances, as well as services such as DataSync or AWS Backup which require new instances to support data transfers to or from the US-WEST-2 Region were affected. Our engineers were automatically engaged and immediately began investigating the root cause. We identified the issue to be caused by a subsystem that supports EBS Volumes required during instance launch. We began remediation of that issue at 3:20 PM, and completed full recovery at 4:21 PM. We recommend customers retry requests that failed during this time. Running EC2 instances and already created EBS volumes were not impacted and continued to operate as normal. The issue has been resolved and all AWS services are now operating normally.",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2026-11-06T22:51:05.000Z",
+    "resolvedAt": "2026-11-07T01:12:16.000Z",
+    "durationMinutes": 141,
+    "affectedServices": [
+      {
+        "serviceName": "Amazon EC2",
+        "category": "compute",
+        "regions": [
+          "us-west-2"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-11-06T22:51:05.000Z",
+        "status": "1",
+        "message": "We are experiencing elevated launch failures in the US-WEST-2 Region."
+      },
+      {
+        "timestamp": "2026-11-06T22:51:05.000Z",
+        "status": "1",
+        "message": "[[The following AWS services have been affected by this event:]]\nService: airflow Status: Informational\nService: appstream2 Status: Informational\nService: backup Status: Informational\nService: batch Status: Informational\nService: bedrock-agentcore Status: Informational\nService: cloudshell Status: Informational\nService: cloudwatch Status: Informational\nService: codebuild Status: Informational\nService: codepipeline Status: Informational\nService: datasync Status: Informational\nService: devicefarm Status: Informational\nService: docdb Status: Informational\nService: ecs Status: Informational\nService: elasticbeanstalk Status: Informational\nService: elb Status: Informational\nService: elemental Status: Informational\nService: emr Status: Informational\nService: emrserverless Status: Informational\nService: events Status: Informational\nService: fargate Status: Informational\nService: gamelift Status: Informational\nService: gameliftstreams Status: Informational\nService: glue Status: Informational\nService: healthimaging Status: Informational\nService: mq Status: Informational\nService: omics Status: Informational\nService: pcs Status: Informational\nService: rds Status: Informational\nService: sagemaker Status: Informational\nService: state Status: Informational\nService: vmimportexport Status: Informational\nService: workspaces Status: Informational"
+      },
+      {
+        "timestamp": "2026-11-06T23:19:12.000Z",
+        "status": "1",
+        "message": "We are experiencing elevated launch failures in the US-WEST-2 Region caused by an issue with the EBS service. Services that depend on EBS or EC2 will experience failure rates of their own. We are working to mitigate the issues. We will provide you with another update by 4:00 PM PST or sooner if new information becomes available."
+      },
+      {
+        "timestamp": "2026-11-06T23:51:13.000Z",
+        "status": "1",
+        "message": "Elevated Launch Failures"
+      },
+      {
+        "timestamp": "2026-11-07T00:08:32.000Z",
+        "status": "1",
+        "message": "We can confirm EC2 instance launch failures affecting all AZs (usw2-az1, usw2-az2, usw2-az3, usw2-az4) in the US-WEST-2 Region. We have identified the issue to be caused by a  subsystem that supports EBS Volumes required during instance launch. Services that instantiate new instances, such as cross-region data copy for DataSync, within the US-WEST-2 Region as either the source or destination are also affected. We recommend that customers do not mutate running instances at this time that would result in the replacement or creation of a new EC2 instance in the Region. Running EC2 instances and already created EBS volumes continue to operate as normal. \n\nWe are seeing early signs of recovery, and continue to take steps to restore launches within the Region. We will update this post by 5:30 PM PST or earlier if we have new information to share."
+      },
+      {
+        "timestamp": "2026-11-07T01:12:16.000Z",
+        "status": "0",
+        "message": "[[The following AWS services have been affected by this event:]]\nService: airflow Status: Operating normally\nService: appstream2 Status: Operating normally\nService: backup Status: Operating normally\nService: batch Status: Operating normally\nService: bedrock-agentcore Status: Operating normally\nService: cloudshell Status: Operating normally\nService: cloudwatch Status: Operating normally\nService: codebuild Status: Operating normally\nService: codepipeline Status: Operating normally\nService: datasync Status: Operating normally\nService: devicefarm Status: Operating normally\nService: docdb Status: Operating normally\nService: ecs Status: Operating normally\nService: elasticbeanstalk Status: Operating normally\nService: elb Status: Operating normally\nService: elemental Status: Operating normally\nService: emr Status: Operating normally\nService: emrserverless Status: Operating normally\nService: events Status: Operating normally\nService: fargate Status: Operating normally\nService: gamelift Status: Operating normally\nService: gameliftstreams Status: Operating normally\nService: glue Status: Operating normally\nService: healthimaging Status: Operating normally\nService: mq Status: Operating normally\nService: omics Status: Operating normally\nService: pcs Status: Operating normally\nService: rds Status: Operating normally\nService: sagemaker Status: Operating normally\nService: state Status: Operating normally\nService: vmimportexport Status: Operating normally\nService: workspaces Status: Operating normally"
+      },
+      {
+        "timestamp": "2026-11-07T01:12:16.000Z",
+        "status": "0",
+        "message": "Between 2:35 PM and 4:21 PM PST, we experienced elevated EC2 instance launch failures affecting all AZs (usw2-az1, usw2-az2, usw2-az3, usw2-az4) in the US-WEST-2 Region. EC2 Instance Launches, AWS services that instantiated new instances, as well as services such as DataSync or AWS Backup which require new instances to support data transfers to or from the US-WEST-2 Region were affected. Our engineers were automatically engaged and immediately began investigating the root cause. We identified the issue to be caused by a subsystem that supports EBS Volumes required during instance launch. We began remediation of that issue at 3:20 PM, and completed full recovery at 4:21 PM. We recommend customers retry requests that failed during this time. Running EC2 instances and already created EBS volumes were not impacted and continued to operate as normal. The issue has been resolved and all AWS services are now operating normally."
+      }
+    ],
+    "sourceUrl": "https://health.aws.amazon.com/health/status"
+  },
+  {
     "id": "aws-AWS_APIGATEWAY_OPERATIONAL_ISSUE_63501_D2C0654F167",
     "provider": "aws",
     "title": "Increased invoke error rates",
