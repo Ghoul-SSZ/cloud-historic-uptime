@@ -5981,7 +5981,7 @@
         ]
       },
       {
-        "serviceName": "Amazon Quick Suite",
+        "serviceName": "AWS Quick",
         "category": "other",
         "regions": [
           "me-central-1"
