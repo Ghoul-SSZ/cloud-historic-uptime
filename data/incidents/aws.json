@@ -1,5 +1,383 @@
 [
   {
+    "id": "aws-AWS_EC2_OPERATIONAL_ISSUE_EC778_EFC270B4609",
+    "provider": "aws",
+    "title": "Elevated API issues and Launch Failures",
+    "description": "日本時間 2026 年 11 月 11 日 午後 11 時 46 分から 2026 年 11 月 12 日 午前 5 時 31 分にかけて、AP-NORTHEAST-1 リージョンの主に単一のアベイラビリティーゾーン (apne1-az1) において、断続的な API エラー率の上昇、および新規起動された EC2 インスタンスにおける接続の問題が発生しておりました。エンジニアが自動的に対応に加わり、直ちに調査を開始いたしました。最初の影響期間は、日本時間 2026 年 11 月 11 日 午後 11 時 46 分から 2026 年 11 月 12 日 午前 2 時 46 分であり、主に API エラーおよび EC2 インスタンスの起動失敗として現れておりました。Auto Scaling、ECS、RDS など、ワークフローを EC2 API に依存している他の AWS サービスも、この問題の影響を受けておりました。既存の EC2 インスタンスには影響はございませんでした。この最初の影響期間中、お客様には API のスロットリングまたは 5XX レスポンスが発生していた可能性がございます。また、一部の EC2 RunInstances API の呼び出しは成功したものの、インスタンスが正常に起動せず、TERMINATED 状態に移行した場合がございました。EC2 および EBS のヘルスデータが欠損または遅延し、その結果 CloudWatch アラームが INSUFFICIENT_DATA 状態に移行しておりました。影響を受けたサービスにおいて失敗した API リクエストやワークフローにつきましては、再試行いただくことを推奨いたします。\n\n日本時間 午前 2 時 46 分に API エラーを緩和いたしましたが、この時点ではすべての問題は緩和されておりませんでした。EC2 API の回復を監視する中で、新規起動された EC2 インスタンス、およびネットワーク設定が変更された既存のインスタンスの両方で、接続の問題が発生していることを確認いたしました。これらの接続の問題は、EC2 インスタンスのネットワークの変更を伝播する内部サブシステムにおける遅延によるものであり、根本原因に関連するものでございました。日本時間 午前 5 時 31 分までに、問題を完全に解決いたしました。この間、接続の問題の軽減と根本原因の完全な把握の両面から、複数の対策を並行して実施しておりました。ECS、EKS、ELB、NAT Gateway など、EC2 インスタンスを起動する、または EC2 インスタンスのネットワーク設定を変更する他の AWS サービスも、この問題の影響を受けておりました。\n\n影響を受けたサービスの一覧は以下のとおりです。問題は解決され、すべてのサービスは正常に稼働しております。|\n\nBetween 6:46 AM PST and 12:31 PM PST, we experienced periods of API error rates, as well as connectivity issues for newly launched EC2 instances, primarily affecting a single Availability Zone (apne1-az1) in the AP-NORTHEAST-1 Region. Engineers were automatically engaged and immediately began investigating. The first impact window was between 6:46 AM PST and 9:46 AM PST, and primarily manifested as API errors and failed EC2 instance launches. Other AWS Services that rely on the EC2 APIs for their workflows, such as Autoscaling, ECS, and RDS, were also affected by this issue. Existing EC2 instances were not affected. During this first impact period, customers may have experienced API throttling or 5XX Responses. Additionally, some EC2 RunInstance API calls may have succeeded, but instances did not successfully launch, instead transitioning to a TERMINATED state. EC2 and EBS health data was missing or delayed, which resulted in CloudWatch alarms transitioning to an INSUFFICENT_DATA state. We recommend customers retry failed API requests or workflows that failed for any of the affected services. \n\nAt 9:46 AM, we mitigated the API errors, but had not yet mitigated all issues. While monitoring recovery of the EC2 APIs, we observed that both newly launched EC2 instances and existing instances where the network configuration was modified were experiencing connectivity issues. These connectivity issues were the result of delays in an internal subsytem responsible for propagating EC2 instance networking changes, and related to the underlying root cause. By 12:31 PM PST, we had fully resolved the issue. During this time, we were working on multiple parallel paths to both mitigate the connectivity issues and fully understand the root cause. Other AWS Services that launch EC2 instances or modify EC2 instance networking configuration, such as ECS, EKS, ELB, and NAT Gateway, were also affected by this issue.\n\nA list of impacted services is available below. The issue has been resolved and all services are operating normally. ",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2026-11-11T15:40:33.000Z",
+    "resolvedAt": "2026-11-11T21:11:29.000Z",
+    "durationMinutes": 331,
+    "affectedServices": [
+      {
+        "serviceName": "Amazon Managed Workflows for Apache Airflow",
+        "category": "other",
+        "regions": [
+          "ap-northeast-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon WorkSpaces Applications",
+        "category": "other",
+        "regions": [
+          "ap-northeast-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Athena",
+        "category": "analytics",
+        "regions": [
+          "ap-northeast-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Backup",
+        "category": "other",
+        "regions": [
+          "ap-northeast-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Cloud WAN",
+        "category": "other",
+        "regions": [
+          "ap-northeast-1"
+        ]
+      },
+      {
+        "serviceName": "AWS DataSync",
+        "category": "other",
+        "regions": [
+          "ap-northeast-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Database Migration Service",
+        "category": "other",
+        "regions": [
+          "ap-northeast-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon DocumentDB",
+        "category": "other",
+        "regions": [
+          "ap-northeast-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Elastic Container Service",
+        "category": "other",
+        "regions": [
+          "ap-northeast-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Elastic Kubernetes Service",
+        "category": "other",
+        "regions": [
+          "ap-northeast-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon ElastiCache",
+        "category": "database",
+        "regions": [
+          "ap-northeast-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Elastic File System",
+        "category": "other",
+        "regions": [
+          "ap-northeast-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Elastic Load Balancing",
+        "category": "networking",
+        "regions": [
+          "ap-northeast-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Elastic MapReduce",
+        "category": "other",
+        "regions": [
+          "ap-northeast-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon EMR Serverless",
+        "category": "other",
+        "regions": [
+          "ap-northeast-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Fargate",
+        "category": "compute",
+        "regions": [
+          "ap-northeast-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon FSx",
+        "category": "other",
+        "regions": [
+          "ap-northeast-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Glue",
+        "category": "other",
+        "regions": [
+          "ap-northeast-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Managed Service for Apache Flink",
+        "category": "other",
+        "regions": [
+          "ap-northeast-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Lightsail",
+        "category": "compute",
+        "regions": [
+          "ap-northeast-1"
+        ]
+      },
+      {
+        "serviceName": "AWS NAT Gateway",
+        "category": "other",
+        "regions": [
+          "ap-northeast-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Parallel Computing Service",
+        "category": "other",
+        "regions": [
+          "ap-northeast-1"
+        ]
+      },
+      {
+        "serviceName": "AWS VPCE PrivateLink",
+        "category": "other",
+        "regions": [
+          "ap-northeast-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Relational Database Service",
+        "category": "other",
+        "regions": [
+          "ap-northeast-1"
+        ]
+      },
+      {
+        "serviceName": "Reachability Analyzer",
+        "category": "other",
+        "regions": [
+          "ap-northeast-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Redshift",
+        "category": "database",
+        "regions": [
+          "ap-northeast-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Route 53 Resolver",
+        "category": "other",
+        "regions": [
+          "ap-northeast-1"
+        ]
+      },
+      {
+        "serviceName": "AWS RTB Fabric",
+        "category": "other",
+        "regions": [
+          "ap-northeast-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon SageMaker",
+        "category": "ai-ml",
+        "regions": [
+          "ap-northeast-1"
+        ]
+      },
+      {
+        "serviceName": "SageMaker Unified Studio",
+        "category": "other",
+        "regions": [
+          "ap-northeast-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Storage Gateway",
+        "category": "storage",
+        "regions": [
+          "ap-northeast-1"
+        ]
+      },
+      {
+        "serviceName": "Traffic Mirroring",
+        "category": "other",
+        "regions": [
+          "ap-northeast-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Transfer Family",
+        "category": "other",
+        "regions": [
+          "ap-northeast-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Transit Gateway",
+        "category": "other",
+        "regions": [
+          "ap-northeast-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon VPC Lattice",
+        "category": "other",
+        "regions": [
+          "ap-northeast-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon WorkSpaces",
+        "category": "other",
+        "regions": [
+          "ap-northeast-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon WorkSpaces Secure Browser",
+        "category": "other",
+        "regions": [
+          "ap-northeast-1"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-11-11T15:40:33.000Z",
+        "status": "1",
+        "message": "AP-NORTHEAST-1 リージョンにおいて、API エラー率の上昇および起動失敗が発生しております。起動失敗は、単一のアベイラビリティーゾーン (apne1-az1) に集中して発生していると見受けられます。現在、根本原因の特定および問題の軽減に取り組んでいます。 | We are experiencing elevated API error rates and launch failures in the AP-NORTHEAST-1 Region. Launch failures appear to be concentrated in a single Availability Zone (apne1-az1). We are working to identify the root cause and mitigate the issue."
+      },
+      {
+        "timestamp": "2026-11-11T16:40:43.000Z",
+        "status": "1",
+        "message": "現在 AP-NORTHEAST-1 リージョンにおいて、API エラー率の上昇および起動失敗が発生しております。起動失敗は引き続き単一のアベイラビリティーゾーン (apne1-az1) に集中しているように見受けられますが、他のアベイラビリティーゾーンにおいても少数の起動失敗が発生しております。\n\n影響を受けているアベイラビリティーゾーンでは、EC2 および EBS リソースの CloudWatch アラームが Insufficient Data 状態に移行しており、Insufficient Data でアラートを発生するよう設定されているアラームは、アラーム状態に移行する可能性があります。影響を受けているアベイラビリティーゾーンにおける DescribeInstanceStatus API は、Insufficient Data を返しております。稼働中のインスタンスに影響はございませんが、インスタンスの正常性は、お客様ご自身のヘルステレメトリーに基づいてご判断くださいますようお願いいたします。\n\nさらに、ECS および Fargate のタスク起動失敗、ELB のプロビジョニング遅延、NAT Gateway の作成および関連付け解除のワークフローの失敗など、他サービスにも影響が発生しております。\n\n根本原因は特定済みであり、現在問題の軽減に取り組んでおります。次回の更新は、日本時間午前 2 時 45 分までに、もしくは新たな情報が入り次第、お知らせいたします。 | We are experiencing elevated API error rates and launch failures in the AP-NORTHEAST-1 Region. While launch failures still appear to be concentrated in a single Availability Zone (apne1-az1), we are now seeing low levels of launch failures in other availability zones as well.\n\nCloudwatch alarms for EC2 and EBS resources in the affected Availability Zone are transitioning into Insufficient Data state and alarms configured to alert off of Insufficient Data may transition to Alert state. The DescribeInstanceStatus API in the affected Availability Zone is returning Insufficient Data. Running instances are not affected, and you should rely on your own health telemetry to determine the health of your instance.\n\nIn addition, we are seeing impact to other services such as ECS and Fargate Task Launch failures, ELB provisioning delays and Nat Gateway failures for Create and Disassociate workflows.\n\nWe have identified the root cause and are working to mitigate the issue. We will provide you with another update by 9:45 AM PST or sooner as new information becomes available.\n"
+      },
+      {
+        "timestamp": "2026-11-11T17:38:01.000Z",
+        "status": "1",
+        "message": "AP-NORTHEAST-1 リージョンにおける API エラー率の上昇および起動失敗について、回復の兆候が見られております。EC2 および EBS の CloudWatch ヘルスデータは、現在正常に報告されております。引き続き復旧作業の進捗を監視し、次回の更新は日本時間午前 3 時までに、もしくは新たな情報が入り次第、お知らせいたします。 | We are seeing early signs of recovery for the elevated API error rates and launch failures in the AP-NORTHEAST-1 Region. EC2 and EBS CloudWatch health data is now reporting correctly. We will continue to monitor the progress of our recovery efforts and will provide you with another update by 10:00 AM PST or sooner as new information becomes available.\n"
+      },
+      {
+        "timestamp": "2026-11-11T17:59:22.000Z",
+        "status": "1",
+        "message": "AP-NORTHEAST-1 リージョンにおいて、引き続き広範囲で回復の兆候が見られております。現在も緩和策の実施を継続しており、次回の進捗の更新は日本時間午前 3 時 45 分までに、もしくは新たな情報が入り次第、お知らせいたします。| We continue to see broad signs of recovery in the AP-NORTHEAST-1 Region. Our mitigation efforts are still underway, and we will provide you with another update on our progress by 10:45 AM PST or sooner as new information becomes available.\n"
+      },
+      {
+        "timestamp": "2026-11-11T18:54:49.000Z",
+        "status": "1",
+        "message": "現在引き続き完全な復旧に向けて取り組んでおります。単一のアベイラビリティーゾーン (apne1-az1) において、新規作成または変更されたインスタンスへの接続の問題が発生していることを確認しております。この問題は、新しいインスタンスの起動、新しいクラスターの作成、Auto Scaling グループ、ゲートウェイ、および VPC ゲートウェイエンドポイントなどのアクションに影響を与えております。既存のリソースへの接続およびインスタンス間の通信には影響はございません。この新しい問題の根本原因は特定済みであり、現在問題の軽減に取り組んでおります。次回の更新は、日本時間午前 5 時までに、もしくは新たな情報が入り次第、お知らせいたします。| We continue to work towards full recovery. We are observing some connectivity issues to newly created or modified instances in a single Availability Zone (apne1-az1). This affects actions such as new instance launches, new cluster creation, autoscaling groups, gateways, and vpc gateway endpoints. Connectivity to existing resources and Instance to Instance communication are not impacted. We have identified the root cause of this new issue and are working to mitigate the issue. We will provide you with another update by 12:00 PM PST or sooner as new information becomes available."
+      },
+      {
+        "timestamp": "2026-11-11T19:54:32.000Z",
+        "status": "1",
+        "message": "引き続き完全な復旧に向けて取り組んでおります。お客様は、他の 2 つの正常なアベイラビリティーゾーン (apne1-az2、apne1-az3) で新しいインスタンスを起動することができます。また、影響を受けているアベイラビリティーゾーンにおける既存のインスタンスへの接続に影響を与えるような変更は行わないことをお客様におすすめいたします。これには、ネットワークインターフェイスやゲートウェイのアタッチおよびデタッチ、VPC ピアリングの変更などのアクションが含まれます。単一のアベイラビリティーゾーン (apne1-az1) において、新規作成または変更されたインスタンスへの断続的な接続の問題の解決に引き続き取り組んでおります。この問題は、新しいインスタンスの起動、新しいクラスターの作成、Auto Scaling グループ、ゲートウェイ、および VPC ゲートウェイエンドポイントなどのアクションに影響を与えております。既存のリソースへの接続およびインスタンス間の通信には影響はございません。次回の更新は、日本時間午前 6 時までに、もしくは新たな情報が入り次第、お知らせいたします。| We continue to work towards full recovery. Customers can launch new instances in the other two healthy Availability Zones (apne1-az2, apne1-az3). We also recommend that customers do not make changes that would impact connectivity to existing instances in the affected Availability Zone. This includes actions such as attaching and detaching network interfaces or gateways as well as VPC Peerings changes. We are continuing to work on resolving the intermittent connectivity issues to newly created or modified instances in a single Availability Zone (apne1-az1). This affects actions such as new instance launches, new cluster creation, autoscaling groups, gateways, and vpc gateway endpoints. Connectivity to existing resources and Instance to Instance communication are not impacted. We will provide you with another update by 1:00 PM PST or sooner as new information becomes available."
+      },
+      {
+        "timestamp": "2026-11-11T21:11:29.000Z",
+        "status": "0",
+        "message": "日本時間 2026 年 11 月 11 日 午後 11 時 46 分から 2026 年 11 月 12 日 午前 5 時 31 分にかけて、AP-NORTHEAST-1 リージョンの主に単一のアベイラビリティーゾーン (apne1-az1) において、断続的な API エラー率の上昇、および新規起動された EC2 インスタンスにおける接続の問題が発生しておりました。エンジニアが自動的に対応に加わり、直ちに調査を開始いたしました。最初の影響期間は、日本時間 2026 年 11 月 11 日 午後 11 時 46 分から 2026 年 11 月 12 日 午前 2 時 46 分であり、主に API エラーおよび EC2 インスタンスの起動失敗として現れておりました。Auto Scaling、ECS、RDS など、ワークフローを EC2 API に依存している他の AWS サービスも、この問題の影響を受けておりました。既存の EC2 インスタンスには影響はございませんでした。この最初の影響期間中、お客様には API のスロットリングまたは 5XX レスポンスが発生していた可能性がございます。また、一部の EC2 RunInstances API の呼び出しは成功したものの、インスタンスが正常に起動せず、TERMINATED 状態に移行した場合がございました。EC2 および EBS のヘルスデータが欠損または遅延し、その結果 CloudWatch アラームが INSUFFICIENT_DATA 状態に移行しておりました。影響を受けたサービスにおいて失敗した API リクエストやワークフローにつきましては、再試行いただくことを推奨いたします。\n\n日本時間 午前 2 時 46 分に API エラーを緩和いたしましたが、この時点ではすべての問題は緩和されておりませんでした。EC2 API の回復を監視する中で、新規起動された EC2 インスタンス、およびネットワーク設定が変更された既存のインスタンスの両方で、接続の問題が発生していることを確認いたしました。これらの接続の問題は、EC2 インスタンスのネットワークの変更を伝播する内部サブシステムにおける遅延によるものであり、根本原因に関連するものでございました。日本時間 午前 5 時 31 分までに、問題を完全に解決いたしました。この間、接続の問題の軽減と根本原因の完全な把握の両面から、複数の対策を並行して実施しておりました。ECS、EKS、ELB、NAT Gateway など、EC2 インスタンスを起動する、または EC2 インスタンスのネットワーク設定を変更する他の AWS サービスも、この問題の影響を受けておりました。\n\n影響を受けたサービスの一覧は以下のとおりです。問題は解決され、すべてのサービスは正常に稼働しております。|\n\nBetween 6:46 AM PST and 12:31 PM PST, we experienced periods of API error rates, as well as connectivity issues for newly launched EC2 instances, primarily affecting a single Availability Zone (apne1-az1) in the AP-NORTHEAST-1 Region. Engineers were automatically engaged and immediately began investigating. The first impact window was between 6:46 AM PST and 9:46 AM PST, and primarily manifested as API errors and failed EC2 instance launches. Other AWS Services that rely on the EC2 APIs for their workflows, such as Autoscaling, ECS, and RDS, were also affected by this issue. Existing EC2 instances were not affected. During this first impact period, customers may have experienced API throttling or 5XX Responses. Additionally, some EC2 RunInstance API calls may have succeeded, but instances did not successfully launch, instead transitioning to a TERMINATED state. EC2 and EBS health data was missing or delayed, which resulted in CloudWatch alarms transitioning to an INSUFFICENT_DATA state. We recommend customers retry failed API requests or workflows that failed for any of the affected services. \n\nAt 9:46 AM, we mitigated the API errors, but had not yet mitigated all issues. While monitoring recovery of the EC2 APIs, we observed that both newly launched EC2 instances and existing instances where the network configuration was modified were experiencing connectivity issues. These connectivity issues were the result of delays in an internal subsytem responsible for propagating EC2 instance networking changes, and related to the underlying root cause. By 12:31 PM PST, we had fully resolved the issue. During this time, we were working on multiple parallel paths to both mitigate the connectivity issues and fully understand the root cause. Other AWS Services that launch EC2 instances or modify EC2 instance networking configuration, such as ECS, EKS, ELB, and NAT Gateway, were also affected by this issue.\n\nA list of impacted services is available below. The issue has been resolved and all services are operating normally. "
+      }
+    ],
+    "sourceUrl": "https://health.aws.amazon.com/health/status"
+  },
+  {
+    "id": "aws-AWS_EC2_OPERATIONAL_ISSUE-1794411633000",
+    "provider": "aws",
+    "title": "Elevated API issues and Launch Failures",
+    "description": "日本時間 2026 年 11 月 11 日 午後 11 時 46 分から 2026 年 11 月 12 日 午前 5 時 31 分にかけて、AP-NORTHEAST-1 リージョンの主に単一のアベイラビリティーゾーン (apne1-az1) において、断続的な API エラー率の上昇、および新規起動された EC2 インスタンスにおける接続の問題が発生しておりました。エンジニアが自動的に対応に加わり、直ちに調査を開始いたしました。最初の影響期間は、日本時間 2026 年 11 月 11 日 午後 11 時 46 分から 2026 年 11 月 12 日 午前 2 時 46 分であり、主に API エラーおよび EC2 インスタンスの起動失敗として現れておりました。Auto Scaling、ECS、RDS など、ワークフローを EC2 API に依存している他の AWS サービスも、この問題の影響を受けておりました。既存の EC2 インスタンスには影響はございませんでした。この最初の影響期間中、お客様には API のスロットリングまたは 5XX レスポンスが発生していた可能性がございます。また、一部の EC2 RunInstances API の呼び出しは成功したものの、インスタンスが正常に起動せず、TERMINATED 状態に移行した場合がございました。EC2 および EBS のヘルスデータが欠損または遅延し、その結果 CloudWatch アラームが INSUFFICIENT_DATA 状態に移行しておりました。影響を受けたサービスにおいて失敗した API リクエストやワークフローにつきましては、再試行いただくことを推奨いたします。\n\n日本時間 午前 2 時 46 分に API エラーを緩和いたしましたが、この時点ではすべての問題は緩和されておりませんでした。EC2 API の回復を監視する中で、新規起動された EC2 インスタンス、およびネットワーク設定が変更された既存のインスタンスの両方で、接続の問題が発生していることを確認いたしました。これらの接続の問題は、EC2 インスタンスのネットワークの変更を伝播する内部サブシステムにおける遅延によるものであり、根本原因に関連するものでございました。日本時間 午前 5 時 31 分までに、問題を完全に解決いたしました。この間、接続の問題の軽減と根本原因の完全な把握の両面から、複数の対策を並行して実施しておりました。ECS、EKS、ELB、NAT Gateway など、EC2 インスタンスを起動する、または EC2 インスタンスのネットワーク設定を変更する他の AWS サービスも、この問題の影響を受けておりました。\n\n影響を受けたサービスの一覧は以下のとおりです。問題は解決され、すべてのサービスは正常に稼働しております。|\n\nBetween 6:46 AM PST and 12:31 PM PST, we experienced periods of API error rates, as well as connectivity issues for newly launched EC2 instances, primarily affecting a single Availability Zone (apne1-az1) in the AP-NORTHEAST-1 Region. Engineers were automatically engaged and immediately began investigating. The first impact window was between 6:46 AM PST and 9:46 AM PST, and primarily manifested as API errors and failed EC2 instance launches. Other AWS Services that rely on the EC2 APIs for their workflows, such as Autoscaling, ECS, and RDS, were also affected by this issue. Existing EC2 instances were not affected. During this first impact period, customers may have experienced API throttling or 5XX Responses. Additionally, some EC2 RunInstance API calls may have succeeded, but instances did not successfully launch, instead transitioning to a TERMINATED state. EC2 and EBS health data was missing or delayed, which resulted in CloudWatch alarms transitioning to an INSUFFICENT_DATA state. We recommend customers retry failed API requests or workflows that failed for any of the affected services. \n\nAt 9:46 AM, we mitigated the API errors, but had not yet mitigated all issues. While monitoring recovery of the EC2 APIs, we observed that both newly launched EC2 instances and existing instances where the network configuration was modified were experiencing connectivity issues. These connectivity issues were the result of delays in an internal subsytem responsible for propagating EC2 instance networking changes, and related to the underlying root cause. By 12:31 PM PST, we had fully resolved the issue. During this time, we were working on multiple parallel paths to both mitigate the connectivity issues and fully understand the root cause. Other AWS Services that launch EC2 instances or modify EC2 instance networking configuration, such as ECS, EKS, ELB, and NAT Gateway, were also affected by this issue.\n\nA list of impacted services is available below. The issue has been resolved and all services are operating normally. ",
+    "severity": "minor",
+    "status": "resolved",
+    "startedAt": "2026-11-11T15:40:33.000Z",
+    "resolvedAt": "2026-11-12T05:55:31.000Z",
+    "durationMinutes": 855,
+    "affectedServices": [
+      {
+        "serviceName": "Amazon EC2",
+        "category": "compute",
+        "regions": [
+          "ap-northeast-1"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-11-11T15:40:33.000Z",
+        "status": "1",
+        "message": "AP-NORTHEAST-1 リージョンにおいて、API エラー率の上昇および起動失敗が発生しております。起動失敗は、単一のアベイラビリティーゾーン (apne1-az1) に集中して発生していると見受けられます。現在、根本原因の特定および問題の軽減に取り組んでいます。 | We are experiencing elevated API error rates and launch failures in the AP-NORTHEAST-1 Region. Launch failures appear to be concentrated in a single Availability Zone (apne1-az1). We are working to identify the root cause and mitigate the issue."
+      },
+      {
+        "timestamp": "2026-11-11T15:40:33.000Z",
+        "status": "1",
+        "message": "[[The following AWS services have been affected by this event:]]\nService: airflow Status: Informational\nService: appstream2 Status: Informational\nService: athena Status: Informational\nService: backup Status: Informational\nService: cloudwan Status: Informational\nService: datasync Status: Informational\nService: dms Status: Informational\nService: docdb Status: Informational\nService: ecs Status: Informational\nService: eks Status: Informational\nService: elasticache Status: Informational\nService: elasticfilesystem Status: Informational\nService: elb Status: Informational\nService: emr Status: Informational\nService: emrserverless Status: Informational\nService: fargate Status: Informational\nService: fsx Status: Informational\nService: glue Status: Informational\nService: kinesisanalytics Status: Informational\nService: lightsail Status: Informational\nService: natgateway Status: Informational\nService: pcs Status: Informational\nService: privatelink Status: Informational\nService: rds Status: Informational\nService: reachabilityanalyzer Status: Informational\nService: redshift Status: Informational\nService: route53resolver Status: Informational\nService: rtbfabric Status: Informational\nService: sagemaker Status: Informational\nService: sagemaker-unified-studio Status: Informational\nService: storagegateway Status: Informational\nService: trafficmirroring Status: Informational\nService: transfer Status: Informational\nService: transitgateway Status: Informational\nService: vpclattice Status: Informational\nService: workspaces Status: Informational\nService: workspacesweb Status: Informational"
+      },
+      {
+        "timestamp": "2026-11-11T16:40:43.000Z",
+        "status": "1",
+        "message": "現在 AP-NORTHEAST-1 リージョンにおいて、API エラー率の上昇および起動失敗が発生しております。起動失敗は引き続き単一のアベイラビリティーゾーン (apne1-az1) に集中しているように見受けられますが、他のアベイラビリティーゾーンにおいても少数の起動失敗が発生しております。\n\n影響を受けているアベイラビリティーゾーンでは、EC2 および EBS リソースの CloudWatch アラームが Insufficient Data 状態に移行しており、Insufficient Data でアラートを発生するよう設定されているアラームは、アラーム状態に移行する可能性があります。影響を受けているアベイラビリティーゾーンにおける DescribeInstanceStatus API は、Insufficient Data を返しております。稼働中のインスタンスに影響はございませんが、インスタンスの正常性は、お客様ご自身のヘルステレメトリーに基づいてご判断くださいますようお願いいたします。\n\nさらに、ECS および Fargate のタスク起動失敗、ELB のプロビジョニング遅延、NAT Gateway の作成および関連付け解除のワークフローの失敗など、他サービスにも影響が発生しております。\n\n根本原因は特定済みであり、現在問題の軽減に取り組んでおります。次回の更新は、日本時間午前 2 時 45 分までに、もしくは新たな情報が入り次第、お知らせいたします。 | We are experiencing elevated API error rates and launch failures in the AP-NORTHEAST-1 Region. While launch failures still appear to be concentrated in a single Availability Zone (apne1-az1), we are now seeing low levels of launch failures in other availability zones as well.\n\nCloudwatch alarms for EC2 and EBS resources in the affected Availability Zone are transitioning into Insufficient Data state and alarms configured to alert off of Insufficient Data may transition to Alert state. The DescribeInstanceStatus API in the affected Availability Zone is returning Insufficient Data. Running instances are not affected, and you should rely on your own health telemetry to determine the health of your instance.\n\nIn addition, we are seeing impact to other services such as ECS and Fargate Task Launch failures, ELB provisioning delays and Nat Gateway failures for Create and Disassociate workflows.\n\nWe have identified the root cause and are working to mitigate the issue. We will provide you with another update by 9:45 AM PST or sooner as new information becomes available.\n"
+      },
+      {
+        "timestamp": "2026-11-11T17:38:01.000Z",
+        "status": "1",
+        "message": "AP-NORTHEAST-1 リージョンにおける API エラー率の上昇および起動失敗について、回復の兆候が見られております。EC2 および EBS の CloudWatch ヘルスデータは、現在正常に報告されております。引き続き復旧作業の進捗を監視し、次回の更新は日本時間午前 3 時までに、もしくは新たな情報が入り次第、お知らせいたします。 | We are seeing early signs of recovery for the elevated API error rates and launch failures in the AP-NORTHEAST-1 Region. EC2 and EBS CloudWatch health data is now reporting correctly. We will continue to monitor the progress of our recovery efforts and will provide you with another update by 10:00 AM PST or sooner as new information becomes available.\n"
+      },
+      {
+        "timestamp": "2026-11-11T17:59:22.000Z",
+        "status": "1",
+        "message": "AP-NORTHEAST-1 リージョンにおいて、引き続き広範囲で回復の兆候が見られております。現在も緩和策の実施を継続しており、次回の進捗の更新は日本時間午前 3 時 45 分までに、もしくは新たな情報が入り次第、お知らせいたします。| We continue to see broad signs of recovery in the AP-NORTHEAST-1 Region. Our mitigation efforts are still underway, and we will provide you with another update on our progress by 10:45 AM PST or sooner as new information becomes available.\n"
+      },
+      {
+        "timestamp": "2026-11-11T18:54:49.000Z",
+        "status": "1",
+        "message": "現在引き続き完全な復旧に向けて取り組んでおります。単一のアベイラビリティーゾーン (apne1-az1) において、新規作成または変更されたインスタンスへの接続の問題が発生していることを確認しております。この問題は、新しいインスタンスの起動、新しいクラスターの作成、Auto Scaling グループ、ゲートウェイ、および VPC ゲートウェイエンドポイントなどのアクションに影響を与えております。既存のリソースへの接続およびインスタンス間の通信には影響はございません。この新しい問題の根本原因は特定済みであり、現在問題の軽減に取り組んでおります。次回の更新は、日本時間午前 5 時までに、もしくは新たな情報が入り次第、お知らせいたします。| We continue to work towards full recovery. We are observing some connectivity issues to newly created or modified instances in a single Availability Zone (apne1-az1). This affects actions such as new instance launches, new cluster creation, autoscaling groups, gateways, and vpc gateway endpoints. Connectivity to existing resources and Instance to Instance communication are not impacted. We have identified the root cause of this new issue and are working to mitigate the issue. We will provide you with another update by 12:00 PM PST or sooner as new information becomes available."
+      },
+      {
+        "timestamp": "2026-11-11T19:54:32.000Z",
+        "status": "1",
+        "message": "引き続き完全な復旧に向けて取り組んでおります。お客様は、他の 2 つの正常なアベイラビリティーゾーン (apne1-az2、apne1-az3) で新しいインスタンスを起動することができます。また、影響を受けているアベイラビリティーゾーンにおける既存のインスタンスへの接続に影響を与えるような変更は行わないことをお客様におすすめいたします。これには、ネットワークインターフェイスやゲートウェイのアタッチおよびデタッチ、VPC ピアリングの変更などのアクションが含まれます。単一のアベイラビリティーゾーン (apne1-az1) において、新規作成または変更されたインスタンスへの断続的な接続の問題の解決に引き続き取り組んでおります。この問題は、新しいインスタンスの起動、新しいクラスターの作成、Auto Scaling グループ、ゲートウェイ、および VPC ゲートウェイエンドポイントなどのアクションに影響を与えております。既存のリソースへの接続およびインスタンス間の通信には影響はございません。次回の更新は、日本時間午前 6 時までに、もしくは新たな情報が入り次第、お知らせいたします。| We continue to work towards full recovery. Customers can launch new instances in the other two healthy Availability Zones (apne1-az2, apne1-az3). We also recommend that customers do not make changes that would impact connectivity to existing instances in the affected Availability Zone. This includes actions such as attaching and detaching network interfaces or gateways as well as VPC Peerings changes. We are continuing to work on resolving the intermittent connectivity issues to newly created or modified instances in a single Availability Zone (apne1-az1). This affects actions such as new instance launches, new cluster creation, autoscaling groups, gateways, and vpc gateway endpoints. Connectivity to existing resources and Instance to Instance communication are not impacted. We will provide you with another update by 1:00 PM PST or sooner as new information becomes available."
+      },
+      {
+        "timestamp": "2026-11-11T21:11:29.000Z",
+        "status": "0",
+        "message": "[[The following AWS services have been affected by this event:]]\nService: airflow Status: Operating normally\nService: appstream2 Status: Operating normally\nService: athena Status: Operating normally\nService: backup Status: Operating normally\nService: cloudwan Status: Operating normally\nService: datasync Status: Operating normally\nService: dms Status: Operating normally\nService: docdb Status: Operating normally\nService: ecs Status: Operating normally\nService: eks Status: Operating normally\nService: elasticache Status: Operating normally\nService: elasticfilesystem Status: Operating normally\nService: elb Status: Operating normally\nService: emr Status: Operating normally\nService: emrserverless Status: Operating normally\nService: fargate Status: Operating normally\nService: fsx Status: Operating normally\nService: glue Status: Operating normally\nService: kinesisanalytics Status: Operating normally\nService: lightsail Status: Operating normally\nService: natgateway Status: Operating normally\nService: pcs Status: Operating normally\nService: privatelink Status: Operating normally\nService: rds Status: Operating normally\nService: reachabilityanalyzer Status: Operating normally\nService: redshift Status: Operating normally\nService: route53resolver Status: Operating normally\nService: rtbfabric Status: Operating normally\nService: sagemaker Status: Operating normally\nService: sagemaker-unified-studio Status: Operating normally\nService: storagegateway Status: Operating normally\nService: trafficmirroring Status: Operating normally\nService: transfer Status: Operating normally\nService: transitgateway Status: Operating normally\nService: vpclattice Status: Operating normally\nService: workspaces Status: Operating normally\nService: workspacesweb Status: Operating normally"
+      },
+      {
+        "timestamp": "2026-11-11T21:11:29.000Z",
+        "status": "0",
+        "message": "日本時間 2026 年 11 月 11 日 午後 11 時 46 分から 2026 年 11 月 12 日 午前 5 時 31 分にかけて、AP-NORTHEAST-1 リージョンの主に単一のアベイラビリティーゾーン (apne1-az1) において、断続的な API エラー率の上昇、および新規起動された EC2 インスタンスにおける接続の問題が発生しておりました。エンジニアが自動的に対応に加わり、直ちに調査を開始いたしました。最初の影響期間は、日本時間 2026 年 11 月 11 日 午後 11 時 46 分から 2026 年 11 月 12 日 午前 2 時 46 分であり、主に API エラーおよび EC2 インスタンスの起動失敗として現れておりました。Auto Scaling、ECS、RDS など、ワークフローを EC2 API に依存している他の AWS サービスも、この問題の影響を受けておりました。既存の EC2 インスタンスには影響はございませんでした。この最初の影響期間中、お客様には API のスロットリングまたは 5XX レスポンスが発生していた可能性がございます。また、一部の EC2 RunInstances API の呼び出しは成功したものの、インスタンスが正常に起動せず、TERMINATED 状態に移行した場合がございました。EC2 および EBS のヘルスデータが欠損または遅延し、その結果 CloudWatch アラームが INSUFFICIENT_DATA 状態に移行しておりました。影響を受けたサービスにおいて失敗した API リクエストやワークフローにつきましては、再試行いただくことを推奨いたします。\n\n日本時間 午前 2 時 46 分に API エラーを緩和いたしましたが、この時点ではすべての問題は緩和されておりませんでした。EC2 API の回復を監視する中で、新規起動された EC2 インスタンス、およびネットワーク設定が変更された既存のインスタンスの両方で、接続の問題が発生していることを確認いたしました。これらの接続の問題は、EC2 インスタンスのネットワークの変更を伝播する内部サブシステムにおける遅延によるものであり、根本原因に関連するものでございました。日本時間 午前 5 時 31 分までに、問題を完全に解決いたしました。この間、接続の問題の軽減と根本原因の完全な把握の両面から、複数の対策を並行して実施しておりました。ECS、EKS、ELB、NAT Gateway など、EC2 インスタンスを起動する、または EC2 インスタンスのネットワーク設定を変更する他の AWS サービスも、この問題の影響を受けておりました。\n\n影響を受けたサービスの一覧は以下のとおりです。問題は解決され、すべてのサービスは正常に稼働しております。|\n\nBetween 6:46 AM PST and 12:31 PM PST, we experienced periods of API error rates, as well as connectivity issues for newly launched EC2 instances, primarily affecting a single Availability Zone (apne1-az1) in the AP-NORTHEAST-1 Region. Engineers were automatically engaged and immediately began investigating. The first impact window was between 6:46 AM PST and 9:46 AM PST, and primarily manifested as API errors and failed EC2 instance launches. Other AWS Services that rely on the EC2 APIs for their workflows, such as Autoscaling, ECS, and RDS, were also affected by this issue. Existing EC2 instances were not affected. During this first impact period, customers may have experienced API throttling or 5XX Responses. Additionally, some EC2 RunInstance API calls may have succeeded, but instances did not successfully launch, instead transitioning to a TERMINATED state. EC2 and EBS health data was missing or delayed, which resulted in CloudWatch alarms transitioning to an INSUFFICENT_DATA state. We recommend customers retry failed API requests or workflows that failed for any of the affected services. \n\nAt 9:46 AM, we mitigated the API errors, but had not yet mitigated all issues. While monitoring recovery of the EC2 APIs, we observed that both newly launched EC2 instances and existing instances where the network configuration was modified were experiencing connectivity issues. These connectivity issues were the result of delays in an internal subsytem responsible for propagating EC2 instance networking changes, and related to the underlying root cause. By 12:31 PM PST, we had fully resolved the issue. During this time, we were working on multiple parallel paths to both mitigate the connectivity issues and fully understand the root cause. Other AWS Services that launch EC2 instances or modify EC2 instance networking configuration, such as ECS, EKS, ELB, and NAT Gateway, were also affected by this issue.\n\nA list of impacted services is available below. The issue has been resolved and all services are operating normally. "
+      }
+    ],
+    "sourceUrl": "https://health.aws.amazon.com/health/status"
+  },
+  {
     "id": "aws-AWS_EC2_OPERATIONAL_ISSUE_62978_C9C1126888D",
     "provider": "aws",
     "title": "Elevated Launch Failures",
