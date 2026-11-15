@@ -1,5 +1,161 @@
 [
   {
+    "id": "aws-AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE_7EB95_9ACD11D39CE",
+    "provider": "aws",
+    "title": "Increased Connectivity issues in US-EAST-1",
+    "description": "We are seeing early signs of recovery for authentication via IAM Identity Center and SignUp.",
+    "severity": "minor",
+    "status": "ongoing",
+    "startedAt": "2026-11-15T12:38:02.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "AWS IoT Device Management",
+        "category": "other",
+        "regions": [
+          "us-east-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon CloudWatch",
+        "category": "management",
+        "regions": [
+          "us-east-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Connect",
+        "category": "other",
+        "regions": [
+          "us-east-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon OpenSearch Service",
+        "category": "other",
+        "regions": [
+          "us-east-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon Elastic Load Balancing",
+        "category": "networking",
+        "regions": [
+          "us-east-1"
+        ]
+      },
+      {
+        "serviceName": "AWS IAM Identity Center",
+        "category": "other",
+        "regions": [
+          "us-east-1"
+        ]
+      },
+      {
+        "serviceName": "Kiro",
+        "category": "other",
+        "regions": [
+          "us-east-1"
+        ]
+      },
+      {
+        "serviceName": "AWS NAT Gateway",
+        "category": "other",
+        "regions": [
+          "us-east-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Sign Up",
+        "category": "other",
+        "regions": [
+          "us-east-1"
+        ]
+      },
+      {
+        "serviceName": "AWS Step Functions",
+        "category": "other",
+        "regions": [
+          "us-east-1"
+        ]
+      },
+      {
+        "serviceName": "Amazon VPC Lattice",
+        "category": "other",
+        "regions": [
+          "us-east-1"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-11-15T12:38:02.000Z",
+        "status": "1",
+        "message": "We are investigating reports of Connectivity issues in the US-EAST-1 Region. IAM Identity center sign-in requests and AWS SignUp are also impacted at this time."
+      },
+      {
+        "timestamp": "2026-11-15T13:15:45.000Z",
+        "status": "1",
+        "message": "We continue to investigate Connectivity issues in the US-EAST-1 Region. IAM Identity center sign-in requests and AWS SignUp are impacted at this time. \n\nWe can confirm errors when attempted to authenticate when using identity center or when using services that rely on IAM Identity center. For Kiro users, logins from social sign in methods are not impacted at this time. There are no workarounds for impacted customers."
+      },
+      {
+        "timestamp": "2026-11-15T13:22:11.000Z",
+        "status": "1",
+        "message": "We are seeing early signs of recovery for authentication via IAM Identity Center and SignUp."
+      }
+    ],
+    "sourceUrl": "https://health.aws.amazon.com/health/status"
+  },
+  {
+    "id": "aws-AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE-1794746282000",
+    "provider": "aws",
+    "title": "Increased Connectivity issues in US-EAST-1",
+    "description": "We are seeing early signs of recovery for authentication via IAM Identity Center and SignUp.",
+    "severity": "minor",
+    "status": "ongoing",
+    "startedAt": "2026-11-15T12:38:02.000Z",
+    "resolvedAt": null,
+    "durationMinutes": null,
+    "affectedServices": [
+      {
+        "serviceName": "Multiple Services",
+        "category": "other",
+        "regions": [
+          "us-east-1"
+        ]
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2026-11-15T12:38:02.000Z",
+        "status": "1",
+        "message": "We are investigating reports of Connectivity issues in the US-EAST-1 Region. IAM Identity center sign-in requests and AWS SignUp are also impacted at this time."
+      },
+      {
+        "timestamp": "2026-11-15T12:38:02.000Z",
+        "status": "1",
+        "message": "[[The following AWS services have been affected by this event:]]\nService: awsiotdevicemanagement Status: Informational\nService: cloudwatch Status: Informational\nService: connect Status: Informational\nService: elasticsearch Status: Informational\nService: elb Status: Informational\nService: iamidentitycenter Status: Informational\nService: kiro Status: Informational\nService: natgateway Status: Informational\nService: signup Status: Informational\nService: state Status: Informational\nService: vpclattice Status: Informational"
+      },
+      {
+        "timestamp": "2026-11-15T13:15:45.000Z",
+        "status": "1",
+        "message": "We continue to investigate Connectivity issues in the US-EAST-1 Region. IAM Identity center sign-in requests and AWS SignUp are impacted at this time. \n\nWe can confirm errors when attempted to authenticate when using identity center or when using services that rely on IAM Identity center. For Kiro users, logins from social sign in methods are not impacted at this time. There are no workarounds for impacted customers."
+      },
+      {
+        "timestamp": "2026-11-15T13:22:11.000Z",
+        "status": "1",
+        "message": "[[The following AWS services have been affected by this event:]]\nService: awsiotdevicemanagement Status: Operating normally\nService: cloudwatch Status: Informational\nService: connect Status: Operating normally\nService: elasticsearch Status: Informational\nService: elb Status: Informational\nService: iamidentitycenter Status: Operating normally\nService: kiro Status: Operating normally\nService: natgateway Status: Informational\nService: signup Status: Operating normally\nService: state Status: Informational\nService: vpclattice Status: Informational"
+      },
+      {
+        "timestamp": "2026-11-15T13:22:11.000Z",
+        "status": "1",
+        "message": "We are seeing early signs of recovery for authentication via IAM Identity Center and SignUp."
+      }
+    ],
+    "sourceUrl": "https://health.aws.amazon.com/health/status"
+  },
+  {
     "id": "aws-AWS_EC2_OPERATIONAL_ISSUE_EC778_EFC270B4609",
     "provider": "aws",
     "title": "Elevated API issues and Launch Failures",
